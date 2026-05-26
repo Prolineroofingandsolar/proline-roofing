@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  trailingSlash: true,
+  output: "standalone",
   images: {
-    // Static export requires unoptimized images (no server to resize them)
-    unoptimized: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.sanity.io" },
+    ],
   },
 };
 
