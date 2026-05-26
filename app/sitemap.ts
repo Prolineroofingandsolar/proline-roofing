@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const base = "https://www.prolineroofingandsolar.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
