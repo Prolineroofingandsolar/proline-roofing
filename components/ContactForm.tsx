@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
+
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
 const SERVICES = [
   "Roof Repairs",
@@ -45,6 +48,39 @@ function validate(data: FormData): Errors {
   return errors;
 }
 
+async function sendToCRM(form: FormData) {
+  const now = new Date().toISOString();
+  const lead = {
+    id: crypto.randomUUID(),
+    name: form.name,
+    phone: form.phone,
+    email: form.email,
+    address: "",
+    job_type: form.service,
+    stage: "New Lead",
+    source: "Website",
+    notes: form.message,
+    created_at: now,
+    updated_at: now,
+  };
+
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify(lead),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(text || "Failed to submit");
+  }
+}
+
 export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
   const [form, setForm] = useState<FormData>({
     name: "",
@@ -55,6 +91,8 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
   });
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   const inputBase = `w-full px-4 py-3 rounded border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#f97316] ${
@@ -84,13 +122,23 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
     setErrors((prev) => ({ ...prev, [name]: newErrors[name as keyof Errors] }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const newErrors = validate(form);
     setErrors(newErrors);
     setTouched({ name: true, phone: true, email: true, service: true, message: true });
-    if (Object.keys(newErrors).length === 0) {
+    if (Object.keys(newErrors).length > 0) return;
+
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      await sendToCRM(form);
       setSubmitted(true);
+    } catch (err) {
+      console.error("CRM submit error:", err);
+      setSubmitError("Something went wrong — please call us on 07587 478826 or try again.");
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -129,9 +177,7 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
             placeholder="John Smith"
             className={`${inputBase} ${errors.name ? errorClass : ""}`}
           />
-          {errors.name && (
-            <p className="mt-1 text-xs text-red-500">{errors.name}</p>
-          )}
+          {errors.name && <p className="mt-1 text-xs text-red-500">{errors.name}</p>}
         </div>
 
         {/* Phone */}
@@ -150,9 +196,7 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
             placeholder="07700 900000"
             className={`${inputBase} ${errors.phone ? errorClass : ""}`}
           />
-          {errors.phone && (
-            <p className="mt-1 text-xs text-red-500">{errors.phone}</p>
-          )}
+          {errors.phone && <p className="mt-1 text-xs text-red-500">{errors.phone}</p>}
         </div>
       </div>
 
@@ -172,9 +216,7 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
           placeholder="john@example.com"
           className={`${inputBase} ${errors.email ? errorClass : ""}`}
         />
-        {errors.email && (
-          <p className="mt-1 text-xs text-red-500">{errors.email}</p>
-        )}
+        {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
       </div>
 
       {/* Service */}
@@ -192,14 +234,10 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
         >
           <option value="">Select a service...</option>
           {SERVICES.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
+            <option key={s} value={s}>{s}</option>
           ))}
         </select>
-        {errors.service && (
-          <p className="mt-1 text-xs text-red-500">{errors.service}</p>
-        )}
+        {errors.service && <p className="mt-1 text-xs text-red-500">{errors.service}</p>}
       </div>
 
       {/* Message */}
@@ -217,16 +255,27 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
           placeholder="Tell us about your project..."
           className={`${inputBase} resize-none ${errors.message ? errorClass : ""}`}
         />
-        {errors.message && (
-          <p className="mt-1 text-xs text-red-500">{errors.message}</p>
-        )}
+        {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message}</p>}
       </div>
+
+      {submitError && (
+        <p className="text-sm text-red-600 bg-red-50 border border-red-200 px-4 py-3 rounded">
+          {submitError}
+        </p>
+      )}
 
       <button
         type="submit"
-        className="w-full bg-[#f97316] hover:bg-[#ea6c0a] text-white font-bold py-3.5 px-6 rounded transition-colors text-sm tracking-wide"
+        disabled={submitting}
+        className="w-full bg-[#f97316] hover:bg-[#ea6c0a] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3.5 px-6 rounded transition-colors text-sm tracking-wide flex items-center justify-center gap-2"
       >
-        Send Message
+        {submitting ? (
+          <>
+            <Loader2 className="w-4 h-4 animate-spin" /> Sending…
+          </>
+        ) : (
+          "Send Message"
+        )}
       </button>
       <p className={`text-xs text-center ${darkBg ? "text-gray-400" : "text-gray-500"}`}>
         We respond within 24 hours. No spam, ever.
