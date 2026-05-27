@@ -46,16 +46,40 @@ function validate(data: FormData): Errors {
   return errors;
 }
 
+const SUPABASE_URL = "https://qzvdzzvokmulcfujyea.supabase.co";
+const SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6dmR6enZrb2NtdWxjZnVqeWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NzIxNjUsImV4cCI6MjA5NDQ0ODE2NX0.g42AvuElukfbpgbg9Y6XImnuHQ2Po5GEaVVGMz3Siu0";
+
 async function sendToCRM(form: FormData) {
-  const res = await fetch("/api/leads", {
+  const now = new Date().toISOString();
+  const lead = {
+    id: crypto.randomUUID(),
+    name: form.name,
+    phone: form.phone,
+    email: form.email,
+    address: "",
+    job_type: form.service,
+    stage: "New Lead",
+    source: "Website",
+    notes: form.message,
+    created_at: now,
+    updated_at: now,
+  };
+
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(form),
+    headers: {
+      "Content-Type": "application/json",
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify(lead),
   });
 
   if (!res.ok) {
-    const data = await res.json().catch(() => ({}));
-    throw new Error(data.error || `Server error ${res.status}`);
+    const text = await res.text();
+    throw new Error(text || `Error ${res.status}`);
   }
 }
 
