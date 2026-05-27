@@ -1,17 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const SUPABASE_URL = "https://qzvdzzvokmulcfujyea.supabase.co";
+const SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6dmR6enZrb2NtdWxjZnVqeWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NzIxNjUsImV4cCI6MjA5NDQ0ODE2NX0.g42AvuElukfbpgbg9Y6XImnuHQ2Po5GEaVVGMz3Siu0";
+
 export async function POST(req: NextRequest) {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-  if (!supabaseUrl || !supabaseKey) {
-    console.error("Missing Supabase env vars");
-    return NextResponse.json(
-      { error: "Server configuration error — env vars missing" },
-      { status: 500 }
-    );
-  }
-
   let body;
   try {
     body = await req.json();
@@ -34,12 +27,12 @@ export async function POST(req: NextRequest) {
     updated_at: now,
   };
 
-  const res = await fetch(`${supabaseUrl}/rest/v1/leads`, {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      apikey: supabaseKey,
-      Authorization: `Bearer ${supabaseKey}`,
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
       Prefer: "return=minimal",
     },
     body: JSON.stringify(lead),
