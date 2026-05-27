@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { CheckCircle, Loader2 } from "lucide-react";
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
 const SERVICES = [
   "Roof Repairs",
@@ -49,35 +47,15 @@ function validate(data: FormData): Errors {
 }
 
 async function sendToCRM(form: FormData) {
-  const now = new Date().toISOString();
-  const lead = {
-    id: crypto.randomUUID(),
-    name: form.name,
-    phone: form.phone,
-    email: form.email,
-    address: "",
-    job_type: form.service,
-    stage: "New Lead",
-    source: "Website",
-    notes: form.message,
-    created_at: now,
-    updated_at: now,
-  };
-
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+  const res = await fetch("/api/leads", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      Prefer: "return=minimal",
-    },
-    body: JSON.stringify(lead),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(form),
   });
 
   if (!res.ok) {
-    const text = await res.text();
-    throw new Error(text || "Failed to submit");
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || `Server error ${res.status}`);
   }
 }
 
@@ -136,7 +114,8 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
       setSubmitted(true);
     } catch (err) {
       console.error("CRM submit error:", err);
-      setSubmitError("Something went wrong — please call us on 07587 478826 or try again.");
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      setSubmitError(`Something went wrong: ${msg}. Please call us on 07587 478826.`);
     } finally {
       setSubmitting(false);
     }
