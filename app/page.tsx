@@ -6,6 +6,7 @@ import {
   CheckCircle, Star, Phone, ArrowRight, MapPin, ChevronDown,
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
+import GoogleReviewButton from "@/components/GoogleReviewButton";
 import AnimatedSection from "@/components/AnimatedSection";
 import CountUp from "@/components/CountUp";
 import CoverageMap from "@/components/CoverageMap";
@@ -374,9 +375,12 @@ export default function HomePage() {
           </div>
 
           <AnimatedSection className="text-center mt-10">
-            <Link href="/reviews" className="inline-flex items-center gap-2 border-2 border-[#f97316] text-[#f97316] font-black text-sm uppercase tracking-widest px-6 py-3 hover:bg-[#f97316] hover:text-white transition-all">
-              Read All Reviews <ArrowRight className="w-4 h-4" />
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/reviews" className="inline-flex items-center gap-2 border-2 border-[#f97316] text-[#f97316] font-black text-sm uppercase tracking-widest px-6 py-3 hover:bg-[#f97316] hover:text-white transition-all">
+                Read All Reviews <ArrowRight className="w-4 h-4" />
+              </Link>
+              <GoogleReviewButton variant="solid" label="Leave us a Google Review" className="px-6 py-3" />
+            </div>
           </AnimatedSection>
         </div>
       </section>

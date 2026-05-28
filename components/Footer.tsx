@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import Logo from "./Logo";
+import GoogleReviewButton from "./GoogleReviewButton";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -22,6 +23,8 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed mt-4">
               Roofing and solar specialists based in Taunton, Somerset.
             </p>
+            <p className="text-gray-400 text-sm mt-5 mb-3">Happy with our work?</p>
+            <GoogleReviewButton variant="solid" label="Review us on Google" className="text-xs px-5 py-3" />
           </div>
 
           {/* Col 2 – Quick Links */}

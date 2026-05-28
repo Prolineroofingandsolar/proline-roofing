@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
+import GoogleReviewButton from "@/components/GoogleReviewButton";
+import { FACEBOOK_REVIEW_URL, BARK_REVIEW_URL } from "@/lib/links";
 import { client } from "@/sanity/client";
 
 export const metadata: Metadata = {
@@ -164,16 +166,9 @@ export default async function ReviewsPage() {
             <p className="text-gray-900 font-black text-xl uppercase mb-2">Had a great experience?</p>
             <p className="text-gray-500 text-sm mb-8">Leave us a review on your preferred platform — it really helps!</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <GoogleReviewButton variant="solid" label="Google Review" className="w-full sm:w-auto justify-center" />
               <a
-                href="https://www.google.com/search?q=ProLine+Roofing+Solar+Taunton"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black px-6 py-3 uppercase tracking-widest text-sm transition-all hover:scale-105 w-full sm:w-auto justify-center"
-              >
-                <ExternalLink className="w-4 h-4" /> Google Review
-              </a>
-              <a
-                href="https://www.facebook.com/prolineroofingandsolar"
+                href={FACEBOOK_REVIEW_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#1464d2] text-white font-black px-6 py-3 uppercase tracking-widest text-sm transition-all hover:scale-105 w-full sm:w-auto justify-center"
@@ -181,7 +176,7 @@ export default async function ReviewsPage() {
                 <ExternalLink className="w-4 h-4" /> Facebook Review
               </a>
               <a
-                href="https://www.bark.com/en/gb/company/proline-roofing--solar/"
+                href={BARK_REVIEW_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#1a1a1a] hover:bg-black text-white font-black px-6 py-3 uppercase tracking-widest text-sm transition-all hover:scale-105 w-full sm:w-auto justify-center"
