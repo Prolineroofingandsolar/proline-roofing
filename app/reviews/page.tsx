@@ -6,6 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import GoogleReviewButton from "@/components/GoogleReviewButton";
 import { FACEBOOK_REVIEW_URL, BARK_REVIEW_URL } from "@/lib/links";
 import { getGoogleReviews } from "@/lib/googleReviews";
+import { curatedReviews } from "@/lib/curatedReviews";
 import { client } from "@/sanity/client";
 
 export const metadata: Metadata = {
@@ -74,12 +75,15 @@ export default async function ReviewsPage() {
     getReviews(),
   ]);
 
-  // Priority: live Google reviews → CMS reviews → placeholder reviews
-  const reviews = google?.reviews ?? sanityReviews ?? staticReviews;
+  // Live Google reviews + hand-curated reviews from other platforms
+  // (MyBuilder, Bark, Facebook). Falls back to CMS, then placeholders.
+  const liveReviews = [...(google?.reviews ?? []), ...curatedReviews];
+  const isLive = liveReviews.length > 0;
+  const reviews = isLive ? liveReviews : (sanityReviews ?? staticReviews);
 
-  const totalLabel = google?.totalReviewCount
-    ? `${google.totalReviewCount}+`
-    : "30+";
+  const totalCount =
+    (google?.totalReviewCount ?? google?.reviews.length ?? 0) + curatedReviews.length;
+  const totalLabel = totalCount > 0 ? `${totalCount}+` : "30+";
   const ratingLabel = google?.averageRating
     ? `${google.averageRating.toFixed(1)} ★`
     : "5.0 ★";
@@ -126,10 +130,10 @@ export default async function ReviewsPage() {
       {/* Reviews grid */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          {google ? (
+          {isLive ? (
             <AnimatedSection className="text-center mb-10">
               <p className="text-gray-400 text-xs">
-                Showing {google.reviews.length} live review{google.reviews.length !== 1 ? "s" : ""} pulled automatically from Google
+                Showing {reviews.length} verified review{reviews.length !== 1 ? "s" : ""} from Google, MyBuilder &amp; Bark
               </p>
             </AnimatedSection>
           ) : sanityReviews ? (

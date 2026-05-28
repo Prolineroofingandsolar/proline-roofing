@@ -93,9 +93,9 @@ const services = [
 ];
 
 const testimonials = [
-  { name: "Sarah M.", location: "Taunton", rating: 5, text: "Brilliant service from start to finish. New roof looks fantastic, tidy workers and great communication.", service: "New Roof" },
-  { name: "David R.", location: "Wellington", rating: 5, text: "Solar panels fitted last month — already seeing huge savings on our electricity bills. Professional team.", service: "Solar PV" },
-  { name: "James L.", location: "Bridgwater", rating: 5, text: "Fantastic service. Fixed our storm-damaged roof within 48 hours. Friendly, fast and great value.", service: "Roof Repairs" },
+  { name: "Rebecca", location: "Axminster", rating: 5, text: "Roof and chimney repointing. Brilliant. All very friendly and polite. Did a brilliant job and cleaned up nicely after themselves :) very pleased.", service: "Chimney Work" },
+  { name: "Verified Customer", location: "Yeovil", rating: 5, text: "Will came out on Bank Holiday Monday to complete the job, quickly, efficiently and to a high standard.", service: "Solar PV" },
+  { name: "Verified Customer", location: "Bridgwater", rating: 5, text: "William and his team done a very good job. Always clean up after every day and kept me updated as they went on. I will definitely be using them again.", service: "Roof Repairs" },
 ];
 
 const whyUs = [
@@ -344,13 +344,13 @@ export default function HomePage() {
           <AnimatedSection className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-3">
               <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Google Reviews</span>
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Customer Reviews</span>
               <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight">What Our Customers Say</h2>
             <div className="flex items-center justify-center gap-1 mt-3">
               {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-[#f97316] text-[#f97316]" />)}
-              <span className="ml-2 text-gray-600 text-sm font-semibold">5.0 on Google</span>
+              <span className="ml-2 text-gray-600 text-sm font-semibold">Rated 5.0 by our customers</span>
             </div>
           </AnimatedSection>
 
