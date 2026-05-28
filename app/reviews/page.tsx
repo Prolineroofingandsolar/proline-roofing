@@ -96,7 +96,7 @@ export default async function ReviewsPage() {
       <section className="bg-[#f97316] py-6">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-3 gap-4 text-center">
           {[
-            { value: "127+", label: "Total Reviews" },
+            { value: "30+", label: "Total Reviews" },
             { value: "5.0 ★", label: "Average Rating" },
             { value: "100%", label: "Would Recommend" },
           ].map(({ value, label }) => (
