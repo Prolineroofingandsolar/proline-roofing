@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
+import GoogleReviewButton from "@/components/GoogleReviewButton";
+import { FACEBOOK_REVIEW_URL, BARK_REVIEW_URL } from "@/lib/links";
+import { getGoogleReviews } from "@/lib/googleReviews";
 import { client } from "@/sanity/client";
 
 export const metadata: Metadata = {
@@ -66,8 +69,20 @@ async function getReviews() {
 }
 
 export default async function ReviewsPage() {
-  const sanityReviews = await getReviews();
-  const reviews = sanityReviews ?? staticReviews;
+  const [google, sanityReviews] = await Promise.all([
+    getGoogleReviews(),
+    getReviews(),
+  ]);
+
+  // Priority: live Google reviews → CMS reviews → placeholder reviews
+  const reviews = google?.reviews ?? sanityReviews ?? staticReviews;
+
+  const totalLabel = google?.totalReviewCount
+    ? `${google.totalReviewCount}+`
+    : "30+";
+  const ratingLabel = google?.averageRating
+    ? `${google.averageRating.toFixed(1)} ★`
+    : "5.0 ★";
 
   return (
     <>
@@ -96,8 +111,8 @@ export default async function ReviewsPage() {
       <section className="bg-[#f97316] py-6">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-3 gap-4 text-center">
           {[
-            { value: "127+", label: "Total Reviews" },
-            { value: "5.0 ★", label: "Average Rating" },
+            { value: totalLabel, label: "Total Reviews" },
+            { value: ratingLabel, label: "Average Rating" },
             { value: "100%", label: "Would Recommend" },
           ].map(({ value, label }) => (
             <AnimatedSection key={label}>
@@ -111,14 +126,20 @@ export default async function ReviewsPage() {
       {/* Reviews grid */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          {sanityReviews && (
+          {google ? (
+            <AnimatedSection className="text-center mb-10">
+              <p className="text-gray-400 text-xs">
+                Showing {google.reviews.length} live review{google.reviews.length !== 1 ? "s" : ""} pulled automatically from Google
+              </p>
+            </AnimatedSection>
+          ) : sanityReviews ? (
             <AnimatedSection className="text-center mb-10">
               <p className="text-gray-400 text-xs">
                 Showing {sanityReviews.length} review{sanityReviews.length !== 1 ? "s" : ""} — manage them at{" "}
                 <strong>/studio</strong>
               </p>
             </AnimatedSection>
-          )}
+          ) : null}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map((r, i) => {
@@ -164,16 +185,9 @@ export default async function ReviewsPage() {
             <p className="text-gray-900 font-black text-xl uppercase mb-2">Had a great experience?</p>
             <p className="text-gray-500 text-sm mb-8">Leave us a review on your preferred platform — it really helps!</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <GoogleReviewButton variant="solid" label="Google Review" className="w-full sm:w-auto justify-center" />
               <a
-                href="https://www.google.com/search?q=ProLine+Roofing+Solar+Taunton"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black px-6 py-3 uppercase tracking-widest text-sm transition-all hover:scale-105 w-full sm:w-auto justify-center"
-              >
-                <ExternalLink className="w-4 h-4" /> Google Review
-              </a>
-              <a
-                href="https://www.facebook.com/prolineroofingandsolar"
+                href={FACEBOOK_REVIEW_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#1464d2] text-white font-black px-6 py-3 uppercase tracking-widest text-sm transition-all hover:scale-105 w-full sm:w-auto justify-center"
@@ -181,7 +195,7 @@ export default async function ReviewsPage() {
                 <ExternalLink className="w-4 h-4" /> Facebook Review
               </a>
               <a
-                href="https://www.bark.com/en/gb/company/proline-roofing--solar/"
+                href={BARK_REVIEW_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#1a1a1a] hover:bg-black text-white font-black px-6 py-3 uppercase tracking-widest text-sm transition-all hover:scale-105 w-full sm:w-auto justify-center"
