@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -81,13 +82,13 @@ function IconEmergency() {
 }
 
 const services = [
-  { Icon: IconRoofRepairs, title: "Roof Repairs", href: "/roofing", desc: "Fast, reliable repairs for leaks, slipped tiles and storm damage." },
-  { Icon: IconNewRoofs, title: "New Roofs", href: "/roofing", desc: "Full new roof installations built to last using premium materials." },
-  { Icon: IconFlatRoofing, title: "Flat Roofing", href: "/roofing", desc: "GRP fibreglass and EPDM flat roof systems with 25-year guarantees." },
-  { Icon: IconSolarPV, title: "Solar PV", href: "/solar", desc: "Reduce your energy bills with high-efficiency solar panel systems." },
-  { Icon: IconChimney, title: "Chimney Work", href: "/roofing", desc: "Chimney repairs, repointing, flashing and full rebuilds." },
-  { Icon: IconLeadwork, title: "Leadwork", href: "/roofing", desc: "Expert lead valleys, flashings, abutments and soakers." },
-  { Icon: IconFascias, title: "Fascias & Guttering", href: "/roofing", desc: "UPVC fascias, soffits and guttering supply and installation." },
+  { Icon: IconRoofRepairs, title: "Roof Repairs", href: "/roofing#roofing-services", desc: "Fast, reliable repairs for leaks, slipped tiles and storm damage." },
+  { Icon: IconNewRoofs, title: "New Roofs", href: "/roofing#roofing-services", desc: "Full new roof installations built to last using premium materials." },
+  { Icon: IconFlatRoofing, title: "Flat Roofing", href: "/roofing#roofing-services", desc: "GRP fibreglass and EPDM flat roof systems with 25-year guarantees." },
+  { Icon: IconSolarPV, title: "Solar PV", href: "/solar#solar-services", desc: "Reduce your energy bills with high-efficiency solar panel systems." },
+  { Icon: IconChimney, title: "Chimney Work", href: "/roofing#roofing-services", desc: "Chimney repairs, repointing, flashing and full rebuilds." },
+  { Icon: IconLeadwork, title: "Leadwork", href: "/roofing#roofing-services", desc: "Expert lead valleys, flashings, abutments and soakers." },
+  { Icon: IconFascias, title: "Fascias & Guttering", href: "/roofing#roofing-services", desc: "UPVC fascias, soffits and guttering supply and installation." },
   { Icon: IconEmergency, title: "Emergency Call-Out", href: "/contact", desc: "24/7 emergency roofing — we're there when you need us most." },
 ];
 
@@ -107,6 +108,8 @@ const whyUs = [
 ];
 
 export default function HomePage() {
+  const [activeCard, setActiveCard] = useState<string | null>(null);
+
   return (
     <>
       {/* ── HERO ── */}
@@ -255,23 +258,35 @@ export default function HomePage() {
           </AnimatedSection>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {services.map(({ Icon, title, href, desc }, i) => (
-              <AnimatedSection key={title} delay={i * 0.07}>
-                <Link
-                  href={href}
-                  className="group border border-gray-200 p-6 flex flex-col items-center text-center hover:border-[#f97316] hover:shadow-lg transition-all duration-300 h-full"
-                >
-                  <div className="mb-4 text-[#f97316] group-hover:scale-110 transition-transform duration-300">
-                    <Icon />
+            {services.map(({ Icon, title, href, desc }, i) => {
+              const isActive = activeCard === title;
+              return (
+                <AnimatedSection key={title} delay={i * 0.07}>
+                  <div
+                    onClick={() => setActiveCard(isActive ? null : title)}
+                    className={`border p-6 flex flex-col items-center text-center transition-all duration-300 h-full cursor-pointer select-none
+                      ${isActive
+                        ? "border-[#f97316] shadow-lg"
+                        : "border-gray-200 hover:border-[#f97316] hover:shadow-lg"
+                      }`}
+                  >
+                    <div className={`mb-4 text-[#f97316] transition-transform duration-300 ${isActive ? "scale-110" : ""}`}>
+                      <Icon />
+                    </div>
+                    <h3 className="font-black text-[12px] uppercase tracking-wider text-gray-900 mb-2">{title}</h3>
+                    <p className="text-gray-500 text-[11px] leading-relaxed">{desc}</p>
+                    <Link
+                      href={href}
+                      onClick={(e) => e.stopPropagation()}
+                      className={`mt-3 text-[#f97316] text-xs font-bold flex items-center gap-1 transition-all duration-200
+                        ${isActive ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                    >
+                      Learn more <ArrowRight className="w-3 h-3" />
+                    </Link>
                   </div>
-                  <h3 className="font-black text-[12px] uppercase tracking-wider text-gray-900 mb-2">{title}</h3>
-                  <p className="text-gray-500 text-[11px] leading-relaxed">{desc}</p>
-                  <span className="mt-3 text-[#f97316] text-xs font-bold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn more <ArrowRight className="w-3 h-3" />
-                  </span>
-                </Link>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>

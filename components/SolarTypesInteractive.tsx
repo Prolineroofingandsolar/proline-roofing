@@ -238,7 +238,7 @@ export default function SolarTypesInteractive() {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="solar-services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12">
