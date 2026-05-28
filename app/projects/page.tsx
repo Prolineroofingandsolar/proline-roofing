@@ -7,9 +7,34 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { client, urlFor } from "@/sanity/client";
 
 export const metadata: Metadata = {
-  title: "Our Projects | ProLine Roofing & Solar",
+  title: "Roofing & Solar Projects Taunton | ProLine Portfolio",
   description:
-    "Browse completed roofing and solar projects by ProLine in Taunton and across Somerset. See our workmanship for yourself.",
+    "Browse completed roofing and solar panel projects by ProLine in Taunton, Somerset and across the South West. See our workmanship — roof replacements, flat roofs, solar installations and more.",
+  keywords: [
+    "roofing projects taunton",
+    "solar installation projects somerset",
+    "proline roofing portfolio",
+    "roof replacement examples taunton",
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.prolineroofingandsolar.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Projects",
+      item: "https://www.prolineroofingandsolar.co.uk/projects",
+    },
+  ],
 };
 
 // Revalidate every 60 seconds so new Sanity projects appear without redeploy
@@ -118,6 +143,10 @@ export default async function ProjectsPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative bg-[#111111] text-white py-24 overflow-hidden">
         <div

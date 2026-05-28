@@ -4,9 +4,34 @@ import ContactForm from "@/components/ContactForm";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Contact Us | ProLine Roofing & Solar",
+  title: "Contact Roofers in Taunton | ProLine Roofing & Solar",
   description:
-    "Get in touch with ProLine Roofing & Solar in Taunton, Somerset. Call 07587 478826 or send us a message online. Free quotes available.",
+    "Contact ProLine Roofing & Solar in Taunton, Somerset. Call 07587 478826, email admin@prolineroofingandsolar.co.uk or fill in our online form. Free quotes available.",
+  keywords: [
+    "contact roofer taunton",
+    "roofer taunton phone number",
+    "proline roofing contact",
+    "roofing quote taunton",
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.prolineroofingandsolar.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Contact Us",
+      item: "https://www.prolineroofingandsolar.co.uk/contact",
+    },
+  ],
 };
 
 const contactDetails = [
@@ -19,6 +44,10 @@ const contactDetails = [
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative bg-[#111111] text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />

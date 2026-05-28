@@ -17,10 +17,128 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SolarTypesInteractive from "@/components/SolarTypesInteractive";
 
 export const metadata: Metadata = {
-  title: "Solar Panel Installation | Taunton & South West",
+  title: "Solar Panels Taunton & Somerset | MCS Certified Solar PV | ProLine",
   description:
-    "Solar PV panel installation, battery storage and EV charging in Taunton, Somerset. MCS certified. Reduce your energy bills with a professionally installed solar system. Free survey and quote.",
+    "MCS certified solar panel installation in Taunton, Somerset. Solar PV, battery storage and EV charging. Cut your energy bills by £1,000+ per year. Free survey — call 07587 478826.",
+  keywords: [
+    "solar panels taunton",
+    "solar panel installation taunton",
+    "solar PV taunton",
+    "solar installer taunton",
+    "MCS certified solar taunton",
+    "battery storage taunton",
+    "solar panels somerset",
+    "solar energy taunton",
+    "EV charging taunton",
+    "solar installation somerset",
+    "SEG tariff taunton",
+    "solar panels bridgwater",
+    "solar panels wellington somerset",
+    "cheap solar taunton",
+    "best solar installer taunton",
+  ],
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.prolineroofingandsolar.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Solar Panel Installation",
+      item: "https://www.prolineroofingandsolar.co.uk/solar",
+    },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much do solar panels cost in Taunton?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A typical 4kW solar panel system in Taunton costs between £5,500 and £8,000 fully installed, including scaffolding, panels, inverter and all electrical work. Larger systems with battery storage cost more. ProLine provides free no-obligation solar surveys — call 07587 478826.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much can I save with solar panels in Somerset?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most Somerset homeowners with a 4kW system save between £800 and £1,200 per year on electricity bills. With a battery storage system, savings can exceed £1,500 per year. You can also earn income through the Smart Export Guarantee (SEG) tariff for surplus energy exported to the grid.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are ProLine solar installers MCS certified?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — all ProLine solar PV installations are carried out by MCS-certified installers. MCS certification is required to access the Smart Export Guarantee (SEG) tariff and most solar panel warranties.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do solar panels work in Somerset's climate?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Somerset and Taunton enjoy above-average solar radiation for the UK. Solar panels generate electricity from daylight, not just direct sunshine, so they work year-round. A properly designed system can generate 3,500–4,500 kWh per year from a 4kW installation in Taunton.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does solar panel installation take in Taunton?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most domestic solar panel installations in Taunton are completed in 1–2 days. ProLine handles everything including scaffolding, electrical work, DNO application and grid connection — so you don't need to arrange anything separately.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I add battery storage to existing solar panels?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — ProLine can retrofit battery storage to most existing solar PV systems. Battery storage allows you to use the energy you generate at night or on cloudy days, significantly increasing your self-consumption and savings.",
+      },
+    },
+  ],
+};
+
+const solarFaqs = [
+  {
+    q: "How much do solar panels cost in Taunton?",
+    a: "A typical 4kW solar system in Taunton costs between £5,500 and £8,000 fully installed, including scaffolding, panels, inverter and all electrical work. ProLine provides free no-obligation solar surveys — call 07587 478826.",
+  },
+  {
+    q: "How much can I save with solar panels in Somerset?",
+    a: "Most Somerset homeowners with a 4kW system save between £800 and £1,200 per year. With battery storage, savings can exceed £1,500 per year — plus income from the Smart Export Guarantee (SEG) tariff.",
+  },
+  {
+    q: "Are ProLine solar installers MCS certified?",
+    a: "Yes — all our solar PV installations are MCS-certified. MCS certification is required to access the SEG tariff and most manufacturer warranties.",
+  },
+  {
+    q: "Do solar panels work in Somerset's climate?",
+    a: "Absolutely. Somerset enjoys above-average solar radiation for the UK. Solar panels generate electricity from daylight, not just direct sunshine, and work year-round.",
+  },
+  {
+    q: "How long does solar panel installation take in Taunton?",
+    a: "Most domestic installations are completed in 1–2 days. ProLine handles everything — scaffolding, electrical work, DNO application and grid connection.",
+  },
+  {
+    q: "Can I add battery storage to existing solar panels?",
+    a: "Yes — we can retrofit battery storage to most existing solar PV systems, allowing you to use generated energy at night or on cloudy days and increasing your savings significantly.",
+  },
+];
 
 const reasons = [
   {
@@ -58,6 +176,14 @@ const reasons = [
 export default function SolarPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── Hero ──────────────────────────────────────────────── */}
       <section className="relative bg-[#111111] text-white py-28 overflow-hidden">
         <div
@@ -239,9 +365,59 @@ export default function SolarPage() {
         </div>
       </section>
 
+      {/* ── FAQ ──────────────────────────────────────────────── */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <AnimatedSection className="text-center mb-14">
+            <div className="flex items-center justify-center gap-4 mb-3">
+              <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
+                FAQs
+              </span>
+              <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
+            </div>
+            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight">
+              Solar Questions Answered
+            </h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">
+              Common questions from homeowners in Taunton and Somerset about solar panel installation.
+            </p>
+          </AnimatedSection>
+
+          <div className="space-y-4">
+            {solarFaqs.map(({ q, a }, i) => (
+              <AnimatedSection key={i} delay={i * 0.06}>
+                <div className="bg-white border border-gray-100 p-6 shadow-sm hover:border-[#f97316] transition-colors">
+                  <h3 className="font-black text-gray-900 mb-2 text-sm">{q}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center mt-10">
+            <p className="text-gray-500 text-sm mb-4">Have another question about solar panels in Taunton?</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/quote"
+                className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black text-sm uppercase tracking-widest px-6 py-3 transition-all hover:scale-105"
+              >
+                Free Solar Survey <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="tel:07587478826"
+                className="inline-flex items-center gap-2 border-2 border-[#1a1a1a] text-[#1a1a1a] font-black text-sm uppercase tracking-widest px-6 py-3 hover:bg-[#1a1a1a] hover:text-white transition-all"
+              >
+                <Phone className="w-4 h-4" /> 07587 478826
+              </a>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <CTASection
-        heading="Ready to Go Solar?"
-        subtext="Get a free, no-obligation solar survey and find out exactly how much you could save."
+        heading="Ready to Go Solar in Taunton?"
+        subtext="Get a free, no-obligation solar survey and find out exactly how much you could save in Somerset."
       />
     </>
   );

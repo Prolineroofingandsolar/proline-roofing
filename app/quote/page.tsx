@@ -4,14 +4,43 @@ import ContactForm from "@/components/ContactForm";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Get a Free Quote | ProLine Roofing & Solar",
+  title: "Free Roofing & Solar Quote Taunton | ProLine",
   description:
-    "Request a free, no-obligation quote from ProLine Roofing & Solar in Taunton, Somerset. We respond within 24 hours. Call 07587 478826.",
+    "Get a free, no-obligation roofing or solar quote from ProLine in Taunton, Somerset. We visit, survey and provide a detailed written quote within 24 hours. Call 07587 478826.",
+  keywords: [
+    "free roofing quote taunton",
+    "free solar quote taunton",
+    "roofing estimate taunton",
+    "get a quote roofer taunton",
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.prolineroofingandsolar.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Get a Free Quote",
+      item: "https://www.prolineroofingandsolar.co.uk/quote",
+    },
+  ],
 };
 
 export default function QuotePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative bg-[#111111] text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />

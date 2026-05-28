@@ -6,9 +6,34 @@ import AnimatedSection from "@/components/AnimatedSection";
 import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
-  title: "About Us | ProLine Roofing & Solar",
+  title: "About ProLine | Taunton Roofing & Solar Specialists",
   description:
-    "Learn about ProLine Roofing & Solar — Taunton's trusted roofing and solar specialists with 30 years of combined experience serving the South West.",
+    "ProLine Roofing & Solar — Taunton's trusted local roofing and solar company. 30 years combined experience, 5-star rated, based in Taunton, Somerset. Serving the South West.",
+  keywords: [
+    "about proline roofing taunton",
+    "taunton roofing company",
+    "local roofer taunton",
+    "trusted roofer somerset",
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.prolineroofingandsolar.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About Us",
+      item: "https://www.prolineroofingandsolar.co.uk/about",
+    },
+  ],
 };
 
 const values = [
@@ -23,6 +48,10 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative bg-[#111111] text-white py-24 overflow-hidden">
         <div

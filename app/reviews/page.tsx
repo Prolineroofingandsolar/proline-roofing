@@ -6,9 +6,96 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { client } from "@/sanity/client";
 
 export const metadata: Metadata = {
-  title: "Customer Reviews | ProLine Roofing & Solar",
+  title: "Customer Reviews Taunton | ProLine Roofing & Solar",
   description:
-    "Read 5-star customer reviews for ProLine Roofing & Solar in Taunton, Somerset. Verified reviews from real customers across the South West.",
+    "Read 5-star verified customer reviews for ProLine Roofing & Solar in Taunton, Somerset. 127+ reviews from Google, Facebook, Bark and MyBuilder.",
+  keywords: [
+    "proline roofing reviews",
+    "roofer taunton reviews",
+    "solar installer taunton reviews",
+    "proline roofing and solar taunton",
+    "best roofer taunton",
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.prolineroofingandsolar.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Customer Reviews",
+      item: "https://www.prolineroofingandsolar.co.uk/reviews",
+    },
+  ],
+};
+
+const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "ProLine Roofing & Solar",
+  "@id": "https://www.prolineroofingandsolar.co.uk/#business",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: 127,
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Sarah M." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      datePublished: "2025-03-01",
+      reviewBody:
+        "Absolutely brilliant service from start to finish. The team replaced our entire roof and it looks fantastic. Tidy workers, great communication, and the price was very fair. Would highly recommend ProLine to anyone.",
+      name: "Brilliant roof replacement in Taunton",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "David R." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      datePublished: "2025-04-01",
+      reviewBody:
+        "Had solar panels fitted last month — what a difference! The guys were professional and left everything spotless. Already seeing the savings on our electricity bills. Excellent company.",
+      name: "Professional solar panel installation Somerset",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Karen T." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      datePublished: "2025-01-01",
+      reviewBody:
+        "Called ProLine after a storm damaged our roof. They came out the very next day, assessed the damage, and had it repaired within the week. Fantastic response time and quality workmanship.",
+      name: "Fast emergency roof repair Taunton",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "James L." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      datePublished: "2025-02-01",
+      reviewBody:
+        "We had a flat roof on our extension that was leaking badly. ProLine came out, gave us a fair quote, and replaced the whole thing with a GRP fibreglass roof. Brilliant job — no more leaks!",
+      name: "GRP flat roof replacement Somerset",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Mike P." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      datePublished: "2024-12-01",
+      reviewBody:
+        "ProLine re-roofed our 1930s semi-detached and did a superb job. The tiles match perfectly and the ridge looks immaculate. Clean, courteous team who worked efficiently every day.",
+      name: "Excellent re-roof on 1930s house Taunton",
+    },
+  ],
 };
 
 export const revalidate = 60;
@@ -71,6 +158,16 @@ export default async function ReviewsPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aggregateRatingSchema),
+        }}
+      />
       {/* Hero */}
       <section className="relative bg-[#111111] text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/image0.jpeg')" }} />

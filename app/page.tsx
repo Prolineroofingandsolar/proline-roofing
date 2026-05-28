@@ -126,7 +126,7 @@ export default function HomePage() {
               className="text-[#f97316] font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2"
             >
               <span className="w-8 h-px bg-[#f97316] inline-block" />
-              Taunton&apos;s Trusted Roofing &amp; Solar Specialists
+              Protecting Homes &bull; Powering Futures
             </motion.p>
 
             <motion.h1
@@ -135,8 +135,8 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-black text-white uppercase leading-tight tracking-tight mb-5"
             >
-              Protecting Homes.<br />
-              <span className="text-[#f97316]">Powering Futures.</span>
+              Expert Roofers in<br />
+              <span className="text-[#f97316]">Taunton, Somerset.</span>
             </motion.h1>
 
             <motion.p
@@ -145,7 +145,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-white/85 text-lg max-w-lg mb-8 leading-relaxed"
             >
-              Expert roofing and solar installation across the South West. Quality workmanship, honest pricing, and 30 years of combined experience.
+              Taunton&apos;s trusted roofing and solar specialists. Quality workmanship, honest pricing, and 30 years of combined experience serving Somerset and the South West.
             </motion.p>
 
             <motion.div
@@ -336,6 +336,73 @@ export default function HomePage() {
 
       {/* ── COVERAGE MAP ── */}
       <CoverageMap />
+
+      {/* ── TAUNTON LOCAL SEO SECTION ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <AnimatedSection className="text-center mb-14">
+            <div className="flex items-center justify-center gap-4 mb-3">
+              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Based in Taunton</span>
+              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight">
+              Roofing &amp; Solar Services in Taunton, Somerset
+            </h2>
+            <p className="text-gray-500 mt-3 max-w-2xl mx-auto text-sm">
+              ProLine Roofing &amp; Solar is Taunton&apos;s most trusted local roofing and solar company. Based on Hardys Road, TA2, we&apos;ve been serving homeowners and businesses across Taunton, Bridgwater, Wellington, Yeovil and the wider Somerset area for over 30 years.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <AnimatedSection direction="left" className="bg-gray-50 border border-gray-100 p-8">
+              <h3 className="text-xl font-black text-[#1a1a1a] uppercase mb-4">
+                Roofing in Taunton
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Whether you need an emergency roof repair after a Somerset storm, a complete new roof installation, a GRP flat roof on your extension, or chimney repointing on a Victorian terrace in Taunton — ProLine has the skills, materials and local knowledge to get it done properly.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                We work on all property types across Taunton and Somerset: detached houses, terraced homes, bungalows, commercial premises and new builds. Every job comes with a written workmanship guarantee and full public liability insurance.
+              </p>
+              <ul className="space-y-2 mb-6">
+                {["Roof Repairs Taunton", "New Roofs Taunton", "Flat Roofing Taunton", "Chimney Repairs Taunton", "Fascias & Guttering Taunton", "24/7 Emergency Roofer Taunton"].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 text-[#f97316] shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/roofing" className="inline-flex items-center gap-2 bg-[#1a1a1a] hover:bg-[#2a2a2a] text-white font-black text-xs uppercase tracking-widest px-6 py-3 transition-all">
+                Roofing Services <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection direction="right" className="bg-gray-50 border border-gray-100 p-8">
+              <h3 className="text-xl font-black text-[#1a1a1a] uppercase mb-4">
+                Solar Panels in Taunton
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Somerset enjoys some of the best solar radiation in the UK, making Taunton an excellent location for solar PV installation. As MCS-certified solar installers based in Taunton, ProLine designs and fits solar systems that are optimised for local conditions — and handles everything from DNO applications to grid connection.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Typical Taunton homeowners with a 4kW solar system save between £800 and £1,200 per year on electricity bills, and earn additional income through the Smart Export Guarantee (SEG) tariff.
+              </p>
+              <ul className="space-y-2 mb-6">
+                {["Solar PV Installation Taunton", "Battery Storage Somerset", "EV Charging Points Taunton", "MCS Certified Installers", "SEG Export Tariff Setup", "Free Solar Survey Taunton"].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 text-[#f97316] shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/solar" className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black text-xs uppercase tracking-widest px-6 py-3 transition-all">
+                Solar Services <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
 
       {/* ── TESTIMONIALS ── */}
       <section className="py-20 bg-white">
