@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             { value: 30, suffix: "+", label: "Years Combined Experience" },
-            { value: 1000, suffix: "+", label: "Projects Completed" },
+            { value: 300, suffix: "+", label: "Projects Completed" },
             { value: 5, suffix: "★", label: "Google Rating" },
             { value: 100, suffix: "%", label: "Free Quotes" },
           ].map(({ value, suffix, label }) => (
