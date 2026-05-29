@@ -258,19 +258,19 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {services.map(({ Icon, title, href, desc }, i) => (
               <AnimatedSection key={title} delay={i * 0.07}>
-                <Link
-                  href={href}
-                  className="group border border-gray-200 p-6 flex flex-col items-center text-center hover:border-[#f97316] hover:shadow-lg transition-all duration-300 h-full"
-                >
+                <div className="group border border-gray-200 p-6 flex flex-col items-center text-center hover:border-[#f97316] hover:shadow-lg transition-all duration-300 h-full">
                   <div className="mb-4 text-[#f97316] group-hover:scale-110 transition-transform duration-300">
                     <Icon />
                   </div>
                   <h3 className="font-black text-[12px] uppercase tracking-wider text-gray-900 mb-2">{title}</h3>
                   <p className="text-gray-500 text-[11px] leading-relaxed">{desc}</p>
-                  <span className="mt-3 text-[#f97316] text-xs font-bold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Link
+                    href={href}
+                    className="mt-3 text-[#f97316] text-xs font-bold flex items-center gap-1 hover:gap-2 transition-all"
+                  >
                     Learn more <ArrowRight className="w-3 h-3" />
-                  </span>
-                </Link>
+                  </Link>
+                </div>
               </AnimatedSection>
             ))}
           </div>
