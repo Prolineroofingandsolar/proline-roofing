@@ -1,0 +1,11 @@
+# Cloudflare Workers Assets caching rules.
+# More specific paths take precedence over the broad /* rule.
+
+# Default: always revalidate so a new deploy shows immediately.
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Content-hashed build assets never change for a given filename
+# (the filename itself changes on each build) — cache them permanently.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
