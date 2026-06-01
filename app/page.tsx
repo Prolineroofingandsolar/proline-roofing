@@ -91,18 +91,6 @@ const services = [
   { Icon: IconEmergency, title: "Emergency Call-Out", href: "/services/emergency-roofing", desc: "24/7 emergency roofing — we're there when you need us most." },
 ];
 
-const locations = [
-  { name: "Taunton", href: "/roofer/taunton", county: "Somerset" },
-  { name: "Bridgwater", href: "/roofer/bridgwater", county: "Somerset" },
-  { name: "Bath", href: "/roofer/bath", county: "Somerset" },
-  { name: "Bristol", href: "/roofer/bristol", county: "Bristol" },
-  { name: "Exeter", href: "/roofer/exeter", county: "Devon" },
-  { name: "Yeovil", href: "/roofer/yeovil", county: "Somerset" },
-  { name: "Weston-super-Mare", href: "/roofer/weston-super-mare", county: "N. Somerset" },
-  { name: "Wellington", href: "/roofer/wellington", county: "Somerset" },
-  { name: "Burnham-on-Sea", href: "/roofer/burnham-on-sea", county: "Somerset" },
-  { name: "Glastonbury", href: "/roofer/glastonbury", county: "Somerset" },
-];
 
 const testimonials = [
   { name: "Rebecca", location: "Axminster", rating: 5, text: "Roof and chimney repointing. Brilliant. All very friendly and polite. Did a brilliant job and cleaned up nicely after themselves :) very pleased.", service: "Chimney Work" },
@@ -398,42 +386,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── AREAS WE COVER ── */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection className="text-center mb-10">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Coverage</span>
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-            </div>
-            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight">Areas We Cover</h2>
-            <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">Based in Taunton, we serve customers across Somerset, Devon, Bristol, Bath and the wider South West.</p>
-          </AnimatedSection>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {locations.map(({ name, href, county }) => (
-              <AnimatedSection key={name}>
-                <Link
-                  href={href}
-                  className="group border border-gray-200 bg-white hover:border-[#f97316] hover:shadow-md p-4 text-center transition-all block"
-                >
-                  <MapPin className="w-5 h-5 text-[#f97316] mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                  <p className="font-black text-[#1a1a1a] text-sm group-hover:text-[#f97316] transition-colors">{name}</p>
-                  <p className="text-gray-400 text-xs mt-0.5">{county}</p>
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-          <AnimatedSection className="text-center mt-8">
-            <Link href="/locations" className="inline-flex items-center gap-2 text-[#f97316] font-black text-sm uppercase tracking-widest hover:underline">
-              View All Areas <ArrowRight className="w-4 h-4" />
-            </Link>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* ── CTA ── */}
-      <CTASection />
+      <CTASection
+        heading="Free Quote or Emergency Call-Out?"
+        subtext="Storm damage, active leak, or just need a no-obligation quote? Call us any time — we cover Taunton, Bridgwater and all of Somerset."
+      />
     </>
   );
 }
