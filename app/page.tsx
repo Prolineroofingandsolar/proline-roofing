@@ -8,7 +8,6 @@ import {
 import CTASection from "@/components/CTASection";
 import GoogleReviewButton from "@/components/GoogleReviewButton";
 import AnimatedSection from "@/components/AnimatedSection";
-import CountUp from "@/components/CountUp";
 import CoverageMap from "@/components/CoverageMap";
 
 /* ── Service icons ── */
@@ -140,26 +139,27 @@ export default function HomePage() {
               className="text-[#f97316] font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2"
             >
               <span className="w-8 h-px bg-[#f97316] inline-block" />
-              Taunton&apos;s Trusted Roofing &amp; Solar Specialists
+              Local Roofers &amp; Solar Installers — Taunton, Somerset
             </motion.p>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-black text-white uppercase leading-tight tracking-tight mb-5"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black text-white uppercase leading-tight tracking-tight mb-5"
             >
-              Protecting Homes.<br />
-              <span className="text-[#f97316]">Powering Futures.</span>
+              Trusted Roofers &amp;<br />
+              <span className="text-[#f97316]">Solar Installers</span><br />
+              in Taunton, Somerset
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-white/85 text-lg max-w-lg mb-8 leading-relaxed"
+              className="text-white/85 text-base max-w-lg mb-8 leading-relaxed"
             >
-              Expert roofing and solar installation across the South West. Quality workmanship, honest pricing, and 30 years of combined experience.
+              Roof repairs, flat roofs, re-roofs, chimney work, leadwork, guttering and solar PV installations across Taunton, Bridgwater, Wellington and Somerset.
             </motion.p>
 
             <motion.div
@@ -240,14 +240,14 @@ export default function HomePage() {
       <section className="bg-[#1a1a1a] border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
           {[
-            { value: 30, suffix: "+", label: "Years Experience" },
-            { value: 300, suffix: "+", label: "Projects Completed" },
-            { value: 5, suffix: "★", label: "Google Rating" },
-            { value: 100, suffix: "%", label: "Free Quotes" },
-          ].map(({ value, suffix, label }, i) => (
+            { value: "30+", label: "Years Experience" },
+            { value: "300+", label: "Projects Completed" },
+            { value: "5★", label: "Google Rating" },
+            { value: "£5m", label: "Public Liability" },
+          ].map(({ value, label }, i) => (
             <AnimatedSection key={label} delay={i * 0.1} className="py-7 px-4 text-center group">
               <div className="text-4xl md:text-5xl font-black text-[#f97316] leading-none tracking-tight">
-                <CountUp end={value} suffix={suffix} />
+                {value}
               </div>
               <div className="text-gray-400 text-xs uppercase tracking-widest mt-2">{label}</div>
             </AnimatedSection>
