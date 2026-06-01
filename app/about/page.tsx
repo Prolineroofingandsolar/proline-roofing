@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, MapPin, Phone } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, MapPin, Phone, Shield, Award, FileText } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
 import CountUp from "@/components/CountUp";
@@ -143,13 +143,91 @@ export default function AboutPage() {
               Based in Taunton, we travel across the South West to deliver the same quality service wherever you are.
             </p>
             <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-              {["Taunton", "Bridgwater", "Wellington", "Yeovil", "Exeter", "Plymouth", "Bristol", "Bath", "Glastonbury", "Weston-super-Mare", "Dorchester", "Barnstaple", "Truro"].map((town) => (
-                <span key={town} className="bg-white/10 border border-white/20 text-white px-3 py-1.5 text-xs font-semibold">
-                  {town}
-                </span>
+              {[
+                { name: "Taunton", href: "/roofer/taunton" },
+                { name: "Bridgwater", href: "/roofer/bridgwater" },
+                { name: "Wellington", href: "/roofer/wellington" },
+                { name: "Yeovil", href: "/roofer/yeovil" },
+                { name: "Exeter", href: "/roofer/exeter" },
+                { name: "Bristol", href: "/roofer/bristol" },
+                { name: "Bath", href: "/roofer/bath" },
+                { name: "Glastonbury", href: "/roofer/glastonbury" },
+                { name: "Weston-super-Mare", href: "/roofer/weston-super-mare" },
+                { name: "Burnham-on-Sea", href: "/roofer/burnham-on-sea" },
+              ].map(({ name, href }) => (
+                <Link key={name} href={href} className="bg-white/10 border border-white/20 hover:border-[#f97316] hover:bg-[#f97316]/20 text-white px-3 py-1.5 text-xs font-semibold transition-colors">
+                  {name}
+                </Link>
               ))}
             </div>
-            <p className="text-gray-500 text-xs mt-6 italic">Not on the list? Call us — we may still be able to help.</p>
+            <p className="text-gray-500 text-xs mt-6 italic">Not on the list? Call us — we cover the whole South West.</p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Accreditations & Trust */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <AnimatedSection className="text-center mb-14">
+            <div className="flex items-center justify-center gap-4 mb-3">
+              <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Credentials</span>
+              <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
+            </div>
+            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight">Fully Qualified &amp; Accredited</h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm">
+              We believe in complete transparency. Below is a summary of our qualifications, insurance and credentials for your peace of mind.
+            </p>
+          </AnimatedSection>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Shield,
+                title: "Public Liability Insurance",
+                desc: "We hold £5 million public liability insurance on all contracts. Certificate available on request.",
+              },
+              {
+                icon: Shield,
+                title: "Employers' Liability Insurance",
+                desc: "All team members are covered under our employers' liability policy in line with UK legal requirements.",
+              },
+              {
+                icon: Award,
+                title: "MCS Accredited — Solar Installations",
+                desc: "Our solar installations are MCS-accredited, meaning you qualify for the Smart Export Guarantee and all eligible government incentives.",
+              },
+              {
+                icon: CheckCircle,
+                title: "30+ Years Combined Experience",
+                desc: "Our lead installer has over 30 years of hands-on roofing experience across residential and commercial properties in Somerset and the South West.",
+              },
+              {
+                icon: FileText,
+                title: "Written Guarantees on All Work",
+                desc: "Every job — from a single tile repair to a full re-roof — comes with a written workmanship guarantee. We're here for the long term.",
+              },
+              {
+                icon: Star,
+                title: "5-Star Rated on Google",
+                desc: "We have a 5-star rating on Google from verified customers across Somerset. Read their stories on our Reviews page.",
+              },
+            ].map(({ icon: Icon, title, desc }, i) => (
+              <AnimatedSection key={title} delay={i * 0.08}>
+                <div className="group p-7 border border-gray-100 hover:border-[#f97316] hover:shadow-md transition-all h-full">
+                  <div className="w-11 h-11 bg-[#f97316]/10 group-hover:bg-[#f97316] flex items-center justify-center mb-4 transition-colors">
+                    <Icon className="w-5 h-5 text-[#f97316] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-black text-[#1a1a1a] text-sm uppercase tracking-wide mb-2">{title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection className="text-center mt-10">
+            <p className="text-gray-500 text-sm mb-4">Want to verify our credentials? Call us or request copies of our certificates directly.</p>
+            <a href="tel:07587478826" className="inline-flex items-center gap-2 bg-[#1a1a1a] text-white font-black px-6 py-3 uppercase tracking-widest text-sm hover:bg-[#2a2a2a] transition-colors">
+              <Phone className="w-4 h-4" /> 07587 478826
+            </a>
           </AnimatedSection>
         </div>
       </section>

@@ -7,21 +7,48 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Roofing Services", href: "/roofing" },
   { label: "Solar Services", href: "/solar" },
+  { label: "Blog & Advice", href: "/blog" },
+  { label: "Our Projects", href: "/projects" },
+  { label: "Customer Reviews", href: "/reviews" },
   { label: "About Us", href: "/about" },
-  { label: "Projects", href: "/projects" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Get a Free Quote", href: "/quote" },
+];
+
+const serviceLinks = [
+  { label: "All Services", href: "/services" },
+  { label: "Roof Repairs", href: "/services/roof-repairs" },
+  { label: "Flat Roofing", href: "/services/flat-roofing" },
+  { label: "Slate Roofing", href: "/services/slate-roofing" },
+  { label: "Chimney Repairs", href: "/services/chimney-repairs" },
+  { label: "Guttering", href: "/services/guttering" },
+  { label: "Fascias & Soffits", href: "/services/fascias-soffits" },
+  { label: "Emergency Roofing", href: "/services/emergency-roofing" },
+  { label: "Roofing FAQs", href: "/faq" },
+];
+
+const locationLinks = [
+  { label: "Roofer Taunton", href: "/roofer/taunton" },
+  { label: "Roofer Bridgwater", href: "/roofer/bridgwater" },
+  { label: "Roofer Bath", href: "/roofer/bath" },
+  { label: "Roofer Bristol", href: "/roofer/bristol" },
+  { label: "Roofer Exeter", href: "/roofer/exeter" },
+  { label: "Roofer Yeovil", href: "/roofer/yeovil" },
+  { label: "Roofer Weston-super-Mare", href: "/roofer/weston-super-mare" },
+  { label: "All Locations", href: "/locations" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-white">
       <div className="max-w-7xl mx-auto px-4 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* Top row: brand + quick links + services + locations */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Col 1 – Brand */}
           <div>
             <Logo dark className="mb-4" />
             <p className="text-gray-400 text-sm leading-relaxed mt-4">
-              Roofing and solar specialists based in Taunton, Somerset.
+              Expert roofing and solar installation across Somerset, Devon, Bristol and Bath. Based in Taunton — serving the whole South West.
             </p>
             <p className="text-gray-400 text-sm mt-5 mb-3">Happy with our work?</p>
             <GoogleReviewButton variant="solid" label="Review us on Google" className="text-xs px-5 py-3" />
@@ -46,7 +73,48 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 – Contact */}
+          {/* Col 3 – Services */}
+          <div>
+            <h3 className="text-white font-black text-xs uppercase tracking-[0.2em] mb-5 pb-2 border-b border-[#f97316]">
+              Our Services
+            </h3>
+            <ul className="space-y-2.5">
+              {serviceLinks.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
+                    className="text-gray-400 hover:text-[#f97316] text-sm transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 4 – Locations */}
+          <div>
+            <h3 className="text-white font-black text-xs uppercase tracking-[0.2em] mb-5 pb-2 border-b border-[#f97316]">
+              Areas We Cover
+            </h3>
+            <ul className="space-y-2.5">
+              {locationLinks.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
+                    className="text-gray-400 hover:text-[#f97316] text-sm transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom row: contact + quote */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-10 border-t border-white/10">
+          {/* Contact */}
           <div>
             <h3 className="text-white font-black text-xs uppercase tracking-[0.2em] mb-5 pb-2 border-b border-[#f97316]">
               Contact Us
@@ -77,13 +145,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 – Get a Free Quote */}
+          {/* Get a Free Quote */}
           <div>
             <h3 className="text-white font-black text-xs uppercase tracking-[0.2em] mb-5 pb-2 border-b border-[#f97316]">
               Get a Free Quote
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              Get in touch today for a free, no obligation quote for your roofing or solar project.
+              Get in touch today for a free, no obligation quote for your roofing or solar project. We respond within 24 hours.
             </p>
             <Link
               href="/quote"
