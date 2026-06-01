@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileStickyBar from "@/components/MobileStickyBar";
 
 export const metadata: Metadata = {
   title: {
@@ -187,10 +188,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className="min-h-full flex flex-col antialiased">
+      <body className="min-h-full flex flex-col antialiased pb-[56px] lg:pb-0">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <MobileStickyBar />
       </body>
     </html>
   );
