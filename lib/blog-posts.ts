@@ -3,7 +3,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string;
-  category: "roofing" | "solar" | "guides" | "local" | "maintenance";
+  category: 'roofing' | 'solar' | 'guides' | 'local' | 'maintenance';
   tags: string[];
   publishedAt: string;
   readTime: number;
@@ -15,1550 +15,1684 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "roof-repair-costs-somerset-2024",
     title: "Roof Repair Costs in Somerset: Complete 2024 Guide",
-    excerpt: "A comprehensive breakdown of roofing repair costs across Somerset — from minor tile replacements to major structural work. Find out what affects price and how to avoid overpaying.",
+    excerpt: "Wondering how much roof repairs cost in Somerset? This complete guide covers everything from minor tile fixes to major structural repairs, with real price ranges and tips for avoiding rogue traders.",
     category: "guides",
-    tags: ["roof repair", "costs", "somerset", "budget guide"],
-    publishedAt: "2024-02-15",
-    readTime: 7,
-    author: "ProLine Roofing & Solar",
     featured: true,
-    content: `## How Much Does a Roof Repair Cost in Somerset?
+    tags: ["roof repair costs", "Somerset roofing", "roofing prices", "roof quotes"],
+    publishedAt: "2024-01-15",
+    readTime: 8,
+    author: "ProLine Roofing & Solar",
+    content: `Getting a roof repaired in Somerset can feel daunting — particularly when you're not sure what a fair price looks like. This guide breaks down typical costs across all repair types, explains what drives prices up or down, and gives you the tools to get a fair deal from a reputable roofer.
 
-Roof repair costs in Somerset vary enormously depending on the type and extent of damage, the materials involved, and the access requirements. This guide gives you realistic price ranges so you know what to expect before you call a roofer.
+## Minor Roof Repairs (£150–£500)
 
-## Minor Roof Repairs: £150–£500
+Minor repairs are the most common call-outs we receive. These typically involve replacing a small number of broken, slipped or missing tiles, re-bedding ridge tiles, or re-pointing around a chimney stack.
 
-Minor repairs include replacing a handful of cracked or missing tiles, resealing a small section of flashing, or patching a localised flat roof leak. These jobs are typically completed in a few hours and don't require scaffolding.
+A single tile replacement, including callout, materials and labour, typically costs between £150 and £300. If you have several tiles to replace at the same time, the per-tile cost drops significantly because the scaffolding or ladder work is already set up. Re-bedding two or three ridge tiles usually falls in the £200–£400 range. These are relatively quick jobs but should never be ignored — a single missing tile can allow rainwater to penetrate your roof deck and cause far more expensive timber or insulation damage within weeks.
 
-Examples of minor repairs:
-- Replacing 3–10 broken or missing concrete tiles: £150–£300
-- Re-sealing lead flashing around a chimney: £200–£400
-- Patching a small flat roof blister or split: £200–£450
-- Re-bedding 2–4 loose ridge tiles: £200–£400
+## Medium Roof Repairs (£500–£2,000)
 
-## Medium Roof Repairs: £500–£2,000
+This price band covers a wider range of work: section re-roofing (stripping and re-laying tiles over a portion of the roof), chimney re-pointing or flaunching, lead flashing replacement, and valley gutter repairs.
 
-Medium repairs involve more extensive work — perhaps re-bedding a full ridge line, replacing a section of underfelt, repairing a significant flat roof area, or carrying out comprehensive chimney work. Scaffolding may be required.
+A full valley replacement — removing the old lead or mortar-bedded valley, fitting a new lead or GRP valley — typically costs £600–£1,200 depending on length and access. Chimney flashing replacement (cutting out old flashings and fitting new Code 4 lead) usually comes in at £400–£800. If your flat roof section needs a full felt or EPDM replacement, expect to pay £500–£1,500 for a typical garage or bay window roof, depending on size and material chosen.
 
-Examples of medium repairs:
-- Full ridge tile re-bedding and repointing: £500–£900
-- Lead valley replacement on one side of a roof: £600–£1,400
-- Chimney repointing and lead flashing replacement: £500–£1,500
-- Flat roof repair or patch over 5–10m²: £400–£1,200
+## Major Structural Repairs (£2,000+)
 
-## Major Roof Repairs: £2,000–£8,000+
+Major repairs involve significant structural work: replacing roof timbers (rafters, purlins, ridge boards), repairs following storm damage, or dealing with widespread rot or collapse. These jobs almost always require scaffolding, skip hire and structural assessment.
 
-Major works might include partial re-tiling, structural repairs to rafters or timbers, full flat roof replacement, or extensive leadwork. These projects typically require full scaffolding and may take several days.
+Replacing a section of rotted rafters might cost £1,500–£4,000 depending on extent. If your roof needs a partial re-structure alongside new tiling, costs can rise to £5,000–£10,000 for a typical semi-detached home. For a full re-roof on a 3-bedroom detached house in Somerset, budget £8,000–£18,000 depending on material choice (concrete tiles being the most affordable, natural slate the most expensive).
 
-Examples of major repairs:
-- Partial re-tiling (one slope of a semi-detached): £2,500–£6,000
-- Full flat roof replacement on a garage or extension: £2,500–£6,000
-- Replacing rotten roof timbers alongside re-tiling: £3,000–£8,000
-- Full chimney stack rebuild: £2,000–£6,000
+## Factors That Affect Roof Repair Costs in Somerset
 
-## What Affects the Cost of Roof Repairs?
+**Access and scaffolding**: A steep pitch or high ridge height may require full scaffold erection (£600–£1,500) rather than a simple ladder or tower, adding significantly to the cost of small repairs.
 
-**Type of material:** Natural slate is more expensive to repair than concrete tiles. Lead flashings cost more than aluminium alternatives.
+**Roof pitch**: Steeper roofs take longer to work on safely and require more care with materials. A 45-degree pitch will cost more to repair than a 30-degree one.
 
-**Access and scaffolding:** Any pitched roof work above 3m typically requires scaffolding, which adds £500–£1,500 depending on the size and duration.
+**Material choice**: Natural Welsh slate costs roughly three times more per tile than a standard concrete plain tile. Clay tiles fall in between. If you're in a conservation area or working on a listed building in Somerset, you may be required to match original materials.
 
-**Location in Somerset:** Rural locations with longer travel times may incur higher call-out costs. Urban areas like Taunton, Bridgwater and Bath are within easy reach for most Somerset roofers.
+**Time of year**: Emergency winter repairs or work in wet conditions may carry a premium. Booking in advance for spring or summer work is generally cheaper.
 
-**Urgency:** Emergency call-outs attract a premium, typically £50–£150 above standard day rates.
+**Location within Somerset**: Accessibility can affect costs. Rural properties around the Quantocks, Exmoor or the Somerset Levels may require longer travel time, which some contractors build into their pricing.
 
-**Roof pitch and complexity:** Steep pitches, hipped roofs and complex valley arrangements take longer and cost more.
+## VAT on Roofing Work
 
-## How to Avoid Overpaying
+Roofing work on residential properties is generally subject to 20% standard rate VAT. However, there are important exceptions. If your home is empty and has been so for two or more years, reduced rate VAT (5%) applies. New builds carry 0% VAT on construction work. Always ask whether quotes include or exclude VAT — reputable contractors should be clear about this upfront.
 
-1. **Get at least two written quotes.** Reputable roofers should provide a written, itemised quote before any work begins.
+## Getting Roof Repair Quotes in Somerset
 
-2. **Check insurance certificates.** Ask to see public liability insurance (minimum £1 million). ProLine holds £5 million.
+Always get at least three written quotes for any job over £500. A written quote should specify: the work to be done, materials to be used (including brand/specification), whether scaffolding is included, payment schedule, and the guarantee offered on workmanship.
 
-3. **Avoid large upfront cash payments.** A deposit is reasonable for large jobs, but paying more than 30% upfront is a red flag.
+Be wary of any contractor who insists on cash only, requests large upfront payments, or cannot provide a business address. Check that they carry public liability insurance — a minimum of £1 million is standard, with £2–5 million preferable for larger jobs.
 
-4. **Beware of storm-chasing traders.** After bad weather, unscrupulous traders go door-to-door. Always use a local, established company with a track record you can verify.
+## Avoiding Rogue Traders
 
-5. **Check Companies House.** Verify the company is registered and has been trading for several years.
+Somerset, like the rest of the UK, unfortunately sees a number of travelling rogue traders, particularly after storms. Warning signs include: knocking unsolicited, claiming to have spotted damage while passing, asking for cash only, providing no written quote, and pressuring you to agree immediately.
 
-## VAT on Roof Repairs
+Legitimate roofers will always be happy to provide a written quote, give you time to consider it, and show proof of insurance. Membership of trade bodies such as the National Federation of Roofing Contractors (NFRC) or the Confederation of Roofing Contractors (CORC) provides an additional layer of reassurance.
 
-Standard rate VAT (20%) applies to most roof repair and replacement work. However, if a property is empty and has been for at least two years, or if it is a listed building, reduced rates may apply. Always check with your roofer and HMRC guidance.
-
-## Does Insurance Cover Roof Repairs?
-
-Buildings insurance typically covers sudden events — storm damage, falling trees, impact damage. Gradual wear and tear is almost always excluded. If you're making a claim, a written damage report from your roofer will help support it.
-
-For storm damage claims, contact your insurer first, document the damage thoroughly, and request a temporary fix to prevent further deterioration while the claim is processed.
-
-## Summary
-
-Roof repair costs in Somerset range from £150 for minor work to £8,000+ for major structural repairs. Getting a free, no-obligation written quote from a reputable local roofer is always the best first step. ProLine Roofing & Solar offers free surveys and written quotes across Somerset and the South West.`,
+At ProLine Roofing & Solar, all our quotes are free, written and fixed-price. We carry full public liability insurance and offer a written workmanship guarantee on every job. Call us on 07587 478826 for an honest, no-obligation assessment.`,
   },
   {
     slug: "signs-you-need-a-new-roof",
     title: "10 Signs You Need a New Roof (Before It's Too Late)",
-    excerpt: "Ignoring roof problems is an expensive mistake. Here are the 10 key warning signs that your roof is approaching the end of its life — and what to do about them.",
+    excerpt: "Your roof rarely fails all at once — it deteriorates gradually over years. Knowing the warning signs early can save you thousands in emergency repairs or interior damage.",
     category: "roofing",
-    tags: ["new roof", "signs", "roof replacement", "advice"],
-    publishedAt: "2024-03-10",
-    readTime: 6,
-    author: "ProLine Roofing & Solar",
     featured: true,
-    content: `## Is It Time for a New Roof?
+    tags: ["new roof", "roof replacement", "roof warning signs", "roof age"],
+    publishedAt: "2024-02-10",
+    readTime: 7,
+    author: "ProLine Roofing & Solar",
+    content: `Most homeowners only think about their roof when something goes visibly wrong — a drip through the ceiling, a tile landing in the garden, or an obvious hole. By that point, damage has usually been building for months or years. Catching the warning signs early can mean the difference between a simple repair and a full re-roof.
 
-Most homeowners don't think about their roof until something goes wrong. But by the time water is coming through your ceiling, you may be facing much more than a simple tile replacement. Here are the 10 warning signs every Somerset homeowner should know.
+## 1. Your Roof Is Over 25 Years Old
 
-## 1. Your Roof Is Over 25–30 Years Old
+Most concrete tile roofs in the UK have a lifespan of 30–50 years, but the underlays, flashings and timbers underneath often deteriorate faster. If your roof was last replaced or substantially repaired more than 25 years ago, it deserves a professional inspection, regardless of how it looks from the ground. Natural slate roofs can last 100 years or more, but clay tile roofs from the 1970s and 1980s may be reaching end of life.
 
-Concrete tile roofs typically last 30–50 years. If yours was last replaced in the 1990s or earlier, it may be approaching the end of its serviceable life — even if it looks acceptable from the ground. An annual inspection will tell you its true condition.
+## 2. Sagging or Bowing Roof Sections
 
-## 2. You Can See Daylight Through the Roof
+A roof that sags or dips in any section is a serious warning sign. It usually indicates failed or rotted roof timbers — rafters, purlins or the ridge board. This is a structural issue and should be assessed by a qualified roofer immediately. Do not ignore sagging; it can progress to partial collapse, particularly after heavy snow or prolonged rainfall.
 
-Stand in your loft on a bright day. If you can see pinpricks of light coming through the roof boards or around the eaves, your underfelt has failed and your roof needs attention urgently.
+## 3. Daylight Through the Roof Boards
 
-## 3. Water Stains on Your Ceilings or Walls
+If you can stand in your loft on a sunny day and see pinpricks or shafts of daylight coming through the roof boards, you have gaps that are letting in air, moisture and eventually water. While some light around vents or skylights is normal, light through the tiles or boards themselves is not. Check your loft on a bright morning.
 
-Brown rings or damp patches on upstairs ceilings are a sure sign of water ingress. The source may be a failed flashing, a missing tile, or widespread underfelt failure. Don't wait — water damage spreads and becomes exponentially more expensive.
+## 4. Missing, Cracked or Slipped Tiles
 
-## 4. Missing, Cracked or Curling Tiles
+Individual tiles can be replaced, but if you're seeing widespread cracking, slipping or missing tiles across multiple areas of the roof, it indicates the roof is losing its structural integrity. Concrete tiles become brittle and porous with age; clay tiles can crack in freeze-thaw cycles. A few missing tiles here and there every year is normal wear; significant regular losses are not.
 
-Individual broken tiles can be replaced, but widespread cracking, curling or lifting is a sign of age-related material failure. When tiles start to fail in numbers, the most cost-effective solution is usually a full re-roof.
+## 5. Granule Loss on Felt Roofs
 
-## 5. Your Roof Is Sagging or Dipping
+If you have a flat felt roof (common on garages, extensions and bay windows), look in your gutters for granules — the small grit coating on the felt surface. Heavy granule loss exposes the underlying bitumen, which then becomes brittle and cracks. This is a sign your flat roof is approaching the end of its serviceable life.
 
-Any visible sagging, dipping or waviness in your roofline is a structural concern. This can indicate rotten decking, damaged rafters or sarking boards, or in serious cases, structural movement. This always needs professional assessment.
+## 6. Moss, Lichen and Algae Growth
 
-## 6. You've Had Multiple Repairs in Recent Years
+Somerset's damp, mild climate makes it particularly prone to moss and lichen growth on roofs. While a thin covering of moss is largely cosmetic, heavy moss holds moisture against your tiles, accelerating freeze-thaw damage and eventually forcing tiles apart. Lichen is harder to remove and often indicates tiles that are already porous and weakening. Heavy, widespread growth across an older roof is a red flag.
 
-If you've called a roofer for repairs three or four times in the past few years, the cost of continuing repairs may now exceed the cost of a full replacement. Ask your roofer for an honest assessment.
+## 7. Water Stains on Interior Ceilings or Walls
 
-## 7. Granule Loss from Tiles
+Brown or yellow staining on ceilings, particularly after heavy rain, is a clear sign that water is getting into your roof structure. It's important to note that the visible stain is rarely directly below the entry point — water can travel along rafters or joists before dripping. Don't patch the ceiling until the roof cause has been identified and fixed.
 
-Concrete tiles shed a fine granule coating as they age. Significant granule buildup in gutters or around downpipes after heavy rain is a sign of advanced tile degradation.
+## 8. High Energy Bills
 
-## 8. Moss and Lichen Growth
+A poorly performing roof — particularly one with a degraded or missing underlay — loses heat rapidly. If you've noticed a significant rise in your heating bills without an obvious cause, your roof's thermal performance may have deteriorated. Gaps in the underlay, failed insulation, or poor ventilation all contribute to heat loss that ultimately comes out of your wallet.
 
-Some moss growth on north-facing slopes is normal in Somerset's wet climate. Extensive, thick moss and lichen growth across the roof can indicate moisture retention, tile porosity issues, and accelerated wear.
+## 9. Persistent Draughts in Upper Rooms
 
-## 9. Failed Underfelt
+Similar to the energy bill issue, draughts felt in upstairs rooms — particularly near eaves or in loft conversions — can indicate gaps in the roof structure, failed pointing around chimneys, or deteriorated flashing. A warm, well-sealed roof should not allow noticeable draughts.
 
-If you can see your loft rafters without any felt covering, or the felt is brittle, torn, or hanging in places, your secondary waterproofing has failed. Modern breathable membranes are vastly superior to old bitumen felt.
+## 10. Repeated Repairs Over a Short Period
 
-## 10. High Energy Bills
-
-While not exclusively a roofing issue, poor roof insulation contributes to heat loss. A poorly ventilated or failing roof system can also allow condensation and moisture into the loft insulation, significantly reducing its effectiveness.
+If you find yourself calling a roofer every six to twelve months for new problems — a new leak here, more ridge tiles there, another section of flashing failing — this pattern tells you the roof is in systemic decline rather than experiencing isolated issues. At some point, continuing to repair is false economy compared to a full re-roof with a 10–20 year workmanship guarantee.
 
 ## What to Do Next
 
-If you recognise two or more of these signs, arrange a free roof survey with a qualified local roofer. ProLine Roofing & Solar offers free, no-obligation inspections across Somerset. We'll give you an honest assessment of whether you need repairs, a partial re-roof, or a full replacement — and a clear written quote either way.`,
+If you've identified two or more of the above warning signs, the sensible step is to arrange a professional inspection. A good roofer will conduct a full survey, photograph any issues and provide a written report with repair or replacement recommendations — without any obligation to proceed.
+
+ProLine Roofing & Solar offers free roof surveys across Somerset and the South West. Call 07587 478826 to arrange an inspection at a time that suits you.`,
   },
   {
     slug: "tile-vs-slate-roofing-somerset",
     title: "Tile vs Slate Roofing: Which is Best for Somerset Homes?",
-    excerpt: "Choosing between tiles and slate for your Somerset home depends on your property type, budget, and local planning requirements. Here's everything you need to know.",
+    excerpt: "Choosing between concrete tiles, clay tiles and natural slate affects the look, longevity and cost of your roof for decades. Here's what Somerset homeowners need to know.",
     category: "roofing",
-    tags: ["tiles", "slate", "roofing materials", "somerset", "advice"],
-    publishedAt: "2024-04-05",
-    readTime: 6,
+    tags: ["roof tiles", "slate roofing", "concrete tiles", "clay tiles", "Somerset"],
+    publishedAt: "2024-03-05",
+    readTime: 7,
     author: "ProLine Roofing & Solar",
-    content: `## Tile vs Slate: The Core Choice
+    content: `When it comes to re-roofing a Somerset property, material choice is one of the most important decisions you'll make. The right material depends on your budget, the age and style of your property, planning constraints and how long you plan to stay in the home. Here's a detailed comparison of the four main options.
 
-When it comes to re-roofing a property in Somerset, the most common question homeowners ask is: should I use tiles or slate? The honest answer is: it depends on your property, your budget, and your local planning requirements.
+## Concrete Tiles
 
-## Concrete Tiles: The Practical Choice
+Concrete tiles are the most widely used roofing material in the UK and the most affordable option for a full re-roof. They are manufactured to consistent dimensions, making installation straightforward, and are available in a wide range of profiles (plain tile, pantile, interlocking large format) and colours.
 
-Concrete plain tiles and interlocking tiles are the most popular choice for modern and post-war homes in Somerset. They're durable, relatively low-cost, and available in a wide range of profiles and colours.
+**Cost**: £6,000–£12,000 for a typical 3-bed semi including labour and scaffolding.
+**Lifespan**: 30–50 years, though the roof structure and underlay may need attention sooner.
+**Weight**: Moderate — most roof structures can handle concrete tiles without modification.
+**Appearance**: Functional but can look flat or uniform. Colour tends to fade over 20+ years.
+**Planning**: Generally acceptable in most areas under permitted development rights.
 
-**Pros of concrete tiles:**
-- Cost-effective (£4,000–£10,000 for a typical semi-detached)
-- Wide range of colours and profiles
-- Good lifespan (30–50 years)
-- Easy to source replacement tiles
-- No planning issues for standard residential properties
+Concrete tiles are a solid, practical choice for post-war homes where aesthetics are secondary to budget and longevity.
 
-**Cons of concrete tiles:**
-- Not suitable for all period properties
-- Lower aesthetic value than natural slate
-- Can look incongruous on older homes
+## Natural Clay Tiles
 
-## Clay Tiles: The Traditional Choice
+Clay tiles have been used on British roofs for centuries and remain popular in Somerset, particularly on older properties and in conservation areas. They have a distinctive warm, earthy tone that weathers beautifully over time.
 
-Clay tiles — both plain tiles and pantiles — have been used on Somerset buildings for centuries. They're the right choice for period properties, particularly in conservation areas.
+**Cost**: £9,000–£18,000 for a typical 3-bed semi — roughly 30–50% more than concrete.
+**Lifespan**: 60–100 years. Clay tiles rarely need replacing if the roof structure is sound.
+**Weight**: Heavier than concrete tiles — your roof structure should be assessed before installation.
+**Appearance**: Excellent. Clay tiles age gracefully and complement traditional Somerset stone and brick.
+**Planning**: Often preferred or required in conservation areas and for listed buildings. Their traditional appearance makes them more likely to gain planning approval for changes.
 
-**Pros of clay tiles:**
-- Authentic, traditional appearance
-- Very long lifespan (60–100+ years)
-- Planning-sympathetic in conservation areas
-- Age beautifully over time
+If you're restoring a Victorian or Edwardian property, clay plain tiles are usually the most sympathetic choice and will add to the property's value.
 
-**Cons of clay tiles:**
-- Higher cost than concrete (£6,000–£15,000 for a typical semi)
-- Heavier, may require structural assessment
-- Fewer modern profiles available
+## Natural Slate
 
-## Natural Slate: The Premium Choice
+Natural Welsh or Spanish slate is the premium roofing option — beautiful, extremely durable and highly sought after by buyers of period properties.
 
-Natural Welsh or Spanish slate is the premium roofing material and the correct choice for listed buildings, conservation areas, and period properties throughout Somerset.
+**Cost**: £12,000–£25,000 for a typical 3-bed semi. Welsh slate commands a premium over imported Spanish or Chinese slate.
+**Lifespan**: 80–150+ years. Original Victorian slate roofs are still performing well today.
+**Weight**: Light relative to its lifespan — slate is actually lighter per m² than many concrete tiles.
+**Appearance**: Outstanding. Slate has a natural variation in colour and texture that no manufactured tile can replicate.
+**Planning**: Preferred in conservation areas and almost always required for listed buildings in Somerset. Natural slate is likely to gain planning approval where other materials would not.
 
-**Pros of natural slate:**
-- Very long lifespan (Welsh slate: 100+ years)
-- Authentic appearance for period properties
-- Planning compliant in almost all circumstances
-- Self-cleansing surface
+The main drawbacks of natural slate are cost and the skill required for installation. Badly laid slate will not perform well, so always use an experienced slater.
 
-**Cons of natural slate:**
-- High cost (£8,000–£18,000 for a typical semi)
-- Specialist installation required
-- Nail sickness can occur after 50–80 years
+## Artificial / Fibre Cement Slate
 
-## Artificial Slate: The Modern Alternative
+Artificial slates — made from fibre cement or recycled materials — offer a middle ground: the appearance of slate at a lower cost. Brands such as Eternit, Cembrit and Marley are well established in the UK market.
 
-Modern artificial slates (Marley Eternit, Cembrit, Tapco) offer the appearance of natural slate at a fraction of the cost. They're particularly useful when planning rules require a slate-like appearance but budget is a concern.
+**Cost**: £8,000–£15,000 for a typical re-roof — significantly less than natural slate.
+**Lifespan**: 25–40 years, shorter than natural slate but longer than concrete tiles.
+**Weight**: Very light — suitable for any roof structure.
+**Appearance**: Good from a distance, though lacks the natural variation of real slate. Suitable for modern homes and some traditional properties.
+**Planning**: May not satisfy conservation area or listed building requirements — always check with your local planning authority.
 
-**Pros of artificial slate:**
-- Lower cost than natural slate (£5,000–£10,000)
-- No nail sickness
-- Consistent colour and size
-- Lightweight
+## Planning Permission Considerations in Somerset
 
-**Cons of artificial slate:**
-- Not accepted in all conservation areas
-- Shorter lifespan than natural slate
-- Less authentic appearance up close
+Somerset has numerous conservation areas across towns including Taunton, Wells, Glastonbury and Bridgwater, as well as parts of the Quantock Hills and Exmoor National Park where additional restrictions apply.
 
-## Somerset's Conservation Areas
+If your property is in a conservation area, changing the external appearance of your roof (including material changes) may require planning permission, even under circumstances that would normally be permitted development. Listed buildings always require listed building consent for any material changes.
 
-Somerset has a significant number of conservation areas, including large parts of Taunton, Bath, Wells, Glastonbury, Shepton Mallet and many villages. If your property is within a conservation area or is listed, you'll need to use sympathetic materials — typically natural clay or Welsh slate. Always check with your local planning authority before replacing your roof covering.
+As a general rule: if your home is pre-1900 or in a conservation area, consult your local planning authority before agreeing to a re-roof, and favour materials that closely match the original.
 
-## Our Recommendation
-
-For modern post-war homes: concrete tiles offer the best value. For period properties and conservation areas: clay tiles or natural slate. For modern builds in rural settings: concrete or artificial slate. We'll advise you during a free survey on the best option for your specific property.`,
+ProLine Roofing & Solar can advise on the best material choice for your specific property and planning context. Call 07587 478826 for a free consultation.`,
   },
   {
     slug: "flat-roofing-guide-somerset",
     title: "Flat Roofing Guide for Somerset Homeowners",
-    excerpt: "Everything you need to know about flat roofing systems — EPDM, GRP and felt — including costs, lifespan and how to choose the right system for your property.",
+    excerpt: "Flat roofs cover millions of UK homes on garages, extensions and bay windows. This guide explains the three main modern systems — EPDM, GRP and felt — and how to choose the right one.",
     category: "guides",
-    tags: ["flat roofing", "EPDM", "GRP", "somerset", "guide"],
-    publishedAt: "2024-05-20",
-    readTime: 7,
+    tags: ["flat roofing", "EPDM", "GRP fibreglass", "felt roof", "Somerset"],
+    publishedAt: "2024-04-12",
+    readTime: 8,
     author: "ProLine Roofing & Solar",
-    content: `## Flat Roofing in Somerset: A Complete Guide
+    content: `Flat roofs have a poor reputation in the UK — largely due to the millions of low-quality felt roofs installed in the 1960s and 70s that leaked within a decade. Modern flat roofing systems are a completely different story. The three main options available today — EPDM rubber, GRP fibreglass and built-up felt — offer lifespans of 20–50 years when correctly installed.
 
-Flat roofing covers extensions, garages, outbuildings, bay windows and some commercial properties across Somerset. Unlike pitched roofs, flat roofs are prone to specific problems — primarily water ponding and seam failure — but modern systems have addressed most historic concerns.
+## Understanding Flat Roof Failure
 
-## The Three Main Flat Roof Systems
+Before choosing a replacement system, it helps to understand why flat roofs fail. The most common causes are: ponding water (caused by insufficient falls), UV degradation of the surface membrane, thermal expansion cracking, failed seams or joins, and blocked or poorly positioned drainage.
 
-### 1. EPDM Rubber Roofing
+Any quality flat roof installation should address all of these factors — adequate fall to outlets, fully bonded or mechanically fixed membrane, and quality drainage detailing.
 
-EPDM (Ethylene Propylene Diene Monomer) is a synthetic rubber membrane that has become the preferred choice for residential flat roofing. It's supplied in large sheets, meaning fewer joins and fewer potential leak points.
+## EPDM Rubber Roofing
 
-- **Lifespan:** 25–50 years
-- **Cost:** £2,500–£6,000 for a typical garage (20–30m²)
-- **Thickness:** 1.0mm, 1.2mm or 1.5mm (thicker = better)
-- **Best for:** Domestic extensions, garages, outbuildings
+EPDM (Ethylene Propylene Diene Monomer) is a synthetic rubber membrane that has been used in commercial roofing for decades and is now the dominant choice for domestic flat roof replacement in the UK.
 
-### 2. GRP Fibreglass Roofing
+**How it works**: EPDM comes in large sheets (up to 15m wide) that can often cover a whole roof area in a single piece, eliminating joins entirely. It is either fully adhered with a water-based adhesive or mechanically fixed around the perimeter.
 
-GRP (Glass Reinforced Polyester) is a rigid fibreglass system applied in liquid form and cured to create a seamless, watertight surface. It's extremely durable and aesthetically neat.
+**Thickness options**: 1.0mm (adequate for most applications), 1.2mm (good for areas with foot traffic or debris), 1.5mm (premium, for high-traffic or commercial applications).
 
-- **Lifespan:** 25+ years (often 30–40 years)
-- **Cost:** £3,000–£7,000 for a typical garage
-- **Appearance:** Clean, smooth, can be walked on
-- **Best for:** Domestic extensions, roof terraces, complex shapes
+**Lifespan**: 25–50 years. EPDM is highly resistant to UV, ozone and temperature extremes (-40°C to +120°C).
 
-### 3. Traditional Felt (Torch-On)
+**Cost**: Typically £50–£80 per m² installed, including insulation board and drainage. A typical 20m² garage roof costs £1,000–£1,600.
 
-Three-layer torch-on felt remains an option for budget projects, though modern two-layer SBS modified bitumen is a significant improvement on old bitumen felt.
+**Pros**: Seamless installation on most roofs, excellent longevity, easily repaired with contact adhesive patches, lightweight, cold-applied (no naked flame).
 
-- **Lifespan:** 10–20 years (good quality), 8–12 years (budget)
-- **Cost:** £1,500–£4,000 for a typical garage
-- **Best for:** Budget replacements, outbuildings
+**Cons**: Black colour absorbs heat (though white EPDM is available), can look industrial on traditional properties, requires a smooth substrate.
 
-## Warm Deck vs Cold Deck
+## GRP Fibreglass Roofing
 
-A **warm deck** flat roof places the insulation above the structural deck, under the waterproof membrane. This is the recommended modern approach as it eliminates the condensation risk of cold deck construction.
+GRP (Glass Reinforced Polyester) is a rigid fibreglass system applied in liquid form and cured to create a seamless waterproof shell. It's particularly popular in the UK for domestic flat roofs.
 
-A **cold deck** flat roof has insulation below the deck, between the joists. This older approach can suffer from condensation if not properly ventilated.
+**How it works**: The roof deck is prepared with 18mm OSB or marine ply, then multiple layers of fibreglass matting are saturated with polyester resin, which cures hard. A coloured topcoat is applied and cut into with a non-slip finish.
 
-If you're replacing a flat roof, always specify warm deck construction.
+**Lifespan**: 25–40 years when correctly installed. GRP does not shrink, crack or blister like traditional felt.
 
-## Common Flat Roof Problems
+**Cost**: Typically £60–£100 per m² installed. Slightly more expensive than EPDM, particularly for complex shapes.
 
-**Water ponding:** All flat roofs have some degree of ponding. Persistent, deep ponding indicates drainage issues and stresses the membrane.
+**Pros**: Very hard and durable surface, excellent for walkable roofs (balconies, roof terraces), seamless, wide choice of colours, good in cold climates.
 
-**Blistering:** Bubbles beneath the membrane caused by trapped moisture or poor adhesion. Can be repaired but indicates the membrane is under stress.
+**Cons**: Skilled installation essential — resin must be mixed and applied correctly, or delamination occurs. Not suitable in very cold temperatures (below 5°C). Brittle if struck hard.
 
-**Split seams:** The most common failure point on felt roofing. Multiple split seams indicate the roof is approaching end of life.
+## Traditional Built-Up Felt
 
-**Thermal cracking:** Flat roofs experience greater thermal movement than pitched roofs. Incorrectly specified or installed membranes can crack over time.
+Three-layer built-up felt (bonding layer, underlay, mineral-faced cap sheet) is the traditional UK flat roofing system and still widely used. Modern high-performance felts are significantly better than the single-layer torched felt applied to most 1980s flat roofs.
+
+**Lifespan**: 10–20 years for standard torch-on felt. High-performance polyester-based systems can last 20–30 years.
+
+**Cost**: Typically £35–£60 per m² — the most affordable option.
+
+**Pros**: Low cost, widely available contractors, proven track record, easy to patch repair.
+
+**Cons**: Shorter lifespan than EPDM or GRP, seams and joins are potential failure points, can be damaged by solar gain and frost, bitumen degrades over time.
 
 ## When to Repair vs Replace
 
-If your flat roof is under 15 years old and has a localised issue (split seam, puncture, small blister), repair is usually the right approach. If it's over 15–20 years old, has multiple issues, or is showing widespread blistering, a full replacement is almost always more cost-effective than repeated repairs.
+If your flat roof is under 10 years old and has isolated damage (a split seam, a small blister, failed flashing), repair is usually economical. If the roof is over 15 years old, showing widespread cracking or blistering, ponding in multiple areas, or has had multiple leaks, replacement is almost always better value than continued patching.
 
-## Summary
+## Insulation
 
-For modern domestic flat roofing in Somerset, EPDM or GRP are the systems to specify. Both offer 25+ year lifespans, excellent waterproofing performance, and strong manufacturer warranties when installed correctly. Always use a qualified roofer familiar with the system being installed.`,
+All flat roof replacements should incorporate adequate insulation to meet current Building Regulations (Part L). Cold roof configurations (insulation at ceiling level) are the simplest but risk condensation within the roof void. Warm roof configurations (insulation on top of the deck) are preferred as they eliminate condensation risk and provide better thermal performance.
+
+## Drainage
+
+No flat roof performs well without adequate drainage. All flat roofs should have a minimum fall of 1:80 (recommended 1:40) towards outlets. Outlets should be sized correctly and accessible for maintenance. Gutters and downpipes must have sufficient capacity to handle peak flow during Somerset's heavy winter rainfall.
+
+ProLine Roofing & Solar installs all three flat roofing systems across Somerset. Call 07587 478826 for a free survey and recommendation.`,
   },
   {
     slug: "chimney-repair-guide",
     title: "Chimney Repair Guide: What Every Homeowner Should Know",
-    excerpt: "Chimney problems are one of the most common sources of roof leaks. This guide covers repointing, flashing, flaunching and when to cap or remove a chimney stack.",
+    excerpt: "Chimneys are one of the most maintenance-intensive parts of a traditional British home. This guide covers repointing, flaunching, flashing, structural issues and when capping makes sense.",
     category: "roofing",
-    tags: ["chimney repairs", "repointing", "flashing", "chimney stack"],
-    publishedAt: "2024-06-12",
-    readTime: 6,
-    author: "ProLine Roofing & Solar",
-    content: `## Chimney Repair: A Homeowner's Guide
-
-Chimneys are one of the most complex and maintenance-intensive parts of a roof. They penetrate the roof covering at multiple points, creating vulnerable junctions that require regular attention. Here's what every homeowner should know.
-
-## Common Chimney Problems
-
-### Repointing Needed
-
-The mortar joints between bricks erode over time due to weathering. When mortar becomes loose, cracked or missing, water gets in behind the brickwork, causing damp, frost damage and structural deterioration.
-
-**Signs:** Crumbling or missing mortar joints, white salt stains on brickwork (efflorescence), damp patches on chimney breast inside.
-
-**Solution:** Raking out old mortar and repointing with fresh mortar. On modern stacks, a breathable lime mortar is recommended. Cost: £300–£800 depending on stack size and access.
-
-### Lead Flashing Failure
-
-Lead flashing seals the junction between the chimney and the roof covering. Over time, the mortar that holds the lead into the brickwork joints fails, allowing water to run behind the flashing and into the roof void.
-
-**Signs:** Water stains near the chimney on ceilings or walls, visible gaps between lead and brickwork.
-
-**Solution:** Rake out and re-point the chase (groove in the mortar joint), re-dress the lead and re-point. If the lead itself is fatigued, full re-leading is needed. Cost: £300–£1,200.
-
-### Failed Flaunching
-
-Flaunching is the mortar fillet that holds the chimney pot in place and slopes water away from the pot. Over time it cracks and falls away.
-
-**Signs:** Cracked or missing mortar collar around the chimney pot.
-
-**Solution:** Remove old flaunching, re-bed the pot and apply new flaunching in appropriate mortar. Cost: £200–£500.
-
-### Damp on the Chimney Breast
-
-Damp appearing on an internal chimney breast (a chimney breast bulge on a wall) can have several causes: failed flashing, failed pointing, a bridged damp proof course, or rain entering via the pot or open flue.
-
-**Solution:** Identify the route of water ingress before carrying out any repairs. A full inspection from above is usually needed.
-
-## Should You Cap or Remove the Chimney?
-
-For chimneys that are no longer used (redundant flues), capping is a cost-effective solution. A ventilated cap prevents rain entry while allowing the flue to breathe. A sealed cap should never be used unless the chimney is being removed completely, as it can cause severe condensation.
-
-Removing a chimney stack entirely eliminates ongoing maintenance costs. On terraced houses, a structural engineer's advice is needed as the chimney may be shared. Removal typically costs £2,000–£6,000.
-
-## Chimney Safety
-
-Loose chimney pots and crumbling stacks are a serious safety hazard. If you suspect your chimney stack is structurally compromised, arrange an inspection immediately and don't leave it — a falling chimney pot can cause serious injury or death.`,
-  },
-  {
-    slug: "solar-panel-installation-guide-somerset",
-    title: "Solar Panel Installation in Somerset: Complete Homeowner Guide",
-    excerpt: "Thinking about solar panels for your Somerset home? This complete guide covers how solar works, what you'll pay, what you'll save, and what to look for in a solar installer.",
-    category: "solar",
-    tags: ["solar panels", "installation", "somerset", "guide", "MCS"],
-    publishedAt: "2024-07-08",
-    readTime: 8,
-    author: "ProLine Roofing & Solar",
-    featured: true,
-    content: `## Solar Panels for Somerset Homeowners: The Complete Guide
-
-Somerset receives around 1,400–1,600 sunshine hours per year — enough to make solar panels a financially sound investment for most homeowners. This guide covers everything from how the technology works to what you'll actually save on your bills.
-
-## How Solar PV Works
-
-Photovoltaic (PV) panels convert sunlight directly into DC electricity. An inverter converts this to AC electricity suitable for your home appliances. Any excess electricity not used in the home can be exported to the grid or stored in a battery.
-
-A typical 4kW system on a south-facing Somerset roof will generate approximately 3,400–3,800 kWh per year — equivalent to around 70–80% of an average household's annual electricity consumption.
-
-## Is My Roof Suitable?
-
-**Orientation:** South-facing roofs are ideal. East or west-facing roofs generate 15–20% less than south-facing. North-facing roofs are not recommended.
-
-**Pitch:** 30–40 degrees is optimal. Very shallow or very steep roofs will reduce output.
-
-**Shading:** Even partial shading from trees, chimneys or neighbouring buildings can significantly reduce output. A site survey will identify shading issues.
-
-**Structural integrity:** The roof must be in good condition and able to support the additional load (approximately 13–15kg per panel). We inspect the roof before installation.
-
-## What Does Solar Cost in Somerset?
-
-Indicative costs for supply and installation by an MCS-accredited installer:
-
-- **2kW system (6–8 panels):** £4,000–£5,500
-- **3kW system (8–10 panels):** £5,000–£7,000
-- **4kW system (10–13 panels):** £6,000–£8,500
-- **6kW system (16–20 panels):** £8,000–£12,000
-
-Solar panels are currently **0% VAT** for residential installations until at least 2027.
-
-Adding a battery storage system adds £2,000–£5,000 to the above costs.
-
-## What Will I Save?
-
-Savings depend on your consumption patterns and how much of your solar generation you use directly. A typical 4kW system:
-
-- Generates ~3,600 kWh/year in Somerset
-- Saves approximately £700–£1,000 per year on bills (at current electricity prices)
-- Earns an additional £100–£200 per year in Smart Export Guarantee (SEG) payments
-- **Total annual benefit: £800–£1,200**
-
-## Payback Period
-
-At current energy prices, a well-sited 4kW system typically pays back in 8–12 years. After payback, the system continues generating savings and income for a further 15–20 years.
-
-## The Smart Export Guarantee (SEG)
-
-The Smart Export Guarantee is a government scheme requiring licensed electricity suppliers to pay households for excess solar energy exported to the grid. Rates vary by supplier — typically 3–15p per kWh. To qualify, your system must be installed by an MCS-accredited installer.
-
-## Choosing an MCS-Accredited Installer
-
-**MCS (Microgeneration Certification Scheme)** is the quality standard for solar installers in the UK. Only MCS-accredited installations qualify for the Smart Export Guarantee and other government incentives.
-
-Always ask to see your installer's current MCS certificate. ProLine Roofing & Solar is MCS accredited and can confirm certification on request.
-
-## What to Expect on Installation Day
-
-A typical 4kW system takes one to two days to install. Scaffolding is erected on day one if required. Panels are mounted on rail systems fixed to the roof structure. The inverter is typically installed in the loft or a utility space. DNO (Distribution Network Operator) notification is required before export — we handle this on your behalf.
-
-## Summary
-
-Solar panels are a sound investment for most Somerset homeowners with a suitable south-facing roof. With 0% VAT, the Smart Export Guarantee, and rising energy prices, payback periods have shortened significantly. Always use an MCS-accredited installer to qualify for all available incentives.`,
-  },
-  {
-    slug: "solar-panel-costs-somerset-2024",
-    title: "Solar Panel Costs in Somerset: 2024 Price Guide",
-    excerpt: "A detailed breakdown of solar panel installation costs in Somerset — by system size, panel brand, and component. Updated for 2024 prices with 0% VAT.",
-    category: "solar",
-    tags: ["solar costs", "solar price guide", "somerset", "2024"],
-    publishedAt: "2024-08-01",
-    readTime: 5,
-    author: "ProLine Roofing & Solar",
-    content: `## Solar Panel Installation Costs in Somerset: 2024
-
-Solar panel costs in the UK have fallen significantly over the past decade and continue to offer strong value, particularly with 0% VAT in place until at least 2027. Here's a current price guide for Somerset homeowners.
-
-## System Size Guide
-
-The right system size depends on your roof space, household consumption, and budget. Here are typical 2024 costs:
-
-| System Size | No. of Panels | Annual Generation | Typical Cost |
-|-------------|---------------|-------------------|--------------|
-| 2kW | 5–6 panels | ~1,700 kWh | £4,000–£5,500 |
-| 3kW | 8–9 panels | ~2,550 kWh | £5,000–£7,000 |
-| 4kW | 10–13 panels | ~3,400 kWh | £6,000–£8,500 |
-| 6kW | 16–20 panels | ~5,100 kWh | £8,500–£12,000 |
-| 10kW | 26–32 panels | ~8,500 kWh | £14,000–£20,000 |
-
-*Costs include supply, installation, scaffolding, inverter, mounting, DNO notification and MCS certificate.*
-
-## What Affects the Cost?
-
-**Roof complexity:** Simple south-facing pitched roofs cost less than east/west split systems, flat roofs or complex multi-slope installations.
-
-**Panel brand and quality:** Budget panels (Longi, JA Solar) are typically 15–20% cheaper than premium brands (SunPower, REC, Panasonic). Premium panels have higher efficiency and longer warranties.
-
-**Inverter type:** String inverters are standard and cost-effective. Microinverters (installed under each panel) cost more but offer better performance under partial shading conditions.
-
-**Battery storage:** A home battery adds £2,000–£5,000 to the system cost but significantly increases self-consumption and savings.
-
-**Scaffolding:** For high or complex roofs, scaffolding can add £600–£1,500.
-
-## 0% VAT: Significant Saving
-
-Since April 2022, solar panel installations on residential properties are zero-rated for VAT (0% instead of 20%). This saves approximately £1,000–£2,000 on a typical 4kW system. This zero-rating is currently confirmed until March 2027.
-
-## Battery Storage Costs
-
-Adding a battery to your solar system maximises self-consumption and provides backup power. Typical costs:
-
-- **5–10kWh battery (e.g., GivEnergy, Fox ESS):** £2,000–£3,500
-- **10–15kWh battery (e.g., Tesla Powerwall):** £3,500–£6,000
-- **15kWh+ whole-home battery:** £5,000–£9,000
-
-## Smart Export Guarantee Tariffs
-
-As of 2024, SEG tariffs from main suppliers range from approximately 3p to 15p per kWh exported. Octopus Energy's Outgoing tariff tracks wholesale prices and can be higher during peak periods. We recommend shopping around for the best SEG rate once your system is installed.
-
-## Getting the Best Price
-
-Get written quotes from at least two MCS-accredited installers. Ensure the quote includes: all panels and mounting hardware, inverter, battery (if included), scaffolding, electrical work, DNO application, MCS certificate and commissioning report. Never pay the full amount upfront.`,
-  },
-  {
-    slug: "emergency-roof-repair-guide",
-    title: "Emergency Roof Repair: What to Do When Disaster Strikes",
-    excerpt: "Storm damage, active leaks, fallen tiles — here's exactly what to do in the first hours after a roofing emergency, from making the property safe to claiming on insurance.",
-    category: "guides",
-    tags: ["emergency roofing", "storm damage", "insurance", "somerset"],
-    publishedAt: "2024-09-05",
-    readTime: 6,
-    author: "ProLine Roofing & Solar",
-    featured: true,
-    content: `## What to Do in a Roofing Emergency
-
-A roofing emergency can happen at any time — a storm overnight, a tile blown off by high winds, a sudden leak appearing during heavy rain. The actions you take in the first few hours can significantly affect the cost and complexity of the repair.
-
-## Step 1: Stay Safe
-
-Do not go onto the roof yourself. Roof surfaces are dangerous in dry conditions; in wet or windy weather they're extremely hazardous. Each year, people are seriously injured or killed attempting DIY roof access. Leave it to the professionals.
-
-## Step 2: Contain the Water Indoors
-
-If water is actively coming in:
-- Place buckets or bowls under drips
-- Lay towels to absorb and channel water away from electronics and furniture
-- Move valuables away from the affected area
-- Turn off electricity in any affected room if there's any risk of water reaching electrics
-
-If water has reached a ceiling, the ceiling may be bowing under the weight of water above it. Carefully make a small hole in the centre of the bow to allow water to drain in a controlled way — this prevents a more catastrophic ceiling collapse.
-
-## Step 3: Document the Damage
-
-Take photographs and video of:
-- The interior damage (water stains, drips, wet insulation)
-- Any visible roof damage from the ground
-- The surrounding area if a tree or object has caused the damage
-
-This documentation is important for insurance claims and for providing accurate information to the roofer.
-
-## Step 4: Apply a Temporary Fix
-
-If it's safe to do so from ground level or from inside the loft, temporary measures can prevent further water ingress:
-- A heavy-duty tarpaulin over the affected area, weighted down or tied off
-- Emergency waterproof sealant around a damaged flashing (temporary only)
-- Boarding up any displaced tiles or structural openings
-
-Do not use permanent sealants that will complicate the proper repair.
-
-## Step 5: Call Your Emergency Roofer
-
-Call a local, established roofing company immediately. ProLine Roofing & Solar provides 24/7 emergency response across Somerset and the South West. Call 07587 478826 at any time.
-
-When you call, explain:
-- The type of damage (tiles, flat roof, chimney, etc.)
-- Whether water is actively coming in
-- Your location
-- Any temporary measures you've already taken
-
-## Step 6: Notify Your Insurer
-
-Contact your buildings insurer as soon as reasonably practicable. Most policies have a requirement to notify promptly after a loss event. Provide:
-- Date and time of the incident
-- Description and photographs of the damage
-- Details of any emergency repairs already carried out
-
-Keep all receipts for emergency work — insurers typically cover reasonable emergency mitigation costs.
-
-## Step 7: The Permanent Repair
-
-Once the emergency is contained, your roofer will carry out a full inspection and provide a written quote for the permanent repair. For insurance claims, a written damage report from the roofer will be required by the loss adjuster.
-
-## Common Emergency Scenarios in Somerset
-
-**Storm tile loss:** Somerset's prevailing south-westerly winds can dislodge tiles on exposed properties. The risk increases significantly after storms with gusts exceeding 50mph.
-
-**Lead flashing failure:** Heavy, sustained rainfall can overwhelm old or failing lead flashings, causing sudden water ingress that may not have been apparent in normal conditions.
-
-**Flat roof ponding overflow:** Flat roofs with blocked drainage can fill with water during prolonged rain — the combined weight can cause sudden membrane failure.
-
-**Chimney stack movement:** Old mortar joints can fail suddenly after frost, causing loose or fallen chimney pots.`,
-  },
-  {
-    slug: "solar-roi-calculator-somerset",
-    title: "Is Solar Worth It in Somerset? ROI Calculator & Guide",
-    excerpt: "Somerset gets 1,400–1,600 sunshine hours per year. We break down the real numbers — annual generation, savings, export income — so you can calculate your own solar ROI.",
-    category: "solar",
-    tags: ["solar ROI", "solar savings", "somerset", "calculator"],
-    publishedAt: "2024-10-01",
+    tags: ["chimney repair", "chimney repointing", "chimney flashing", "chimney stack"],
+    publishedAt: "2024-05-08",
     readTime: 7,
     author: "ProLine Roofing & Solar",
-    content: `## Is Solar Worth It in Somerset?
+    content: `If your home has a chimney stack — whether in active use or disused — it requires regular attention. Exposed to the elements 365 days a year, chimneys suffer from freeze-thaw action, wind-driven rain, sulphate attack on mortar, and settlement movement. Neglected chimneys are one of the leading causes of water ingress in older UK properties.
 
-The short answer: yes, for most homeowners with a suitable south-facing roof. Somerset's sunshine hours, current energy prices, and 0% VAT make solar one of the most financially compelling home improvements available. Here's how to work out the numbers for your specific situation.
+## Repointing
 
-## Somerset's Solar Resource
+The mortar joints between bricks erode over time, particularly on exposed chimney stacks where wind and rain attack from every direction. Once joints have eroded more than about 10mm deep, rainwater can enter the brickwork directly, leading to saturation and frost damage.
 
-Somerset sits in the UK's South West — one of the sunniest regions in the country. Annual sunshine hours in Somerset typically range from 1,400 in cloudy years to 1,600+ in good years. This compares favourably with the UK average of around 1,350 hours.
+Chimney repointing involves raking out the old mortar to a depth of approximately 20mm and repacking with a fresh mortar mix. The mortar specification matters enormously: Victorian chimneys were built with soft lime mortar, and using a modern hard cement mortar for repointing will cause differential movement and can actually accelerate damage by trapping moisture in the brick face.
 
-This means a well-sited 4kW system in Somerset will typically generate between 3,400 and 3,800 kWh per year.
+**Cost**: £300–£800 for a typical stack, including access scaffolding or ladder work. Full scaffold may be required for tall stacks.
 
-## The Worked Example: 4kW System in Taunton
+## Flaunching
 
-**System cost:** £7,000 (supply, installation, scaffolding, MCS certificate)
+The flaunching is the sloped mortar bed at the top of the chimney stack that holds the chimney pots in place and sheds rainwater away from the stack top. Old flaunching often cracks and crumbles, allowing water to pool at the top of the stack.
 
-**Annual generation:** 3,600 kWh
+Failed flaunching is a very common and often underestimated source of chimney damp. Water entering through a cracked flaunching can travel down the inside of the stack and appear as damp patches on a chimney breast in an upstairs room.
 
-**Self-consumption:** Let's assume you use 50% of what you generate in the home (1,800 kWh)
+**Cost**: £200–£500 to re-flaunch a single stack, including pot resetting.
 
-**Grid import savings:** 1,800 kWh × 28p/kWh = **£504/year**
+## Chimney Flashing
 
-**SEG export income:** 1,800 kWh exported × 8p/kWh = **£144/year**
+Lead flashing seals the junction between the chimney stack and the roof surface. Over time, lead expands and contracts with temperature changes, causing it to crack, pull away from mortar joints, or lose adhesion where it is dressed against the chimney face.
 
-**Total annual benefit: £648/year**
+There are several types of flashing around a chimney: step flashing up the sides, back gutter flashing behind the stack, and front apron flashing. All must be sound for the chimney to remain watertight.
 
-**Simple payback: 10.8 years**
+**Cost**: £400–£800 to replace all flashings on a typical chimney stack using Code 4 lead.
 
-**After 25 years (panel lifespan): Total benefit = £16,200 — net profit of £9,200**
+## Structural Issues
 
-## Improving the ROI: Increase Self-Consumption
+Older chimneys can develop structural movement — leaning, spalling brickwork, loose corbelling, or a failing interior flue liner. Any chimney that appears to be leaning or has visible cracks running through the brickwork (rather than just the joints) should be assessed by a structural engineer or experienced roofer before any repair work is undertaken.
 
-The key to maximising solar ROI is using as much of your own generation as possible. Ways to increase self-consumption:
+In severe cases, partial or full stack demolition and rebuilding may be necessary. The cost varies widely (£1,000–£5,000+) depending on the extent of the work and access requirements.
 
-- **Run appliances during daylight hours:** Dishwasher, washing machine, tumble dryer
-- **EV charging:** Charge an electric vehicle from solar during the day
-- **Immersion heater diverter:** Automatically diverts excess solar to heat water (£150–£300 extra)
-- **Battery storage:** Store excess daytime generation for evening use — adds £2,000–£5,000 but can increase self-consumption to 80%+
+## Bird Nesting
 
-## The Battery Question
+Unused chimneys are popular nesting sites for jackdaws, starlings and, in some areas, protected species such as swifts. A blocked flue is a fire risk if the chimney is ever brought back into use. Cowls (wire-mesh caps) can be fitted to allow ventilation while excluding birds. Note: if birds are actively nesting, it is illegal to disturb the nest during breeding season (roughly March–August).
 
-Adding a 10kWh battery to our example above:
+## Damp in Chimney Breasts
 
-**Additional cost:** £3,000
-**Self-consumption increases to:** 70% (2,520 kWh used, 1,080 exported)
-**Annual grid import savings:** 2,520 kWh × 28p = **£706/year**
-**SEG export income:** 1,080 kWh × 8p = **£86/year**
-**Total annual benefit with battery: £792/year**
-**Payback on total system (£10,000): 12.6 years**
+Damp patches on chimney breast walls — particularly at high level or on external walls — are almost always caused by a fault at the top of the stack rather than rising damp. The diagnosis is usually one of: failed flaunching, eroded pointing, failed flashing, or a leaking internal flue liner. Treating the symptom (damp-proofing the wall internally) without fixing the entry point is a waste of money.
 
-The battery adds 1.8 years to payback but significantly increases energy independence and provides backup power capability.
+## When to Cap a Chimney
 
-## How Rising Energy Prices Affect the Calculation
+If a chimney is permanently disused and you have no plans to use it in future, capping it with a ventilated cap and sealing the fireplace opening prevents water entry, bird nesting and heat loss. This is far more cost-effective than ongoing maintenance repairs.
 
-Our example uses 28p/kWh. If electricity prices rise to 35p/kWh (entirely possible given recent history), the annual saving from a 4kW system jumps to £800+/year, cutting payback to under 9 years.
+However, all disused flues must retain some ventilation to prevent condensation within the flue and damp migrating to surrounding walls.
 
-## The 25-Year View
-
-Solar panels are typically warranted for 25 years. After the system pays for itself (~year 10–12), you're essentially generating free electricity. Over 25 years, a 4kW system in Somerset will likely deliver £12,000–£18,000 in total value — a strong return on a £7,000 investment.
-
-## Is My Roof Worth It?
-
-The ROI calculation changes significantly for east/west-facing or shaded roofs. An east-facing 4kW system generates approximately 20% less than south-facing. Our survey will identify any shading issues and give you accurate generation estimates before you commit.`,
-  },
-  {
-    slug: "solar-grants-uk-2024",
-    title: "Solar Panel Grants & Incentives UK 2024: What's Available?",
-    excerpt: "From 0% VAT to the Smart Export Guarantee and ECO4 — a complete guide to solar incentives available to UK homeowners in 2024.",
-    category: "solar",
-    tags: ["solar grants", "SEG", "ECO4", "0% VAT", "incentives"],
-    publishedAt: "2024-11-01",
-    readTime: 5,
-    author: "ProLine Roofing & Solar",
-    content: `## Solar Panel Grants and Incentives: 2024 Guide
-
-The good news: there has never been a better time to go solar in the UK from a financial incentives perspective. Here's a complete overview of what's currently available.
-
-## 1. Zero-Rate VAT (0% VAT)
-
-The most significant incentive for 2024 is the zero-rate VAT on residential solar panel installations. This was introduced in April 2022 and is currently confirmed until March 2027.
-
-On a typical 4kW system costing £7,500 before VAT, the 0% rate saves **£1,500 compared to the standard 20% rate**. This is a direct cost reduction, not a future payment.
-
-**Who qualifies:** Any UK residential solar installation on an existing home.
-
-## 2. Smart Export Guarantee (SEG)
-
-The Smart Export Guarantee is a government scheme that requires licensed electricity suppliers to pay households for excess solar electricity exported to the grid. It replaced the old Feed-in Tariff in 2020.
-
-**Current tariff rates (mid-2024):**
-- Octopus Energy: up to 15p/kWh (tracked wholesale rate)
-- British Gas: 5.5p/kWh
-- E.ON Next: 5.5p/kWh
-- EDF: 5p/kWh
-
-**Who qualifies:** Systems installed by MCS-accredited installers up to 5MW capacity. You must apply to your electricity supplier after installation.
-
-**Annual SEG income on a 4kW system:** Approximately £100–£250 depending on tariff and export volume.
-
-## 3. ECO4 Scheme (Free Solar for Eligible Households)
-
-The ECO4 (Energy Company Obligation 4) scheme funds energy efficiency measures — including solar panels — for low-income households. Eligibility is based on receiving certain means-tested benefits or having a low Energy Performance Certificate rating.
-
-**Who qualifies:** Homeowners or private tenants receiving qualifying benefits (Universal Credit, Pension Credit, Child Tax Credit etc.), or households with an EPC rating of D, E, F or G.
-
-**Available through:** Your local council or energy company. Contact Somerset Council for local referral schemes.
-
-## 4. Warm Homes Plan (Coming)
-
-The government's Warm Homes Plan proposes significant new grants for home energy improvements including solar panels, heat pumps and insulation. Details and timelines are being developed — we recommend checking the government's Energy Bills Support webpage for updates.
-
-## 5. Business Solar Incentives
-
-For commercial solar installations:
-- **0% VAT** also applies to commercial solar on charitable buildings and some business types
-- **Full expensing:** Businesses can deduct 100% of qualifying capital expenditure (including solar) from profits in the year of purchase
-- **Enhanced Capital Allowances** for certain energy-efficient equipment
-
-## Maximising Incentives: The Right Steps
-
-1. **Ensure MCS accreditation** — non-MCS installations do not qualify for SEG
-2. **Compare SEG tariffs** before choosing a supplier
-3. **Apply for SEG** promptly after installation — don't leave export income unclaimed
-4. **Check ECO4 eligibility** if you receive any means-tested benefits
-
-ProLine Roofing & Solar is MCS accredited and will guide you through the SEG application process after installation.`,
+ProLine Roofing & Solar carries out all types of chimney repairs across Somerset. Call 07587 478826 for a free assessment of your chimney.`,
   },
   {
     slug: "gutter-maintenance-guide",
     title: "Complete Gutter Maintenance Guide for UK Homes",
-    excerpt: "Blocked or damaged gutters are a leading cause of damp in UK homes. This complete guide covers cleaning frequency, signs of failure, and when to repair vs replace.",
+    excerpt: "Blocked or broken gutters cause far more damage than most homeowners realise. This complete guide covers seasonal maintenance, repair options and when to replace your guttering system.",
     category: "maintenance",
-    tags: ["guttering", "maintenance", "gutter cleaning", "damp prevention"],
-    publishedAt: "2024-12-03",
-    readTime: 5,
+    tags: ["gutter maintenance", "gutter cleaning", "gutter repair", "UPVC gutters"],
+    publishedAt: "2024-06-20",
+    readTime: 6,
     author: "ProLine Roofing & Solar",
-    content: `## Gutter Maintenance: A Complete Guide
+    content: `Gutters are unglamorous but essential. Their job is to collect rainwater from your roof and direct it safely to downpipes and drains, protecting your walls, foundations and interior from water damage. When gutters fail — whether through blockage, damage or age — the consequences can be surprisingly serious and expensive.
 
-Gutters are one of the most overlooked parts of a home — until they fail. Blocked or broken gutters are a leading cause of damp penetration, fascia rot, and foundation problems. Here's everything you need to know to keep your gutters working properly.
+## Why Gutters Matter
 
-## How Often Should Gutters Be Cleaned?
+Water running down the face of a wall (rather than being collected by a gutter) is the leading cause of penetrating damp in UK homes. Saturated brickwork is an ideal breeding ground for damp and mould, causes efflorescence (white salt deposits), and can ultimately lead to structural damage if water reaches the foundations. A few years of overflowing gutters can cost far more to rectify than a gutter replacement would have.
 
-In Somerset's climate — with significant deciduous tree cover in many areas — gutters should ideally be cleaned at least once a year, in autumn after leaf fall. Properties with heavy tree coverage may need cleaning twice a year (spring and autumn).
+## Seasonal Maintenance Schedule
 
-Signs your gutters need cleaning:
-- Water spilling over the top of gutters during rain
-- Plant growth from gutters (moss, weeds, even small trees)
-- Birds nesting in gutters
-- Damp patches on walls below the gutterline
+**Autumn (October–November)**: The most important gutter maintenance period. Clear all fallen leaves, moss and debris after the main leaf fall. Check all gutter joints and unions are sound. Clear downpipe outlets and check flow into drains.
 
-## Signs That Gutters Need Repairing or Replacing
+**Spring (March–April)**: Clear winter debris, check for frost damage to joints and brackets, clear moss that has washed down from the roof, and check that downpipe connections are secure.
 
-**Leaking joints:** Most UPVC gutter leaks occur at the joints where sections meet. Joints are sealed with rubber gaskets that harden and fail over time.
+**After storms**: Check for displaced gutters, broken brackets or sections dislodged by falling branches.
 
-**Sagging gutters:** Gutters that sag in the middle have either lost their fall (gradient) or have a broken bracket. Water will pool and overflow at the low point.
+## Signs of Gutter Damage
 
-**Cracks and splits:** UPVC gutters can crack due to impact damage or UV degradation. Cracked sections should be replaced.
-
-**Rust (cast iron):** Cast iron gutters can last 50+ years with periodic repainting. Once rust penetrates through the section, replacement is needed.
+Overflowing water during rain is the most obvious sign, but others include: green algae or moss growing on the wall below gutters (indicates persistent dampness), paint peeling on fascia boards, pooling water at the base of external walls, sagging gutter sections (bracket failure or weight of debris), and visible cracks or splits in UPVC gutters.
 
 ## UPVC vs Cast Iron Guttering
 
-**UPVC guttering** is the standard choice for most modern properties. It's low maintenance, available in many colours, and easy to install. Lifespan: 20–30 years.
+Most post-1970s homes in Somerset have UPVC (plastic) guttering, while older properties may retain original cast iron gutters.
 
-**Cast iron guttering** is the correct choice for period properties, listed buildings and conservation areas. It looks far superior to UPVC, ages beautifully, and lasts 50+ years with proper maintenance. It requires periodic painting (bituminous paint) to prevent rust.
+**UPVC guttering**: Lightweight, low maintenance, does not rust, easy to install and relatively inexpensive. The main weaknesses are UV degradation over 20–30 years (causing brittleness and cracking) and joint failure (the rubber seals in push-fit joints perish over time). UPVC is easy to cut and join, making DIY repairs feasible for accessible sections.
 
-**Aluminium guttering** is a premium alternative to UPVC — stronger, lighter and more environmentally friendly. Available in a wide range of colours and profiles. Good lifespan (30+ years).
+**Cast iron guttering**: Heavy, durable, aesthetically appropriate for Victorian and Edwardian properties, but requires periodic painting (every 5–7 years) and is prone to rust at joints if the paint system breaks down. Cast iron is considerably more expensive to replace but can last 80–100 years with proper maintenance.
 
-## Gutter Sizing
+## Gutter Replacement Costs
 
-Standard domestic guttering is 112mm half-round or ogee profile. Larger properties with steep pitches and large catchment areas may need 150mm guttering to handle the flow.
+Replacing gutters on a typical 3-bed semi-detached property in Somerset:
+- UPVC half-round system: £400–£800 including labour
+- UPVC deep-flow system (better for high-rainfall areas): £500–£1,000
+- Cast iron replacement (match original): £1,200–£2,500
+- Aluminium ogee (heritage appearance, low maintenance): £800–£1,600
 
-## When to Call a Professional
+These costs often exclude scaffolding — if gutters are higher than one-storey, access equipment may add £200–£600.
 
-Call a professional gutter cleaning or repair service when:
-- Your gutters are high up or on a large property (ladder safety)
-- Gutters have been neglected for several years (heavy blockage)
-- Gutters need re-fixing or adjusting (fall correction)
-- Multiple sections need replacement
+## Gutter Guards
 
-We offer complete gutter replacement and repair services across Somerset, often combined with fascia and soffit replacement for a complete roofline solution.`,
+Gutter guards (mesh inserts or hood-type covers) can significantly reduce the frequency of cleaning required. They range from £2–£8 per metre for DIY mesh products to £15–£30 per metre professionally installed. They are most cost-effective on properties surrounded by trees that create heavy annual leaf falls.
+
+Note: guards do not eliminate cleaning entirely — fine debris such as moss and pine needles can still accumulate on top of or within mesh guards.
+
+## Preventing Ice Dams
+
+In cold snaps, snow that melts on a warm roof section can refreeze in cold gutters, forming ice dams that eventually force water back under tiles and into the roof structure. Good loft insulation (preventing heat from the house warming the roof deck) and well-maintained gutters with good flow are the main preventive measures.
+
+ProLine Roofing & Solar includes gutter inspection and replacement as part of our roofing services. Call 07587 478826 for a free quote.`,
   },
   {
-    slug: "choose-roofer-somerset",
-    title: "How to Choose a Roofer in Somerset: 10 Things to Check",
-    excerpt: "Roofing is one of the few industries where rogue traders still operate. Here's a definitive checklist to help Somerset homeowners choose a reliable, qualified roofer.",
+    slug: "emergency-roof-repair-guide",
+    title: "Emergency Roof Repair: What to Do When Disaster Strikes",
+    excerpt: "A storm or sudden roof failure is stressful. Knowing the right steps to take in the first hours can limit interior damage, protect your insurance claim and get your home secure quickly.",
     category: "guides",
-    tags: ["choosing a roofer", "rogue traders", "somerset", "advice"],
-    publishedAt: "2025-01-15",
+    featured: true,
+    tags: ["emergency roof repair", "storm damage", "roof leak", "insurance claim"],
+    publishedAt: "2024-07-03",
     readTime: 6,
     author: "ProLine Roofing & Solar",
-    content: `## How to Choose a Roofer in Somerset
+    content: `Storm damage, sudden tile loss or an active roof leak is every homeowner's nightmare. In the immediate aftermath, it can be hard to know what to do first. This guide gives you a clear action plan for the first 24 hours and beyond.
 
-Roofing is unfortunately one of the trades most associated with rogue traders. High-pressure door-to-door selling, poor workmanship and vanishing after payment are all too common. Here's a 10-point checklist to help you choose wisely.
+## Immediate Safety First
 
-## 1. Ask for Proof of Insurance
+Before anything else: if water is entering your home near electrical fittings, switch off the electricity at the consumer unit. Do not attempt to go on the roof yourself — wet roofs are extremely dangerous, particularly during or immediately after a storm. Falling from a roof causes serious injury or death every year.
 
-Any reputable roofer carries public liability insurance (minimum £1 million, ideally £5 million). Ask for a certificate of insurance before any work begins. This protects you if the roofer damages your property or causes an injury.
+## Contain the Interior Damage
 
-## 2. Get a Written, Itemised Quote
+Use buckets, towels and plastic sheeting to catch and redirect water entering through the ceiling. Place newspaper under buckets to absorb overflow. If a ceiling section is visibly bulging with trapped water, carefully use a screwdriver to poke a small drainage hole in the centre to release the water in a controlled stream rather than allowing the ceiling to collapse.
 
-Never agree to work without a written quote specifying exactly what work will be done, what materials will be used, and the total cost. Verbal quotes and vague written estimates are inadequate.
+Photograph everything before you start moving things around or mopping up — your insurer will want evidence of the damage in its original state.
 
-## 3. Check Companies House
+## Temporary Exterior Fixes
 
-Any reputable roofing company should be registered at Companies House (even sole traders should have a clear business identity). Search the company name at beta.companieshouse.gov.uk to check they're legitimate.
+If it is safe to access the roof from a ladder without going on the roof itself (for example, to assess a single missing tile at a low eaves level), a quick-seal rubberised compound can be applied to exposed gaps as a temporary measure. However, for any roof at height, wait for a professional.
 
-## 4. Verify Their Online Presence
+A heavy-duty tarpaulin secured over a damaged section of roof with battens or sandbag weights is an effective temporary fix that can prevent further water ingress for several days while a permanent repair is arranged. Many emergency roofers carry tarps for exactly this purpose.
 
-A genuine, established business will have a verifiable online presence: a website, Google Business Profile, and reviews on Google, Checkatrade or Trustpilot. Look at the age of the reviews — a genuinely established business will have reviews going back several years.
+## Photograph Everything
 
-## 5. Read Reviews Carefully
+Before any repair work begins, photograph the exterior damage from as many angles as possible, the interior damage, water ingress paths, and any damage to possessions. If it's safe, photograph from an upper window rather than the roof.
 
-Look for reviews that mention specific jobs and locations. Be sceptical of a business with only 5-star reviews and no specifics. ProLine has genuine, named reviews from customers across Somerset on Google.
+These photographs form the basis of your insurance claim. Keep them in a dated folder along with any emergency repair invoices.
 
-## 6. Check VAT Registration
+## Contact Your Insurer
 
-Established roofing businesses with turnover over the VAT threshold (£90,000) should be VAT registered. If a contractor offers a large discount for "cash in hand" to avoid VAT, walk away.
+Call your home insurance provider as soon as practicable — most have a 24-hour claims line. Explain the situation and ask whether:
+- An emergency callout to make the property watertight is covered
+- They have a panel of approved contractors, or whether you can use your own
+- A loss adjuster will be required before repairs are authorised
+- Temporary accommodation is available if the property is uninhabitable
 
-## 7. Never Pay Large Amounts Upfront
+Keep notes of all conversations, including the date, time and name of the person you spoke to.
 
-A small deposit (10–20%) is reasonable for larger jobs where materials need to be ordered. Never pay the full amount upfront. If a roofer demands 50% or more before work starts, it's a red flag.
+## Finding an Emergency Roofer
 
-## 8. Be Wary of Door-to-Door Sellers
+Emergency roofing callouts are available from most established local roofers. When calling, ask:
+- Can they attend within 24 hours?
+- Are they insured (public liability)?
+- Will they provide a written quote or at minimum a written confirmation of the emergency work done?
+- Can they provide before-and-after photographs for your insurer?
 
-Legitimate roofing businesses rarely go door-to-door. If someone knocks claiming to have "just noticed" a problem with your roof, be extremely sceptical. Ask for their details and get independent confirmation of any alleged problem before proceeding.
+Be cautious of roofers who appear unsolicited at your door claiming to have noticed your damaged roof while passing — this is a common rogue trader tactic, particularly after storms.
 
-## 9. Check Their Physical Location
+## Emergency Repair Costs
 
-Ask for a physical address (not just a mobile number). Search for the address — a genuine business will have a verifiable local presence.
+Making a property watertight on an emergency basis typically costs £200–£600 depending on the extent of the damage and time of day. Full permanent repairs are quoted separately once the extent of damage is fully assessed, often after the structure has dried out.
 
-## 10. Ask for References
+If your insurer is covering the repairs, agree the repair scope with them before instructing permanent works — carrying out unrequested permanent work before insurer approval can complicate or void a claim.
 
-Established roofers should be able to provide two or three references from recent customers in your area. A good roofer will be happy to provide these.
+## Timescales
 
-## The ProLine Guarantee
+For emergency stabilisation: 2–24 hours. For permanent repairs after storm damage: typically 1–4 weeks, depending on material availability and contractor schedules. If scaffolding is needed, allow an additional 3–7 days for erection.
 
-ProLine Roofing & Solar is based in Taunton, has been serving Somerset for over 30 years, and holds full public liability insurance. We provide written quotes, written guarantees on all work, and are fully transparent about pricing. Call 07587 478826 or visit our reviews page to see what our customers say.`,
+ProLine Roofing & Solar provides 24/7 emergency roofing services across Somerset. Call 07587 478826 any time.`,
   },
   {
-    slug: "how-long-does-roof-last",
-    title: "How Long Does a Roof Last? Lifespan Guide by Material",
-    excerpt: "Different roofing materials have very different lifespans. Here's a definitive guide to expected roof lifespan by material — and the factors that affect how long yours will last.",
-    category: "roofing",
-    tags: ["roof lifespan", "roof materials", "how long roof lasts"],
-    publishedAt: "2025-02-10",
-    readTime: 5,
-    author: "ProLine Roofing & Solar",
-    content: `## How Long Does a Roof Last?
-
-One of the most common questions homeowners ask is: how long will my roof last? The answer depends almost entirely on the roofing material, the quality of the original installation, and how well the roof has been maintained.
-
-## Roofing Material Lifespans
-
-**Natural Welsh Slate: 100–150+ years**
-The longest-lasting roofing material available. High-quality Welsh slate (Penrhyn or Ffestiniog) can genuinely last 150 years or more. The nails typically fail before the slate itself.
-
-**Natural Clay Tiles: 60–100 years**
-Clay plain tiles and pantiles have excellent longevity. Period properties with original clay tile roofs in Somerset often date back 100+ years without full replacement.
-
-**Concrete Interlocking Tiles: 30–50 years**
-Concrete tiles are the standard for modern homes. Post-war properties are due for re-roofing as their original concrete tiles approach end of life.
-
-**Concrete Plain Tiles: 30–40 years**
-Slightly shorter lifespan than interlocking tiles due to their profile and water-shedding characteristics.
-
-**GRP Fibreglass Flat Roofing: 25–40 years**
-Modern GRP systems are significantly more durable than old built-up felt. With a proper specification (minimum 1.5mm resin thickness), lifespans of 30+ years are realistic.
-
-**EPDM Rubber Flat Roofing: 25–50 years**
-EPDM is arguably the most durable flat roofing material available. The rubber membrane itself can last 50+ years; joined seams are the potential weak point.
-
-**Traditional Built-Up Felt: 10–20 years**
-Old-style three-layer bitumen felt has a much shorter lifespan. Properties roofed with felt in the 1990s or 2000s may already be approaching replacement.
-
-## What Shortens a Roof's Lifespan?
-
-- **Poor original installation:** Incorrect lap, inadequate fixing, poor underfelt specification
-- **Lack of maintenance:** Blocked gutters, accumulated moss, failed flashings left unrepaired
-- **Tree proximity:** Overhanging branches, falling debris, leaf accumulation
-- **Exposure:** Coastal properties face greater weathering than sheltered inland locations
-- **Underfelt failure:** Even if tiles are sound, failed underfelt means the secondary waterproofing layer is gone
-
-## When to Have Your Roof Inspected
-
-A professional inspection every 5–10 years is good practice for roofs over 20 years old. ProLine offers free surveys across Somerset — we'll tell you honestly whether your roof needs attention now, in 5 years, or not for a decade.`,
-  },
-  {
-    slug: "planning-permission-roof-somerset",
-    title: "Do I Need Planning Permission for Roof Work in Somerset?",
-    excerpt: "Most roof repairs and replacements are permitted development. But there are important exceptions — conservation areas, listed buildings, and specific types of changes all have different rules.",
-    category: "guides",
-    tags: ["planning permission", "roof work", "somerset", "conservation areas"],
-    publishedAt: "2025-03-05",
-    readTime: 5,
-    author: "ProLine Roofing & Solar",
-    content: `## Planning Permission for Roof Work in Somerset
-
-The good news is that most routine roofing work falls within permitted development rights and doesn't require planning permission. But there are important exceptions, and getting it wrong can mean enforcement action and costly remediation.
-
-## What Usually Doesn't Need Permission
-
-Under permitted development rights, the following generally don't require planning permission:
-
-- Replacing tiles like-for-like on a standard residential roof
-- Re-roofing with the same material (concrete tiles for concrete tiles, etc.)
-- Installing solar panels on a non-listed building outside a conservation area
-- Replacing lead flashings and gutters
-
-## What May Require Permission
-
-### Conservation Areas
-
-Somerset has numerous conservation areas — Taunton, Bath, Wells, Glastonbury, and many villages all have designated areas. Within a conservation area:
-
-- You generally cannot change the exterior appearance in a way that would be "materially different" from the existing appearance
-- Changes of roofing material (e.g., from slate to concrete tiles) may require consent
-- Solar panels may require planning permission (though some are still permitted)
-
-### Listed Buildings
-
-If your property is listed (Grade I, II* or II), virtually all external changes require Listed Building Consent in addition to any planning permission. This includes changing roofing materials, even replacing like-for-like. Always check with your local authority before starting any work on a listed building.
-
-### Dormer Windows and Roof Extensions
-
-Adding a dormer window to a roof requires planning permission in most cases, especially in conservation areas or for front-facing dormers visible from the highway.
-
-### Roof Terraces
-
-Converting a flat roof to a terrace with balustrades typically requires planning permission as it represents a change of use.
-
-## How to Check
-
-The easiest way to check if your project needs permission:
-
-1. Contact your local planning authority (Somerset Council, Bath & North East Somerset Council, North Somerset Council, or the relevant district council)
-2. Use the government's Planning Portal interactive guide
-3. Ask your roofing contractor — we advise on planning implications during every survey
-
-## Our Approach at ProLine
-
-We flag any potential planning issues during our free survey before any work begins. We have extensive experience working in Somerset's conservation areas and with listed buildings, and can advise on the correct approach to achieve the result you want within the planning framework.`,
-  },
-  {
-    slug: "battery-storage-solar-guide",
-    title: "Solar Battery Storage Guide: Is It Worth It in 2024?",
-    excerpt: "Solar batteries have dropped in price but still add thousands to your system cost. Here's an honest assessment of whether battery storage makes financial sense in 2024.",
+    slug: "solar-panel-installation-guide-somerset",
+    title: "Solar Panel Installation in Somerset: Complete Homeowner Guide",
+    excerpt: "Thinking about solar panels for your Somerset home? This complete guide covers how solar PV works, what system size you need, what it costs, and what savings you can realistically expect.",
     category: "solar",
-    tags: ["battery storage", "solar battery", "Powerwall", "GivEnergy"],
-    publishedAt: "2025-04-01",
+    featured: true,
+    tags: ["solar panel installation", "solar PV", "solar panels Somerset", "MCS"],
+    publishedAt: "2024-08-01",
+    readTime: 10,
+    author: "ProLine Roofing & Solar",
+    content: `Solar photovoltaic (PV) panels convert sunlight directly into electricity that can power your home. With electricity prices remaining high and solar technology continuing to improve, solar panels are now one of the most financially sound home improvements available to Somerset homeowners.
+
+## How Solar PV Works
+
+Each solar panel contains photovoltaic cells made from silicon. When photons from sunlight strike these cells, they knock electrons loose, creating a direct current (DC) flow. An inverter mounted in your loft or utility room converts this DC into alternating current (AC) — the type of electricity used by your household appliances.
+
+Any electricity generated that you don't immediately use can be exported to the National Grid. Under the Smart Export Guarantee (SEG), your energy supplier pays you for this exported electricity — typically 4–15p per unit depending on your tariff.
+
+## Is Your Roof Suitable?
+
+**Orientation**: South-facing roofs are ideal, generating approximately 100% of potential output. South-east and south-west orientations produce around 90–95% of optimal. East or west orientations generate around 70–80%. North-facing slopes are generally not viable.
+
+**Pitch**: The ideal pitch is 30–40 degrees, close to the angle of maximum solar gain in the UK. Shallower and steeper pitches are workable but slightly less efficient. Flat roofs can accommodate panels on mounting frames angled to the optimum.
+
+**Shading**: Even partial shading — from a chimney, dormer, tree or neighbouring building — has a significant impact on output. Modern microinverter and DC optimiser systems can minimise shading losses, but it's always better to install panels on a shading-free section of roof.
+
+**Structural condition**: Your roof should be in sound condition before panels are installed. Fitting solar panels to a roof that will need replacing in five years is a false economy — removing and refitting panels adds £500–£1,500 in extra costs.
+
+## System Sizing
+
+A 4kWp system is the most common domestic installation in the UK — it typically comprises 10–12 panels and generates approximately 3,400–3,800 kWh per year in Somerset.
+
+**Small household (1–2 people, low consumption)**: 2–3kWp system, 6–8 panels.
+**Average household (3–4 people)**: 4kWp system, 10–12 panels.
+**Large household or EV owner**: 6kWp+ system, 15–18 panels.
+
+Your installer will assess your annual electricity consumption (available from your bills) and recommend the optimum system size. A larger system does not always mean better economics — if you export a large proportion of the electricity at a low SEG rate, the payback period extends.
+
+## Installation Costs in Somerset
+
+A typical 4kWp system in 2024 costs:
+- Panels and inverter: £3,500–£5,000
+- Installation, fixings and scaffolding: £1,000–£2,500
+- DNO application (if required): £150–£300
+- **Total**: approximately £5,000–£8,000 for a 4kWp system
+
+Prices vary with roof complexity, access, scaffolding requirements and panel brand. Adding battery storage (see separate guide) typically adds £2,000–£5,000.
+
+## Expected Savings
+
+A 4kWp system in Somerset generates approximately 3,400–3,800 kWh per year. Based on current electricity prices:
+
+- If you self-consume 50% of generation (1,700–1,900 kWh) at 25p/kWh: saving of £425–£475/year
+- If you export 50% (1,700–1,900 kWh) at 7p/kWh (SEG): income of £119–£133/year
+- **Total annual benefit**: approximately £544–£608/year
+
+These figures improve significantly if you shift loads (dishwasher, washing machine, EV charging) to run during peak solar hours.
+
+## Payback Period
+
+At a total cost of £6,500 and annual benefit of £575, the simple payback period is approximately 11 years. Solar panels carry 25-year performance warranties, so the remaining 14 years represent pure savings.
+
+If electricity prices rise (the long-term trend), payback shortens. Battery storage can increase self-consumption from 50% to 80%+, improving payback further.
+
+## MCS Accreditation
+
+Always use an MCS (Microgeneration Certification Scheme) accredited installer. MCS accreditation is a requirement for claiming the Smart Export Guarantee, and provides consumer protection through a complaints procedure and guarantee scheme. At ProLine Roofing & Solar, we are fully MCS accredited.
+
+Call 07587 478826 for a free solar survey and personalised quotation for your Somerset home.`,
+  },
+  {
+    slug: "solar-panel-costs-somerset-2024",
+    title: "Solar Panel Costs in Somerset: 2024 Price Guide",
+    excerpt: "Solar panel costs have fallen significantly over the past decade. This 2024 price guide breaks down the real costs of solar installation in Somerset, from 2kW starter systems to large 10kW+ arrays.",
+    category: "solar",
+    tags: ["solar panel costs", "solar prices 2024", "solar installation cost", "Somerset solar"],
+    publishedAt: "2024-09-10",
     readTime: 7,
     author: "ProLine Roofing & Solar",
-    content: `## Is Solar Battery Storage Worth It?
+    content: `Solar panel prices in the UK have fallen by over 70% in the last decade. In 2024, a quality solar installation represents excellent value for money, with payback periods of 8–12 years and system lifespans of 25–30 years. Here's what you can expect to pay for solar in Somerset.
 
-Battery storage adds significant cost to a solar installation — but it also significantly increases the value you get from your panels. Here's an honest assessment of the numbers.
+## System Sizes and Costs
 
-## How Solar Batteries Work
+### 2kWp System (4–6 panels)
+Suitable for: single occupant, small flat conversion, boat or garage setup.
+Panel output: 1,700–2,000 kWh/year.
+Approximate total cost: £3,000–£4,500.
 
-A solar battery stores excess electricity generated by your panels during the day, making it available for use in the evening and at night. Without a battery, excess solar generation is exported to the grid (earning SEG income). With a battery, that electricity stays in your home, saving you the full import rate instead of the much lower export rate.
+### 3kWp System (7–8 panels)
+Suitable for: couple or small family with modest electricity usage.
+Panel output: 2,550–2,850 kWh/year.
+Approximate total cost: £4,000–£5,500.
 
-## The Financial Case
+### 4kWp System (10–12 panels) — Most Popular
+Suitable for: average UK household (3,200–3,800 kWh annual consumption).
+Panel output: 3,400–3,800 kWh/year.
+Approximate total cost: £5,500–£8,000.
 
-**Without battery:** 4kW system generates 3,600 kWh. You use 50% directly (1,800 kWh × 28p = £504 saved) and export 50% (1,800 kWh × 8p = £144 earned). Total annual benefit: £648.
+### 6kWp System (14–16 panels)
+Suitable for: larger family, EV owner, home office or higher consumption.
+Panel output: 5,100–5,700 kWh/year.
+Approximate total cost: £7,500–£11,000.
 
-**With 10kWh battery:** Self-consumption rises to ~70%. You use 2,520 kWh directly (£706 saved) and export 1,080 kWh (£86 earned). Total annual benefit: £792.
+### 10kWp+ System (24+ panels)
+Suitable for: very large homes, properties with significant roof space, commercial-scale domestic.
+Panel output: 8,500–9,500 kWh/year.
+Approximate total cost: £12,000–£18,000.
 
-Battery adds £792 - £648 = **£144/year** of additional value. At a battery cost of £3,000, payback on the battery alone is approximately **21 years**. At current prices, that's marginal.
+## Panel Brand Comparison
 
-## When Battery Storage Makes More Sense
+**SunPower (Maxeon)**: Premium US brand, highest efficiency (22–24%), best warranty (40 years on some products), most expensive. Suitable for space-constrained roofs. Expect to pay 30–50% more per panel.
 
-**Higher electricity prices:** If electricity rises to 35p+/kWh, the additional annual saving from a battery increases to £200+ and payback falls to 15 years.
+**Panasonic HIT / EverVolt**: High efficiency (20–22%), excellent temperature performance, very strong warranty. Mid-to-premium price range.
 
-**Time-of-use tariffs:** Tariffs like Octopus Agile or Go have very low overnight rates. A battery charged on cheap overnight electricity (3–7p/kWh) and discharged at peak evening rates (30p+) can deliver 20p+ of arbitrage per kWh cycled. This can make batteries very financially attractive.
+**LG NeON**: Excellent quality, now discontinued from manufacturing but still available as new stock. High efficiency (19–22%), good warranty. Still a top choice.
 
-**Energy security:** The peace of mind of backup power during outages has real value that's hard to quantify financially.
+**Q Cells (Hanwha)**: German-designed, Korean-manufactured. Excellent value/performance ratio. Very popular in the UK market. Efficiency 19–21%.
 
-**EV ownership:** Combining solar, battery and EV charging creates a powerful energy ecosystem where almost all energy costs are minimised.
+**Trina Solar**: Large Chinese manufacturer, competitive pricing, reliable quality. Efficiency 19–21%. Good choice for budget-conscious buyers.
 
-## Battery Options in 2024
+**Jinko Solar**: One of the world's largest solar manufacturers. Competitive pricing, good quality control. Efficiency 19–21%.
 
-**GivEnergy (UK brand):** Popular, well-supported, 5kWh to 19.2kWh modular systems. Good value at £2,000–£4,500.
+**REC Alpha**: Norwegian-designed, high efficiency (21–22%), innovative technology. Mid-premium price range.
 
-**Fox ESS:** Korean-made, AC or DC coupled, competitive pricing. 5–10kWh from £2,000–£3,500.
+## Panel Technologies
 
-**Tesla Powerwall 3:** Premium option, 13.5kWh usable, built-in inverter. From £8,000–£10,000 installed.
+**Monocrystalline PERC**: The current mainstream technology. High efficiency, good performance in diffuse light. Most panels sold today.
 
-**Sonnen eco:** German-made, premium quality, 10-year warranty. 5–15kWh from £6,000–£12,000.
+**TOPCon**: Next-generation technology with slightly higher efficiency than standard PERC. Increasingly common in 2024.
 
-## Our Recommendation
+**HJT (Heterojunction)**: Premium technology, excellent temperature coefficient (maintains performance better in heat), highest efficiency in this category.
 
-For most Somerset homeowners, solar without a battery is the financially optimal first step. Add a battery if you're on a time-of-use tariff, have or plan an EV, or value energy independence. The battery market is still evolving rapidly — prices continue to fall and the financial case will continue to improve.`,
+**Polycrystalline**: Older technology, lower efficiency, becoming less common. You may see cheap poly panels on budget installs — not generally recommended for new installations.
+
+## Cost Breakdown
+
+For a typical 4kWp system at £7,000 total cost:
+- Solar panels (12 × 370W): ~£1,800–£2,400
+- Inverter (string or hybrid): ~£700–£1,200
+- Mounting system and fixings: ~£400–£600
+- Electrical cabling and components: ~£200–£400
+- Scaffolding: ~£600–£1,000
+- Installation labour: ~£600–£900
+- DNO G98/G99 application: ~£150–£200
+- Commissioning and MCS certificate: included
+
+## Battery Storage Add-On Costs
+
+Adding battery storage to a solar system (installed at the same time) typically costs:
+- 5kWh battery (e.g., GivEnergy 5.2): ~£2,000–£2,500
+- 10kWh battery (e.g., GivEnergy 9.5): ~£3,000–£3,800
+- 13.5kWh Tesla Powerwall 2: ~£7,000–£9,000 installed
+
+Battery storage significantly increases self-consumption (from ~50% to 80%+) and improves overall ROI over the system lifetime.
+
+ProLine Roofing & Solar is MCS accredited and provides free, no-obligation solar surveys across Somerset. Call 07587 478826 today.`,
   },
   {
-    slug: "storm-damage-roof-repair",
-    title: "Storm Damage Roof Repair: Insurance Claims & Repair Guide",
-    excerpt: "Storm damage is covered by most buildings insurance policies — but claiming successfully requires the right approach. Here's everything you need to know.",
-    category: "maintenance",
-    tags: ["storm damage", "insurance claim", "roof repair", "somerset"],
-    publishedAt: "2025-05-10",
-    readTime: 6,
+    slug: "solar-roi-calculator-somerset",
+    title: "Is Solar Worth It in Somerset? ROI Calculator & Guide",
+    excerpt: "Somerset receives around 1,400–1,600 sunshine hours per year — more than the UK average. This guide calculates exactly what return on investment you can expect from solar panels in the South West.",
+    category: "solar",
+    tags: ["solar ROI", "solar worth it", "solar savings", "Somerset sunshine"],
+    publishedAt: "2024-10-15",
+    readTime: 8,
     author: "ProLine Roofing & Solar",
-    content: `## Storm Damage Roof Repair: A Complete Guide
+    content: `One of the most common questions we hear is: "Is solar really worth it?" The honest answer for Somerset is: yes, for most homes it represents an excellent long-term investment. Here's the evidence.
 
-Somerset is no stranger to stormy weather — the South West experiences some of the UK's strongest Atlantic weather systems, with regular gusts exceeding 50–60mph during winter storms. Here's what to do when your roof takes a hit.
+## Somerset's Solar Resource
 
-## Assessing Storm Damage Safely
+Somerset sits in the south-west of England, one of the sunniest regions in the UK. Annual sunshine hours in Taunton average 1,500–1,600, compared to a UK average of approximately 1,400 hours. This means a solar system in Somerset generates roughly 10–15% more electricity per year than the same system installed in the north of England.
 
-After a storm, assess your roof from ground level only. Use binoculars if needed. Look for:
+Peak sun hours (the period of most intense irradiance useful for generation) in Somerset average 3.2–3.6 hours per day on an annual basis, with significant seasonal variation: 5–7 hours in summer months, 1–2 hours in December–January.
 
-- Missing or displaced tiles or slates
-- Displaced ridge tiles
-- Bent or missing lead flashings
-- Chimney pots that have moved or fallen
-- Sagging gutters or loose fascias
-- Any debris on the roof
+## Basic ROI Calculation for a Typical Somerset Home
 
-Do not attempt to access the roof yourself — surfaces may be wet, tiles may be unstable, and structural damage may not be immediately visible.
+**System**: 4kWp (12 panels, south-facing, 35-degree pitch)
+**Annual generation**: 3,600 kWh (typical Somerset figure)
+**System cost**: £7,000 (including installation)
 
-## Inside the Property
+**Self-consumption assumption**: 50% (1,800 kWh used directly)
+- Saving at 25p/kWh: £450/year
 
-Check your loft space if it's accessible. Look for:
-- Water stains on the underside of the roof boarding
-- Wet insulation
-- Active drips or pooling water
-- Daylight visible through the roof (indicates missing tiles or failed underfelt)
+**Export assumption**: 50% (1,800 kWh exported)
+- SEG income at 7p/kWh: £126/year
 
-Also check ceilings on upper floors for new water stains.
+**Total annual benefit**: £576/year
+**Simple payback period**: £7,000 ÷ £576 = **12.2 years**
 
-## Temporary Protection
+After payback, the system continues generating for a further 13+ years before reaching its 25-year warranty endpoint — that's 13 years of pure saving.
 
-If you can do so safely, a heavy-duty tarpaulin over the affected area will minimise further water ingress while you arrange repairs. Weight it down or tie it securely — don't attach it to vulnerable chimney stacks.
+**Total 25-year benefit** (at today's prices, no inflation): approximately £14,400 from a £7,000 investment.
 
-## Notifying Your Insurer
+## Improving Your ROI
 
-Most buildings insurance policies require you to notify your insurer "as soon as reasonably practicable" after storm damage. Contact them promptly.
+### Shift Loads to Solar Hours
+If you can run dishwashers, washing machines and tumble dryers between 10am–3pm, you maximise self-consumption. This alone can push self-consumption from 50% to 65–70%, significantly improving returns.
 
-What to have ready:
-- The date and approximate time of the storm
-- A description of the visible damage
-- Photographs
-- Your policy number
+### Add Battery Storage
+A 10kWh battery (approximately £3,500 installed) can boost self-consumption from 50% to 80%. The additional system cost of £3,500 generates additional savings of approximately £350/year (30% of 3,600kWh at 32p/kWh net benefit over export). Payback on the battery alone: ~10 years — but as a combined system, the economics improve.
 
-The insurer will either appoint a loss adjuster to assess the damage or ask you to obtain quotes.
+### EV Charging Interaction
+Electric vehicle owners gain disproportionate benefit from solar. A typical EV requires 3,000–4,000 kWh per year to charge. If you charge from solar during the day (using a smart charger), you can displace expensive electricity that would otherwise cost £750–£1,000/year, dramatically improving solar ROI.
 
-## Getting a Roofer's Report
+## Smart Export Guarantee (SEG)
 
-Your insurer will typically require a written damage report from a roofing contractor. This should include:
-- Description of the damage found
-- Assessment of the cause (storm vs pre-existing wear)
-- Photographs of the damage
-- A written quote for the repair
+Since the Feed-in Tariff closed to new applicants in 2019, the Smart Export Guarantee (SEG) has replaced it for new solar installations. Under the SEG, licensed energy suppliers with over 150,000 customers are required to offer an export tariff.
 
-ProLine Roofing & Solar provides detailed written damage reports for insurance purposes across Somerset.
+SEG rates in 2024 range from 4p/kWh (Octopus Agile export) to around 20p/kWh on premium tariffs. Smart meters are required to benefit from SEG — fortunately, most UK homes now have one.
 
-## What Insurance Does and Doesn't Cover
+## 25-Year Financial Analysis
 
-**Typically covered:** Sudden damage caused by storm, high winds, hail, falling trees or branches, impacts.
+Assuming 2% annual electricity price inflation and current costs:
 
-**Typically NOT covered:** Gradual wear and tear, maintenance issues, damage that predated the storm (insurers look for pre-existing conditions).
+| Year | Annual Saving | Cumulative Return |
+|------|--------------|------------------|
+| 1    | £576         | £576             |
+| 5    | £635         | £3,040           |
+| 10   | £701         | £6,495           |
+| 12   | £727         | ~£7,840 (payback)|
+| 20   | £854         | £14,720          |
+| 25   | £942         | £19,350          |
 
-## Excess and Betterment
+Over 25 years, the net return (after system cost) is approximately **£12,350** — an internal rate of return of around 8–9% per year.
 
-Check your policy excess — this is the amount you pay towards each claim. Some policies have high excesses that make smaller claims uneconomical. "Betterment" clauses may also reduce a payout if the repair represents an improvement on the pre-storm condition.
+## Environmental Impact
 
-## Choosing a Contractor for Insurance Work
+A 4kWp solar system in Somerset prevents approximately 0.9 tonnes of CO₂ emissions per year (based on the grid carbon intensity factor). Over 25 years, that's approximately 22 tonnes of CO₂ — equivalent to planting around 1,000 trees.
 
-Use an established, insured roofing company — not a storm-chasing door-to-door trader. Ensure the contractor provides a written report and is prepared to liaise with the loss adjuster on your behalf.`,
+Call ProLine Roofing & Solar on 07587 478826 for a personalised ROI calculation for your specific property.`,
   },
   {
-    slug: "fascias-soffits-replacement-guide",
-    title: "Fascias & Soffits Replacement Guide: Costs, Options & Advice",
-    excerpt: "UPVC fascias and soffits are one of the most cost-effective roofline upgrades available. This guide covers costs, options, and what to watch out for.",
-    category: "roofing",
-    tags: ["fascias", "soffits", "roofline", "UPVC", "costs"],
-    publishedAt: "2025-05-20",
-    readTime: 5,
+    slug: "solar-grants-uk-2024",
+    title: "Solar Panel Grants & Incentives UK 2024: What's Available?",
+    excerpt: "There are several routes to financial assistance for solar installation in 2024. This guide covers all current UK government schemes, incentives and local grants available to Somerset homeowners.",
+    category: "solar",
+    tags: ["solar grants", "solar incentives", "ECO4", "0% VAT solar", "Smart Export Guarantee"],
+    publishedAt: "2024-11-05",
+    readTime: 7,
     author: "ProLine Roofing & Solar",
-    content: `## Fascias and Soffits: A Complete Replacement Guide
+    content: `The UK government's support for residential solar has shifted significantly since the Feed-in Tariff closed in 2019. While there is no longer a direct installation grant for most homeowners, several important financial incentives remain in place, and new schemes are emerging.
 
-Fascias and soffits are the boards that run along the lower edge of a roof. Fascias face outward and carry the guttering; soffits form the underside of the eaves. When they fail — typically through rot in timber boards — they're best replaced with UPVC.
+## 0% VAT on Solar Panels (Extended to 2027 and Beyond)
 
-## Why Replace Timber Fascias?
+The most universally available incentive is the 0% VAT rate on solar panel installation for residential properties, which was introduced in April 2022 and has been confirmed to apply at least until 2027.
 
-Older homes have painted timber fascias and soffits. These require regular painting (every 5–7 years) to prevent rot. Once timber begins to rot, it deteriorates quickly, can allow pests into the roof void, and affects the structural integrity of the guttering fixings.
+This means you pay no VAT (normally 20%) on the supply and installation of solar panels, batteries, and related equipment. On a £7,000 system, this is equivalent to a saving of approximately £1,167. This applies regardless of income level and requires no application — it is automatically applied by any legitimate solar installer.
 
-UPVC fascias are low maintenance (never need painting), rot-free, and are available in white, black, brown and other colours to match your property.
+## ECO4 Scheme
 
-## The Options: Overfascia vs Full Replacement
+The Energy Company Obligation (ECO4) is the current government energy efficiency scheme, obligating large energy suppliers to fund insulation, heating and renewable energy measures for low-income and vulnerable households.
 
-**Full replacement** involves removing the old timber boards completely and fitting new UPVC. This allows inspection of the timber rafters behind, treatment of any rot, and fitting of ventilated soffits for loft ventilation. This is the recommended approach.
+Solar panels can be funded under ECO4 as part of a wider energy efficiency package, but eligibility is restricted. You may qualify if:
+- You receive certain means-tested benefits (Universal Credit, Pension Credit, etc.)
+- Your home has an EPC rating of D, E, F or G
+- You live in a private rented or owner-occupied property
 
-**Overfascia capping** fits a UPVC profile over the existing timber, provided the timber is in reasonable condition. It's quicker and cheaper but covers up any rot rather than addressing it.
+ECO4 is administered through energy suppliers and local authority partnerships. Contact Somerset County Council or your energy supplier to check eligibility.
 
-## Typical Costs
+## Great British Insulation Scheme
 
-For a standard 3-bedroom semi-detached house in Somerset:
+The Great British Insulation Scheme (GBIS) focuses primarily on loft and cavity wall insulation but can be complementary to solar installation — better-insulated homes get more value from solar-generated heat. GBIS has a slightly broader eligibility than ECO4, including council tax bands A–D in addition to benefit recipients.
 
-- **Full UPVC replacement (fascias, soffits, bargeboards):** £800–£1,800
-- **Including gutter replacement:** £1,200–£2,500
-- **Scaffolding:** Usually required for pitched roof work; typically included in the quote
+## The Warm Homes Plan
 
-## Ventilated Soffits
+The Labour government elected in 2024 announced the Warm Homes Plan, which proposes grants and low-interest loans for home energy improvements including solar, heat pumps and insulation. As of late 2024, detailed scheme rules are still being developed, with full rollout expected through 2025–2026. Watch this space — the Warm Homes Plan may provide the most significant new financial support for solar in years.
 
-Building regulations require roof voids to be adequately ventilated to prevent condensation and moisture build-up. Ventilated soffits have perforated or slotted sections that allow airflow into the loft. Always specify ventilated soffits when replacing roofline boards.
+## Smart Export Guarantee (SEG)
 
-## Choosing a Colour
+The SEG is not a grant but a guaranteed income for exported electricity. All MCS-accredited solar installations are eligible. You must register with a licensed SEG licensee (usually your energy supplier) and have a smart meter.
 
-White remains the most popular and widely available colour. Dual-colour profiles (white inner, grey outer) are increasingly popular on modern homes. For period properties, black or dark grey fascias can look very attractive and are increasingly common.
+Currently available SEG tariffs include:
+- Octopus Energy: competitive variable rates
+- EDF Energy: fixed rates around 5–7p/kWh
+- Ovo Energy: fixed rates available
+- Various smaller suppliers offering higher rates for short periods
 
-## What to Expect
+Shopping around for SEG tariffs is worthwhile — a difference of 5p/kWh on 1,800 kWh/year exported equals £90 per year.
 
-Full roofline replacement on a semi-detached typically takes one full day. Scaffolding is normally required. We carry a range of standard profiles and can source less common sizes. All guttering removed during fascia replacement is checked and replaced if necessary.`,
-  },
-  {
-    slug: "moss-removal-roof-somerset",
-    title: "Roof Moss Removal in Somerset: Complete Guide",
-    excerpt: "Somerset's wet climate means roof moss is a common problem. This guide covers safe removal methods, treatment options, and prevention — and what not to do.",
-    category: "maintenance",
-    tags: ["moss removal", "roof maintenance", "somerset", "algae"],
-    publishedAt: "2025-06-01",
-    readTime: 5,
-    author: "ProLine Roofing & Solar",
-    content: `## Roof Moss Removal in Somerset
+## Local Council Schemes
 
-Somerset's mild, wet climate is ideal for moss and lichen growth on roofs — particularly on north-facing and shaded slopes. While some moss growth is cosmetic, heavy infestations can cause real damage over time.
+Somerset County Council and constituent district councils periodically run solar co-operative or group purchase schemes that can reduce installation costs through bulk purchasing. These schemes are not always active — check with Somerset Council for current offerings.
 
-## Why Moss Is a Problem
+The Social Housing Decarbonisation Fund provides grants to housing associations and local authorities for energy improvements to social housing stock, including solar.
 
-Moss holds moisture against the tile surface, accelerating freeze-thaw damage and tile degradation. Root-like structures (rhizoids) penetrate mortar joints and can cause physical damage over time. Heavy moss can also impede water flow and block gutters.
+## Business Rates Relief for Solar
 
-## Safe Removal Methods
+Commercial property owners in England benefit from a 100% business rates relief for solar panels, meaning solar installations on commercial buildings do not attract additional business rates. This is a significant benefit for business owners considering commercial solar.
 
-### Biocide Treatment
+## Summary of Available Support (2024)
 
-Biocide sprays (algaecide and moss-killer products) are applied to the roof surface and kill existing moss and algae. The dead moss then gradually weathers away over 6–12 months. This is the safest method as it doesn't require scraping that can damage tiles.
+| Incentive | Who Qualifies | Benefit |
+|-----------|--------------|---------|
+| 0% VAT on solar | All residential | ~£1,167 saving on £7,000 system |
+| ECO4 solar funding | Low income, poor EPC | Up to 100% cost covered |
+| SEG export payments | All MCS installations | £100–£300/year |
+| Warm Homes Plan | TBC (launching 2025–26) | Grants/loans TBC |
 
-**Cost:** £200–£500 for a standard semi-detached, applied from the ground using a long lance or from scaffolding.
-
-### Manual Brush Removal
-
-Careful hand-brushing can remove heavy moss infestations. This must be done gently to avoid displacing tiles or cracking mortar. Not suitable for fragile older tiles.
-
-### Pressure Washing
-
-**Not recommended.** High-pressure washing can dislodge mortar, damage tile surfaces, and force water under tiles and into the roof structure. It also disrupts the protective surface treatment on many modern tiles.
-
-## Prevention
-
-**Zinc or copper strips:** A strip of zinc or copper fitted along the ridge releases trace metals when it rains, inhibiting moss and algae growth. Effective, long-lasting, and low cost (£150–£400 installed).
-
-**Regular biocide applications:** A preventive biocide spray every 3–5 years maintains a moss-free roof.
-
-**Tree management:** Overhanging branches increase shade and deposit debris that encourages moss growth. Cutting back trees significantly reduces moss recolonisation rates.
-
-## When Moss Indicates a Bigger Problem
-
-Extensive, rapidly growing moss can indicate that the protective surface treatment on concrete tiles has broken down — a sign that the tiles are nearing end of life. If biocide treatment doesn't clear the moss within 12 months, arrange a survey to assess the overall roof condition.`,
+ProLine Roofing & Solar is MCS accredited and can help you access all available incentives. Call 07587 478826 for a free consultation.`,
   },
   {
     slug: "best-solar-panels-uk",
     title: "Best Solar Panels UK 2024: Top Brands Compared",
-    excerpt: "Choosing the right solar panels matters for performance and longevity. Here's a comparison of the top solar panel brands available to UK homeowners in 2024.",
+    excerpt: "With dozens of solar panel brands on the market, choosing the right product can be overwhelming. This guide compares the top brands on efficiency, warranty, cost and suitability for UK conditions.",
     category: "solar",
-    tags: ["solar panels", "panel brands", "UK", "comparison", "2024"],
-    publishedAt: "2025-04-15",
-    readTime: 6,
+    tags: ["best solar panels UK", "solar panel brands", "solar panel comparison", "solar efficiency"],
+    publishedAt: "2025-01-08",
+    readTime: 8,
     author: "ProLine Roofing & Solar",
-    content: `## Best Solar Panels for UK Homes: 2024 Guide
+    content: `Not all solar panels are created equal. Efficiency, temperature coefficient, warranty terms and degradation rates all affect how much electricity your system generates over its lifetime and the total return on your investment. Here is a thorough comparison of the leading brands available in the UK in 2024.
 
-The solar panel market offers everything from budget Chinese panels to premium US and Japanese products. Here's what you need to know to choose well.
+## Key Metrics to Understand
 
-## Key Performance Metrics
+**Efficiency (%)**: The percentage of sunlight converted to electricity. Higher efficiency means more output per m² of panel area. Ranges from ~18% (budget) to ~24% (premium).
 
-**Efficiency:** The percentage of sunlight converted to electricity. Premium panels: 21–23%. Budget panels: 17–19%. A 1% efficiency difference on a 4kW system equates to roughly 200 extra kWh per year.
+**Temperature coefficient (%/°C)**: How much output drops as the panel heats up. A lower (more negative) coefficient means less performance loss on hot days. UK summers are rarely extreme, but it still matters.
 
-**Temperature coefficient:** How much output drops per degree above 25°C. Less relevant in the UK's cool climate.
+**Degradation rate**: How much efficiency is lost per year. Premium panels degrade at ~0.25%/year; budget at ~0.7%/year. Over 25 years this becomes a significant difference.
 
-**Degradation rate:** High-quality panels degrade at 0.3–0.5% per year. Budget panels: 0.7–1.0% per year. Over 25 years, this difference is significant.
+**Warranty**: Product warranty (manufacturing defects) and performance warranty (guaranteed output). Top brands offer 25-year product and 25–40 year performance warranties.
 
-**Warranty:** Product warranty (the panel itself) and performance warranty (minimum output guarantee). Premium brands: 25-year product warranty. Budget brands: 10–12 years.
+## SunPower (Maxeon Technology)
 
-## Premium Tier
+SunPower panels use the proprietary Maxeon cell architecture — a fundamentally different design with rear contacts and no silver grid lines on the front face. This gives the highest efficiency of any commercially available panel (22–24.1%) and the industry's lowest degradation rate (~0.25%/year).
 
-### SunPower (US)
-- Efficiency: 22.8% (Maxeon cells)
-- 40-year performance warranty
-- Excellent degradation rate: 0.25%/year
-- Cost: Premium — typically 40–60% more than mid-range
+SunPower backs their Maxeon panels with a 40-year product and performance warranty — unique in the industry. The downside is cost: SunPower panels cost 40–60% more per watt than mainstream options.
 
-### Panasonic HIT / EverVolt
-- Efficiency: 21.7%
-- 25-year warranty
-- Excellent temperature performance
-- Cost: Premium
+**Best for**: Space-constrained roofs, customers prioritising maximum lifetime output.
 
-## Mid-Range (Best Value for Most Homeowners)
+## Panasonic EverVolt / HIT Technology
 
-### REC Alpha Series (Norwegian)
-- Efficiency: 21.7%
-- 25-year warranty, excellent build quality
-- Often specified by quality UK installers
-- Cost: £0.40–0.50/Wp
+Panasonic's HIT (Heterojunction with Intrinsic Thin layer) technology combines amorphous and crystalline silicon, giving excellent performance at higher temperatures and in diffuse light — both relevant to UK conditions. Efficiency 20–22%, temperature coefficient -0.26%/°C (excellent).
 
-### Q CELLS (Korean/German design)
-- Efficiency: 20.9%
-- Good UK track record, competitive warranty
-- Widely available in the UK
-- Cost: £0.30–0.40/Wp
+Panasonic now manufactures through its joint venture with Sanyo and markets panels under the EverVolt brand. Strong 25-year product warranty.
 
-### Jinko Solar (Chinese, Tier 1)
-- Efficiency: 21.1–22.0% (Tiger Neo TOPCon range)
-- 25-year warranty
-- Among the world's largest manufacturers
-- Cost: £0.25–0.35/Wp
+**Best for**: All-round UK performance, particularly suited to cloudy UK weather patterns.
 
-## Budget Tier
+## Q Cells (Hanwha)
 
-### Longi Solar, JA Solar, Trina Solar
-Competent Chinese manufacturers producing affordable panels. Suitable for straightforward roof installations where maximum efficiency isn't critical. 10–12 year product warranties; 25-year linear performance warranty.
+Q Cells is arguably the most popular mid-premium panel brand in the UK. German-engineered and manufactured in South Korea, they offer an excellent balance of performance, quality and price. Efficiency 19.9–21.9%, Anti-LID technology prevents light-induced degradation, Q.ANTUM technology improves low-light performance.
 
-## Cell Technology: Monocrystalline vs TOPCon vs HJT
+25-year product and performance warranty. Widely available through UK installers.
 
-**Monocrystalline PERC** is the current standard for most installations — good efficiency at reasonable cost.
+**Best for**: Best value in the mid-premium tier, excellent for UK conditions.
 
-**TOPCon** (Tunnel Oxide Passivated Contact) is the latest mainstream technology, offering slightly higher efficiency and better low-light performance. Most new Tier 1 panels now use TOPCon.
+## REC Alpha
 
-**HJT** (Heterojunction) offers the highest efficiency and lowest degradation but at a premium price. Best for space-constrained roofs.
+REC is a Norwegian company whose Alpha series uses HJT technology. Efficiency up to 22.3%, excellent temperature coefficient (-0.24%/°C), 25-year product and performance warranty. Relatively competitive pricing for a high-efficiency panel.
 
-## Our Recommendation
+**Best for**: Good efficiency at a more accessible price than SunPower.
 
-For most Somerset homes, a Tier 1 mid-range panel (REC, Q CELLS, or Jinko Tiger Neo) represents the best balance of performance, warranty and cost. We specify panels from these manufacturers on our standard installations. For space-constrained roofs, we'll recommend higher-efficiency options.`,
+## Trina Solar (Vertex S+)
+
+Trina is one of the world's largest panel manufacturers. Their Vertex S+ series uses TOPCon technology (Tunnel Oxide Passivated Contact), delivering efficiency of 21–22.8%. Competitive pricing, Tier 1 manufacturer status, 25-year warranty.
+
+**Best for**: High efficiency at mainstream pricing.
+
+## Jinko Solar (Tiger Neo)
+
+Another of the world's largest manufacturers. Tiger Neo TOPCon panels offer 21–23% efficiency at very competitive prices. Consistent quality for volume manufacturing, 25-year warranty.
+
+**Best for**: Good performance at budget-conscious pricing.
+
+## JA Solar (DeepBlue 4.0)
+
+Similar positioning to Jinko — Tier 1 Chinese manufacturer, TOPCon technology, 21–23% efficiency, competitive pricing. Widely used in commercial installations.
+
+**Best for**: Commercial projects and cost-sensitive residential.
+
+## Monocrystalline vs Polycrystalline vs TOPCon vs HJT
+
+- **Poly (polycrystalline)**: Older technology, being phased out. Lower efficiency (15–17%), cheaper, but not recommended for new installations in 2024.
+- **Mono PERC**: Current mainstream technology. Efficiency 19–21%. Good all-round choice.
+- **TOPCon**: Next-generation, slight efficiency and durability improvement over PERC. Increasingly the standard in 2024–25.
+- **HJT (Heterojunction)**: Premium technology, best temperature performance, highest efficiency (21–24%). Higher cost.
+
+## Our Recommendation for Somerset Homes
+
+For most Somerset homeowners, Q Cells, Trina Vertex or Jinko Tiger Neo (all TOPCon) offer the best value: 21%+ efficiency, 25-year warranty, and competitive pricing. For space-constrained roofs or those wanting the absolute best performance, SunPower or Panasonic HJT are worth the premium.
+
+ProLine Roofing & Solar installs panels from leading brands and will advise on the best option for your specific property. Call 07587 478826.`,
   },
   {
-    slug: "new-roof-complete-guide",
-    title: "New Roof Installation: Complete Guide for UK Homeowners",
-    excerpt: "Everything you need to know about getting a new roof in the UK — from choosing materials to what to expect during installation, and how to get the best price.",
-    category: "guides",
-    tags: ["new roof", "re-roofing", "guide", "costs", "installation"],
-    publishedAt: "2025-03-20",
-    readTime: 7,
-    author: "ProLine Roofing & Solar",
-    content: `## New Roof Installation: The Complete Guide
-
-A new roof is one of the most significant home improvement projects you'll undertake. Done well, it protects your home for the next 30–100 years depending on the material. Done poorly, you'll be dealing with problems for years. Here's everything you need to know.
-
-## When Do You Need a Full New Roof?
-
-Consider a full replacement when:
-- The roof is over 25–30 years old (concrete tiles) or 100+ years (natural slate)
-- Underfelt has failed and you're having repeated leaks
-- Multiple tiles are failing or nail sickness is widespread (slate)
-- Structural repairs are needed alongside tile/slate replacement
-- You want to upgrade to a higher-performance material
-
-## Choosing Your Roofing Material
-
-**Concrete plain tiles (£4,000–£10,000):** Most popular choice for modern homes. 30–50 year lifespan. Wide range of profiles and colours.
-
-**Natural Welsh slate (£9,000–£18,000):** Premium choice for period properties. 100+ year lifespan.
-
-**Artificial slate (£5,000–£10,000):** Good alternative where natural slate is too expensive or heavy.
-
-**Clay tiles (£6,000–£15,000):** Correct for period properties and conservation areas. 60–100+ year lifespan.
-
-## The Full Re-Roofing Process
-
-### 1. Free Survey and Quote
-
-A reputable roofer visits, inspects the full roof, identifies any structural issues, and provides a written, itemised quote. This should include: all materials, scaffold, waste disposal, any structural repairs needed, and the workmanship guarantee offered.
-
-### 2. Scaffolding
-
-Full scaffold is always required for a residential re-roof. It should be erected before any other work starts. Expect scaffolding to remain for the duration of the project.
-
-### 3. Stripping the Old Roof
-
-Old tiles and battens are removed carefully and disposed of. This is when the structure is fully exposed for inspection. Any rotten timbers, damaged sarking boards or inadequate roof design can be addressed.
-
-### 4. Installing New Underfelt and Battens
-
-New breathable membrane underfelt is laid over the rafters, and new treated timber battens are nailed across the slope to provide fixing points for the new tiles.
-
-### 5. Tiling or Slating
-
-New tiles or slates are laid from the eaves upward, overlapping correctly to ensure a watertight finish. Ridge, hip and valley tiles are fitted and mortar-pointed (or dry-fixed systems installed).
-
-### 6. Lead Flashings
-
-Any abutments, chimney flashings, valley flashings and soakers are replaced or installed as part of the project.
-
-### 7. Guttering and Roofline
-
-This is an ideal time to replace gutters, fascias and soffits if needed — the scaffolding is already in place, making it much more cost-effective.
-
-## How Long Does Re-Roofing Take?
-
-A standard 3-bedroom semi-detached typically takes 3–7 working days. Complex hipped roofs, properties with multiple chimneys or dormers, and houses with very large roof areas will take longer. Weather delays are always possible.
-
-## Getting the Best Price
-
-Get a minimum of two written, itemised quotes. Compare the scope of works carefully — cheaper quotes may exclude underfelt, structural repairs or waste disposal. The cheapest quote is rarely the best value.`,
-  },
-  {
-    slug: "solar-panels-old-house",
-    title: "Solar Panels on Older Houses: What You Need to Know",
-    excerpt: "Fitting solar panels to an older or period property comes with specific considerations around planning, roof structure and aesthetics. Here's what to expect.",
-    category: "solar",
-    tags: ["solar panels", "period property", "listed buildings", "conservation"],
-    publishedAt: "2025-02-28",
-    readTime: 5,
-    author: "ProLine Roofing & Solar",
-    content: `## Solar Panels on Older Houses: Key Considerations
-
-Somerset has a wealth of period and listed properties — Georgian town houses in Bath, Victorian terraces in Taunton, and rural farmhouses throughout the county. Fitting solar panels to these properties requires care and often specific products or planning consents.
-
-## Structural Assessment
-
-Older properties may have original roof timbers that are not sized to modern standards. Solar panels add approximately 13–15kg per panel to the roof load. Before installation, we assess:
-
-- The condition and sizing of roof rafters
-- Whether any reinforcement is required
-- The condition of the roof covering (we won't install panels on a roof that will need replacing within 5–10 years)
-
-For most Victorian and Edwardian properties with original, full-depth rafters, the additional panel load is well within structural limits.
-
-## Conservation Areas and Planning Permission
-
-Solar panels on residential buildings are generally permitted development (no planning permission required) subject to certain conditions — including that the panels should not protrude more than 200mm beyond the roof plane and should not be visible from a highway in a conservation area.
-
-For properties in conservation areas, carefully consider where panels are placed. Rear or side elevations are typically preferred and often don't require permission. Front-elevation panels in conservation areas may require prior approval or full planning permission.
-
-## Listed Buildings
-
-Listed buildings in England require Listed Building Consent for external changes, including solar panel installation. This is a separate process from planning permission and applies regardless of permitted development rights.
-
-Getting consent for solar on a listed building is possible but requires:
-- A pre-application discussion with the conservation officer
-- Using all-black or slate-grey panels that minimise visual impact
-- Careful consideration of fixings and any damage to original fabric
-
-We have experience with listed building solar installations in Somerset and can advise on the correct approach.
-
-## Panel Options for Period Properties
-
-**All-black panels** (black frame, black backsheet) are significantly less visually intrusive than silver-framed panels on older properties. Most premium manufacturers offer all-black variants.
-
-**Slate-effect panels** — solar tiles designed to integrate flush with the roof — are available from Marley Solar and others. These are more expensive but virtually invisible on a slate or tile roof. Efficiency is lower than conventional panels.
-
-## Roofline Considerations
-
-Many period properties have original clay tiles, natural slate, or unusual tile profiles. We always check the roof is in good enough condition before installing panels, and confirm that appropriate fixing systems are available for the specific tile type.`,
-  },
-  {
-    slug: "epdm-flat-roofing-guide",
-    title: "EPDM Rubber Roofing: Complete Guide for UK Homeowners",
-    excerpt: "EPDM rubber flat roofing has become the dominant choice for domestic flat roofs. Here's everything you need to know about this durable, long-lasting membrane system.",
+    slug: "how-long-does-roof-last",
+    title: "How Long Does a Roof Last? Lifespan Guide by Material",
+    excerpt: "A roof's lifespan varies enormously depending on the material used, quality of installation and maintenance history. This guide covers every common roofing material used in the UK.",
     category: "roofing",
-    tags: ["EPDM", "rubber roofing", "flat roofing", "guide"],
-    publishedAt: "2025-01-25",
-    readTime: 5,
-    author: "ProLine Roofing & Solar",
-    content: `## EPDM Rubber Roofing: The Complete Guide
-
-EPDM (Ethylene Propylene Diene Monomer) has become the preferred material for domestic flat roofing in the UK over the past 20 years. Here's everything you need to know.
-
-## What is EPDM?
-
-EPDM is a synthetic rubber membrane originally developed for industrial sealing applications. It's supplied in large rolls (up to 15m × 30m), meaning most domestic flat roofs can be covered with a single piece — eliminating the risk of seam failure that plagues old felt systems.
-
-## Why Choose EPDM Over Other Systems?
-
-**vs Traditional felt:** EPDM lasts 25–50 years vs 10–15 years for felt. Fewer seams means fewer leaks.
-
-**vs GRP fibreglass:** EPDM is more flexible, better on large areas with complex geometry, and tends to be less expensive.
-
-**vs TPO/PVC single-ply:** EPDM is better proven in domestic applications; TPO is preferred for larger commercial roofs.
-
-## EPDM Specification: What Matters
-
-**Thickness:** 1.0mm, 1.2mm and 1.5mm are the standard options. Thicker is better. For domestic roofs, 1.2mm is the minimum recommended specification; 1.5mm is preferred.
-
-**Fully adhered vs mechanically fixed:** Fully adhered EPDM is bonded to the insulation below using specialist adhesive — this is the preferred approach for domestic flat roofs as it eliminates wind uplift risk.
-
-**Tapered insulation:** Flat roofs must be designed to drain. Tapered rigid insulation boards create the required 1:40 fall. This is essential to prevent ponding.
-
-## EPDM Repairs
-
-Small splits, punctures or seam failures in EPDM can be repaired using EPDM patch kits and contact adhesive. A well-repaired EPDM roof can continue to perform well for many more years.
-
-## Typical Costs
-
-- **Garage (approximately 25m²):** £2,500–£4,500
-- **Single-storey extension (approximately 35m²):** £3,500–£6,000
-- **Large outbuilding or flat (approximately 60m²+):** £6,000–£10,000+
-
-Costs include stripping old covering, new timber decking if required, tapered insulation, EPDM membrane, and any trims and details.
-
-## How Long Does Installation Take?
-
-A typical garage flat roof (25m²) takes one to two days. Larger projects may take 3–5 days. Preparation and insulation work often takes longer than the membrane installation itself.`,
-  },
-  {
-    slug: "commercial-solar-somerset",
-    title: "Commercial Solar Panels in Somerset: Guide for Business Owners",
-    excerpt: "Commercial solar makes excellent financial sense for Somerset businesses. This guide covers ROI, VAT, capital allowances and what to look for in a commercial installer.",
-    category: "solar",
-    tags: ["commercial solar", "somerset", "business solar", "ROI"],
-    publishedAt: "2025-05-01",
+    tags: ["roof lifespan", "how long does a roof last", "roof materials", "roof replacement"],
+    publishedAt: "2025-02-12",
     readTime: 6,
     author: "ProLine Roofing & Solar",
-    content: `## Commercial Solar Panels for Somerset Businesses
+    content: `Homeowners often ask us how long their roof should last. The answer depends heavily on what it's made of, how well it was installed, and how the property has been maintained. Here is a comprehensive lifespan guide covering every common roofing material used in the UK.
 
-Commercial solar panels offer excellent returns for businesses with suitable roof space — typically better than residential installations due to daytime usage patterns, tax incentives, and the scale economies of larger systems.
+## Natural Slate: 80–150+ Years
 
-## Why Commercial Solar Makes Sense
+Natural Welsh slate is the gold standard of roofing longevity. A well-installed natural slate roof on a Victorian or Edwardian property can last 100–150 years. Many original slates from the 19th century are still performing well today.
 
-**Daytime usage match:** Commercial buildings use most electricity during business hours — exactly when solar is generating. Self-consumption rates of 80%+ are achievable, compared to 40–60% for domestic installations.
+The caveats: even when the slates themselves remain good, the nibs (the small tabs holding the slate on the batten) may wear, causing slates to slip. The sarking felt (if present) and battens typically need replacement every 40–60 years even if the slates are sound. Spanish and Chinese imported slates have shorter lifespans of 30–60 years due to different mineral compositions and quality standards.
 
-**Scale economies:** Larger systems have lower installation costs per kW and lower per-panel costs for bulk purchases.
+## Clay Tiles: 60–100 Years
 
-**Tax incentives:** Businesses benefit from full expensing (100% of capital cost deductible from taxable profits in year one), significantly reducing the net cost.
+Hand-made clay plain tiles have been used in England for centuries and can last well in excess of 100 years when the roof structure is maintained. Machine-made clay tiles from reputable manufacturers (Marley, Sandtoft, Dreadnought) typically last 60–80 years. Clay tiles handle freeze-thaw action well due to their low water absorption.
 
-**VAT:** 0% VAT applies to many commercial solar installations. Commercial systems on business premises typically attract 0% or 5% VAT rather than the standard 20% rate. Confirm with your installer and accountant.
+## Concrete Tiles: 30–50 Years
 
-## Typical System Sizes for Somerset Businesses
+Concrete tiles are the most widely used roofing tile in the UK but have the shortest lifespan among pitched roofing options. Over time, concrete becomes porous, the surface coating fades and erodes, and the tile can absorb significant moisture leading to freeze-thaw damage. Most concrete tile roofs from the 1970s and 1980s are now reaching the end of their useful lives.
 
-| Business Type | Typical System | Cost |
-|---------------|---------------|------|
-| Small office/retail | 10–20kW | £10,000–£22,000 |
-| Medium factory/warehouse | 30–100kW | £25,000–£80,000 |
-| Large industrial unit | 100–500kW | £80,000–£400,000 |
-| Farm diversification | 50–250kW | £40,000–£200,000 |
+## Traditional Three-Layer Felt (Flat Roofs): 10–15 Years
 
-## Commercial Solar ROI Example
+Traditional torch-on felt flat roofs — the type found on most British flat roofs installed before 2000 — have a relatively short lifespan of 10–20 years. Quality, installation and sun exposure all affect the lifespan. Single-layer felt (common on cheap installations) may only last 5–8 years.
 
-**50kW system on a light industrial unit in Taunton:**
+## EPDM Rubber (Flat Roofs): 25–50 Years
 
-- Installation cost: £40,000 (before tax deduction)
-- Tax deduction (25% corporation tax rate): £10,000
-- Net cost after tax: £30,000
-- Annual generation: ~42,500 kWh
-- Self-consumption (80%): 34,000 kWh × 28p = **£9,520/year saved**
-- Export income: 8,500 kWh × 8p = **£680/year**
-- Total annual benefit: **£10,200/year**
-- Payback: approximately **3 years**
+High-quality EPDM rubber membranes are remarkably durable. Premium EPDM from manufacturers such as Firestone or Carlisle has a proven track record of 40–50 years in commercial applications. Correctly installed domestic EPDM roofs should last 25–40 years minimum.
 
-## DNO Grid Connection
+## GRP Fibreglass (Flat Roofs): 25–40 Years
 
-Large commercial solar systems (typically above 16kW) require a grid connection application to the Distribution Network Operator (Western Power Distribution / National Grid in Somerset). This process typically takes 4–12 weeks. We handle all DNO applications on behalf of our commercial clients.
+GRP fibreglass is hard-wearing and when correctly installed offers excellent longevity. The main failure mode is poor installation — insufficient resin saturation leading to delamination. A professionally installed GRP system should last 25–35 years with minimal maintenance.
 
-## What to Look for in a Commercial Installer
+## Lead: 100+ Years
 
-- MCS accreditation (required for export payments)
-- Track record of commercial installations
-- Detailed system design documentation
-- Structural survey capability
-- References from local businesses of similar scale
+Lead flashings and lead-lined valleys, correctly installed using appropriate lead code (Code 4 minimum for flashings), last extremely well. Lead has been used in roofing for over 2,000 years. The main maintenance requirement is checking for cracking at stress points every 20–30 years.
 
-ProLine Roofing & Solar is MCS accredited and has experience with commercial solar installations across Somerset. Contact us for a free commercial site survey.`,
-  },
-  {
-    slug: "lead-flashing-repair-guide",
-    title: "Lead Flashing Repair Guide: When to Repair vs Replace",
-    excerpt: "Failed lead flashing is one of the most common causes of roof leaks. This guide explains the options — patch repairs, re-pointing, or full replacement — and when each is appropriate.",
-    category: "maintenance",
-    tags: ["lead flashing", "roof flashing", "repair", "chimney"],
-    publishedAt: "2025-04-20",
-    readTime: 4,
-    author: "ProLine Roofing & Solar",
-    content: `## Lead Flashing Repair Guide
+## Cedar Shingles: 20–40 Years
 
-Failed lead flashing is responsible for a significant proportion of all roof leaks — particularly around chimneys, where step flashings, back gutters and apron flashings must all remain watertight. This guide explains your options.
+Western red cedar shingles are used on some residential and commercial properties for their natural appearance. Untreated cedar lasts 20–30 years; treated or maintained with preservative, 30–40 years. Not common in Somerset but occasionally seen on architect-designed properties.
 
-## Types of Lead Flashing
+## What Else Affects Roof Lifespan?
 
-**Step flashings:** Stair-step shaped pieces of lead that seal the junction between a pitched roof and a wall. Each step covers the next tile lap.
+**Installation quality**: A poorly installed slate roof will fail in 15–20 years; a well-installed one lasts 100. The material is only as good as the workmanship.
 
-**Soakers:** Hidden pieces of lead that sit under each tile at the junction, providing the primary seal.
+**Underlay and battens**: Even if the surface tiles are sound, the supporting underlay and battens deteriorate over time. Modern vapour-permeable underlays last 40–50 years; traditional felt underlays often fail in 20–25 years.
 
-**Back gutter:** The lead-lined gutter at the rear (upslope) face of a chimney stack.
+**Ventilation**: Adequate roof ventilation prevents condensation in the roof void, which rots timber, destroys insulation and accelerates underlay deterioration.
 
-**Apron flashing:** The lead at the front (downslope) face of a chimney, overlapping the roof covering.
+**Maintenance**: Keeping gutters clear, removing moss, maintaining flashings and addressing minor repairs promptly can add years — sometimes decades — to any roof's effective lifespan.
 
-**Valley flashings:** Lead used in valleys between two roof slopes.
-
-## Why Lead Flashings Fail
-
-The most common failure mode is mortar failure. Lead is secured into masonry by being tucked into a groove (a "chase") and held in place by mortar pointing. Over time (typically 30–50 years), this mortar cracks and falls out, allowing the lead to lift and water to penetrate.
-
-Less commonly, the lead itself may crack due to fatigue from thermal movement, or become thin through oxidation.
-
-## Repair Options
-
-### Option 1: Repointing the Chase
-
-If the lead is in good condition but the mortar securing it has failed, repointing alone may be sufficient. The old mortar is raked out, fresh mortar is applied, and the lead is re-dressed and pointed. Cost: £100–£300.
-
-### Option 2: Lead Mortar Compound or Tape
-
-For hairline cracks or minor separations, proprietary lead repair compounds or self-adhesive lead tape can extend service life by several years. Suitable for minor repairs only — not a substitute for full re-leading.
-
-### Option 3: Full Re-Leading
-
-If the lead is thin, fatigued, incorrectly dressed, or has multiple failure points, full replacement is the correct solution. New Code 4 or Code 5 lead is cut, dressed and pointed correctly. This provides a 40–60 year solution. Cost: £400–£1,500 depending on the quantity of lead involved.
-
-## How to Identify Lead Failure
-
-From ground level, look for:
-- Visible gaps between lead and masonry at chimney base
-- Lead that has pulled away from the wall
-- Water stains tracking down from the chimney area
-
-From inside the property, look for:
-- Damp patches on ceilings near chimney
-- Watermarks on chimney breast`,
+ProLine Roofing & Solar offers free roof surveys across Somerset. Call 07587 478826 to assess the remaining life of your roof.`,
   },
   {
     slug: "roof-insulation-guide-somerset",
     title: "Roof Insulation Guide for Somerset Homes",
-    excerpt: "Good roof insulation is one of the most cost-effective energy improvements you can make. This guide covers the options, costs and grants available for Somerset homeowners.",
+    excerpt: "Good roof insulation is one of the highest-impact energy efficiency measures you can make. This guide covers cold loft vs warm loft insulation, materials, costs and current Building Regulations.",
     category: "guides",
-    tags: ["roof insulation", "loft insulation", "energy efficiency", "somerset"],
+    tags: ["roof insulation", "loft insulation", "cold loft", "warm roof", "Part L"],
     publishedAt: "2025-03-01",
-    readTime: 5,
+    readTime: 7,
     author: "ProLine Roofing & Solar",
-    content: `## Roof Insulation for Somerset Homes: Complete Guide
+    content: `Approximately 25% of a home's heat is lost through the roof. Properly insulating your roof or loft space is one of the most cost-effective energy efficiency measures available, often paying back its cost in reduced heating bills within 2–4 years.
 
-Approximately 25% of a home's heat escapes through the roof. Proper roof insulation is one of the most cost-effective energy improvements available — often paying back within 2–5 years through reduced heating costs.
+## Cold Loft Insulation
 
-## Cold Loft vs Warm Loft Insulation
+The most common and affordable approach is insulating the floor of the loft — the ceiling of the rooms below. This keeps the loft space cold (unheated), protecting the roof structure from condensation while keeping living spaces warm.
 
-**Cold loft (insulation at ceiling level):** The most common approach for older homes. Mineral wool or loose-fill insulation is placed between and over the ceiling joists. The loft space itself remains cold. This is the cheapest option but means cold water pipes in the loft may need lagging.
+**How it works**: Two layers of mineral wool quilt are laid: the first (100mm) between the joists, the second (170mm) perpendicular across the joists to eliminate cold bridging. Total 270mm is the current recommended depth.
 
-**Warm loft (insulation at rafter level):** The roof slope is insulated, bringing the loft into the warm envelope of the house. This is the correct approach for converted lofts, rooms in the roof, or where the loft is used as a habitable space.
+**Cost**: Professional installation of a 270mm mineral wool system in a typical 3-bed semi loft: £400–£700. DIY materials are available from builders merchants for around £200–£400 for the same area.
 
-## Insulation Materials
+**Savings**: According to the Energy Saving Trust, insulating an uninsulated loft to 270mm can save £150–£300 per year on heating bills, depending on property size and fuel type.
 
-**Mineral wool (glass wool or rock wool):** The most common and cost-effective option for cold loft insulation. Easy to install as a DIY project. R-value: moderate.
+**Limitations**: Cold loft insulation is not suitable if the loft is used as habitable space, or if there is significant HVAC equipment in the loft that could be adversely affected by cold conditions.
 
-**Rigid polyisocyanurate (PIR) boards (e.g., Kingspan, Celotex):** Used for warm loft insulation between and below rafters. Higher R-value per thickness means it can be used in shallow rafter situations.
+## Warm Loft / Warm Roof Insulation
 
-**Spray foam insulation:** Fills every gap and provides excellent air sealing. However, spray foam has become controversial — many mortgage lenders will not lend against properties with spray foam in the roof void, as it can cause structural issues. We do not recommend spray foam.
+If your loft is a habitable space (converted bedroom, office, hobby room) or you want to insulate the roof slope, a warm roof approach is required. This involves insulating at rafter level rather than floor level.
 
-## Recommended Insulation Depths
+**Between-rafter insulation**: Rigid insulation boards (PIR foam, such as Kingspan or Celotex) are cut to fit between rafters. However, rafters alone rarely provide enough depth for full-coverage insulation that meets Building Regulations — 50mm of PIR between 75mm rafters leaves inadequate coverage and thermal bridging through the timber.
 
-Current Building Regulations and Energy Savings Trust guidance for cold loft insulation:
-- **Minimum:** 100mm between joists + 200mm over joists = 300mm total
-- **Recommended:** 100mm between + 270mm over = 370mm total
+**Below-rafter insulation**: A continuous layer of rigid PIR board is fixed to the underside of the rafters, eliminating thermal bridging and allowing thinner total depths. This reduces loft headroom slightly.
 
-If your loft has insufficient insulation depth, topping up is quick and inexpensive.
+**Combined approach**: Best practice is a combination of between-rafter mineral wool and below-rafter rigid insulation — maximising performance while minimising headroom loss.
+
+**Warm flat roof insulation (above-deck)**: For flat roof replacements, rigid PIR insulation boards are fixed on top of the structural deck (the warm roof configuration), providing excellent thermal performance without condensation risk.
+
+## Current Building Regulations (Part L)
+
+Part L of the Building Regulations covers energy efficiency in buildings. For new build homes, the requirements are stringent (U-values of 0.15–0.20 W/m²K for roofs). For existing homes, when lofts are converted, the roof element must be improved to at least 0.18 W/m²K.
+
+For reference, 270mm of mineral wool provides approximately 0.16 W/m²K — comfortably compliant. Standard 100mm of older mineral wool may only provide 0.40 W/m²K — significantly non-compliant.
+
+## Condensation Risks
+
+In cold loft configurations, it is critical to ensure adequate ventilation of the cold loft space to prevent condensation. 50mm² ventilation per metre run of eaves, plus ridge ventilation, is the standard requirement. Blocking eaves vents with insulation is a common mistake that leads to significant condensation damage.
+
+In warm roof configurations using vapour-control layers and correctly installed insulation, condensation risk is very low provided the vapour control layer is on the warm side of the insulation.
+
+## Available Grants
+
+Loft insulation is frequently available through the ECO4 scheme for eligible households (those receiving certain benefits or with poor EPC ratings). The Great British Insulation Scheme also covers loft insulation for properties in Council Tax bands A–D. These schemes can fund insulation at no cost or significantly subsidised cost.
+
+Contact ProLine Roofing & Solar on 07587 478826 to discuss your roof insulation requirements alongside any roofing work.`,
+  },
+  {
+    slug: "choose-roofer-somerset",
+    title: "How to Choose a Roofer in Somerset: 10 Things to Check",
+    excerpt: "Choosing the wrong roofer can cost you thousands. This guide gives you a clear 10-point checklist for finding a trustworthy, qualified roofer in Somerset.",
+    category: "guides",
+    tags: ["choosing a roofer", "find a roofer Somerset", "roofer checklist", "avoid rogue traders"],
+    publishedAt: "2025-03-20",
+    readTime: 6,
+    author: "ProLine Roofing & Solar",
+    content: `Roofing is one of the most common sectors for rogue traders and substandard workmanship in the UK construction industry. Roofwork is difficult to inspect once completed, involves working at height, and carries risks of significant property damage if done poorly. Choosing the right roofer is one of the most important decisions you'll make as a homeowner.
+
+## 1. Check Insurance (Don't Just Take Their Word For It)
+
+Any legitimate roofing contractor must carry public liability insurance. This protects you if something goes wrong during the job — a tile damages your car, scaffolding causes injury, or the work causes damage to your property.
+
+Ask for the insurance certificate, not just a claim that they're covered. Check the name matches the company quoting, the policy is current, and the level of cover is adequate (minimum £1 million; ideally £2–5 million for larger jobs).
+
+## 2. Verify Their Business Exists
+
+Check that the business is registered at Companies House (if a limited company) or that the sole trader has a verifiable trading history. A genuine contractor will have a business address, website and traceable history. Be very wary of anyone who provides only a mobile number and no fixed address.
+
+## 3. Check Trade Body Membership
+
+Membership of the National Federation of Roofing Contractors (NFRC), the Confederation of Roofing Contractors (CORC) or the National Association of Roofline, Cladding and Coping (NARCA) provides an additional layer of reassurance. Members agree to comply with Codes of Practice and have access to a complaints procedure. Membership should be verified on the trade body's website — not just claimed.
+
+## 4. Ask for References from Recent Jobs
+
+Any established roofer should be able to provide two or three recent customer references within your area. Call them. Ask about timekeeping, quality of work, cleanliness, communication and value for money. Recent means within the last 12 months — jobs completed years ago are less relevant.
+
+## 5. Get Written Quotes from at Least Three Contractors
+
+Never accept a verbal quote for any job over £500. Written quotes should specify: work to be done, materials and specifications, whether scaffolding is included, VAT treatment, payment terms, and the guarantee on workmanship. Getting three quotes gives you a price benchmark and reveals inconsistencies in scope.
+
+## 6. Be Wary of Unusual Payment Terms
+
+A reasonable deposit for a large job (to cover materials) of 10–25% is acceptable. Never pay more than 50% upfront, and never pay the full amount before work begins. Cash-only requests with no receipt are a red flag. Legitimate contractors accept bank transfer and provide invoices.
+
+## 7. Check Their VAT Registration
+
+Any contractor with turnover over the VAT threshold (currently £90,000/year) must be VAT registered. If a contractor is clearly operating at significant scale but not charging VAT, this is a warning sign — they may be operating illegally or misrepresenting their tax status.
+
+## 8. Read Google and Trustpilot Reviews
+
+Check independent review platforms. Look at the pattern of reviews rather than just the average score: are there recent reviews, do they describe specific jobs, and is there a consistent quality message? One or two negative reviews among many positive ones is normal; a pattern of complaints about the same issues is a red flag.
+
+## 9. Never Accept Unsolicited Callouts After Storms
+
+Rogue traders frequently tour residential areas after storms, knocking on doors claiming they noticed damage while passing. Legitimate roofers do not do this. If you need a roofer after storm damage, find one yourself using the methods above — do not accept anyone who turns up unsolicited.
+
+## 10. Check They Understand Local Planning Rules
+
+In Somerset's many conservation areas and with listed buildings scattered across the county, a roofer needs to understand when planning permission or listed building consent is required for material changes. Ask specifically: "Are there any planning permission considerations I need to be aware of for this work?" A knowledgeable roofer will give you a considered answer.
+
+ProLine Roofing & Solar is fully insured, carries public liability cover, has hundreds of verified 5-star reviews, and has been trading in Somerset for many years. Call 07587 478826 for a free, written, no-obligation quote.`,
+  },
+  {
+    slug: "storm-damage-roof-repair",
+    title: "Storm Damage Roof Repair: Insurance Claims & Repair Guide",
+    excerpt: "Storm damage to roofs is one of the most common home insurance claims in the UK. Understanding the process can get your home repaired faster and maximise your claim.",
+    category: "maintenance",
+    tags: ["storm damage", "roof insurance claim", "storm roof repair", "roof damage"],
+    publishedAt: "2025-04-05",
+    readTime: 7,
+    author: "ProLine Roofing & Solar",
+    content: `The UK experienced several significant storm events in 2023 and 2024, with Somerset particularly affected by Atlantic weather systems driving westerly gales. Storm damage to roofs — from individual tile loss to full section failure — is one of the most frequent and stressful home insurance claims.
+
+## Common Types of Storm Damage
+
+**Missing or displaced tiles**: Wind can lift tiles or slates from their fixings, particularly on older roofs where the nibs have worn or mortar has deteriorated. Even a few missing tiles leave the underlay exposed and can quickly allow water ingress.
+
+**Ridge tile displacement**: Mortar-bedded ridge tiles are particularly vulnerable to high winds. Modern dry-fixed ridge systems are more resistant, but older properties often still have mortar bedding that deteriorates over time.
+
+**Chimney damage**: Chimney stacks — being the highest point of the roof — are especially exposed to wind load. Dislodged pots, cracked flaunching and failed pointing are common after gales.
+
+**Structural damage**: In severe cases, wind can cause partial structural failure — a section of roof lifting entirely, or rafters being pushed from their bearings. This is less common but requires urgent professional attention.
+
+**Debris impact**: Falling trees, branches and airborne debris can cause impact damage to tiles, flashings and gutters.
+
+## Immediate Actions After Storm Damage
+
+1. **Safety first**: Do not go onto the roof yourself. In wet or windy conditions, roofs are extremely hazardous.
+2. **Document everything**: Photograph all visible damage from ground level or upper windows. Do not move or clean up before photographing.
+3. **Minimise further damage**: Use tarpaulins or temporary coverings if water is actively entering the property, but only if this can be done safely from a ladder at low level.
+4. **Notify your insurer**: Call your home insurance claims line as soon as possible. Most policies require prompt notification of claims.
+
+## Making a Successful Insurance Claim
+
+**Photograph the damage**: Multiple photos from different angles. Include the surrounding context (where tiles have come from, the path of a branch that caused impact damage).
+
+**Keep evidence of possessions damaged**: If interior items are damaged by water ingress, photograph and list them.
+
+**Note the date and time**: Storm damage must correlate with a recorded weather event. Insurers can access Met Office data to verify wind speeds at your location — this protects you against false claims but also validates genuine ones.
+
+**Get a professional assessment**: Your insurer may send a loss adjuster to assess the damage, particularly for large claims. You can also obtain your own independent report from a qualified roofer.
+
+**Understand your excess**: Most home insurance policies have an excess (the first portion of any claim you pay yourself). If the repair cost is below your excess, it may not be worth claiming — claims affect your future premiums even if successful.
+
+## Finding an Approved Contractor
+
+Some insurers require you to use their panel of approved contractors; others allow you to find your own. If using your own:
+- Ensure they provide a written quote with full scope of work
+- They must be fully insured
+- Agree the scope with your insurer before permanent work begins
+- Keep all invoices for submission
+
+## Temporary vs Permanent Repairs
+
+After storm damage, a temporary repair (tarpaulin, emergency sealant) may be carried out to make the property watertight while the claim is processed. Insurers generally accept emergency temporary repair costs. However, carrying out permanent repairs before the insurer has agreed the scope can complicate or void a claim — always get agreement first.
+
+## Typical Timescales
+
+- Emergency callout and temporary repair: same day to 24 hours
+- Insurer notification and loss adjuster visit: 3–10 days
+- Approval of permanent repair scope: 1–3 weeks
+- Permanent repairs completed: 1–6 weeks depending on complexity and materials
+
+ProLine Roofing & Solar provides 24/7 emergency response to storm damage across Somerset. We assist with insurance claims and work directly with loss adjusters. Call 07587 478826.`,
+  },
+  {
+    slug: "moss-removal-roof-somerset",
+    title: "Roof Moss Removal in Somerset: Complete Guide",
+    excerpt: "Somerset's mild, damp climate makes it one of the worst regions in England for roof moss growth. This guide covers removal methods, prevention and how often you should treat your roof.",
+    category: "maintenance",
+    tags: ["roof moss removal", "moss on roof", "roof cleaning Somerset", "biocide treatment"],
+    publishedAt: "2025-04-20",
+    readTime: 6,
+    author: "ProLine Roofing & Solar",
+    content: `Somerset's combination of high annual rainfall, mild temperatures and proximity to the Atlantic creates near-ideal growing conditions for moss, lichen and algae on roofs. If your property is in a shaded or north-facing position, surrounded by trees, or in one of Somerset's damp valley locations, moss growth can become a significant problem within just a few years of installation.
+
+## Why Moss Is a Problem
+
+Moss holds moisture against the roof surface. In winter, this trapped moisture freezes and expands, gradually forcing tiles apart and opening joints for water entry. Over time, heavy moss can cause physical lifting of tiles. Moss also blocks gutters and downpipes when it washes off during rain.
+
+Lichen is harder to remove than moss — it bonds chemically to the tile or slate surface — and often indicates that the tile surface has become porous and weakened. Where you see lichen, the tile is usually past its best.
+
+## Removal Methods
+
+### Chemical Treatment (Biocide)
+
+The recommended approach for most roofs. A qualified applicator applies a diluted biocide (moss and algae killer) to the roof surface using low-pressure spray equipment. The moss dies over 2–6 weeks and gradually washes off in rain over the following months.
+
+This method is gentler on tiles than pressure washing, preserves the tile surface granules, and the biocide residue provides ongoing protection for 2–3 years.
+
+**Cost**: Typically £300–£700 for a standard 3-bed semi, depending on access requirements.
+
+### Physical Removal and Brush Clearing
+
+Dead moss can be brushed from a roof using soft-bristled roof brushes, working from the ridge down. This is often done as part of a comprehensive maintenance programme — apply biocide, wait for the moss to die, then brush clean.
+
+Physical removal alone (without biocide) has limited effectiveness as moss regrows rapidly from remaining spores.
+
+### Pressure Washing
+
+High-pressure washing is tempting as it visually cleans the roof quickly, but it is not recommended for most roof types. Pressure washing:
+- Removes the granule coating from concrete and felt tiles
+- Can force water under tiles and damage the underlay
+- Strips pointing mortar from ridge tiles and verges
+- Promotes faster regrowth by leaving a clean surface for spores to colonise
+
+Low-pressure rinsing (below 100 bar) with a rotating nozzle may be acceptable on certain roof types, but high-pressure washing should be avoided.
+
+## Prevention
+
+**Zinc or copper strips**: Zinc strips fixed along the ridge release zinc oxide when it rains, which runs down the roof and inhibits moss growth. This is a chemical-free, low-maintenance approach but takes several months to take effect and is most suitable for properties with persistent moss problems.
+
+**Regular biocide maintenance programme**: Applying a diluted biocide treatment every 2–3 years maintains a clean roof surface and prevents heavy regrowth.
+
+**Tree management**: Overhanging trees create shading (which promotes moss) and deposit leaf debris (which holds moisture). Reducing tree canopy around the roof can significantly reduce moss growth rates.
+
+## How Often Should You Treat?
+
+In Somerset's climate, most roofs benefit from treatment every 3–5 years. Heavily shaded or north-facing roofs in damp locations may need treatment every 2–3 years. Properties on high ground or exposed aspects with good air circulation may need treatment less frequently.
+
+## What Does Treatment Cost?
+
+Biocide spray treatment: £300–£600 for a 3-bed semi, depending on access.
+Biocide + brush clear: £500–£900.
+Zinc strip installation (per linear metre of ridge): £15–£25 including fixing.
+
+Note: scaffolding may be required for steep roofs or two-storey heights, which adds to costs.
+
+ProLine Roofing & Solar provides roof cleaning and moss treatment across Somerset. Call 07587 478826 for a free assessment.`,
+  },
+  {
+    slug: "planning-permission-roof-somerset",
+    title: "Do I Need Planning Permission for Roof Work in Somerset?",
+    excerpt: "Most routine roof repairs and replacements don't need planning permission — but there are important exceptions in conservation areas, for listed buildings and certain types of alterations.",
+    category: "guides",
+    tags: ["planning permission roofing", "conservation area roofing", "permitted development", "Somerset planning"],
+    publishedAt: "2025-05-01",
+    readTime: 7,
+    author: "ProLine Roofing & Solar",
+    content: `One of the questions we're asked regularly is whether planning permission is needed for roof work. The answer depends on the type of work, the location of the property and whether the building has any special designations. Here's a comprehensive guide for Somerset homeowners.
+
+## Routine Repairs: No Planning Permission Needed
+
+Repairing or replacing roofing materials on a like-for-like basis (same material, same profile, same colour) is classed as maintenance and does not require planning permission under any circumstances, even in conservation areas. This includes:
+
+- Replacing broken, slipped or missing tiles or slates with matching materials
+- Repointing ridges, verges or chimney stacks
+- Replacing gutters, fascias and soffits with matching materials and colours
+- Replacing flashings
+
+## Re-Roofing with Different Materials: Usually Permitted Development
+
+In most cases, re-roofing with a different material (for example, replacing concrete tiles with natural slate) on a house in an ordinary residential area falls within permitted development rights and does not require a planning application.
+
+However, permitted development rights can be removed by Article 4 Directions — a planning mechanism where the local authority has restricted permitted development in specific areas. Somerset has several such directions covering conservation areas.
+
+## Conservation Areas: Check Before You Change Materials
+
+Somerset has numerous conservation areas across towns including Taunton, Bridgwater, Wells, Glastonbury, Yeovil and many rural settlements. In a conservation area, changing the external appearance of a building — including using different roofing materials — may require planning permission even where it would otherwise be permitted development.
+
+As a general rule: if your property is within a conservation area and you are considering re-roofing with materially different tiles or slates (different profile, colour or type), contact your local planning authority before proceeding. Taunton Deane and Somerset Council planning departments can advise informally without a formal application.
+
+## Listed Buildings: Always Consult First
+
+Any work on a listed building that affects its character — which includes virtually any roofing work beyond simple like-for-like repairs — requires Listed Building Consent from the local planning authority, regardless of whether planning permission is also needed.
+
+Obtaining Listed Building Consent typically requires detailed specification of the proposed materials and may involve a heritage consultant's report for significant works. Carrying out unauthorised work on a listed building is a criminal offence.
+
+Somerset has a large number of listed buildings, particularly in rural areas — stone farmhouses, cottages, church properties and village hall buildings are frequently listed. If you are unsure whether your property is listed, check the Historic England National Heritage List for England (search online by address).
+
+## Dormer Windows
+
+Adding a dormer window to a roof is generally permitted development for houses (not flats) subject to conditions: the dormer must not extend beyond the existing roof slope on the principal elevation (the front of the house facing the highway), must not exceed the height of the existing roof ridge, and must use materials that match the existing roof.
+
+Front dormers (visible from the street) in most conservation areas require planning permission. Side and rear dormers are more likely to qualify as permitted development.
+
+## Roof Terraces
+
+Converting a flat roof section to a usable roof terrace typically requires planning permission due to overlooking and privacy considerations for neighbours.
+
+## Solar Panels on Roofs
+
+Solar panels on pitched or flat roofs are generally permitted development for houses, subject to conditions: panels must not project more than 200mm above the roof plane, must not extend above the highest part of the roof (excluding chimneys), and must be placed to minimise visibility from the highway as far as practicable.
+
+In conservation areas, solar panels visible from the highway may require planning permission. Listed buildings always require listed building consent for solar panels.
+
+## Practical Advice
+
+When in doubt, submit a Prior Approval application (for solar) or apply for a certificate of lawful development — these are cheaper and faster than full planning applications and give you legal certainty about whether permission is needed.
+
+ProLine Roofing & Solar advises on planning implications as part of our free survey service. Call 07587 478826 for guidance specific to your property.`,
+  },
+  {
+    slug: "fascias-soffits-replacement-guide",
+    title: "Fascias & Soffits Replacement Guide: Costs, Options & Advice",
+    excerpt: "Fascias and soffits protect the edge of your roof and carry your gutters. When they fail, the consequences for your roof structure can be serious. This guide covers everything you need to know.",
+    category: "roofing",
+    tags: ["fascias soffits", "roofline replacement", "UPVC fascias", "guttering"],
+    publishedAt: "2024-12-10",
+    readTime: 6,
+    author: "ProLine Roofing & Solar",
+    content: `Fascias, soffits and bargeboards are collectively known as 'roofline' products. They form the finished edge of your roof, carry the guttering, and — critically — protect the ends of your roof timbers from the weather. When they deteriorate, water can enter the roof structure, causing rafter-end rot that is expensive to repair.
+
+## What Are Fascias and Soffits?
+
+**Fascia board**: The vertical board fixed directly to the ends of the roof rafters. The guttering is fixed to the fascia. It is the most exposed element and typically the first to show deterioration.
+
+**Soffit board**: The horizontal board that bridges the gap between the fascia and the wall, forming the underside of the roof overhang (eaves). Soffits are often vented to allow air to circulate in the loft space.
+
+**Bargeboard**: The board fixed to the verge (sloping edge) of a gabled roof, running from eaves to ridge.
+
+## Signs That Replacement Is Needed
+
+- Peeling or flaking paint (timber fascias/soffits)
+- Soft, spongy or crumbling sections (rot)
+- Visible gaps or cracks allowing water or bird entry
+- Sagging gutters due to failed fascia fixings
+- Wasp or bird nests in soffit cavities
+- Brown staining on walls below fascias
+
+Once rot has set into timber fascias, painting over it provides only a temporary cosmetic fix — the rot will spread. Replacement is the correct solution.
+
+## UPVC vs Timber
+
+**UPVC (PVC)** is now the dominant material for roofline replacement in the UK. It requires no painting, does not rot, and has a lifespan of 20–30 years minimum. It is available in white (most common), woodgrain finishes, anthracite grey, and other colours. UPVC is also resistant to insect attack.
+
+**Timber** is still used on period properties where authentic appearance is important, or in conservation areas where UPVC may not be acceptable. Timber requires repainting every 5–7 years and is vulnerable to rot if not maintained. It is heavier and harder to work with than UPVC but can be painted in any colour.
+
+## Overfascia Capping
+
+An alternative to full replacement is overfascia capping — fitting UPVC boards directly over the existing timber fascias without removing them. This is faster and cheaper, and avoids the disruption of removing old material.
+
+However, overfascia capping is only appropriate if the existing timber is fundamentally sound — it traps moisture against the existing board and accelerates rot if there is any dampness present. Always have the timber assessed before agreeing to capping rather than full replacement.
+
+## Vented Soffits
+
+Building Regulations require adequate ventilation to roof voids in cold loft configurations. Soffits are the standard location for this ventilation. When replacing soffits, ensure the new soffits are vented (either with a continuous ventilated slot or individual vent inserts) to maintain compliance and prevent condensation in the loft.
+
+Blocking soffit ventilation when replacing roofline products is a common mistake that leads to condensation damage within 12–24 months.
 
 ## Costs
 
-- **Cold loft top-up (DIY):** £200–£400 in materials
-- **Professional cold loft installation (standard 3-bed):** £400–£800
-- **Warm rafter insulation (loft conversion):** £2,000–£5,000 depending on roof size
+Typical costs for full UPVC roofline replacement on a 3-bed semi-detached property in Somerset:
 
-## Grants Available
+- Single-storey section only: £600–£1,000
+- Full property (both storeys): £1,200–£2,200
+- With gutter replacement (included at same time): add £300–£600
+- Period property in timber: £2,000–£4,000
 
-The ECO4 scheme (Energy Company Obligation) provides free insulation for qualifying households receiving means-tested benefits, or homes with EPC ratings of D, E, F or G. Contact Somerset Council or your energy supplier to check eligibility.`,
+Scaffolding is generally required for first floor and above work. For a typical semi, scaffold erection and hire adds £400–£800 to the project cost.
+
+## Combining with Other Work
+
+Fascia and soffit replacement is most cost-efficient when combined with gutter replacement (which must be temporarily removed and refitted during roofline work) and any roof maintenance or repairs. The scaffold is already in position, so the marginal cost of additional work is lower.
+
+ProLine Roofing & Solar provides full roofline replacement across Somerset. Call 07587 478826 for a free, no-obligation quote.`,
+  },
+  {
+    slug: "battery-storage-solar-guide",
+    title: "Solar Battery Storage Guide: Is It Worth It in 2024?",
+    excerpt: "Solar battery storage lets you use your solar energy after dark and during peak-rate periods. This guide explains how batteries work, the leading brands, costs and whether the economics stack up.",
+    category: "solar",
+    tags: ["solar battery storage", "Tesla Powerwall", "GivEnergy", "solar battery UK"],
+    publishedAt: "2025-01-25",
+    readTime: 8,
+    author: "ProLine Roofing & Solar",
+    content: `Solar panels generate electricity during daylight hours — but household demand peaks in the evening, after generation has stopped. Battery storage solves this mismatch by storing surplus solar energy during the day for use after dark, dramatically increasing the proportion of your electricity that comes from solar.
+
+## How Solar Battery Storage Works
+
+Lithium-ion battery packs are installed alongside your solar system (typically in a garage or utility room). During the day, when your solar panels generate more electricity than you're consuming, the surplus charges the battery. In the evening, the battery discharges to power your home. Any remaining surplus goes to the grid via the Smart Export Guarantee.
+
+Modern battery systems are intelligent: they can be programmed to charge from cheap off-peak electricity (such as Octopus Go's 7.5p overnight rate) for use during expensive peak periods, regardless of solar generation.
+
+## How Much Difference Does a Battery Make?
+
+Without battery storage, a typical household self-consumes approximately 40–55% of solar generation (using it directly during daylight hours).
+
+With a 10kWh battery, self-consumption typically rises to 70–85%. This means significantly less exported at a low SEG rate, and significantly less bought from the grid at peak prices.
+
+Example: A 4kWp system generating 3,600 kWh/year.
+- Without battery (50% self-consumption): saving of ~£450 + SEG of ~£126 = £576/year
+- With 10kWh battery (80% self-consumption): saving of ~£720 + SEG of ~£72 = £792/year
+- Additional annual benefit from battery: ~£216/year
+
+At £3,500 for battery installation, payback on the battery alone is approximately 16 years — marginal economics in isolation.
+
+However, if you combine battery storage with a cheap off-peak tariff (charging from grid overnight at 7.5p, discharging during peak hours at 25p), the additional arbitrage benefit can reach £300–£500/year, transforming the economics.
+
+## Leading Battery Brands
+
+**Tesla Powerwall 2 (13.5kWh usable)**
+The most recognised residential battery globally. Gateway unit manages energy flows intelligently. Backup power available (powers your home during a grid outage). Cost: £7,000–£9,500 installed. Very strong software and app ecosystem.
+
+**Sonnen ecoLinx**
+Premium German battery with excellent build quality and longevity guarantee. Available in multiple sizes. Higher cost than alternatives but excellent track record. Popular in Germany and increasingly in UK.
+
+**GivEnergy (GivBattery)**
+UK-based company with strong market presence. Available in multiple sizes from 2.6kWh to 18.4kWh. Excellent app and monitoring. Competitive pricing: 9.5kWh from ~£3,000–£3,500 installed. Very popular with UK solar installers.
+
+**Fox ESS**
+Chinese manufacturer, gaining UK market share through competitive pricing and good performance. Hybrid inverter option integrates solar and battery in one unit. 10.3kWh from ~£2,800–£3,500 installed.
+
+**SolarEdge Home Battery**
+Tightly integrated with SolarEdge inverter systems. DC-coupled for maximum efficiency. 10kWh from ~£3,500–£4,500 installed. Excellent for SolarEdge solar installations.
+
+## AC vs DC Coupled Storage
+
+**DC-coupled batteries**: Connect between the solar panels and inverter. More efficient as the power only converts once (DC to AC). Better for retaining solar energy efficiency. Can only be added at time of solar installation (or requires inverter change).
+
+**AC-coupled batteries**: Connect to the AC circuit after the inverter. Can be added to any existing solar installation without changing the inverter. Slightly less efficient (additional conversion loss of 3–5%) but more flexible.
+
+Most new installations use hybrid inverters with DC-coupled batteries — this is the most efficient approach.
+
+## Virtual Power Plant (VPP) Schemes
+
+Several energy suppliers offer VPP programmes where they aggregate battery storage capacity across many homes to provide grid balancing services. In exchange, participants receive payment or free electricity. Octopus Energy's Powerup and Tesla's Virtual Power Plant programme are examples. These can add £100–£300/year to battery economics.
+
+## Conclusion
+
+Battery storage is most financially compelling when combined with a time-of-use tariff for overnight grid charging, or for households with high evening electricity consumption. Standalone battery ROI is typically 12–18 years; combined with tariff optimisation it can fall to 8–12 years.
+
+Call ProLine Roofing & Solar on 07587 478826 to discuss whether battery storage makes sense for your specific situation.`,
+  },
+  {
+    slug: "commercial-solar-somerset",
+    title: "Commercial Solar Panels in Somerset: Guide for Business Owners",
+    excerpt: "Commercial solar panels offer some of the most compelling ROI of any capital investment available to UK businesses. This guide covers costs, tax benefits and the process for Somerset businesses.",
+    category: "solar",
+    tags: ["commercial solar", "business solar panels", "commercial solar Somerset", "solar ROI business"],
+    publishedAt: "2025-02-20",
+    readTime: 7,
+    author: "ProLine Roofing & Solar",
+    content: `Commercial solar PV installations typically deliver better financial returns than residential systems, thanks to higher daytime electricity consumption, 0% VAT on installation, favourable capital allowance treatment, and the ability to size systems to match large roof areas.
+
+## Why Commercial Solar Outperforms Residential
+
+Businesses typically consume 60–80% of their solar generation on-site during working hours — significantly higher than the 40–55% self-consumption typical of residential properties. This means less electricity is exported at low SEG rates, and more displaces expensive purchased electricity. The economics are substantially better.
+
+Additionally, businesses benefit from capital allowances that are not available to homeowners — specifically, 100% First Year Allowances under the Annual Investment Allowance for qualifying energy-efficient plant and machinery. Solar panels qualify, meaning the full capital cost is deductible against taxable profits in the year of installation.
+
+## 0% VAT on Commercial Solar
+
+The 0% VAT rate introduced in April 2022 applies to commercial solar installations as well as residential. For a £50,000 commercial installation, this represents a £10,000 saving compared to the pre-2022 20% VAT rate. Note: 0% VAT on solar applies to the supply and installation; associated structural works (roof repairs, etc.) are still standard rated.
+
+## Typical System Sizes and Costs for Commercial Buildings
+
+**Retail unit/small factory (200–500m² roof)**: 20–50kWp system. Annual generation: 18,000–45,000 kWh. Approximate cost: £20,000–£45,000.
+
+**Farm building/large warehouse (500–2,000m² roof)**: 50–200kWp system. Annual generation: 45,000–180,000 kWh. Approximate cost: £45,000–£160,000.
+
+**Large industrial unit (2,000m²+ roof)**: 200kWp+ system. Annual generation: 180,000+ kWh. Approximate cost: £160,000+.
+
+## DNO Grid Connection
+
+Commercial installations over 50kWp typically require a G99 grid connection application to the local distribution network operator (DNO). For Somerset, this is Western Power Distribution (now National Grid Electricity Distribution). The DNO assesses whether the local grid can accept the additional generation and whether any network reinforcement is needed.
+
+G99 applications can take 4–12 weeks for straightforward connections. More complex connections near the limit of local grid capacity may take longer and could require system downsizing or additional cost for network reinforcement.
+
+Applications below 50kWp use the simpler G98 notification process, which is generally straightforward.
+
+## Export Limiting and Smart Inverters
+
+Where the local grid cannot accept full export, systems can be fitted with export limiting — the inverter reduces output to prevent export exceeding a set level. This protects the grid but reduces revenue from exported electricity. It does not affect self-consumed generation. Most modern inverters support export limiting as standard.
+
+## Business Rates
+
+In England, solar panels are generally exempt from business rates under the Valuation Office Agency's practice for building-integrated plant and machinery. This has been confirmed through multiple appeal cases. Check with your business rates valuer if you have concerns.
+
+## Solar ROI Example: Somerset Farm
+
+A 100kWp solar installation on a farm building generating 90,000 kWh/year. Farm daytime consumption: 40,000 kWh/year (mostly machinery, cooling, pumping).
+
+- Self-consumed (44%): 40,000 kWh × 25p = £10,000/year saving
+- Exported (56%): 50,000 kWh × 7p = £3,500/year SEG income
+- **Total annual benefit**: £13,500
+- System cost: £80,000 (minus 100% AIA tax relief at 25% = effective cost £60,000)
+- **Effective payback**: approximately 4.4 years after tax relief
+
+This level of return — comparable to the best-performing commercial investments — is why commercial solar is becoming standard practice for farms, factories and large businesses across Somerset.
+
+ProLine Roofing & Solar designs and installs commercial solar systems across Somerset and the South West. Call 07587 478826 for a free commercial solar assessment.`,
+  },
+  {
+    slug: "epdm-flat-roofing-guide",
+    title: "EPDM Rubber Roofing: Complete Guide for UK Homeowners",
+    excerpt: "EPDM rubber has become the UK's most popular flat roofing system. This complete guide explains what EPDM is, how it performs, the installation process and how it compares to other options.",
+    category: "roofing",
+    tags: ["EPDM roofing", "rubber roof", "flat roof EPDM", "flat roofing guide"],
+    publishedAt: "2025-03-10",
+    readTime: 7,
+    author: "ProLine Roofing & Solar",
+    content: `EPDM (Ethylene Propylene Diene Monomer) rubber has become the dominant choice for domestic flat roof replacement in the UK over the past decade, overtaking traditional felt as the first-choice system for roofers and homeowners alike. Here's everything you need to know about EPDM.
+
+## What Is EPDM?
+
+EPDM is a synthetic rubber polymer, originally developed for pond liners and commercial roofing. It is manufactured in large rolls — up to 15 metres wide — which means most domestic roofs can be covered in a single sheet with no joins. The absence of joins is one of EPDM's greatest strengths: seams are the most common failure point of any flat roof system.
+
+EPDM is chemically inert, highly resistant to UV radiation, ozone, and temperature extremes ranging from -40°C to +120°C. This makes it particularly well-suited to UK conditions — cold winters, occasional hot summers, and the freeze-thaw cycles in between.
+
+## Thickness Options
+
+EPDM is available in three primary thicknesses:
+
+**1.0mm**: Standard domestic grade. Adequate for most residential applications where foot traffic is minimal. Used on garages, bay windows, extensions and outbuildings.
+
+**1.2mm**: Medium grade. Recommended for areas with occasional foot traffic (maintenance access), or where there is a risk of debris impact. A popular choice for domestic roofs as the marginal cost difference is small.
+
+**1.5mm**: Heavy-duty grade. Used for commercial applications, walkable roofs, balconies and areas of regular foot traffic. Significantly more puncture resistant.
+
+For most domestic applications, 1.2mm represents the best balance of cost and performance.
+
+## Installation Methods
+
+**Fully adhered**: The EPDM sheet is bonded to the substrate (typically 18mm OSB board or rigid insulation board) using a water-based contact adhesive. This is the most common domestic installation method. It provides a clean, flat finish and eliminates any risk of the membrane billowing in high winds.
+
+**Mechanically fixed**: The membrane is fixed at the perimeter and seams using screws and plates, with ballast (gravel or paving slabs) holding the field area flat. Used primarily for large commercial roofs where full bonding would be impractical. Not typical for domestic installations.
+
+**Fleece-backed EPDM**: A version with a polyester fleece bonded to the underside, which bonds particularly well with adhesive and provides additional dimensional stability. Increasingly popular for complex roofs with many penetrations.
+
+## Terminations and Details
+
+The quality of an EPDM installation is largely determined by the detailing — how the membrane is terminated at edges, how it is dressed around upstands, penetrations and flashings.
+
+Edge trim systems (aluminium or EPDM-faced trim) provide a neat, durable finish at roof edges. Upstands (where the roof meets a wall) should have the EPDM dressed at least 150mm up the wall and secured with termination bar and sealant. Penetrations (pipes, rooflights) are sealed with pre-formed EPDM boots or lap sealant.
+
+## Lifespan and Warranty
+
+High-quality EPDM from reputable manufacturers (Firestone RubberGard, Carlisle, Protan) carries manufacturer warranties of 20 years, with proven real-world lifespans of 30–50+ years. The British Board of Agrément (BBA) has certified EPDM systems for 25+ years in the UK climate.
+
+Failures before this age are almost always due to poor installation (poorly bonded seams, inadequate edge detail) rather than material failure.
+
+## Cost Comparison
+
+EPDM installed cost per m²:
+- EPDM (1.2mm, fully adhered): £55–£80/m²
+- GRP fibreglass: £65–£95/m²
+- Traditional felt (3-layer torch-on): £35–£55/m²
+
+For a 20m² garage roof:
+- EPDM: £1,100–£1,600
+- GRP: £1,300–£1,900
+- Felt: £700–£1,100
+
+EPDM's combination of longevity and moderate cost makes it excellent value over its lifespan.
+
+## Maintenance
+
+EPDM requires minimal maintenance. An annual visual inspection (checking that edge trims are secure and the membrane is free from punctures or splits) is sufficient. Any damage found can be repaired using EPDM contact adhesive and a patch of new EPDM — repairs are simple, effective and long-lasting.
+
+ProLine Roofing & Solar installs EPDM flat roofing systems across Somerset. Call 07587 478826 for a free flat roof survey and quotation.`,
+  },
+  {
+    slug: "lead-flashing-repair-guide",
+    title: "Lead Flashing Repair Guide: When to Repair vs Replace",
+    excerpt: "Lead flashings are the most durable component of most roofs — but they do eventually fail. This guide helps you decide whether to repair or replace failed flashings, and what to expect from each approach.",
+    category: "maintenance",
+    tags: ["lead flashing", "flashing repair", "roof flashing", "chimney flashing"],
+    publishedAt: "2025-04-15",
+    readTime: 6,
+    author: "ProLine Roofing & Solar",
+    content: `Lead flashings seal the critical junctions between your roof and other elements — chimneys, dormer walls, abutments, valleys and skylights. When flashings fail, water enters the roof structure silently and often causes considerable damage before it becomes visible inside the property.
+
+## Where Flashings Are Found
+
+**Chimney step flashings**: Step-cut into the mortar joints up each side of a chimney stack, with separate cover flashings lapped over the top.
+
+**Chimney back gutter**: A tray of lead behind the chimney stack that collects water running down from the main roof above.
+
+**Chimney apron**: The flashing across the front (downhill) face of the chimney stack.
+
+**Abutment flashings**: Where a lean-to or extension roof meets a wall — typically step-and-cover flashings on one or both sides.
+
+**Valley flashings**: Open valleys lined with lead (or alternative materials) to carry water from the intersection of two roof slopes.
+
+**Dormer cheek flashings**: Sealing the junction between dormer walls and the main roof surface.
+
+**Skylight/rooflight flashings**: Purpose-designed flashing kits or site-formed lead flashings around roof windows.
+
+## Lead Codes
+
+Lead is sold by 'code', which indicates its thickness:
+- Code 3 (1.32mm): Too thin for external flashings — sometimes used for small saddles
+- Code 4 (1.80mm): The minimum for most flashing applications. Standard for step and cover flashings
+- Code 5 (2.24mm): Used for valleys, back gutters and larger flashings subject to more water flow
+- Code 6+ (2.65mm+): Used for flat roof coverings, parapet gutters and heavy-duty applications
+
+Using undersized lead is a common quality issue — always specify Code 4 minimum for flashings.
+
+## Common Failure Modes
+
+**Thermal cracking**: Lead expands and contracts significantly with temperature change. Long runs of lead that are not properly formed with 'rolls' or 'drips' at regular intervals (every 1.5m maximum) will crack at stress points. This is the most common failure mode on older buildings.
+
+**Pulling away from mortar joints**: Step flashings are wedged into raked-out mortar joints. Over time, the mortar may fail or the lead work loose, creating gaps.
+
+**Poor lap sealant**: Where cover flashings lap over step flashings, the joint should be sealed with lead mastic. Old or poorly applied mastic dries out and cracks, allowing water entry.
+
+**Oxidation perforations**: Old lead can eventually thin through oxidation to the point of perforation, particularly on flat or near-flat sections where water ponds.
+
+## Repair Options
+
+**Mastic re-sealing**: For minor lap joint failures, clearing out old mastic and applying fresh lead mastic or proprietary flashing sealant can extend the life of sound lead work by several years. Cost: typically £100–£200 plus access.
+
+**Patching with new lead**: Small areas of cracked or perforated lead can be patched with a new piece of lead soldered or bonded in place using lead welding techniques or purpose-designed lead cold weld compounds. Suitable for isolated damage in otherwise sound flashings.
+
+**Leadwork repair compounds**: Proprietary repair compounds (such as Flashband or Leadax) can seal minor cracks and laps as an emergency measure. These are not a permanent solution and should be considered temporary only.
+
+## When to Replace Rather Than Repair
+
+Lead replacement (rather than repair) is the right decision when:
+- The existing lead is substantially undersize (Code 3 or thinner)
+- Multiple failure points exist across the same run of flashing
+- The existing lead is more than 40–50 years old and showing general deterioration
+- Previous repair compounds have been applied repeatedly without permanent fix
+- Water damage to the underlying roof structure requires access anyway
+
+## Cost of Lead Flashing Replacement
+
+Replace chimney flashing set (step, cover, back gutter, apron): £400–£800 depending on stack size and scaffold requirement.
+
+Abutment flashing per linear metre: £60–£100/m including access.
+
+Valley lining replacement (open lead valley, 5m): £300–£600.
+
+ProLine Roofing & Solar carries out all leadwork repairs and replacements across Somerset. Call 07587 478826 for a free assessment.`,
+  },
+  {
+    slug: "new-roof-complete-guide",
+    title: "New Roof Installation: Complete Guide for UK Homeowners",
+    excerpt: "A complete roof replacement is one of the largest home improvement projects you'll undertake. This guide covers everything — from deciding when you need a new roof to what happens on installation day.",
+    category: "guides",
+    tags: ["new roof", "roof replacement", "re-roof guide", "roof installation UK"],
+    publishedAt: "2025-02-05",
+    readTime: 9,
+    author: "ProLine Roofing & Solar",
+    content: `A full roof replacement is a significant investment — but it also delivers long-term certainty, improved energy performance and peace of mind that no amount of patching and repairing can provide. Here is everything Somerset homeowners need to know about commissioning a new roof.
+
+## When Do You Actually Need a New Roof?
+
+Not every roof problem requires full replacement. The decision to re-roof rather than repair comes down to extent of damage, age of existing roof, and economics.
+
+A useful rule of thumb: if repair costs exceed 30–40% of the cost of a full re-roof, replacement is usually better value. Similarly, if the roof has been repaired multiple times in the past 5 years for different problems, it is telling you it has reached the end of its serviceable life.
+
+Key indicators that full replacement is needed:
+- Roof is over 25–30 years old (concrete tiles) or 40+ years (clay tiles)
+- Underlay is deteriorated or missing over large areas
+- Multiple sections of timbers are rotten or damaged
+- Widespread tile failure across multiple elevations
+- Significant ongoing leak problems despite repairs
+
+## Material Choices
+
+The main options for a re-roof in Somerset:
+
+**Concrete interlocking tiles**: Most affordable, good longevity, wide range of profiles and colours. Suitable for most post-war homes.
+
+**Clay plain tiles**: Traditional appearance, excellent longevity (60–100 years), appropriate for period properties and conservation areas. Higher cost.
+
+**Natural Welsh slate**: Premium choice, exceptional longevity (100+ years), required for many listed buildings and conservation area properties. Highest cost.
+
+**Natural Spanish/Portuguese slate**: More affordable than Welsh, still good quality (40–60 years lifespan). Acceptable for most non-listed properties.
+
+**Artificial fibre cement slate**: Looks similar to natural slate at lower cost, 25–40 year lifespan. Not acceptable for listed buildings.
+
+## Planning Your Re-Roof
+
+**Get multiple quotes**: Obtain at least 3 written quotes. Ensure each quote specifies: materials (brand and specification), all labour, scaffold hire, skip hire, underlay specification, ridge treatment (dry-fix or mortar), and guarantee.
+
+**Timing**: Spring and summer are the preferred seasons — longer daylight, lower rain risk, and roofers prefer not to lay new tiles in freezing conditions. However, good weather cannot be guaranteed and roofers will work in most conditions.
+
+**Duration**: A typical 3-bed semi with a straightforward roof takes 3–7 working days to strip, re-felt and batten, and tile. More complex roofs (hips, valleys, dormers) take longer. Scaffold is typically up for 2–4 weeks.
+
+## What Happens During Installation
+
+**Day 1**: Scaffold erected. Often by a separate scaffold subcontractor on the day before roofing begins.
+
+**Day 1–2**: Stripping. Old tiles, battens and underlay are stripped from the roof and removed by skip. This is the noisiest and most disruptive phase. The bare roof timbers are now exposed — any rot or damage is identified and repaired at this stage.
+
+**Day 2–3**: New underlay and battens fixed. Modern vapour-permeable underlays are fixed to the rafters; new tanalised (pressure-treated) timber battens are fixed over the underlay.
+
+**Day 3–6**: Tiling. New tiles or slates are nailed to the battens. Hips, valleys, dormers and penetrations are dealt with at this stage. Flashings are installed.
+
+**Day 5–7**: Ridge and verges. Ridges are either mortar-bedded (traditional) or fitted with dry-fix ridge systems (recommended). Verges are finished.
+
+**Day 7+**: Scaffold struck and removed. Final inspection and snagging.
+
+## What to Expect as a Homeowner
+
+Expect significant noise and dust during stripping. Protect loft contents from the brief period when the roof is stripped and before new underlay is laid (typically a few hours). In very heavy rain, work may pause.
+
+You do not need to be present throughout, but it's useful to be available at the start and end of each day, and particularly when the bare timbers are exposed so you can discuss any findings with the roofer.
+
+## Costs
+
+Typical full re-roof costs for Somerset properties in 2024:
+
+- 3-bed semi (concrete interlocking tile): £6,000–£10,000
+- 3-bed semi (clay plain tile): £9,000–£14,000
+- 3-bed semi (natural slate): £12,000–£20,000
+- 4-bed detached (concrete tile): £10,000–£18,000
+- 4-bed detached (natural slate): £18,000–£30,000
+
+Costs vary significantly with roof complexity, access, and regional labour rates.
+
+## Guarantees
+
+A reputable roofer will provide a written workmanship guarantee on the installation. Industry standard is 5–10 years for labour; material manufacturers typically provide 10–30 year product warranties. Ensure you receive and keep all guarantee documents and warranty registration details.
+
+Call ProLine Roofing & Solar on 07587 478826 for a free survey and written quotation for your re-roof project.`,
+  },
+  {
+    slug: "solar-panels-old-house",
+    title: "Solar Panels on Older Houses: What You Need to Know",
+    excerpt: "Fitting solar panels to an older or period property requires more thought than a standard installation. This guide covers structural considerations, planning requirements and aesthetic options for Somerset's older homes.",
+    category: "solar",
+    tags: ["solar panels old house", "solar listed building", "heritage solar panels", "Victorian solar"],
+    publishedAt: "2025-04-28",
+    readTime: 7,
+    author: "ProLine Roofing & Solar",
+    content: `Somerset is home to a remarkable stock of older properties — Georgian townhouses in Taunton and Bath, Victorian and Edwardian terraces throughout the county, stone farmhouses and rural cottages dating back to the 17th century and earlier. While solar panels are straightforwardly viable for modern homes, older properties need a more careful approach.
+
+## Structural Considerations
+
+Before any solar installation, the roof must be assessed for structural adequacy. A standard residential solar array (10–16 panels, approximately 150–250kg) imposes a modest load on the roof structure. For most properties, this is within normal design parameters. However, older roofs may have:
+
+**Undersized or deteriorated rafters**: Pre-1940 roof timbers were not designed to current structural codes. If rafters are already stressed or partially rotted, additional load from solar panels should not be imposed until repairs are made.
+
+**Lime mortar ridge bedding**: Many older roofs still have lime-mortar bedded ridges. The vibration and disturbance of fitting solar panels can disturb these. This is not a barrier to installation, but the ridge condition should be checked and any loose sections re-bedded or replaced with dry-fix systems before panels are fitted.
+
+**Fragile old slates or tiles**: Victorian slates can become fragile with age. Installers working on an old slate roof must use roof ladders (which spread load) and be experienced with old slates. Breakage during installation is not uncommon with inexperienced installers on old roofs.
+
+## Checking the Roof Condition First
+
+As a general rule, if a roof needs significant work within the next 10 years, it should be addressed before solar is installed. Removing and refitting solar panels to access the roof costs £500–£1,500 extra in addition to the roofing work itself. At ProLine, we always recommend a combined assessment — roof condition first, then solar planning.
+
+## Planning in Conservation Areas
+
+Somerset's conservation areas cover significant parts of historic town centres (Taunton, Wells, Glastonbury, Bridgwater, Shepton Mallet) and many rural villages. In conservation areas, solar panels on roof slopes visible from the highway may require planning permission under the following circumstances:
+
+- The panels are visible from a public highway
+- The installation would alter the character or appearance of the conservation area
+
+"Visible from the highway" is interpreted as visible from a public road or path, not just from directly in front of the property. This means rear-slope installations are often permitted without consent even in conservation areas, as they are not visible from the street.
+
+Always consult your local planning authority before installation in a conservation area — most offer a free pre-application advice service.
+
+## Listed Buildings
+
+Listed buildings always require Listed Building Consent for solar panel installation — there are no permitted development rights. Consent is not automatically refused: English Heritage and Historic England guidance supports solar installation on listed buildings where it can be done sensitively.
+
+Key factors in gaining consent:
+- Panels should be on a rear or hidden slope
+- Panels should be as low-profile as possible
+- Panels should ideally be removable without permanent damage to the fabric of the building
+- The heritage significance of the building should not be materially harmed
+
+In-roof solar systems (where panels replace roof tiles entirely and sit flush with the roof surface) are often more sympathetic on older properties than above-roof racking systems.
+
+## Aesthetic Options for Period Properties
+
+**All-black panels**: Monocrystalline solar panels with black frames and black backsheets (rather than the standard silver frame / white backsheet combination) have a much lower visual impact, particularly on dark slate roofs. They carry a small efficiency penalty (black backsheets run slightly hotter) but are worth considering on period properties.
+
+**In-roof / integrated systems**: Solar tiles or slates (e.g., Tesla Solar Roof, Marley SolarTile, GB-Sol ViridianACP) replace conventional roof tiles. These are more expensive (typically 30–60% premium over above-roof systems) but are the most sympathetic option for visible roof slopes on period properties.
+
+**Slate-effect solar panels**: Products such as the SunRoofTile replicate the appearance of natural slate while incorporating photovoltaic cells. Not yet as efficient as conventional panels, but improving rapidly.
+
+## Electrical Considerations on Older Properties
+
+Very old properties (pre-1970) may have outdated electrical wiring (rubber-insulated or aluminium wiring) that requires upgrade before solar can be safely connected. Your installer's electrician will assess the consumer unit and earthing arrangements as part of the installation process.
+
+Solar installation also provides an opportunity to upgrade to a modern consumer unit (fuse board) if the existing installation is outdated — often a worthwhile simultaneous investment.
+
+Call ProLine Roofing & Solar on 07587 478826 for expert advice on solar for older Somerset properties.`,
   },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug);
+  return blogPosts.find((p) => p.slug === slug);
 }
 
 export function getFeaturedPosts(): BlogPost[] {
-  return blogPosts.filter((post) => post.featured);
+  return blogPosts.filter((p) => p.featured === true);
 }
 
 export function getPostsByCategory(category: string): BlogPost[] {
-  if (category === "all") return blogPosts;
-  return blogPosts.filter((post) => post.category === category);
+  if (category === 'all') return blogPosts;
+  return blogPosts.filter((p) => p.category === category);
 }
 
 export function getRelatedPosts(slug: string, count = 3): BlogPost[] {
-  const current = getBlogPostBySlug(slug);
-  if (!current) return blogPosts.slice(0, count);
+  const post = getBlogPostBySlug(slug);
+  if (!post) return blogPosts.slice(0, count);
   const sameCat = blogPosts.filter(
-    (p) => p.slug !== slug && p.category === current.category
+    (p) => p.slug !== slug && p.category === post.category
   );
+  if (sameCat.length >= count) return sameCat.slice(0, count);
   const others = blogPosts.filter(
-    (p) => p.slug !== slug && p.category !== current.category
+    (p) => p.slug !== slug && p.category !== post.category
   );
   return [...sameCat, ...others].slice(0, count);
 }

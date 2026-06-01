@@ -1,171 +1,208 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Clock, Calendar, User, Tag } from "lucide-react";
+import Link from "next/link";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Phone, Tag } from "lucide-react";
 import CTASection from "@/components/CTASection";
-import AnimatedSection from "@/components/AnimatedSection";
-import BreadcrumbNav from "@/components/BreadcrumbNav";
-import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
+import {
+  blogPosts,
+  getBlogPostBySlug,
+  getRelatedPosts,
+} from "@/lib/blog-posts";
 
-export const dynamic = "force-static";
+const BASE = "https://www.prolineroofingandsolar.co.uk";
 
+/* ── Static params ──────────────────────────────────────────── */
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return blogPosts.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+/* ── Metadata ───────────────────────────────────────────────── */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
-
-  const base = "https://www.prolineroofingandsolar.co.uk";
-
   return {
-    title: `${post.title} | ProLine Roofing & Solar`,
+    title: post.title,
     description: post.excerpt,
     keywords: post.tags,
-    alternates: { canonical: `${base}/blog/${post.slug}` },
+    alternates: { canonical: `${BASE}/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `${base}/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
       authors: [post.author],
+      tags: post.tags,
     },
   };
 }
 
-const categoryColors: Record<string, string> = {
-  roofing: "bg-[#f97316] text-white",
-  solar: "bg-yellow-500 text-white",
-  guides: "bg-blue-600 text-white",
-  maintenance: "bg-green-600 text-white",
-  local: "bg-purple-600 text-white",
+/* ── Helpers ────────────────────────────────────────────────── */
+const categoryConfig: Record<
+  string,
+  { label: string; colour: string; bg: string }
+> = {
+  roofing:     { label: "Roofing",     colour: "text-blue-700",   bg: "bg-blue-100"   },
+  solar:       { label: "Solar",       colour: "text-yellow-700", bg: "bg-yellow-100" },
+  guides:      { label: "Guides",      colour: "text-green-700",  bg: "bg-green-100"  },
+  maintenance: { label: "Maintenance", colour: "text-purple-700", bg: "bg-purple-100" },
+  local:       { label: "Local",       colour: "text-orange-700", bg: "bg-orange-100" },
 };
 
-const categoryLabels: Record<string, string> = {
-  roofing: "Roofing",
-  solar: "Solar",
-  guides: "Guides",
-  maintenance: "Maintenance",
-  local: "Local",
-};
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
 
+/* Render content: split on \n\n, handle ## headers */
 function renderContent(content: string) {
-  const lines = content.split("\n");
-  const elements: React.ReactNode[] = [];
-  let key = 0;
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-
-    if (line.startsWith("## ")) {
-      elements.push(
-        <h2 key={key++} className="text-2xl font-black text-[#1a1a1a] uppercase tracking-tight mt-10 mb-4 pt-6 border-t border-gray-100">
-          {line.slice(3)}
+  const blocks = content.split(/\n\n+/);
+  return blocks.map((block, i) => {
+    if (block.startsWith("## ")) {
+      return (
+        <h2
+          key={i}
+          className="text-xl font-black text-[#1a1a1a] mt-10 mb-4 pt-2 border-t border-gray-100 uppercase tracking-tight"
+        >
+          {block.replace("## ", "")}
         </h2>
       );
-    } else if (line.startsWith("### ")) {
-      elements.push(
-        <h3 key={key++} className="text-lg font-black text-[#1a1a1a] uppercase tracking-tight mt-8 mb-3">
-          {line.slice(4)}
+    }
+    if (block.startsWith("# ")) {
+      return (
+        <h3
+          key={i}
+          className="text-lg font-black text-[#1a1a1a] mt-8 mb-3 uppercase tracking-tight"
+        >
+          {block.replace("# ", "")}
         </h3>
       );
-    } else if (line.startsWith("- ")) {
-      const listItems: string[] = [];
-      let j = i;
-      while (j < lines.length && lines[j].startsWith("- ")) {
-        listItems.push(lines[j].slice(2));
-        j++;
-      }
-      elements.push(
-        <ul key={key++} className="space-y-2 my-4 pl-4">
-          {listItems.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-2 text-gray-600 text-sm leading-relaxed">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#f97316] shrink-0 mt-2" />
-              <span dangerouslySetInnerHTML={{ __html: formatInline(item) }} />
-            </li>
-          ))}
-        </ul>
-      );
-      i = j - 1;
-    } else if (/^\d+\. /.test(line)) {
-      const listItems: string[] = [];
-      let j = i;
-      while (j < lines.length && /^\d+\. /.test(lines[j])) {
-        listItems.push(lines[j].replace(/^\d+\. /, ""));
-        j++;
-      }
-      elements.push(
-        <ol key={key++} className="space-y-2 my-4 pl-4">
-          {listItems.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-3 text-gray-600 text-sm leading-relaxed">
-              <span className="w-5 h-5 shrink-0 bg-[#f97316] text-white text-xs font-black flex items-center justify-center rounded-sm mt-0.5">
-                {idx + 1}
-              </span>
-              <span dangerouslySetInnerHTML={{ __html: formatInline(item) }} />
-            </li>
-          ))}
-        </ol>
-      );
-      i = j - 1;
-    } else if (line.trim() === "") {
-      // skip blank lines
-    } else {
-      elements.push(
-        <p key={key++} className="text-gray-600 text-sm leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
-      );
     }
-  }
-
-  return elements;
+    // Handle bold text inline
+    const rendered = block.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    return (
+      <p
+        key={i}
+        className="text-gray-700 leading-relaxed mb-0"
+        dangerouslySetInnerHTML={{ __html: rendered }}
+      />
+    );
+  });
 }
 
-function formatInline(text: string): string {
-  return text
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>");
+/* Category → service links */
+const serviceLinks: Record<string, { label: string; href: string }[]> = {
+  roofing: [
+    { label: "Roofing Services", href: "/roofing" },
+    { label: "Emergency Roofing", href: "/services/emergency-roofing" },
+    { label: "Flat Roofing",      href: "/services/flat-roofing" },
+    { label: "Chimney Repairs",   href: "/services/chimney-repairs" },
+  ],
+  solar: [
+    { label: "Solar Panels", href: "/solar" },
+    { label: "Solar in Taunton",  href: "/solar-panels/taunton" },
+    { label: "Solar in Somerset", href: "/solar-panels/bridgwater" },
+    { label: "Get a Solar Quote", href: "/quote" },
+  ],
+  guides: [
+    { label: "Roofing Services", href: "/roofing" },
+    { label: "Solar Panels",     href: "/solar" },
+    { label: "Get a Quote",      href: "/quote" },
+    { label: "About ProLine",    href: "/about" },
+  ],
+  maintenance: [
+    { label: "Roofing Services", href: "/roofing" },
+    { label: "Fascias & Soffits", href: "/services/fascias-soffits" },
+    { label: "Guttering",        href: "/services/guttering" },
+    { label: "Emergency Roofing", href: "/services/emergency-roofing" },
+  ],
+  local: [
+    { label: "Roofer in Taunton", href: "/roofer/taunton" },
+    { label: "Locations Covered", href: "/locations" },
+    { label: "Get a Quote",       href: "/quote" },
+    { label: "Contact Us",        href: "/contact" },
+  ],
+};
+
+/* Small related post card */
+function RelatedCard({ post }: { post: (typeof blogPosts)[number] }) {
+  const cfg = categoryConfig[post.category] ?? {
+    label: post.category,
+    colour: "text-gray-700",
+    bg: "bg-gray-100",
+  };
+  return (
+    <Link
+      href={`/blog/${post.slug}`}
+      className="group flex flex-col gap-2 p-4 border border-gray-100 hover:border-[#f97316] hover:shadow-md transition-all"
+    >
+      <span
+        className={`text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit ${cfg.bg} ${cfg.colour}`}
+      >
+        {cfg.label}
+      </span>
+      <span className="text-sm font-black text-[#1a1a1a] leading-snug group-hover:text-[#f97316] transition-colors line-clamp-2">
+        {post.title}
+      </span>
+      <span className="text-xs text-gray-400 flex items-center gap-1">
+        <Clock className="w-3 h-3" /> {post.readTime} min read
+      </span>
+    </Link>
+  );
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+/* ── Page component ─────────────────────────────────────────── */
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
-  if (!post) notFound();
+  const found = getBlogPostBySlug(slug);
+  if (!found) notFound();
+  const post = found as NonNullable<typeof found>;
 
-  const related = getRelatedPosts(slug, 3);
-  const base = "https://www.prolineroofingandsolar.co.uk";
+  const related = getRelatedPosts(post.slug, 3);
+  const catCfg = categoryConfig[post.category] ?? {
+    label: post.category,
+    colour: "text-gray-700",
+    bg: "bg-gray-100",
+  };
+  const links = serviceLinks[post.category] ?? serviceLinks.guides;
 
+  /* ── JSON-LD ────────────────────────────────────────────── */
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
-    datePublished: post.publishedAt,
-    author: {
-      "@type": "Organization",
-      name: "ProLine Roofing & Solar",
-      url: base,
-    },
+    author: { "@type": "Organization", name: post.author },
     publisher: {
       "@type": "Organization",
       name: "ProLine Roofing & Solar",
-      url: base,
-      logo: {
-        "@type": "ImageObject",
-        url: `${base}/logo.png`,
-      },
+      url: BASE,
     },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${base}/blog/${post.slug}`,
-    },
+    datePublished: post.publishedAt,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${BASE}/blog/${post.slug}` },
     keywords: post.tags.join(", "),
   };
 
-  const currentIndex = blogPosts.findIndex((p) => p.slug === slug);
-  const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
-  const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home",   item: BASE },
+      { "@type": "ListItem", position: 2, name: "Blog",   item: `${BASE}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${BASE}/blog/${post.slug}` },
+    ],
+  };
 
   return (
     <>
@@ -173,158 +210,152 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
-      <section className="relative bg-[#111111] text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: "url('/image1.jpeg')" }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/85" />
-        <div className="relative max-w-4xl mx-auto px-4">
-          <AnimatedSection>
-            <BreadcrumbNav
-              items={[{ label: "Blog", href: "/blog" }, { label: post.title }]}
-              dark
-            />
-            <div className="flex items-center gap-3 mt-6 mb-5">
-              <span className={`text-xs font-black uppercase tracking-widest px-3 py-1.5 ${categoryColors[post.category]}`}>
-                {categoryLabels[post.category]}
+      {/* ── Article Hero ─────────────────────────────────────── */}
+      <section className="bg-[#1a1a1a] py-16 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-xs text-gray-400 mb-8">
+            <Link href="/" className="hover:text-[#f97316] transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/blog" className="hover:text-[#f97316] transition-colors">Blog</Link>
+            <span>/</span>
+            <span className="text-gray-300 truncate max-w-[200px]">{post.title}</span>
+          </nav>
+
+          <div className="flex items-center gap-3 mb-4">
+            <span
+              className={`text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded ${catCfg.bg} ${catCfg.colour}`}
+            >
+              {catCfg.label}
+            </span>
+            {post.featured && (
+              <span className="text-xs font-bold text-[#f97316] uppercase tracking-wider">
+                Featured
               </span>
-              {post.featured && (
-                <span className="text-xs font-black uppercase tracking-widest px-3 py-1.5 bg-white/10 text-white">Featured</span>
-              )}
-            </div>
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-5 leading-tight">
-              {post.title}
-            </h1>
-            <p className="text-gray-300 text-lg mb-6 max-w-2xl">{post.excerpt}</p>
-            <div className="flex flex-wrap items-center gap-4 text-gray-400 text-xs">
-              <span className="flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5" /> {post.author}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5" />
-                {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5" /> {post.readTime} min read
-              </span>
-            </div>
-          </AnimatedSection>
+            )}
+          </div>
+
+          <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight max-w-4xl mb-6">
+            {post.title}
+          </h1>
+
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+            <span className="flex items-center gap-1.5">
+              <Calendar className="w-4 h-4" />
+              {formatDate(post.publishedAt)}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4" />
+              {post.readTime} min read
+            </span>
+            <span className="text-gray-500">By {post.author}</span>
+          </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* ── Main Content ─────────────────────────────────────── */}
+      <div className="bg-white py-14">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-[1fr_320px] gap-12">
-            {/* Main content */}
-            <article className="prose-custom min-w-0">
-              <AnimatedSection>
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12 xl:gap-16 items-start">
+
+            {/* Article body */}
+            <article>
+              {/* Excerpt / lead */}
+              <p className="text-lg text-gray-600 leading-relaxed mb-8 pb-8 border-b border-gray-100 font-medium italic">
+                {post.excerpt}
+              </p>
+
+              {/* Content */}
+              <div className="space-y-5 text-[15px]">
                 {renderContent(post.content)}
-              </AnimatedSection>
+              </div>
 
               {/* Tags */}
-              <div className="mt-10 pt-6 border-t border-gray-100">
-                <div className="flex flex-wrap gap-2 items-center">
-                  <Tag className="w-4 h-4 text-gray-400" />
+              <div className="mt-12 pt-8 border-t border-gray-100">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-3 flex items-center gap-2">
+                  <Tag className="w-3.5 h-3.5" /> Tags
+                </p>
+                <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
-                    <span key={tag} className="border border-gray-200 text-gray-500 text-xs px-3 py-1">
+                    <span
+                      key={tag}
+                      className="text-xs px-3 py-1.5 bg-gray-100 text-gray-600 rounded"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
 
-              {/* Prev / Next */}
-              <div className="mt-10 pt-6 border-t border-gray-100 grid sm:grid-cols-2 gap-4">
-                {prevPost ? (
-                  <Link href={`/blog/${prevPost.slug}`} className="group flex items-start gap-3 p-4 border border-gray-100 hover:border-[#f97316] transition-all">
-                    <ArrowLeft className="w-4 h-4 text-[#f97316] shrink-0 mt-1" />
-                    <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Previous</p>
-                      <p className="text-sm font-bold text-[#1a1a1a] group-hover:text-[#f97316] transition-colors leading-tight">{prevPost.title}</p>
-                    </div>
-                  </Link>
-                ) : <div />}
-                {nextPost && (
-                  <Link href={`/blog/${nextPost.slug}`} className="group flex items-start gap-3 p-4 border border-gray-100 hover:border-[#f97316] transition-all text-right sm:justify-end">
-                    <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Next</p>
-                      <p className="text-sm font-bold text-[#1a1a1a] group-hover:text-[#f97316] transition-colors leading-tight">{nextPost.title}</p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-[#f97316] shrink-0 mt-1" />
-                  </Link>
-                )}
+              {/* Back + Service links */}
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-[#f97316] transition-colors"
+                >
+                  <ArrowLeft className="w-4 h-4" /> Back to Blog
+                </Link>
               </div>
             </article>
 
             {/* Sidebar */}
-            <aside className="space-y-6">
-              {/* CTA */}
+            <aside className="space-y-6 lg:sticky lg:top-6">
+              {/* Quote CTA */}
               <div className="bg-[#f97316] p-6 text-white">
-                <h3 className="font-black text-sm uppercase tracking-widest mb-2">Get a Free Quote</h3>
-                <p className="text-orange-100 text-sm mb-4">Serving Somerset since 1994. Free written quotes, fully insured.</p>
-                <Link href="/quote" className="block bg-white text-[#f97316] font-black text-sm uppercase tracking-widest text-center py-3 hover:bg-orange-50 transition-colors">
-                  Request Quote
-                </Link>
-                <a href="tel:07587478826" className="block mt-2 border border-white/40 text-white font-black text-sm uppercase tracking-widest text-center py-3 hover:bg-white/10 transition-colors">
-                  07587 478826
+                <h3 className="font-black text-lg uppercase tracking-tight mb-2">
+                  Free Quote
+                </h3>
+                <p className="text-orange-100 text-sm mb-5 leading-relaxed">
+                  Based in Taunton, Somerset. Free surveys, written quotes, no
+                  pressure.
+                </p>
+                <a
+                  href="tel:07587478826"
+                  className="flex items-center gap-2 bg-white text-[#f97316] font-bold px-4 py-3 text-sm hover:bg-orange-50 transition-colors mb-3"
+                >
+                  <Phone className="w-4 h-4" /> 07587 478826
                 </a>
+                <Link
+                  href="/quote"
+                  className="flex items-center justify-between bg-[#1a1a1a] text-white font-bold px-4 py-3 text-sm hover:bg-black transition-colors"
+                >
+                  Get a Free Quote <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
 
               {/* Related posts */}
               {related.length > 0 && (
-                <div className="border border-gray-100 p-6">
-                  <h3 className="font-black text-[#1a1a1a] text-xs uppercase tracking-widest mb-4 pb-3 border-b border-gray-100">Related Articles</h3>
-                  <div className="space-y-4">
-                    {related.map((r) => (
-                      <Link key={r.slug} href={`/blog/${r.slug}`} className="group block">
-                        <span className={`text-xs font-black uppercase tracking-wider px-2 py-0.5 ${categoryColors[r.category]}`}>
-                          {categoryLabels[r.category]}
-                        </span>
-                        <p className="text-sm font-bold text-[#1a1a1a] group-hover:text-[#f97316] transition-colors mt-1 leading-tight">
-                          {r.title}
-                        </p>
-                        <p className="text-gray-400 text-xs mt-1 flex items-center gap-1">
-                          <Clock className="w-3 h-3" /> {r.readTime} min read
-                        </p>
-                      </Link>
+                <div>
+                  <h3 className="font-black text-sm uppercase tracking-[0.15em] text-gray-400 mb-4">
+                    Related Articles
+                  </h3>
+                  <div className="space-y-3">
+                    {related.map((rp) => (
+                      <RelatedCard key={rp.slug} post={rp} />
                     ))}
                   </div>
                 </div>
               )}
 
-              {/* Services quick links */}
-              <div className="border border-gray-100 p-6">
-                <h3 className="font-black text-[#1a1a1a] text-xs uppercase tracking-widest mb-4 pb-3 border-b border-gray-100">Our Services</h3>
-                <ul className="space-y-2">
-                  {[
-                    { l: "Roof Repairs", h: "/services/roof-repairs" },
-                    { l: "Flat Roofing", h: "/services/flat-roofing" },
-                    { l: "Slate Roofing", h: "/services/slate-roofing" },
-                    { l: "Chimney Repairs", h: "/services/chimney-repairs" },
-                    { l: "Solar Panels", h: "/solar" },
-                    { l: "Emergency Roofing", h: "/services/emergency-roofing" },
-                    { l: "Commercial Roofing", h: "/services/commercial-roofing" },
-                  ].map(({ l, h }) => (
-                    <li key={l}>
-                      <Link href={h} className="flex items-center justify-between text-sm text-gray-600 hover:text-[#f97316] transition-colors group">
-                        <span>{l}</span>
-                        <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-[#f97316]" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Location quick links */}
-              <div className="border border-gray-100 p-6">
-                <h3 className="font-black text-[#1a1a1a] text-xs uppercase tracking-widest mb-4 pb-3 border-b border-gray-100">Areas We Cover</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["Taunton", "Bridgwater", "Bath", "Bristol", "Exeter", "Yeovil", "Wellington"].map((city) => (
+              {/* Service links */}
+              <div>
+                <h3 className="font-black text-sm uppercase tracking-[0.15em] text-gray-400 mb-4">
+                  Our Services
+                </h3>
+                <div className="space-y-2">
+                  {links.map(({ label, href }) => (
                     <Link
-                      key={city}
-                      href={`/roofer/${city.toLowerCase().replace(/ /g, "-")}`}
-                      className="border border-gray-200 hover:border-[#f97316] hover:text-[#f97316] text-gray-600 text-xs px-2 py-1 transition-colors"
+                      key={href}
+                      href={href}
+                      className="flex items-center justify-between p-3 border border-gray-100 hover:border-[#f97316] hover:text-[#f97316] text-sm font-bold text-gray-700 transition-all group"
                     >
-                      {city}
+                      {label}
+                      <ArrowRight className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#f97316] transition-colors" />
                     </Link>
                   ))}
                 </div>
@@ -332,9 +363,67 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </aside>
           </div>
         </div>
-      </section>
+      </div>
 
-      <CTASection heading="Need a Roofing or Solar Quote?" subtext="Call ProLine on 07587 478826 or request a free written quote online — no obligation." />
+      {/* ── Related Posts Grid ───────────────────────────────── */}
+      {related.length > 0 && (
+        <section className="py-14 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-center gap-4 mb-10">
+              <div className="flex-1 max-w-[60px] h-px bg-[#f97316]" />
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
+                You May Also Like
+              </span>
+              <div className="flex-1 max-w-[60px] h-px bg-[#f97316]" />
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {related.map((rp) => {
+                const cfg = categoryConfig[rp.category] ?? {
+                  label: rp.category,
+                  colour: "text-gray-700",
+                  bg: "bg-gray-100",
+                };
+                return (
+                  <article
+                    key={rp.slug}
+                    className="group flex flex-col bg-white border border-gray-100 hover:border-[#f97316] hover:shadow-lg transition-all duration-300"
+                  >
+                    <div className="p-6 flex flex-col flex-1">
+                      <span
+                        className={`text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit mb-3 ${cfg.bg} ${cfg.colour}`}
+                      >
+                        {cfg.label}
+                      </span>
+                      <h3 className="font-black text-[#1a1a1a] text-base leading-snug mb-3 group-hover:text-[#f97316] transition-colors line-clamp-2">
+                        {rp.title}
+                      </h3>
+                      <p className="text-gray-500 text-sm leading-relaxed flex-1 line-clamp-2 mb-4">
+                        {rp.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <span className="text-xs text-gray-400 flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5" /> {rp.readTime} min read
+                        </span>
+                        <Link
+                          href={`/blog/${rp.slug}`}
+                          className="inline-flex items-center gap-1 text-[#f97316] font-bold text-xs uppercase tracking-wider hover:gap-2 transition-all"
+                        >
+                          Read <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <CTASection
+        heading="Get a Free Quote Today"
+        subtext="ProLine Roofing & Solar covers Taunton, Somerset and the South West. Call or request a quote online."
+      />
     </>
   );
 }
