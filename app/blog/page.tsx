@@ -4,6 +4,8 @@ import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import { blogPosts, getFeaturedPosts } from "@/lib/blog-posts";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Roofing & Solar Blog | ProLine Roofing & Solar",
   description:
