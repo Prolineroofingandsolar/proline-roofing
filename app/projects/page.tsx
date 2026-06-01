@@ -146,9 +146,6 @@ export default async function ProjectsPage() {
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl font-black text-[#1a1a1a] uppercase">Project Gallery</h2>
-            {!sanityProjects && (
-              <p className="text-gray-400 text-xs mt-2">Add your own projects via the Studio at <strong>/studio</strong></p>
-            )}
           </AnimatedSection>
 
           {sanityProjects ? (

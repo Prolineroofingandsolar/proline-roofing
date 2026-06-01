@@ -17,6 +17,7 @@ const navLinks = [
       { label: "New Roofs", href: "/roofing" },
       { label: "Flat Roofing", href: "/services/flat-roofing" },
       { label: "Slate Roofing", href: "/services/slate-roofing" },
+      { label: "Tile Roofing", href: "/services/tile-roofing" },
       { label: "Chimney Repairs", href: "/services/chimney-repairs" },
       { label: "Leadwork", href: "/services/leadwork" },
       { label: "Fascias & Soffits", href: "/services/fascias-soffits" },
@@ -42,11 +43,10 @@ const navLinks = [
       { label: "All Areas We Cover", href: "/locations" },
       { label: "Roofer Taunton", href: "/roofer/taunton" },
       { label: "Roofer Bridgwater", href: "/roofer/bridgwater" },
-      { label: "Roofer Bath", href: "/roofer/bath" },
-      { label: "Roofer Bristol", href: "/roofer/bristol" },
-      { label: "Roofer Exeter", href: "/roofer/exeter" },
+      { label: "Roofer Wellington", href: "/roofer/wellington" },
       { label: "Roofer Yeovil", href: "/roofer/yeovil" },
-      { label: "Roofer Weston-super-Mare", href: "/roofer/weston-super-mare" },
+      { label: "Roofer Burnham-on-Sea", href: "/roofer/burnham-on-sea" },
+      { label: "Roofer Glastonbury", href: "/roofer/glastonbury" },
     ],
   },
   { label: "PROJECTS", href: "/projects" },
@@ -58,8 +58,12 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openSection, setOpenSection] = useState<string | null>(null);
   const pathname = usePathname();
+
+  function toggleSection(label: string) {
+    setOpenSection((prev) => (prev === label ? null : label));
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-md">
@@ -68,7 +72,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between min-w-0">
           <div className="hidden sm:flex items-center gap-1.5 text-gray-300 text-xs shrink-0">
             <MapPin className="w-3.5 h-3.5 text-[#f97316]" />
-            <span>Proudly serving Taunton &amp; the South West</span>
+            <span>Based in Taunton &mdash; Serving Somerset &amp; the South West</span>
           </div>
           <div className="flex items-center gap-3 ml-auto">
             <a
@@ -115,7 +119,7 @@ export default function Header() {
                         {link.label}
                         <ChevronDown className="w-3 h-3" />
                       </button>
-                      <div className="absolute top-full left-0 w-48 bg-white shadow-xl border-t-2 border-[#f97316] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                      <div className="absolute top-full left-0 w-52 bg-white shadow-xl border-t-2 border-[#f97316] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                         {link.children.map((child) => (
                           <Link
                             key={child.label}
@@ -171,13 +175,17 @@ export default function Header() {
                   {link.children ? (
                     <div>
                       <button
-                        onClick={() => setServicesOpen(!servicesOpen)}
+                        onClick={() => toggleSection(link.label)}
                         className="w-full flex items-center justify-between px-4 py-3 text-xs font-bold tracking-wider text-gray-700"
                       >
                         {link.label}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            openSection === link.label ? "rotate-180" : ""
+                          }`}
+                        />
                       </button>
-                      {servicesOpen && (
+                      {openSection === link.label && (
                         <div className="bg-gray-50 divide-y divide-gray-100">
                           {link.children.map((child) => (
                             <Link
@@ -206,13 +214,19 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <div className="p-4">
+            <div className="p-4 grid grid-cols-2 gap-3">
+              <a
+                href="tel:07587478826"
+                className="flex items-center justify-center gap-2 bg-[#1a1a1a] text-white text-xs font-black tracking-widest py-3 uppercase"
+              >
+                <Phone className="w-3.5 h-3.5" /> Call Now
+              </a>
               <Link
                 href="/quote"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full text-center bg-[#f97316] hover:bg-[#ea6c0a] text-white text-xs font-black tracking-widest py-3 uppercase"
+                className="block text-center bg-[#f97316] hover:bg-[#ea6c0a] text-white text-xs font-black tracking-widest py-3 uppercase"
               >
-                Get a Free Quote
+                Free Quote
               </Link>
             </div>
           </div>
