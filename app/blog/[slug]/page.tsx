@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, ArrowRight, Phone, Tag } from "lucide-react";
 import CTASection from "@/components/CTASection";
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
 import {
   blogPosts,
   getBlogPostBySlug,
