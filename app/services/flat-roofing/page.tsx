@@ -225,94 +225,50 @@ export default function FlatRoofingPage() {
 
       {/* ── What Is Flat Roofing ──────────────────────────────── */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
-            <AnimatedSection direction="left">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex-1 max-w-[60px] h-px bg-[#f97316]" />
-                <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
-                  About Flat Roofing
-                </span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight mb-6">
-                What Is a Flat Roof?
-              </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  Flat roofs are defined by their shallow pitch — typically less than
-                  10° — and are found on extensions, garages, commercial buildings,
-                  and many mid-century homes across Somerset. Unlike pitched roofs,
-                  they rely entirely on a waterproof membrane and proper drainage
-                  design to prevent water ingress.
-                </p>
-                <p>
-                  Modern flat roofing systems have come a long way from the
-                  single-layer felt of the 1970s and 1980s. Today&rsquo;s EPDM rubber
-                  and GRP fibreglass systems offer lifespans of 25–50 years,
-                  seamless installation, and dramatically reduced maintenance compared
-                  to traditional felt. When installed correctly to a warm deck
-                  specification, they also meet current Building Regulations for
-                  energy efficiency.
-                </p>
-                <p>
-                  Flat roofs are commonly used on: single-storey rear extensions,
-                  kitchen and utility room additions, garages and car ports,
-                  outbuildings and garden rooms, bay windows and dormers, and
-                  commercial premises such as shops, offices, schools and warehouses.
-                </p>
-                <p>
-                  The most important factor in flat roof performance is correct
-                  installation &mdash; the right fall (drainage gradient), properly
-                  detailed upstands and flashings where the roof meets walls, and
-                  high-quality materials. ProLine&rsquo;s team has specialist flat
-                  roofing expertise built up over decades of work across Somerset
-                  and the South West.
-                </p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection direction="right" delay={0.15}>
-              <div className="bg-[#f97316]/5 border border-[#f97316]/20 p-8 space-y-6">
-                <h3 className="font-black text-[#1a1a1a] uppercase tracking-wide text-lg">
-                  Flat Roof Systems Compared
-                </h3>
-                {[
-                  {
-                    name: "EPDM Rubber",
-                    life: "25–50 years",
-                    best: "Extensions, garages, cold climates",
-                    note: "Excellent flexibility, UV resistant, near-zero maintenance",
-                  },
-                  {
-                    name: "GRP Fibreglass",
-                    life: "25–40 years",
-                    best: "Walkable roofs, neat finish required",
-                    note: "Rigid, seamless, can be formed to complex shapes",
-                  },
-                  {
-                    name: "Torch-On Felt",
-                    life: "15–20 years",
-                    best: "Budget-conscious repairs and replacements",
-                    note: "Multi-layer system, widely available",
-                  },
-                  {
-                    name: "TPO / PVC Single-Ply",
-                    life: "20–30 years",
-                    best: "Large commercial flat roofs",
-                    note: "Lightweight, weldable seams, energy-reflective options",
-                  },
-                ].map(({ name, life, best, note }) => (
-                  <div key={name} className="border-b border-[#f97316]/15 pb-5 last:border-b-0 last:pb-0">
-                    <div className="flex items-start justify-between gap-3 mb-1">
-                      <span className="font-black text-[#1a1a1a] text-sm uppercase tracking-wide">{name}</span>
-                      <span className="text-[#f97316] font-bold text-xs shrink-0">{life}</span>
-                    </div>
-                    <p className="text-gray-500 text-xs mb-1"><strong>Best for:</strong> {best}</p>
-                    <p className="text-gray-400 text-xs">{note}</p>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
-          </div>
+        <div className="max-w-4xl mx-auto px-4">
+          <AnimatedSection>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="flex-1 max-w-[60px] h-px bg-[#f97316]" />
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
+                About Flat Roofing
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight mb-6">
+              What Is a Flat Roof?
+            </h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                Flat roofs are defined by their shallow pitch — typically less than
+                10° — and are found on extensions, garages, commercial buildings,
+                and many mid-century homes across Somerset. Unlike pitched roofs,
+                they rely entirely on a waterproof membrane and proper drainage
+                design to prevent water ingress.
+              </p>
+              <p>
+                Modern flat roofing systems have come a long way from the
+                single-layer felt of the 1970s and 1980s. Today&rsquo;s EPDM rubber
+                and GRP fibreglass systems offer lifespans of 25–50 years,
+                seamless installation, and dramatically reduced maintenance compared
+                to traditional felt. When installed correctly to a warm deck
+                specification, they also meet current Building Regulations for
+                energy efficiency.
+              </p>
+              <p>
+                Flat roofs are commonly used on: single-storey rear extensions,
+                kitchen and utility room additions, garages and car ports,
+                outbuildings and garden rooms, bay windows and dormers, and
+                commercial premises such as shops, offices, schools and warehouses.
+              </p>
+              <p>
+                The most important factor in flat roof performance is correct
+                installation &mdash; the right fall (drainage gradient), properly
+                detailed upstands and flashings where the roof meets walls, and
+                high-quality materials. ProLine&rsquo;s team has specialist flat
+                roofing expertise built up over decades of work across Somerset
+                and the South West.
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -385,90 +341,6 @@ export default function FlatRoofingPage() {
               </AnimatedSection>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── Pricing Guide ────────────────────────────────────── */}
-      <section className="py-20 bg-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection className="text-center mb-14">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
-                Pricing
-              </span>
-              <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
-            </div>
-            <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-3">
-              Flat Roof Cost Guide &mdash; Somerset 2024
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto text-sm">
-              Indicative prices for common flat roofing work in Somerset.
-              All jobs are quoted individually after a free site survey.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                service: "Minor Flat Roof Repair",
-                range: "£500 – £1,500",
-                detail:
-                  "Patching, blister repairs, lap joint re-sealing. Price depends on size of damaged area and system type.",
-              },
-              {
-                service: "EPDM Rubber — Small Extension (15–25m²)",
-                range: "£2,000 – £4,000",
-                detail:
-                  "Full strip and replacement with EPDM membrane, insulation, upstands and trims.",
-              },
-              {
-                service: "GRP Fibreglass — Small Extension (15–25m²)",
-                range: "£2,200 – £4,500",
-                detail:
-                  "GRP laminate system with fibreglass topcoat. Includes insulation boards and trim.",
-              },
-              {
-                service: "Full Flat Roof Replacement (30–50m²)",
-                range: "£4,000 – £8,000",
-                detail:
-                  "Full replacement of larger flat roofs including deck repairs, insulation and new waterproof membrane.",
-              },
-              {
-                service: "Flat Roof Rooflight / Skylight",
-                range: "£600 – £2,000",
-                detail:
-                  "Supply and fit of fixed or opening rooflight, including upstand and flashing.",
-              },
-              {
-                service: "Flat-to-Pitched Conversion",
-                range: "£6,000 – £15,000+",
-                detail:
-                  "Converting a flat roof to a pitched structure. Significant variation based on size and complexity.",
-              },
-            ].map(({ service, range, detail }) => (
-              <AnimatedSection key={service}>
-                <div className="bg-white/5 border border-white/10 p-6 h-full hover:border-[#f97316]/40 transition-colors">
-                  <div className="text-[#f97316] font-black text-xl mb-1">{range}</div>
-                  <div className="text-white font-bold text-sm uppercase tracking-wide mb-3">
-                    {service}
-                  </div>
-                  <p className="text-gray-400 text-sm leading-relaxed">{detail}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection className="mt-10 text-center">
-            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              All prices are indicative guides for Somerset in 2024. Final costs depend on
-              roof size, access, structural condition and chosen materials. VAT may apply.{" "}
-              <Link href="/quote" className="text-[#f97316] hover:underline font-bold">
-                Request a free, no-obligation quote
-              </Link>{" "}
-              for an accurate price for your project.
-            </p>
-          </AnimatedSection>
         </div>
       </section>
 
