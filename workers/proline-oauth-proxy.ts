@@ -1,5 +1,4 @@
 const SUPABASE_AUTH_ORIGIN = "https://qzvdzzvkocmulcfujyea.supabase.co/auth/v1";
-const PROLINE_OAUTH_ORIGIN = "https://qzvdzzvkocmulcfujyea.supabase.co/functions/v1/proline-mcp/oauth";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -59,11 +58,11 @@ export default {
       return json(
         {
           issuer: origin,
-          authorization_endpoint: `${SUPABASE_AUTH_ORIGIN}/oauth/authorize`,
+          authorization_endpoint: `${origin}/authorize`,
           token_endpoint: `${origin}/connect/complete`,
           jwks_uri: `${SUPABASE_AUTH_ORIGIN}/.well-known/jwks.json`,
-          userinfo_endpoint: `${PROLINE_OAUTH_ORIGIN}/userinfo`,
-          registration_endpoint: `${PROLINE_OAUTH_ORIGIN}/register`,
+          userinfo_endpoint: `${origin}/userinfo`,
+          registration_endpoint: `${origin}/register`,
           scopes_supported: ["openid", "profile", "email", "phone", "offline_access"],
           response_types_supported: ["code"],
           response_modes_supported: ["query"],
@@ -82,6 +81,9 @@ export default {
       );
     }
 
+    if (request.method === "GET" && url.pathname === "/authorize") {
+      return Response.redirect(`${SUPABASE_AUTH_ORIGIN}/oauth/authorize${url.search}`, 302);
+    }
     if (request.method === "POST" && url.pathname === "/token") return proxy(request, "/oauth/token");
     if (request.method === "POST" && url.pathname === "/connect/complete") return proxy(request, "/oauth/token");
     if (request.method === "POST" && url.pathname === "/register") return proxy(request, "/oauth/clients/register");
