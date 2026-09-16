@@ -60,7 +60,7 @@ export default {
         {
           issuer: origin,
           authorization_endpoint: `${SUPABASE_AUTH_ORIGIN}/oauth/authorize`,
-          token_endpoint: `${PROLINE_OAUTH_ORIGIN}/token`,
+          token_endpoint: `${PROLINE_OAUTH_ORIGIN}/connect/complete`,
           jwks_uri: `${SUPABASE_AUTH_ORIGIN}/.well-known/jwks.json`,
           userinfo_endpoint: `${PROLINE_OAUTH_ORIGIN}/userinfo`,
           registration_endpoint: `${PROLINE_OAUTH_ORIGIN}/register`,
