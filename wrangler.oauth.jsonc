@@ -4,5 +4,8 @@
   "main": "workers/proline-oauth-proxy.ts",
   "compatibility_date": "2026-05-26",
   "workers_dev": true,
+  "routes": [
+    { "pattern": "oauth.prolineroofingandsolar.co.uk", "custom_domain": true }
+  ],
   "observability": { "enabled": true }
 }
