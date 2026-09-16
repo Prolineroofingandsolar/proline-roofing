@@ -1,4 +1,5 @@
 const SUPABASE_AUTH_ORIGIN = "https://qzvdzzvkocmulcfujyea.supabase.co/auth/v1";
+const PROLINE_OAUTH_ORIGIN = "https://qzvdzzvkocmulcfujyea.supabase.co/functions/v1/proline-mcp/oauth";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -59,10 +60,10 @@ export default {
         {
           issuer: origin,
           authorization_endpoint: `${SUPABASE_AUTH_ORIGIN}/oauth/authorize`,
-          token_endpoint: `${origin}/token`,
+          token_endpoint: `${PROLINE_OAUTH_ORIGIN}/token`,
           jwks_uri: `${SUPABASE_AUTH_ORIGIN}/.well-known/jwks.json`,
-          userinfo_endpoint: `${origin}/userinfo`,
-          registration_endpoint: `${origin}/register`,
+          userinfo_endpoint: `${PROLINE_OAUTH_ORIGIN}/userinfo`,
+          registration_endpoint: `${PROLINE_OAUTH_ORIGIN}/register`,
           scopes_supported: ["openid", "profile", "email", "phone", "offline_access"],
           response_types_supported: ["code"],
           response_modes_supported: ["query"],
