@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "proline-oauth-proxy",
+  "main": "workers/proline-oauth-proxy.ts",
+  "compatibility_date": "2026-05-26",
+  "workers_dev": true,
+  "observability": { "enabled": true }
+}
