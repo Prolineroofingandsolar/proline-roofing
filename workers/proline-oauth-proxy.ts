@@ -60,7 +60,7 @@ export default {
         {
           issuer: origin,
           authorization_endpoint: `${SUPABASE_AUTH_ORIGIN}/oauth/authorize`,
-          token_endpoint: `${PROLINE_OAUTH_ORIGIN}/connect/complete`,
+          token_endpoint: `${origin}/connect/complete`,
           jwks_uri: `${SUPABASE_AUTH_ORIGIN}/.well-known/jwks.json`,
           userinfo_endpoint: `${PROLINE_OAUTH_ORIGIN}/userinfo`,
           registration_endpoint: `${PROLINE_OAUTH_ORIGIN}/register`,
@@ -83,6 +83,7 @@ export default {
     }
 
     if (request.method === "POST" && url.pathname === "/token") return proxy(request, "/oauth/token");
+    if (request.method === "POST" && url.pathname === "/connect/complete") return proxy(request, "/oauth/token");
     if (request.method === "POST" && url.pathname === "/register") return proxy(request, "/oauth/clients/register");
     if (["GET", "POST"].includes(request.method) && url.pathname === "/userinfo") return proxy(request, "/oauth/userinfo");
     if (request.method === "GET" && url.pathname === "/health") return json({ ok: true, service: "proline-oauth-proxy" });
