@@ -29,7 +29,8 @@ function consentPage() {
     const supabase = createClient("https://qzvdzzvkocmulcfujyea.supabase.co", "sb_publishable_Qwyi2uOXUrH39yGC84RUjg_2c9aAfsG");
     const authorizationId = new URLSearchParams(location.search).get("authorization_id");
     const content = document.getElementById("content");
-    const escapeHtml = (value) => String(value || "").replace(/[&<>\"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+    const htmlEscapes = {38:"&amp;",60:"&lt;",62:"&gt;",34:"&quot;",39:"&#39;"};
+    const escapeHtml = (value) => String(value || "").replace(/[&<>"']/g, (c) => htmlEscapes[c.charCodeAt(0)]);
     const showError = (message) => { content.innerHTML = '<h1>Connection problem</h1><p class="error">' + escapeHtml(message) + '</p><button class="secondary" id="retry">Try again</button>'; document.getElementById("retry").onclick = load; };
     const showLogin = () => { content.innerHTML = '<h1>Sign in to ProLine</h1><p>Use your existing CRM administrator account. Your password goes directly to Supabase Auth.</p><form id="login"><label for="email">Email</label><input id="email" type="email" autocomplete="username" required><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required><button class="primary" type="submit" style="margin-top:20px">Sign in</button></form>'; document.getElementById("login").onsubmit = signIn; };
     const decide = async (decision) => { document.querySelectorAll("button").forEach((button) => button.disabled = true); const result = decision === "approve" ? await supabase.auth.oauth.approveAuthorization(authorizationId) : await supabase.auth.oauth.denyAuthorization(authorizationId); if (result.error || !result.data?.redirect_url) return showError(result.error?.message || "The authorization decision could not be completed."); location.assign(result.data.redirect_url); };
