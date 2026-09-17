@@ -5,7 +5,8 @@
   "compatibility_date": "2026-05-26",
   "workers_dev": true,
   "routes": [
-    { "pattern": "oauth.prolineroofingandsolar.co.uk", "custom_domain": true }
+    { "pattern": "oauth.prolineroofingandsolar.co.uk", "custom_domain": true },
+    { "pattern": "prolineroofingandsolar.co.uk/oauth/*", "zone_name": "prolineroofingandsolar.co.uk" }
   ],
   "observability": { "enabled": true }
 }
