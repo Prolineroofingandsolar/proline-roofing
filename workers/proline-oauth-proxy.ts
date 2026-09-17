@@ -7,6 +7,7 @@ const corsHeaders = {
 };
 
 function consentPage() {
+  const nonce = crypto.randomUUID();
   return new Response(`<!doctype html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@ function consentPage() {
     <div class="brand"><div class="mark">P</div><strong>ProLine CRM</strong></div>
     <section id="content"><h1>Checking connection…</h1><p>Please wait.</p></section>
   </main>
-  <script type="module">
+  <script type="module" nonce="${nonce}">
     import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
     const supabase = createClient("https://qzvdzzvkocmulcfujyea.supabase.co", "sb_publishable_Qwyi2uOXUrH39yGC84RUjg_2c9aAfsG");
     const authorizationId = new URLSearchParams(location.search).get("authorization_id");
@@ -42,7 +43,7 @@ function consentPage() {
     headers: {
       "Content-Type": "text/html; charset=utf-8",
       "Cache-Control": "no-store",
-      "Content-Security-Policy": "default-src 'none'; script-src https://esm.sh; connect-src https://qzvdzzvkocmulcfujyea.supabase.co; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+      "Content-Security-Policy": `default-src 'none'; script-src 'nonce-${nonce}' https://esm.sh; connect-src https://qzvdzzvkocmulcfujyea.supabase.co; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'self'; frame-ancestors 'none'`,
       "Referrer-Policy": "no-referrer",
       "X-Content-Type-Options": "nosniff",
       "X-Frame-Options": "DENY",
