@@ -158,7 +158,7 @@ export default function Header() {
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="xl:hidden p-2 text-gray-700 hover:text-[#f97316] transition-colors"
+              className="xl:hidden p-2.5 text-gray-700 hover:text-[#f97316] transition-colors"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               aria-controls="mobile-navigation"

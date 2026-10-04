@@ -10,8 +10,7 @@ import {
   Leaf,
   CheckCircle,
   Award,
-  Clock,
-  Star,
+  FileText,
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -36,24 +35,14 @@ const reasons = [
     desc: "We set out applicable product, installer and workmanship warranty terms in the written proposal.",
   },
   {
-    icon: Star,
-    title: "Customer Feedback",
-    desc: "Read source-labelled customer feedback on our Reviews page.",
-  },
-  {
     icon: Zap,
     title: "Free, No-Obligation Survey",
-    desc: "We visit, assess your roof and usage, and give you a clear fixed-price proposal — no pressure to proceed.",
+    desc: "We assess the roof, electricity use and project requirements before preparing a written proposal.",
   },
   {
-    icon: Clock,
-    title: "End-to-End Service",
-    desc: "We handle everything: design, scaffolding, electrical, DNO application, commissioning and handover.",
-  },
-  {
-    icon: Phone,
-    title: "Local Team, Long-Term Support",
-    desc: "Based in Taunton. We're here for maintenance, faults and upgrades long after installation day.",
+    icon: FileText,
+    title: "A Defined Scope",
+    desc: "The proposal identifies the installation team, included work, grid application responsibilities and handover documents.",
   },
 ];
 
@@ -76,7 +65,7 @@ export default function SolarPage() {
               Clean Energy — Taunton &amp; the South West
             </p>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-5 uppercase leading-none">
-              Solar Panel<br />
+              Solar Panel{" "}<br />
               <span className="text-[#f97316]">Installation</span>
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
@@ -162,7 +151,7 @@ export default function SolarPage() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {reasons.map(({ icon: Icon, title, desc }, i) => (
               <AnimatedSection key={title} delay={i * 0.08}>
                 <div className="group p-7 border border-gray-100 hover:border-[#f97316] hover:shadow-md transition-all duration-300 h-full">
@@ -196,32 +185,22 @@ export default function SolarPage() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 max-w-5xl mx-auto">
             {[
               {
                 step: "01",
-                title: "Free Survey",
-                desc: "We assess your roof, usage and orientation to design the ideal system for your home.",
+                title: "Survey & Usage Review",
+                desc: "We assess the roof, orientation, shading and electricity use to understand the project requirements.",
               },
               {
                 step: "02",
-                title: "System Design",
-                desc: "A bespoke layout created to maximise your generation across all seasons.",
+                title: "Written Proposal",
+                desc: "You receive the proposed layout, equipment, modelled output, responsibilities, price and warranty terms.",
               },
               {
                 step: "03",
-                title: "DNO & Planning",
-                desc: "We handle all grid connection paperwork and applications on your behalf.",
-              },
-              {
-                step: "04",
-                title: "Installation",
-                desc: "The agreed installation team fits and commissions the system to the written design.",
-              },
-              {
-                step: "05",
-                title: "Handover",
-                desc: "Full walkthrough, live monitoring app setup and ongoing aftercare support.",
+                title: "Installation & Handover",
+                desc: "Once agreed, the named team completes the stated permissions, installation, commissioning and handover scope.",
               },
             ].map(({ step, title, desc }, i) => (
               <AnimatedSection key={step} delay={i * 0.1}>
@@ -242,7 +221,7 @@ export default function SolarPage() {
 
       <CTASection
         heading="Ready to Go Solar?"
-        subtext="Get a free, no-obligation solar survey and find out exactly how much you could save."
+        subtext="Request a free, no-obligation survey and receive a written proposal with a modelled output and savings estimate."
       />
     </>
   );

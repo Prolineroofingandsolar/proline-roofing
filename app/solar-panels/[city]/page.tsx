@@ -6,12 +6,9 @@ import {
   ArrowRight,
   MapPin,
   Star,
-  Sun,
-  TrendingDown,
-  Zap,
-  Leaf,
   Shield,
   Award,
+  ChevronDown,
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -36,7 +33,7 @@ export async function generateMetadata({
   const loc = getLocationBySlug(city);
   if (!loc) return {};
   return {
-    title: `Solar Panels ${loc.name} | ProLine Roofing & Solar`,
+    title: `Solar Panels ${loc.name}`,
     description: `Solar panel installation enquiries in ${loc.name}, ${loc.county}. Request a roof and energy-use survey with a written system proposal.`,
     alternates: {
       canonical: `https://www.prolineroofingandsolar.co.uk/solar-panels/${loc.slug}`,
@@ -47,66 +44,46 @@ export async function generateMetadata({
 const solarServices = [
   {
     title: "Solar PV Systems",
-    desc: "High-efficiency monocrystalline panel systems designed and installed for your roof.",
+    desc: "A written layout and output estimate based on the roof, shading and electricity use.",
     icon: "☀️",
   },
   {
     title: "Battery Storage",
-    desc: "Store excess generation and use it when you need it — even after dark.",
+    desc: "Storage options assessed against consumption, tariff, usable capacity and expected lifetime.",
     icon: "🔋",
   },
   {
     title: "Solar Monitoring",
-    desc: "Live generation and consumption monitoring via your smartphone.",
+    desc: "Compatible monitoring options explained and configured as part of handover.",
     icon: "📱",
   },
   {
-    title: "Smart Export Guarantee",
-    desc: "Get paid for the energy you export back to the National Grid.",
-    icon: "💷",
-  },
-  {
-    title: "Solar Maintenance",
-    desc: "Annual health checks, cleaning and inverter servicing for maximum output.",
-    icon: "🔧",
-  },
-  {
     title: "EV Charging Integration",
-    desc: "Combine solar with an EV charger to power your car from the sun.",
+    desc: "Assess solar-aware charging, cable routes, supply capacity and load management.",
     icon: "⚡",
-  },
-  {
-    title: "Flat Roof Solar",
-    desc: "Ballasted or fixed racking systems optimised for flat commercial and residential roofs.",
-    icon: "📐",
-  },
-  {
-    title: "Commercial Solar",
-    desc: "Larger-scale solar PV systems for business premises and agricultural buildings.",
-    icon: "🏭",
   },
 ];
 
-const solarFaqs = (name: string, county: string) => [
+const solarFaqs = (name: string) => [
   {
     q: `How much do solar panels cost in ${name}?`,
-    a: `A typical domestic solar PV system for a home in ${name} costs between £5,000 and £9,000 depending on system size, panel brand and whether battery storage is included. We provide a detailed, fixed-price proposal after a free site survey tailored to your specific property and energy usage.`,
+    a: `The cost depends on designed capacity, equipment, roof access, scaffolding, electrical work and whether battery storage is included. We provide a dated, written proposal after surveying the property and reviewing its electricity use.`,
   },
   {
     q: `How much can I save on energy bills in ${name}?`,
-    a: `Most homeowners in ${name} and the wider ${county} area save between £700 and £1,400 per year on energy bills with a well-sized solar system, depending on energy consumption, household occupancy and whether battery storage is included. We'll give you a site-specific savings estimate at your free survey.`,
+    a: `Savings cannot be predicted reliably from the town alone. They depend on the final design, roof orientation, shading, household consumption, self-consumption, tariff and export rate. A proposal should show its assumptions and a property-specific estimate rather than promise a fixed saving.`,
   },
   {
     q: `Are there solar grants available in ${name}?`,
-    a: `The main financial incentive for solar in ${name} is the Smart Export Guarantee (SEG), which pays you for electricity you export to the grid. Some households may also qualify for the ECO4 scheme or local authority grants depending on income and property type. We'll advise on all available incentives during your survey.`,
+    a: `Export tariffs and support schemes change. Check current eligibility with GOV.UK, Ofgem, the scheme administrator and your chosen energy supplier before making a financial decision. We can identify the assumptions used in your proposal but cannot guarantee scheme eligibility.`,
   },
   {
     q: `How long does solar panel installation take?`,
-    a: `A typical domestic solar installation in ${name} takes 1–2 days for the physical installation. We also handle the DNO (Distribution Network Operator) application and MCS documentation, which can take 2–6 weeks. We manage the full process on your behalf so you have nothing to worry about.`,
+    a: `Physical installation time depends on the array, roof access and electrical work. Grid approval, scaffolding, planning and certification can extend the overall programme. Your proposal should state the expected sequence, responsibilities and handover documents.`,
   },
   {
     q: `Do I need planning permission for solar panels in ${name}?`,
-    a: `In most cases, solar panels installed on a residential roof in ${name} fall within permitted development rights and require no planning permission. Exceptions include listed buildings, certain conservation area properties and ground-mounted systems. We'll confirm the planning position for your specific property during the free survey.`,
+    a: `Many domestic roof installations can be permitted development, but limits and exceptions apply, especially for listed buildings, conservation areas, flats and ground-mounted systems. Check the current Planning Portal guidance and obtain a decision from the relevant planning authority where required.`,
   },
 ];
 
@@ -121,7 +98,7 @@ export default async function SolarPanelsCityPage({
   const loc = locMaybe as NonNullable<typeof locMaybe>;
 
   const adjacent = getAdjacentLocations(city, 5);
-  const faqs = solarFaqs(loc.name, loc.county);
+  const faqs = solarFaqs(loc.name);
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -236,97 +213,7 @@ export default async function SolarPanelsCityPage({
         </div>
       </section>
 
-      {/* ── Solar Benefits Banner ─────────────────────────────── */}
-      <section className="bg-[#f97316] py-8">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              icon: TrendingDown,
-              title: "Cut Your Bills",
-              desc: "Savings depend on system design, household usage and electricity tariffs.",
-            },
-            {
-              icon: Zap,
-              title: "SEG Export Income",
-              desc: "Ask your energy supplier about current export tariffs and eligibility.",
-            },
-            {
-              icon: Sun,
-              title: "Add Property Value",
-              desc: "A system is designed around the roof, orientation and available space.",
-            },
-            {
-              icon: Leaf,
-              title: "Go Green",
-              desc: "Generate lower-carbon electricity at the property when conditions allow.",
-            },
-          ].map(({ icon: Icon, title, desc }, i) => (
-            <AnimatedSection key={title} delay={i * 0.1}>
-              <div className="text-center">
-                <Icon className="w-6 h-6 text-white mx-auto mb-2" />
-                <p className="text-white font-black text-sm">{title}</p>
-                <p className="text-orange-100 text-xs mt-1">{desc}</p>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-      </section>
-
-      {/* ── Section B: Solar Energy Benefits for [City] ─────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection className="mb-10">
-            <div className="flex items-center gap-4 mb-3">
-              <div className="w-16 h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
-                Local Solar
-              </span>
-            </div>
-            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight mb-4">
-              Solar Energy Benefits for {loc.name} Homes
-            </h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">
-              {loc.solarNote}
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-3xl">
-              We serve homeowners across {loc.name} and the surrounding{" "}
-              {loc.postcodePrefix} area, including{" "}
-              {loc.nearbyAreas.slice(0, 4).join(", ")} and beyond.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {[
-              {
-                title: "Energy Independence",
-                desc: `Homeowners in ${loc.name} with solar PV systems generate a significant proportion of their annual electricity demand from the sun — reducing reliance on grid power and shielding against future price rises.`,
-              },
-              {
-                title: "Smart Export Guarantee",
-                desc: `Under the Smart Export Guarantee, ${loc.name} homeowners earn a payment for every unit of electricity they export to the grid. Combined with self-consumption savings, the financial case for solar has never been stronger.`,
-              },
-              {
-                title: "Long-Term Investment",
-                desc: `Solar panels typically pay back their installation cost within 7–10 years and continue generating savings for 25+ years. In ${loc.name}, quality solar systems installed today represent an excellent long-term return.`,
-              },
-            ].map(({ title, desc }, i) => (
-              <AnimatedSection key={title} delay={i * 0.1}>
-                <div className="border border-gray-100 hover:border-[#f97316] hover:shadow-md p-6 transition-all duration-300 h-full group">
-                  <div className="w-10 h-10 bg-[#f97316]/10 group-hover:bg-[#f97316] flex items-center justify-center mb-4 transition-colors">
-                    <Sun className="w-5 h-5 text-[#f97316] group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="font-black text-[#1a1a1a] text-sm uppercase tracking-wide mb-2">
-                    {title}
-                  </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section C: Solar Services ────────────────────────── */}
+      {/* ── Solar Services ────────────────────────────────────── */}
       <section className="py-20 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4">
           <AnimatedSection className="text-center mb-14">
@@ -439,32 +326,22 @@ export default async function SolarPanelsCityPage({
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 max-w-5xl mx-auto">
             {[
               {
                 step: "01",
-                title: "Free Survey",
-                desc: "We visit your property in ${loc.name}, assess your roof and energy usage, and design the ideal system.",
+                title: "Survey & Usage Review",
+                desc: `We assess the roof at your ${loc.name} property, its orientation and shading, plus your electricity use.`,
               },
               {
                 step: "02",
-                title: "System Design",
-                desc: "A bespoke layout created to maximise generation from your specific roof orientation and pitch.",
+                title: "Written Proposal",
+                desc: "You receive the proposed layout, equipment, modelled output, responsibilities, price and warranty terms.",
               },
               {
                 step: "03",
-                title: "DNO & Planning",
-                desc: "We handle all grid connection paperwork and any planning applications on your behalf.",
-              },
-              {
-                step: "04",
-                title: "Installation",
-                desc: "The agreed installation team fits and commissions the system to the written design and programme.",
-              },
-              {
-                step: "05",
-                title: "Handover",
-                desc: "Full walkthrough, monitoring setup and the certification and warranty documents specified in your proposal.",
+                title: "Installation & Handover",
+                desc: "Once agreed, the named team completes the stated permissions, installation, commissioning and handover scope.",
               },
             ].map(({ step, title, desc }, i) => (
               <AnimatedSection key={step} delay={i * 0.1}>
@@ -502,15 +379,16 @@ export default async function SolarPanelsCityPage({
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.07}>
-                <div className="border border-gray-100 hover:border-[#f97316] transition-colors p-6">
-                  <h3 className="font-black text-[#1a1a1a] text-sm mb-3 flex items-start gap-3">
+                <details className="group border border-gray-100 hover:border-[#f97316] transition-colors">
+                  <summary className="cursor-pointer list-none p-5 flex items-start gap-3 font-black text-[#1a1a1a] text-sm">
                     <span className="text-[#f97316] shrink-0">Q.</span>
-                    {faq.q}
-                  </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed pl-6">
+                    <span className="flex-1">{faq.q}</span>
+                    <ChevronDown className="w-4 h-4 text-[#f97316] shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="text-gray-500 text-sm leading-relaxed px-5 pb-5 pl-11">
                     {faq.a}
                   </p>
-                </div>
+                </details>
               </AnimatedSection>
             ))}
           </div>
@@ -583,7 +461,7 @@ export default async function SolarPanelsCityPage({
 
       <CTASection
         heading={`Free Solar Survey in ${loc.name}`}
-        subtext={`Get a free, no-obligation solar survey for your ${loc.name} property. We'll tell you exactly how much you could save — and give you a fixed-price installation quote.`}
+        subtext={`Request a free, no-obligation survey for your ${loc.name} property and receive a written proposal with a modelled output and savings estimate.`}
       />
     </>
   );

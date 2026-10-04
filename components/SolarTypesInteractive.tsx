@@ -35,7 +35,7 @@ const solarTypes: SolarType[] = [
       {
         name: "Bespoke System Design",
         detail:
-          "We model your roof orientation, pitch and shading to design a system that maximises generation all year round.",
+          "The proposed layout accounts for roof orientation, pitch, shading and available space, with a modelled annual output.",
       },
       {
         name: "Panel & Inverter Installation",
@@ -45,31 +45,29 @@ const solarTypes: SolarType[] = [
       {
         name: "Scaffolding & Electrical Work",
         detail:
-          "We handle all scaffolding, the G98/G99 DNO application and the Part P electrical certification.",
+          "The written scope confirms scaffolding, electrical work, the competent installer and the certification to be supplied.",
       },
       {
         name: "DNO Application Handling",
         detail:
-          "We manage the grid connection paperwork with your Distribution Network Operator — you don't have to lift a finger.",
+          "The proposal states whether G98 notification or G99 approval applies and who will manage the grid connection process.",
       },
       {
         name: "App & Monitoring Setup",
         detail:
-          "Full handover with live monitoring app so you can watch your system generate and track savings in real time.",
+          "Where supported by the selected equipment, handover includes monitoring setup and an explanation of the displayed data.",
       },
     ],
     equipment: [
-      "SolarEdge Inverters",
-      "SMA Inverters",
-      "Fronius Inverters",
-      "GivEnergy Inverters",
-      "JA Solar Panels",
-      "Trina Solar Panels",
-      "REC Group Panels",
-      "Enphase Microinverters",
+      "Monocrystalline PV panels",
+      "String or hybrid inverters",
+      "Microinverter options",
+      "Power optimisers",
+      "Roof-specific mounting",
+      "Generation monitoring",
     ],
     stats: [
-      { value: "25yr", label: "Panel Warranty" },
+      { value: "Exact", label: "Product Terms" },
       { value: "Written", label: "System Design" },
       { value: "Modelled", label: "Output Estimate" },
     ],
@@ -80,47 +78,46 @@ const solarTypes: SolarType[] = [
     label: "Battery Storage",
     tagline: "Store It, Use It, Save More",
     description:
-      "Without battery storage, surplus solar energy you can't use immediately gets exported to the grid for a fraction of what you pay to import. A home battery captures that surplus and makes it available in the evenings and overnight — meaning you use far more of what you generate and buy far less from your supplier.",
+      "Battery storage can move surplus generation into the evening and may also support time-of-use tariffs. Whether it is worthwhile depends on consumption, tariff, usable capacity, efficiency and expected battery life, so we model it separately from the solar array.",
     services: [
       {
         name: "Battery Installation",
         detail:
-          "We install, commission and fully configure your battery system including all DC and AC wiring.",
+          "The proposal defines the battery, usable capacity, coupling method, electrical work and commissioning scope.",
       },
       {
         name: "Retrofit to Existing Solar",
         detail:
-          "Already have solar? We can add battery storage to most existing systems — no need for a full replacement.",
+          "Some existing systems can accept AC- or DC-coupled storage after compatibility and warranty checks.",
       },
       {
         name: "Smart Energy Management",
         detail:
-          "Intelligent charge/discharge scheduling to make the most of solar generation, cheap tariff rates and SEG export.",
+          "Compatible systems can be configured around solar generation and time-of-use tariffs, subject to supplier terms.",
       },
       {
         name: "Power Cut Backup",
         detail:
-          "Select battery systems provide islanding capability, keeping essential circuits powered during a grid outage.",
+          "Backup is not standard. Where requested, the proposal identifies compatible equipment and which circuits can be supported.",
       },
       {
         name: "App Monitoring & Control",
         detail:
-          "Full remote monitoring and control via smartphone app. Track charge levels, savings and export earnings live.",
+          "Where supported, the handover covers charge settings, monitoring and the limits of any estimated savings data.",
       },
     ],
     equipment: [
-      "GivEnergy",
-      "Tesla Powerwall",
-      "SolarEdge Home Battery",
-      "Fox ESS",
-      "Solax X-Hybrid",
-      "SMA Sunny Boy Storage",
-      "Huawei LUNA",
+      "AC-coupled storage",
+      "DC-coupled storage",
+      "Hybrid inverter options",
+      "Backup-capable options",
+      "Time-of-use scheduling",
+      "Battery monitoring",
     ],
     stats: [
-      { value: "10yr", label: "Battery Warranty" },
-      { value: "90%+", label: "Round-Trip Efficiency" },
-      { value: "6–16", label: "kWh Capacity Options" },
+      { value: "Written", label: "Warranty Terms" },
+      { value: "Modelled", label: "Usage Case" },
+      { value: "Sized", label: "For Your Demand" },
     ],
   },
   {
@@ -129,22 +126,22 @@ const solarTypes: SolarType[] = [
     label: "EV Charging",
     tagline: "Charge Smart, Charge Solar",
     description:
-      "Charging your electric vehicle from your own rooftop solar is the best way to drive for free. We install and configure smart home EV chargers that work intelligently with your solar system and battery — automatically drawing solar power first before falling back to the grid, and scheduling overnight charges on cheap tariff rates.",
+      "A compatible smart charger can prioritise available solar generation and use scheduled off-peak charging when needed. Actual solar contribution and charging cost depend on the vehicle, charger, weather, household demand and tariff.",
     services: [
       {
         name: "Home EV Charger Installation",
         detail:
-          "Supply and fit a 7kW smart EV charger with full electrical work, consumer unit connection and cable routing.",
+          "The survey checks supply capacity, cable route, earthing, parking position and the appropriate charger rating.",
       },
       {
         name: "Solar & Battery Integration",
         detail:
-          "Configure your charger to draw from solar and battery first, minimising grid import to near zero.",
+          "Compatible chargers can prioritise surplus solar while drawing from the grid when generation is insufficient.",
       },
       {
-        name: "OZEV Grant Assistance",
+        name: "Current Grant Eligibility",
         detail:
-          "We help eligible customers access the OZEV EV chargepoint grant to reduce the upfront cost.",
+          "Where relevant, check the current OZEV scheme, property, customer and installer requirements before relying on a grant.",
       },
       {
         name: "Smart Scheduling",
@@ -158,17 +155,17 @@ const solarTypes: SolarType[] = [
       },
     ],
     equipment: [
-      "Zappi (myenergi)",
-      "Ohme Home Pro",
-      "Wallbox Pulsar Plus",
-      "Pod Point Solo 3",
-      "EO Mini Pro 3",
-      "Indra Smart PRO",
+      "Solar-aware charging",
+      "Dynamic load balancing",
+      "Scheduled charging",
+      "Tethered or untethered options",
+      "App monitoring",
+      "Supply-capacity assessment",
     ],
     stats: [
-      { value: "OZEV", label: "Registered Installer" },
-      { value: "7kW", label: "Fast Charge Speed" },
-      { value: "Zero", label: "Cost Solar Charging" },
+      { value: "Checked", label: "Grant Eligibility" },
+      { value: "Surveyed", label: "Supply & Route" },
+      { value: "Smart", label: "Charging Options" },
     ],
   },
   {
@@ -177,46 +174,46 @@ const solarTypes: SolarType[] = [
     label: "Solar Maintenance",
     tagline: "Keep Generating at Full Power",
     description:
-      "A solar system can lose 15–25% of its output through dirty panels, degraded connections or a failing inverter — and you might never notice until you check the numbers. Our annual maintenance plans keep your system generating at full efficiency, catch faults early and ensure your warranties stay valid.",
+      "Unexpected drops in generation can have several causes, including shading, soiling, monitoring faults, electrical issues or equipment failure. We first compare available performance data with the system specification before recommending inspection, cleaning or repair.",
     services: [
       {
-        name: "Annual System Health Check",
+        name: "System Health Check",
         detail:
           "Full inspection of panels, mounting, inverter, isolators, cabling and monitoring system.",
       },
       {
         name: "Professional Panel Cleaning",
         detail:
-          "Pure water fed pole cleaning removes dirt, moss and bird fouling to restore maximum light absorption.",
+          "Cleaning is recommended only when access, manufacturer guidance and the likely benefit make it appropriate.",
       },
       {
         name: "Inverter & Isolator Testing",
         detail:
-          "We test DC and AC isolators, check inverter logs for faults and verify string voltages and currents.",
+          "The agreed inspection scope can include inverter logs, isolators, visible cabling and electrical measurements.",
       },
       {
         name: "Performance Report",
         detail:
-          "Written report after every visit showing generation data, findings and any recommended actions.",
+          "Where included in the quote, findings and recommended actions are recorded in a written report.",
       },
       {
-        name: "Priority Fault Response",
+        name: "Fault Investigation",
         detail:
-          "Plan holders go to the front of the queue. We'll diagnose and fix faults fast to minimise lost generation.",
+          "We review the reported symptoms and system records before confirming attendance, scope and likely next steps.",
       },
     ],
     equipment: [
-      "Pure Water Fed Cleaning",
-      "Thermal Imaging",
-      "IV Curve Tracing",
-      "Drone Inspection",
-      "Datalogger Analysis",
-      "Shading Modelling",
+      "Generation-data review",
+      "Visual inspection",
+      "Inverter-log review",
+      "Electrical testing by scope",
+      "Cleaning assessment",
+      "Written findings",
     ],
     stats: [
-      { value: "15%+", label: "Generation Recovered" },
-      { value: "Annual", label: "Maintenance Plans" },
-      { value: "Priority", label: "Fault Response" },
+      { value: "Evidence", label: "Led Checks" },
+      { value: "Scoped", label: "Inspection" },
+      { value: "Written", label: "Findings" },
     ],
   },
 ];
@@ -253,19 +250,23 @@ export default function SolarTypesInteractive() {
             Our Solar Services
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Select a service below to see exactly what&apos;s included, the brands and
-            equipment we install, and how ProLine can help you go solar.
+            Select a service to see the typical scope and equipment categories.
+            Your written proposal will confirm the exact products, installer and terms.
           </p>
         </div>
 
         {/* Service selector tiles */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4" role="group" aria-label="Solar services">
           {solarTypes.map(({ id, icon: Icon, label, tagline }) => {
             const isActive = activeId === id;
             return (
               <button
                 key={id}
                 onClick={() => handleSelect(id)}
+                type="button"
+                id={`solar-tab-${id}`}
+                aria-pressed={isActive}
+                aria-controls="solar-service-panel"
                 className={`relative p-5 lg:p-6 text-left transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] ${
                   isActive
                     ? "bg-[#f97316] text-white shadow-xl ring-2 ring-[#f97316]"
@@ -303,6 +304,10 @@ export default function SolarTypesInteractive() {
 
         {/* Detail panel */}
         <div
+          id="solar-service-panel"
+          role="region"
+          aria-labelledby={`solar-tab-${active.id}`}
+          aria-live="polite"
           className="bg-[#1a1a1a] text-white"
           style={{
             opacity: fading ? 0 : 1,
@@ -364,7 +369,7 @@ export default function SolarTypesInteractive() {
               {/* Right column: equipment + stats + CTA */}
               <div className="border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0 lg:border-l lg:border-white/10 lg:pl-12">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.25em] text-[#f97316] mb-4">
-                  Brands &amp; Equipment
+                  Equipment Considerations
                 </h4>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {active.equipment.map((e) => (

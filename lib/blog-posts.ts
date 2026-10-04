@@ -455,7 +455,6 @@ For urgent roofing problems, call ProLine Roofing & Solar on 07587 478826 to che
     title: "Solar Panel Installation in Somerset: Complete Homeowner Guide",
     excerpt: "Thinking about solar panels for your Somerset home? This complete guide covers how solar PV works, what system size you need, what it costs, and what savings you can realistically expect.",
     category: "solar",
-    featured: true,
     tags: ["solar panel installation", "solar PV", "solar panels Somerset", "MCS"],
     publishedAt: "2024-08-01",
     readTime: 10,
@@ -692,7 +691,7 @@ Call ProLine Roofing & Solar on 07587 478826 for a personalised ROI calculation 
     author: "ProLine Roofing & Solar",
     content: `The UK government's support for residential solar has shifted significantly since the Feed-in Tariff closed in 2019. While there is no longer a direct installation grant for most homeowners, several important financial incentives remain in place, and new schemes are emerging.
 
-## 0% VAT on Solar Panels (Extended to 2027 and Beyond)
+## 0% VAT on Solar Panels (2024 Position)
 
 The most universally available incentive is the 0% VAT rate on solar panel installation for residential properties, which was introduced in April 2022 and has been confirmed to apply at least until 2027.
 
@@ -707,7 +706,7 @@ Solar panels can be funded under ECO4 as part of a wider energy efficiency packa
 - Your home has an EPC rating of D, E, F or G
 - You live in a private rented or owner-occupied property
 
-ECO4 is administered through energy suppliers and local authority partnerships. Contact Somerset County Council or your energy supplier to check eligibility.
+ECO4 is administered through energy suppliers and local authority partnerships. Check current eligibility with Somerset Council, your energy supplier and the official scheme guidance.
 
 ## Great British Insulation Scheme
 
@@ -719,7 +718,7 @@ The Labour government elected in 2024 announced the Warm Homes Plan, which propo
 
 ## Smart Export Guarantee (SEG)
 
-The SEG is not a grant but a guaranteed income for exported electricity. All MCS-accredited solar installations are eligible. You must register with a licensed SEG licensee (usually your energy supplier) and have a smart meter.
+The SEG is not a grant but a payment for eligible metered electricity exported to the grid. Certification, metering and tariff requirements vary, so confirm the current rules with the chosen SEG licensee before relying on export income.
 
 Currently available SEG tariffs include:
 - Octopus Energy: competitive variable rates
@@ -731,13 +730,13 @@ Shopping around for SEG tariffs is worthwhile — a difference of 5p/kWh on 1,80
 
 ## Local Council Schemes
 
-Somerset County Council and constituent district councils periodically run solar co-operative or group purchase schemes that can reduce installation costs through bulk purchasing. These schemes are not always active — check with Somerset Council for current offerings.
+Somerset Council and other local authorities may periodically run group-purchase or support schemes. These are not always active, so check the current council and official scheme pages.
 
 The Social Housing Decarbonisation Fund provides grants to housing associations and local authorities for energy improvements to social housing stock, including solar.
 
 ## Business Rates Relief for Solar
 
-Commercial property owners in England benefit from a 100% business rates relief for solar panels, meaning solar installations on commercial buildings do not attract additional business rates. This is a significant benefit for business owners considering commercial solar.
+Commercial solar does not carry a blanket business-rates exemption. Treatment depends on the installation, ownership, use and current valuation rules; check with the Valuation Office Agency and a rates adviser.
 
 ## Summary of Available Support (2024)
 
@@ -830,7 +829,7 @@ Similar positioning to Jinko — Tier 1 Chinese manufacturer, TOPCon technology,
 
 For most Somerset homeowners, Q Cells, Trina Vertex or Jinko Tiger Neo (all TOPCon) offer the best value: 21%+ efficiency, 25-year warranty, and competitive pricing. For space-constrained roofs or those wanting the absolute best performance, SunPower or Panasonic HJT are worth the premium.
 
-ProLine Roofing & Solar installs panels from leading brands and will advise on the best option for your specific property. Call 07587 478826.`,
+The exact manufacturer, model, product warranty and installer should be identified in a current written proposal. Call ProLine Roofing & Solar on 07587 478826 to arrange a property-specific survey.`,
   },
   {
     slug: "how-long-does-roof-last",
@@ -1328,17 +1327,17 @@ Call ProLine Roofing & Solar on 07587 478826 to discuss whether battery storage 
     publishedAt: "2025-02-20",
     readTime: 7,
     author: "ProLine Roofing & Solar",
-    content: `Commercial solar PV installations typically deliver better financial returns than residential systems, thanks to higher daytime electricity consumption, 0% VAT on installation, favourable capital allowance treatment, and the ability to size systems to match large roof areas.
+    content: `Commercial solar PV can deliver useful savings where a business has suitable roof space and substantial daytime electricity demand. The result depends on the proposed design, consumption profile, grid connection, electricity contract, financing, tax treatment and maintenance costs.
 
 ## Why Commercial Solar Outperforms Residential
 
 Businesses typically consume 60–80% of their solar generation on-site during working hours — significantly higher than the 40–55% self-consumption typical of residential properties. This means less electricity is exported at low SEG rates, and more displaces expensive purchased electricity. The economics are substantially better.
 
-Additionally, businesses benefit from capital allowances that are not available to homeowners — specifically, 100% First Year Allowances under the Annual Investment Allowance for qualifying energy-efficient plant and machinery. Solar panels qualify, meaning the full capital cost is deductible against taxable profits in the year of installation.
+Qualifying solar equipment may be eligible for capital allowances, including the Annual Investment Allowance where the current rules and business circumstances permit. Tax treatment is not automatic financial advice: confirm eligibility, timing and the amount claimable with an accountant using current HMRC guidance.
 
-## 0% VAT on Commercial Solar
+## VAT on Commercial Solar
 
-The 0% VAT rate introduced in April 2022 applies to commercial solar installations as well as residential. For a £50,000 commercial installation, this represents a £10,000 saving compared to the pre-2022 20% VAT rate. Note: 0% VAT on solar applies to the supply and installation; associated structural works (roof repairs, etc.) are still standard rated.
+Do not assume that the domestic zero rate for qualifying energy-saving materials applies to a commercial installation. Commercial work is commonly subject to the standard VAT rules, with treatment depending on the customer, property, contract and supply. Ask the installer to show VAT separately and confirm the position with HMRC guidance or a tax adviser before approving the budget.
 
 ## Typical System Sizes and Costs for Commercial Buildings
 
@@ -1350,11 +1349,11 @@ The 0% VAT rate introduced in April 2022 applies to commercial solar installatio
 
 ## DNO Grid Connection
 
-Commercial installations over 50kWp typically require a G99 grid connection application to the local distribution network operator (DNO). For Somerset, this is Western Power Distribution (now National Grid Electricity Distribution). The DNO assesses whether the local grid can accept the additional generation and whether any network reinforcement is needed.
+The applicable connection process depends on inverter capacity, phase configuration, technology type and the existing generation at the premises. G98 is limited to small-scale generation within the Engineering Recommendation's per-phase limits; larger or more complex systems normally require the G99 process. The DNO confirms the correct route and whether the local network can accept the proposed generation.
 
 G99 applications can take 4–12 weeks for straightforward connections. More complex connections near the limit of local grid capacity may take longer and could require system downsizing or additional cost for network reinforcement.
 
-Applications below 50kWp use the simpler G98 notification process, which is generally straightforward.
+Do not use 50kWp as a G98/G99 dividing line. A system can require G99 well below that size, so grid requirements should be checked early in the design.
 
 ## Export Limiting and Smart Inverters
 
@@ -1362,7 +1361,7 @@ Where the local grid cannot accept full export, systems can be fitted with expor
 
 ## Business Rates
 
-In England, solar panels are generally exempt from business rates under the Valuation Office Agency's practice for building-integrated plant and machinery. This has been confirmed through multiple appeal cases. Check with your business rates valuer if you have concerns.
+Business-rates treatment depends on ownership, use, installation type and current valuation rules. Check the position with the Valuation Office Agency and a rates adviser rather than assuming a blanket exemption.
 
 ## Solar ROI Example: Somerset Farm
 
@@ -1371,10 +1370,10 @@ A 100kWp solar installation on a farm building generating 90,000 kWh/year. Farm 
 - Self-consumed (44%): 40,000 kWh × 25p = £10,000/year saving
 - Exported (56%): 50,000 kWh × 7p = £3,500/year SEG income
 - **Total annual benefit**: £13,500
-- System cost: £80,000 (minus 100% AIA tax relief at 25% = effective cost £60,000)
-- **Effective payback**: approximately 4.4 years after tax relief
+- Illustrative system cost: £80,000 before VAT, finance and any tax treatment
+- **Simple pre-tax payback**: approximately 5.9 years before maintenance, degradation, finance, inverter replacement and tax
 
-This level of return — comparable to the best-performing commercial investments — is why commercial solar is becoming standard practice for farms, factories and large businesses across Somerset.
+This is an illustration, not a quote or forecast. A commercial proposal should use interval consumption data, a site-specific output model, the current electricity contract, a confirmed export arrangement and professional tax advice.
 
 ProLine Roofing & Solar designs and installs commercial solar systems across Somerset and the South West. Call 07587 478826 for a free commercial solar assessment.`,
   },

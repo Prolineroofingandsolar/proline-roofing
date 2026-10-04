@@ -39,7 +39,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Taunton's mix of Victorian slate terraces, Edwardian clay-tile semis and modern concrete-tile estates means our team regularly works across a wide variety of roof styles, and we keep stock of the most common local tile profiles for fast repairs.",
     solarNote:
-      "Taunton sits in the Vale of Taunton Deane, benefiting from above-average South West sunshine hours, and south-facing roofs on the town's many post-war semis are ideally oriented for high-yield solar PV systems.",
+      "Solar suitability in Taunton varies by roof orientation, pitch, shading, condition and available space. We assess those factors alongside the property's electricity use before proposing a system.",
     emergencyNote:
       "For urgent roof problems in Taunton, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
     faqs: [
@@ -96,7 +96,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Bridgwater's proximity to the Somerset Levels means properties here can experience higher groundwater-driven damp and more aggressive wind-driven rain than inland towns, making properly sealed and flashed rooflines especially important.",
     solarNote:
-      "The flat surrounding landscape of the Levels near Bridgwater means minimal shading for rooftop solar installations, and many Bridgwater homeowners are already benefiting from strong solar yields and Smart Export Guarantee payments.",
+      "A Bridgwater property's solar potential depends on its individual roof and surroundings rather than the town alone. The survey checks orientation, shading, structure and electricity use before output is modelled.",
     emergencyNote:
       "For urgent roof problems in Bridgwater, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
     faqs: [
@@ -153,7 +153,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Bath's Georgian and Victorian roofscapes rely heavily on natural Welsh slate and hand-cut stone details; working here means sourcing properly matched slates and understanding Bath and North East Somerset Council's Conservation Area Appraisals before a single tile is touched.",
     solarNote:
-      "Many Bath homeowners ask about solar panels on listed buildings or within conservation areas — the good news is that rear-facing roof slopes are often approvable, and we guide customers through the permitted development and planning consent process from start to finish.",
+      "Bath contains many listed buildings and conservation areas, so solar proposals need an early planning and heritage check. Permission is property-specific and must be confirmed with the relevant authority where required.",
     emergencyNote:
       "For urgent roof problems in Bath, call with the postcode and details so we can assess the risk and confirm whether attendance is available.",
     faqs: [
@@ -210,7 +210,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Weston-super-Mare's position on the Bristol Channel means salt air degrades mortar joints, aluminium fixings and painted metalwork far faster than inland locations — we always specify marine-grade fixings and stainless steel components for properties within 2 miles of the seafront.",
     solarNote:
-      "Despite its coastal windiness, Weston's open aspect and low surrounding horizon give it excellent solar irradiance, and the town's many south-facing Victorian bay-windowed terraces are well-suited to rooftop solar installations.",
+      "For Weston-super-Mare properties, the survey considers roof orientation, shading, condition and coastal exposure before specifying the mounting system and estimating output.",
     emergencyNote:
       "For urgent roof problems in Weston-super-Mare, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
     faqs: [
@@ -267,7 +267,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Bristol's dense inner-city terraces, many of them now HMOs or converted flats, often have complex shared rooflines with party walls, shared drainage and multiple chimney stacks requiring careful coordination with neighbouring properties before work begins.",
     solarNote:
-      "Bristol City Council's strong sustainability agenda and Bristol's high density of early adopters means solar PV is increasingly common across the city's suburbs, and many homeowners combine solar with battery storage to reduce reliance on grid electricity.",
+      "Bristol roof layouts can be affected by neighbouring buildings, chimneys and shared structures. A site-specific survey is needed before deciding the array size or whether battery storage is worthwhile.",
     emergencyNote:
       "For urgent roof problems in Bristol, call with the postcode and details so we can assess the risk and confirm whether attendance is available.",
     faqs: [
@@ -324,7 +324,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Exeter's position in the Exe Valley means it receives the full force of Atlantic weather systems coming in from the south-west, and its older housing stock — particularly the Heavitree red sandstone vernacular — requires careful material matching that a specialist roofer understands.",
     solarNote:
-      "Devon's solar irradiance levels are among the highest in England, and Exeter's relatively low urban horizon compared to hilly coastal towns means rooftop systems here frequently outperform the national average generation estimates.",
+      "Solar output in Exeter depends on the individual roof, local shading and the final equipment specification. We model those details instead of relying on a town-wide generation estimate.",
     emergencyNote:
       "For urgent roof problems in Exeter, call with the postcode and details so we can assess the risk and confirm whether attendance is available.",
     faqs: [
@@ -381,7 +381,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Yeovil sits on the Somerset-Dorset border in a slightly elevated position that makes it susceptible to south-westerly gales and driving rain, and we frequently attend to storm-damaged ridge tiles and flashing failures on properties across the BA20 and BA21 postcodes.",
     solarNote:
-      "Yeovil's position in south Somerset, away from the coastal mist that can affect places like Weston-super-Mare, gives it reliably good solar radiation and the town's many unshaded suburban rooftops make excellent candidates for solar PV installation.",
+      "For Yeovil properties, we assess the roof orientation, shading, structure and electricity use before preparing a layout and modelled output estimate.",
     emergencyNote:
       "For urgent roof problems in Yeovil, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
     faqs: [
@@ -438,7 +438,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Wellington's position at the foot of the Blackdown Hills means it captures a good deal of orographic rainfall — properties on the south-facing hillside slopes can experience significantly higher precipitation than the town centre, accelerating moss growth and mortar degradation.",
     solarNote:
-      "The south-facing slopes of the Blackdown Hills around Wellington are among the best natural solar aspects in Somerset, and many rural properties in the TA21 area have already installed large solar PV systems to offset high rural energy costs.",
+      "Properties around Wellington vary considerably in aspect and shading. The survey checks the actual roof and usage profile before a solar or battery recommendation is made.",
     emergencyNote:
       "For urgent roof problems in Wellington, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
     faqs: [
@@ -495,7 +495,7 @@ export const locations: LocationData[] = [
     roofingNote:
       "Burnham-on-Sea's coastal position on the Bristol Channel exposes roofs to persistent salt spray, strong westerly winds and driving rain that can work under even properly fitted tiles — here we always advise on appropriate underlay specification and use fully bonded leadwork rather than clipped flashings.",
     solarNote:
-      "Burnham-on-Sea's flat coastal plain and south-west facing orientation give it excellent solar potential despite the coastal climate, and the town's largely unshaded bungalows and detached properties are among the easiest to install solar on efficiently.",
+      "For Burnham-on-Sea properties, the solar survey considers the individual roof, shading, structure and coastal exposure before equipment and mounting details are proposed.",
     emergencyNote:
       "For urgent roof problems in Burnham-on-Sea, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
     faqs: [
@@ -544,15 +544,15 @@ export const locations: LocationData[] = [
     ],
     nearbyAreas: ["Street", "Wells", "Shepton Mallet", "Somerton", "Castle Cary"],
     roofingNote:
-      "Glastonbury's built environment includes significant numbers of Ham Stone and Blue Lias limestone buildings alongside standard brick and render properties, and roofing work here often requires natural stone slate or specially sourced clay plain tiles to satisfy Mendip District Council's conservation requirements.",
+      "Glastonbury's built environment includes Ham Stone and Blue Lias limestone buildings alongside standard brick and render properties, so roofing work may require carefully matched materials and checks against Somerset Council's current conservation guidance.",
     solarNote:
-      "The Glastonbury area sits in the Somerset Levels at a low elevation with minimal horizon obstruction — solar yield here is excellent, and many rural properties between Glastonbury and Street have installed large solar PV systems with battery storage to reduce dependence on the rural electricity network.",
+      "Solar suitability around Glastonbury and the Somerset Levels remains property-specific. We assess the roof, local shading, structure and electricity use before modelling output or recommending storage.",
     emergencyNote:
       "For urgent roof problems in Glastonbury, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
     faqs: [
       {
         q: "Do you have experience with listed buildings and conservation areas in Glastonbury?",
-        a: "Yes — Glastonbury has extensive conservation area coverage and numerous listed buildings, and we regularly undertake roofing work requiring listed building consent from Mendip District Council. We can advise on materials and help with consent applications.",
+        a: "Glastonbury has extensive conservation-area coverage and numerous listed buildings. Check Somerset Council's current guidance and obtain listed-building consent or planning permission where required; we can provide material and scope information for the application.",
       },
       {
         q: "What roofing materials are used on Glastonbury's historic buildings?",
