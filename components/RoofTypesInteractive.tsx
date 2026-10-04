@@ -55,7 +55,7 @@ const roofTypes: RoofType[] = [
       {
         name: "Emergency Call-Out",
         detail:
-          "Active leak or storm damage? Call with your postcode and details to check current attendance availability.",
+          "Active leak or storm damage? We respond fast, day or night, seven days a week.",
       },
     ],
     materials: [
@@ -69,8 +69,8 @@ const roofTypes: RoofType[] = [
     ],
     stats: [
       { value: "500+", label: "Pitched Roofs Done" },
-      { value: "Written", label: "Warranty Terms" },
-      { value: "Urgent", label: "Call-Out Enquiries" },
+      { value: "10yr", label: "Workmanship Guarantee" },
+      { value: "24/7", label: "Emergency Cover" },
     ],
   },
   {
@@ -99,7 +99,7 @@ const roofTypes: RoofType[] = [
       {
         name: "Leak Detection & Repair",
         detail:
-          "We investigate the source of flat roof leaks and set out the recommended repair and any warranty terms in writing.",
+          "We pinpoint the source of flat roof leaks fast and carry out lasting, fully guaranteed repairs.",
       },
       {
         name: "Flat-to-Pitch Conversion",
@@ -117,7 +117,7 @@ const roofTypes: RoofType[] = [
     stats: [
       { value: "200+", label: "Flat Roofs Done" },
       { value: "25yr", label: "Material Warranty" },
-      { value: "Urgent", label: "Call-Out Enquiries" },
+      { value: "24/7", label: "Emergency Cover" },
     ],
   },
   {
@@ -164,7 +164,7 @@ const roofTypes: RoofType[] = [
     stats: [
       { value: "150+", label: "Chimneys Repaired" },
       { value: "BS EN", label: "12588 Compliant" },
-      { value: "Urgent", label: "Call-Out Enquiries" },
+      { value: "24/7", label: "Emergency Cover" },
     ],
   },
   {
@@ -211,8 +211,8 @@ const roofTypes: RoofType[] = [
       "Square Profile",
     ],
     stats: [
-      { value: "Written", label: "Project Scope" },
-      { value: "Clear", label: "Warranty Terms" },
+      { value: "300+", label: "Rooflines Completed" },
+      { value: "10yr", label: "Workmanship Guarantee" },
       { value: "Zero", label: "Maintenance UPVC" },
     ],
   },

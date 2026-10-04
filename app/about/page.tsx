@@ -1,22 +1,22 @@
 export const dynamic = "force-static";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, MapPin, Phone, Shield, Award, FileText } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, MapPin, Phone, Shield, Award, FileText } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
+import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
   title: "About Us | ProLine Roofing & Solar",
   description:
-    "Learn about ProLine Roofing & Solar, a Taunton-based roofing and solar team serving Somerset and surrounding areas.",
-  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/about" },
+    "Learn about ProLine Roofing & Solar — Taunton's trusted roofing and solar specialists with 30 years of combined experience serving the South West.",
 };
 
 const values = [
   { title: "Quality Workmanship", desc: "We take pride in every job, using only premium materials and tried and tested techniques." },
   { title: "Honest & Transparent", desc: "No hidden costs, no surprises. We agree a fair price upfront and stick to it." },
   { title: "Local & Reliable", desc: "We're your neighbours. We care about our reputation in the community and it shows." },
-  { title: "Current Documentation", desc: "Ask for the insurance and certification documents relevant to your proposed work." },
+  { title: "Fully Insured", desc: "All work is carried out by qualified, fully insured professionals for your complete peace of mind." },
   { title: "Clean & Tidy", desc: "We treat your home with respect — always leaving the site clean at the end of each day." },
   { title: "Here When You Need Us", desc: "From planned projects to emergency call-outs, we're available when it matters most." },
 ];
@@ -36,9 +36,28 @@ export default function AboutPage() {
             <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">Who We Are</p>
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">About ProLine<br />Roofing &amp; Solar</h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              A Taunton-based team providing roofing and solar services across Somerset and surrounding areas.
+              Taunton&apos;s trusted roofing and solar specialists. 30 years of combined experience. Hundreds of happy customers across the South West.
             </p>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="bg-[#f97316] py-6">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          {[
+            { value: 30, suffix: "+", label: "Years Combined Experience" },
+            { value: 300, suffix: "+", label: "Projects Completed" },
+            { value: 5, suffix: "★", label: "Google Rating" },
+            { value: 100, suffix: "%", label: "Free Quotes" },
+          ].map(({ value, suffix, label }) => (
+            <AnimatedSection key={label}>
+              <div className="text-3xl font-black text-white leading-none">
+                <CountUp end={value} suffix={suffix} />
+              </div>
+              <div className="text-orange-100 text-xs uppercase tracking-wider mt-1">{label}</div>
+            </AnimatedSection>
+          ))}
         </div>
       </section>
 
@@ -53,17 +72,17 @@ export default function AboutPage() {
               Built on Reputation.<br />Grown on Trust.
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              ProLine Roofing &amp; Solar is a Taunton-based roofing and solar company. We focus on clear advice, careful workmanship and straightforward communication from the first survey to completion.
+              ProLine Roofing &amp; Solar is a Taunton-based roofing and solar company with over 30 years of combined experience in the trade. We&apos;ve built our business the old-fashioned way — by doing excellent work and letting our customers do the talking.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               From a single emergency repair to a full solar installation, we approach every job with the same commitment to quality. We&apos;re proud to be local, proud to be trusted, and proud of the work we leave behind.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-8">
-              Our regular service areas are listed on the Locations page. For work farther from Taunton, we confirm availability after checking the postcode and project requirements.
+              Based in Taunton, we cover the entire South West — from Bristol and Bath down to Exeter and Plymouth, and everywhere in between.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <MapPin className="w-4 h-4 text-[#f97316]" />
-              Taunton, Somerset &bull; See our current service areas
+              Taunton, Somerset &bull; Covering the South West
             </div>
           </AnimatedSection>
 
@@ -78,6 +97,9 @@ export default function AboutPage() {
                   <div>
                     <p className="text-white font-black">ProLine Roofing &amp; Solar</p>
                     <p className="text-orange-100 text-xs mt-0.5">Taunton &bull; Somerset &bull; South West</p>
+                  </div>
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-white text-white" />)}
                   </div>
                 </div>
               </div>
@@ -117,9 +139,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <AnimatedSection>
             <p className="text-[#f97316] text-xs font-black uppercase tracking-widest mb-3">Where We Work</p>
-            <h2 className="text-3xl font-black text-white uppercase mb-4">Current Service Areas</h2>
+            <h2 className="text-3xl font-black text-white uppercase mb-4">Covering the South West</h2>
             <p className="text-gray-400 text-sm max-w-xl mx-auto mb-8">
-              We regularly work in the areas below. Contact us with your postcode so we can confirm availability.
+              Based in Taunton, we travel across the South West to deliver the same quality service wherever you are.
             </p>
             <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
               {[
@@ -139,7 +161,7 @@ export default function AboutPage() {
                 </Link>
               ))}
             </div>
-            <p className="text-gray-500 text-xs mt-6 italic">Not on the list? Call us and we will confirm whether we can travel to you.</p>
+            <p className="text-gray-500 text-xs mt-6 italic">Not on the list? Call us — we cover the whole South West.</p>
           </AnimatedSection>
         </div>
       </section>
@@ -153,42 +175,42 @@ export default function AboutPage() {
               <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Credentials</span>
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
-            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight">Ask for Current Documentation</h2>
+            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight">Fully Qualified &amp; Accredited</h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm">
-              Insurance, certification, warranty and project-specific documentation should be checked before work begins. We can provide the documents relevant to your quote.
+              We believe in complete transparency. Below is a summary of our qualifications, insurance and credentials for your peace of mind.
             </p>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: Shield,
-                title: "Insurance Documentation",
-                desc: "Ask us for a current certificate and confirm that its cover and limits suit your project.",
+                title: "Public Liability Insurance",
+                desc: "We hold £5 million public liability insurance on all contracts. Certificate available on request.",
               },
               {
                 icon: Shield,
-                title: "Project-Specific Cover",
-                desc: "We will identify the insurance information relevant to the proposed work in your quotation process.",
+                title: "Employers' Liability Insurance",
+                desc: "All team members are covered under our employers' liability policy in line with UK legal requirements.",
               },
               {
                 icon: Award,
-                title: "Solar Certification",
-                desc: "For solar work, ask us to confirm the installer, certification route and documents you will receive for your proposed system.",
+                title: "MCS Accredited — Solar Installations",
+                desc: "Our solar installations are MCS-accredited, meaning you qualify for the Smart Export Guarantee and all eligible government incentives.",
               },
               {
                 icon: CheckCircle,
-                title: "Relevant Experience",
-                desc: "Ask to see recent examples that match your roof type, property and proposed scope of work.",
+                title: "30+ Years Combined Experience",
+                desc: "Our lead installer has over 30 years of hands-on roofing experience across residential and commercial properties in Somerset and the South West.",
               },
               {
                 icon: FileText,
-                title: "Written Terms",
-                desc: "The quotation will state the scope, materials, payment schedule and any workmanship or manufacturer warranty terms.",
+                title: "Written Guarantees on All Work",
+                desc: "Every job — from a single tile repair to a full re-roof — comes with a written workmanship guarantee. We're here for the long term.",
               },
               {
-                icon: CheckCircle,
-                title: "Source-Labelled Reviews",
-                desc: "Our Reviews page identifies the platform associated with each displayed customer review.",
+                icon: Star,
+                title: "5-Star Rated on Google",
+                desc: "We have a 5-star rating on Google from verified customers across Somerset. Read their stories on our Reviews page.",
               },
             ].map(({ icon: Icon, title, desc }, i) => (
               <AnimatedSection key={title} delay={i * 0.08}>

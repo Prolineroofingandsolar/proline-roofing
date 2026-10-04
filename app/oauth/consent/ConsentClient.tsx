@@ -76,8 +76,7 @@ export default function ConsentClient() {
   }, [authorizationId, fail, supabase]);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => void loadConsent(), 0);
-    return () => window.clearTimeout(timer);
+    void loadConsent();
   }, [loadConsent]);
 
   async function signIn(event: FormEvent<HTMLFormElement>) {

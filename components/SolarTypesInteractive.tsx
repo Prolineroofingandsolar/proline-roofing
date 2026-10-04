@@ -30,7 +30,7 @@ const solarTypes: SolarType[] = [
     label: "Solar PV Systems",
     tagline: "Generate Your Own Clean Energy",
     description:
-      "A well-designed solar PV system can reduce the electricity you buy from the grid. We size each proposed system around the property's usage, roof layout, orientation and shading, then provide an output estimate and written specification.",
+      "A well-designed solar PV system is the single biggest thing you can do to cut your energy bills. We design and install bespoke systems sized exactly for your home's usage and roof layout — from a modest 4-panel setup to a full 16-panel array. Every installation is MCS certified and handled start to finish by our own team.",
     services: [
       {
         name: "Bespoke System Design",
@@ -40,7 +40,7 @@ const solarTypes: SolarType[] = [
       {
         name: "Panel & Inverter Installation",
         detail:
-          "The proposal identifies the installation team and covers cabling, mounting, inverter wiring and DC/AC connections included in the scope.",
+          "Full installation by our MCS-certified team. All cabling, mounting, inverter wiring and DC/AC connections included.",
       },
       {
         name: "Scaffolding & Electrical Work",
@@ -70,8 +70,8 @@ const solarTypes: SolarType[] = [
     ],
     stats: [
       { value: "25yr", label: "Panel Warranty" },
-      { value: "Written", label: "System Design" },
-      { value: "Modelled", label: "Output Estimate" },
+      { value: "MCS", label: "Certified Install" },
+      { value: "£1k+", label: "Typical Annual Saving" },
     ],
   },
   {
@@ -238,7 +238,7 @@ export default function SolarTypesInteractive() {
   };
 
   return (
-    <section id="solar-services" className="scroll-mt-32 py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12">

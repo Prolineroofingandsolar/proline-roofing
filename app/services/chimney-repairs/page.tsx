@@ -94,7 +94,7 @@ const whyReasons = [
   {
     icon: Award,
     title: "Specialist Chimney Knowledge",
-    desc: "Chimneys are complex structures involving masonry, leadwork and roof construction. Ask to see recent examples relevant to your property.",
+    desc: "Chimneys are complex structures that require understanding of masonry, leadwork, and roof construction. Our team has decades of specialist chimney repair experience.",
   },
   {
     icon: Shield,
@@ -103,8 +103,8 @@ const whyReasons = [
   },
   {
     icon: CheckCircle,
-    title: "Current Documents & Terms",
-    desc: "Ask for current insurance evidence and the exact workmanship or manufacturer warranty terms included in your quote.",
+    title: "Fully Insured & Guaranteed",
+    desc: "All chimney work is covered by full public liability insurance and comes with a written workmanship guarantee.",
   },
   {
     icon: ThumbsUp,
@@ -205,8 +205,8 @@ export default function ChimneyRepairsPage() {
             {[
               { value: "Free", label: "Chimney Survey" },
               { value: "20–30yr", label: "Repointing Life" },
-              { value: "Source", label: "Review Platforms" },
-              { value: "Current", label: "Documents on Request" },
+              { value: "5 ★", label: "Google Rating" },
+              { value: "Insured", label: "Public Liability" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -418,7 +418,7 @@ export default function ChimneyRepairsPage() {
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-3">
-              Indicative Chimney Repair Costs
+              Chimney Repair Costs &mdash; Somerset 2024
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-sm">
               Indicative prices for common chimney repair work in Somerset.
@@ -479,7 +479,7 @@ export default function ChimneyRepairsPage() {
 
           <AnimatedSection className="mt-10 text-center">
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              Prices are indicative only and may change. Scaffold erection is
+              Prices are indicative guides for Somerset in 2024. Scaffold erection is
               typically an additional cost. Final prices depend on chimney size, condition
               and access.{" "}
               <Link href="/quote" className="text-[#f97316] hover:underline font-bold">

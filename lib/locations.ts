@@ -41,11 +41,11 @@ export const locations: LocationData[] = [
     solarNote:
       "Taunton sits in the Vale of Taunton Deane, benefiting from above-average South West sunshine hours, and south-facing roofs on the town's many post-war semis are ideally oriented for high-yield solar PV systems.",
     emergencyNote:
-      "For urgent roof problems in Taunton, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
+      "As Taunton's home-based roofer, we can typically reach any address in TA1 and TA2 within the hour for a genuine roofing emergency — day or night.",
     faqs: [
       {
         q: "How quickly can ProLine respond to a roofing job in Taunton?",
-        a: "Because we're based in Taunton, local travel is straightforward, but survey and urgent-repair timing still depends on workload, weather and safe access. Call us and we will confirm availability.",
+        a: "Because we're based here in Taunton, we can usually offer same-day or next-day surveys for repairs, and we keep emergency slots available around the clock for active leaks or storm damage.",
       },
       {
         q: "Do you work on listed buildings in Taunton town centre?",
@@ -98,11 +98,11 @@ export const locations: LocationData[] = [
     solarNote:
       "The flat surrounding landscape of the Levels near Bridgwater means minimal shading for rooftop solar installations, and many Bridgwater homeowners are already benefiting from strong solar yields and Smart Export Guarantee payments.",
     emergencyNote:
-      "For urgent roof problems in Bridgwater, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
+      "We're just 20 minutes from Bridgwater and maintain emergency call-out availability around the clock — so if a storm sweeps in off the Levels and damages your roof, help is never far away.",
     faqs: [
       {
         q: "How far are you from Bridgwater?",
-        a: "We travel from Taunton and regularly work across TA6. Appointment timing depends on workload, traffic, weather and safe access, so call us to confirm availability.",
+        a: "We're based in Taunton, approximately 11 miles and 20 minutes from Bridgwater town centre. We regularly work across TA6 and can offer same-day emergency responses.",
       },
       {
         q: "What types of roofing work do you carry out in Bridgwater?",
@@ -155,7 +155,7 @@ export const locations: LocationData[] = [
     solarNote:
       "Many Bath homeowners ask about solar panels on listed buildings or within conservation areas — the good news is that rear-facing roof slopes are often approvable, and we guide customers through the permitted development and planning consent process from start to finish.",
     emergencyNote:
-      "For urgent roof problems in Bath, call with the postcode and details so we can assess the risk and confirm whether attendance is available.",
+      "We travel to Bath for emergency call-outs when the situation demands it — active water ingress in a historic property can cause rapid damage to irreplaceable fabric, so we treat Bath emergencies with the same urgency as any local call.",
     faqs: [
       {
         q: "Can you work on listed buildings and conservation area properties in Bath?",
@@ -180,7 +180,7 @@ export const locations: LocationData[] = [
     ],
     testimonial: {
       name: "Philippa H.",
-      text: "We have a mid-terrace Georgian house in BA1 and were nervous about finding a roofer who understood the requirements. ProLine came highly recommended and did not disappoint — they sourced matching Welsh slate, obtained the listed building consent on our behalf, and the work was immaculate.",
+      text: "We have a mid-terrrace Georgian house in BA1 and were nervous about finding a roofer who understood the requirements. ProLine came highly recommended and did not disappoint — they sourced matching Welsh slate, obtained the listed building consent on our behalf, and the work was immaculate.",
       suburb: "Larkhall, Bath",
       service: "Slate Roof Restoration",
     },
@@ -212,7 +212,7 @@ export const locations: LocationData[] = [
     solarNote:
       "Despite its coastal windiness, Weston's open aspect and low surrounding horizon give it excellent solar irradiance, and the town's many south-facing Victorian bay-windowed terraces are well-suited to rooftop solar installations.",
     emergencyNote:
-      "For urgent roof problems in Weston-super-Mare, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
+      "Coastal storms can cause sudden and severe roof damage in Weston-super-Mare; we respond to emergency call-outs in BS22 and BS23 as a priority, typically reaching the town within 45 minutes from Taunton.",
     faqs: [
       {
         q: "Do coastal properties in Weston-super-Mare need special roofing materials?",
@@ -269,7 +269,7 @@ export const locations: LocationData[] = [
     solarNote:
       "Bristol City Council's strong sustainability agenda and Bristol's high density of early adopters means solar PV is increasingly common across the city's suburbs, and many homeowners combine solar with battery storage to reduce reliance on grid electricity.",
     emergencyNote:
-      "For urgent roof problems in Bristol, call with the postcode and details so we can assess the risk and confirm whether attendance is available.",
+      "We travel to Bristol for genuine roofing emergencies — if you have active water ingress or structural roof damage at a Bristol property, call us immediately and we'll assess whether same-day attendance is possible.",
     faqs: [
       {
         q: "Do you travel to Bristol for roofing work?",
@@ -326,11 +326,11 @@ export const locations: LocationData[] = [
     solarNote:
       "Devon's solar irradiance levels are among the highest in England, and Exeter's relatively low urban horizon compared to hilly coastal towns means rooftop systems here frequently outperform the national average generation estimates.",
     emergencyNote:
-      "For urgent roof problems in Exeter, call with the postcode and details so we can assess the risk and confirm whether attendance is available.",
+      "We cover Exeter and the wider EX postcode area for emergency roofing call-outs and can typically reach central Exeter within 40 minutes from our Taunton base via the M5.",
     faqs: [
       {
         q: "How long does it take you to reach Exeter for a roofing job?",
-        a: "We travel to Exeter from our Taunton base. Appointment timing depends on traffic, workload, weather and safe access, so call us to confirm availability.",
+        a: "Exeter is approximately 26 miles from our Taunton base — around 35 minutes via the M5. We offer same-day emergency attendance and next-day survey appointments for Exeter customers where possible.",
       },
       {
         q: "Can you match the red sandstone and older roofing materials used on Exeter properties?",
@@ -383,11 +383,11 @@ export const locations: LocationData[] = [
     solarNote:
       "Yeovil's position in south Somerset, away from the coastal mist that can affect places like Weston-super-Mare, gives it reliably good solar radiation and the town's many unshaded suburban rooftops make excellent candidates for solar PV installation.",
     emergencyNote:
-      "For urgent roof problems in Yeovil, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
+      "Yeovil is just 28 minutes from our Taunton base along the A358, meaning we can respond quickly to roofing emergencies across the town and its surrounding villages.",
     faqs: [
       {
         q: "How quickly can you get to Yeovil for an emergency roofing call-out?",
-        a: "We travel to Yeovil from our Taunton base. Appointment timing depends on traffic, workload, weather and safe access, so call us to confirm availability.",
+        a: "Yeovil is approximately 28 minutes from our Taunton base via the A358. We maintain 24/7 emergency cover and aim to reach Yeovil and the surrounding area within the hour for a genuine emergency.",
       },
       {
         q: "What types of properties do you work on in Yeovil?",
@@ -440,11 +440,11 @@ export const locations: LocationData[] = [
     solarNote:
       "The south-facing slopes of the Blackdown Hills around Wellington are among the best natural solar aspects in Somerset, and many rural properties in the TA21 area have already installed large solar PV systems to offset high rural energy costs.",
     emergencyNote:
-      "For urgent roof problems in Wellington, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
+      "Wellington is just 12 minutes from our Taunton base, so we can typically be on site within 20 minutes for a genuine roofing emergency in TA21 — making us the fastest professional response available.",
     faqs: [
       {
         q: "What's the quickest you can get to Wellington for a roofing emergency?",
-        a: "Wellington is close to our Taunton base, but appointment timing depends on workload, weather and safe access. Call us and we will confirm availability.",
+        a: "Wellington is just 7 miles and 12 minutes from our Taunton base along the A38 — we're typically on site within 20 minutes of your call for a genuine emergency.",
       },
       {
         q: "Do you work on the rural properties and farms around Wellington?",
@@ -497,7 +497,7 @@ export const locations: LocationData[] = [
     solarNote:
       "Burnham-on-Sea's flat coastal plain and south-west facing orientation give it excellent solar potential despite the coastal climate, and the town's largely unshaded bungalows and detached properties are among the easiest to install solar on efficiently.",
     emergencyNote:
-      "For urgent roof problems in Burnham-on-Sea, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
+      "Bristol Channel storms can arrive quickly and cause serious roof damage to Burnham-on-Sea properties; we respond to TA8 emergencies within approximately 30–40 minutes from our Taunton base and maintain emergency cover all year round.",
     faqs: [
       {
         q: "Does living near the sea affect how quickly my roof deteriorates in Burnham-on-Sea?",
@@ -505,7 +505,7 @@ export const locations: LocationData[] = [
       },
       {
         q: "How do you handle emergency roof repairs after Bristol Channel storms?",
-        a: "Call with the postcode and details of the storm damage. If attendance is available and conditions are safe, the first priority may be a temporary make-safe measure while a permanent repair is assessed.",
+        a: "We respond to TA8 storm damage calls around the clock. Our first priority is to make the roof watertight with temporary measures — battened felt or temporary sheet coverings — while a full repair is planned and materials are sourced.",
       },
       {
         q: "Do bungalows in Burnham-on-Sea have specific roofing challenges?",
@@ -548,7 +548,7 @@ export const locations: LocationData[] = [
     solarNote:
       "The Glastonbury area sits in the Somerset Levels at a low elevation with minimal horizon obstruction — solar yield here is excellent, and many rural properties between Glastonbury and Street have installed large solar PV systems with battery storage to reduce dependence on the rural electricity network.",
     emergencyNote:
-      "For urgent roof problems in Glastonbury, call with the postcode and details so we can assess the risk and confirm current attendance availability.",
+      "Glastonbury is 22 minutes from Taunton via the A361, and we provide emergency roofing cover for BA6 properties throughout the year — particularly important given the town's high proportion of heritage buildings where water ingress can quickly damage historic interiors.",
     faqs: [
       {
         q: "Do you have experience with listed buildings and conservation areas in Glastonbury?",

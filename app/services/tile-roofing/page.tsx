@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Tile Roofing Somerset | ProLine Roofing & Solar",
   description:
-    "Tile roofing installation and repair across Somerset, including concrete and clay tiles, ridge tiles and hip tiles. Free quotes. Call 07587 478826.",
+    "Expert tile roofing installation and repair across Somerset. Concrete and clay roof tiles, ridge tiles, hip tiles. Fully insured, guaranteed. Free quotes. Call 07587 478826.",
   keywords: [
     "tile roofing somerset",
     "roof tiles taunton",
@@ -119,10 +119,10 @@ export default function TileRoofingPage() {
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "Written", label: "Project Scope" },
+              { value: "30+", label: "Years Experience" },
               { value: "All Types", label: "Tile Profiles" },
-              { value: "Source", label: "Review Platforms" },
-              { value: "Clear", label: "Warranty Terms" },
+              { value: "5 ★", label: "Google Rating" },
+              { value: "10 Yr+", label: "Guarantee" },
             ].map(({ value, label }) => (
               <div key={label} className="bg-white/5 backdrop-blur-sm text-center py-4 px-2">
                 <div className="text-2xl font-black text-[#f97316]">{value}</div>
@@ -189,9 +189,9 @@ export default function TileRoofingPage() {
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Award, title: "Relevant Experience", desc: "Ask to see recent examples that match your tile type, roof shape and proposed work." },
-              { icon: Shield, title: "Written Warranty Terms", desc: "Any workmanship or manufacturer warranty included will be stated in your quote." },
-              { icon: Star, title: "Customer Feedback", desc: "Our Reviews page identifies the platform associated with each displayed review." },
+              { icon: Award, title: "30+ Years Experience", desc: "Our team has laid thousands of square metres of tile roofing across Somerset and the South West. We've seen every challenge a Somerset roof can throw at us." },
+              { icon: Shield, title: "Full Workmanship Guarantee", desc: "All our tile roofing work comes with a written guarantee — typically 10–15 years on new roofs. We stand behind every job we do." },
+              { icon: Star, title: "5-Star Rated", desc: "Hundreds of happy customers across Somerset have left us glowing reviews on Google, Facebook and Checkatrade." },
               { icon: CheckCircle, title: "Quality Materials Only", desc: "We use tiles from leading UK manufacturers including Marley, Redland, Dreadnought and Sandtoft — with matching guarantees." },
               { icon: Phone, title: "Free Survey & Quote", desc: "We visit your property, assess the full scope of work and provide a detailed written quote at no charge. No pressure, no surprises." },
               { icon: ArrowRight, title: "Clean, Professional Team", desc: "We treat your home with respect. All materials removed from site, gutters cleared, and property left clean and tidy after every job." },

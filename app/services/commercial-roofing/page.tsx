@@ -5,6 +5,7 @@ import {
   ArrowRight,
   Phone,
   Clock,
+  Star,
   Award,
   Shield,
   Wrench,
@@ -104,13 +105,13 @@ const whyReasons = [
   },
   {
     icon: Shield,
-    title: "Project Documentation",
-    desc: "Ask for current insurance, risk-assessment, method-statement and accreditation information appropriate to your procurement process.",
+    title: "Fully Insured",
+    desc: "We carry full public liability insurance at levels suitable for commercial projects. Risk assessments and method statements are provided as standard for all commercial work.",
   },
   {
     icon: CheckCircle,
-    title: "Written Warranty Terms",
-    desc: "The quotation identifies any workmanship and manufacturer warranty terms, including whether product warranties can be transferred.",
+    title: "Written Guarantees",
+    desc: "All commercial roofing installations come with written workmanship guarantees, backed by manufacturer product warranties that can be assigned to building purchasers.",
   },
   {
     icon: ThumbsUp,
@@ -143,7 +144,7 @@ const faqs = [
   },
   {
     q: "Can you install solar panels on a commercial roof?",
-    a: "Commercial roofs can be suitable for solar, subject to structural condition, shading, grid capacity and project economics. We can assess the roof and prepare a written system proposal. Certification, DNO work, projected output and financial assumptions should all be confirmed for the specific project.",
+    a: "Yes — commercial solar PV is a core part of our offering. Commercial roofs are often ideal for solar because of their large, unshaded area and flat orientation. We carry out a full structural assessment, design the optimal array layout, and manage the full MCS-compliant installation including inverters, monitoring and DNO notification. Commercial solar typically has payback periods of 5–10 years and generates significant income through electricity cost savings and export payments. See our solar page for more information.",
   },
   {
     q: "Do you offer maintenance contracts for commercial roofs?",
@@ -151,7 +152,7 @@ const faqs = [
   },
   {
     q: "Are you insured for commercial roofing work?",
-    a: "We can provide the insurance, risk-assessment, method-statement and accreditation information proposed for a commercial project. Please verify that the current documents, limits and dates meet your procurement requirements before appointment.",
+    a: "Yes. We carry public liability insurance at appropriate levels for commercial projects, and employer's liability insurance for all operatives. For larger projects, we can provide enhanced cover on request. Risk assessments and method statements are produced for all commercial work as standard, and we operate CHAS or equivalent contractor accreditation. We can provide insurance certificates and accreditation documentation at any time.",
   },
   {
     q: "How long does commercial re-roofing take?",
@@ -206,7 +207,7 @@ export default function CommercialRoofingPage() {
             {[
               { value: "20+ yr", label: "TPO Guarantee" },
               { value: "Free", label: "Commercial Survey" },
-              { value: "Source", label: "Review Platforms" },
+              { value: "5 ★", label: "Google Rating" },
               { value: "PPM", label: "Contracts Available" },
             ].map(({ value, label }) => (
               <div
@@ -404,7 +405,7 @@ export default function CommercialRoofingPage() {
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-3">
-              Indicative Commercial Roofing Costs
+              Commercial Roofing Costs &mdash; Somerset 2024
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-sm">
               Commercial roofing costs vary widely with building size, system

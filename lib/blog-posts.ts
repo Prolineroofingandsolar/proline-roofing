@@ -448,7 +448,7 @@ If your insurer is covering the repairs, agree the repair scope with them before
 
 For emergency stabilisation: 2–24 hours. For permanent repairs after storm damage: typically 1–4 weeks, depending on material availability and contractor schedules. If scaffolding is needed, allow an additional 3–7 days for erection.
 
-For urgent roofing problems, call ProLine Roofing & Solar on 07587 478826 to check current attendance availability.`,
+ProLine Roofing & Solar provides 24/7 emergency roofing services across Somerset. Call 07587 478826 any time.`,
   },
   {
     slug: "solar-panel-installation-guide-somerset",
@@ -516,7 +516,7 @@ If electricity prices rise (the long-term trend), payback shortens. Battery stor
 
 ## MCS Accreditation
 
-Check the current installer and installation requirements for the Smart Export Guarantee and verify certification on the official MCS register before proceeding.
+Always use an MCS (Microgeneration Certification Scheme) accredited installer. MCS accreditation is a requirement for claiming the Smart Export Guarantee, and provides consumer protection through a complaints procedure and guarantee scheme. At ProLine Roofing & Solar, we are fully MCS accredited.
 
 Call 07587 478826 for a free solar survey and personalised quotation for your Somerset home.`,
   },
@@ -605,7 +605,7 @@ Adding battery storage to a solar system (installed at the same time) typically 
 
 Battery storage significantly increases self-consumption (from ~50% to 80%+) and improves overall ROI over the system lifetime.
 
-Ask ProLine Roofing & Solar to identify the installer, certification route and handover documents in your written proposal. Call 07587 478826 to arrange a survey.`,
+ProLine Roofing & Solar is MCS accredited and provides free, no-obligation solar surveys across Somerset. Call 07587 478826 today.`,
   },
   {
     slug: "solar-roi-calculator-somerset",
@@ -748,7 +748,7 @@ Commercial property owners in England benefit from a 100% business rates relief 
 | SEG export payments | All MCS installations | £100–£300/year |
 | Warm Homes Plan | TBC (launching 2025–26) | Grants/loans TBC |
 
-Schemes and eligibility change. Verify current information with the relevant official provider, and ask ProLine Roofing & Solar for a property-specific written proposal.`,
+ProLine Roofing & Solar is MCS accredited and can help you access all available incentives. Call 07587 478826 for a free consultation.`,
   },
   {
     slug: "best-solar-panels-uk",
@@ -995,7 +995,7 @@ Rogue traders frequently tour residential areas after storms, knocking on doors 
 
 In Somerset's many conservation areas and with listed buildings scattered across the county, a roofer needs to understand when planning permission or listed building consent is required for material changes. Ask specifically: "Are there any planning permission considerations I need to be aware of for this work?" A knowledgeable roofer will give you a considered answer.
 
-Before appointing any roofer, ask for current insurance documentation, relevant project examples, source-labelled reviews and a written quotation. Call ProLine Roofing & Solar on 07587 478826 to arrange a survey.`,
+ProLine Roofing & Solar is fully insured, carries public liability cover, has hundreds of verified 5-star reviews, and has been trading in Somerset for many years. Call 07587 478826 for a free, written, no-obligation quote.`,
   },
   {
     slug: "storm-damage-roof-repair",
@@ -1058,7 +1058,7 @@ After storm damage, a temporary repair (tarpaulin, emergency sealant) may be car
 - Approval of permanent repair scope: 1–3 weeks
 - Permanent repairs completed: 1–6 weeks depending on complexity and materials
 
-For storm damage, call ProLine Roofing & Solar on 07587 478826 with your postcode and a description of the problem to check current attendance availability.`,
+ProLine Roofing & Solar provides 24/7 emergency response to storm damage across Somerset. We assist with insurance claims and work directly with loss adjusters. Call 07587 478826.`,
   },
   {
     slug: "moss-removal-roof-somerset",

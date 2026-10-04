@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView, useReducedMotion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 interface Props {
@@ -17,7 +17,6 @@ export default function AnimatedSection({
 }: Props) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const reduceMotion = useReducedMotion();
 
   const initial =
     direction === "up"
@@ -31,9 +30,9 @@ export default function AnimatedSection({
   return (
     <motion.div
       ref={ref}
-      initial={reduceMotion ? false : initial}
-      animate={reduceMotion || inView ? { opacity: 1, x: 0, y: 0 } : initial}
-      transition={reduceMotion ? { duration: 0 } : { duration: 0.6, delay, ease: "easeOut" }}
+      initial={initial}
+      animate={inView ? { opacity: 1, x: 0, y: 0 } : initial}
+      transition={{ duration: 0.6, delay, ease: "easeOut" }}
       className={className}
     >
       {children}

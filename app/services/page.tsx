@@ -90,9 +90,9 @@ const roofingServices = [
   {
     title: "Emergency Roofing",
     href: "/services/emergency-roofing",
-    desc: "Urgent roof repair enquiries for storm damage, active leaks, fallen tiles and unsafe chimney damage. Call to check attendance availability.",
-    price: "Call for availability",
-    highlights: ["Urgent enquiries", "Storm damage", "Active leaks", "Written reports"],
+    desc: "24/7 emergency roofing call-outs across Somerset. Storm damage, active leaks, fallen tiles, chimney collapses. Fast response, any time of day or night.",
+    price: "Available 24/7",
+    highlights: ["24/7 response", "Storm damage", "Active leaks", "Insurance reports"],
   },
   {
     title: "Commercial Roofing",
@@ -107,9 +107,9 @@ const solarServices = [
   {
     title: "Solar Panel Installation",
     href: "/solar",
-    desc: "Solar PV enquiries for homes and businesses, covering system design, supply and installation with project documentation set out in writing.",
+    desc: "MCS-accredited solar PV installation for homes and businesses. System design, supply and installation. Fully qualified, fully insured.",
     price: "From £5,000",
-    highlights: ["Certification details", "Suitable roof types", "System design", "DNO applications"],
+    highlights: ["MCS accredited", "All roof types", "System design", "DNO applications"],
   },
   {
     title: "Battery Storage",

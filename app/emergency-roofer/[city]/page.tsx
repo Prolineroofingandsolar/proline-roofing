@@ -3,10 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   Phone,
+  ArrowRight,
+  Clock,
   Shield,
   AlertTriangle,
   CheckCircle,
   Zap,
+  Star,
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -31,18 +34,18 @@ export async function generateMetadata({
   const loc = getLocationBySlug(city);
   if (!loc) return {};
   return {
-    title: `Urgent Roof Repairs ${loc.name} | ProLine Roofing & Solar`,
-    description: `Urgent roof repair enquiries in ${loc.name} for storm damage, active leaks and fallen tiles. Call 07587 478826 to check attendance availability.`,
+    title: `Emergency Roofer ${loc.name} 24/7 | ProLine Roofing & Solar`,
+    description: `Emergency roofer in ${loc.name} available 24/7. Storm damage, active leaks, fallen tiles — we respond fast. Call NOW: 07587 478826`,
     alternates: {
       canonical: `https://www.prolineroofingandsolar.co.uk/emergency-roofer/${loc.slug}`,
     },
   };
 }
 
-const emergencyFaqs = (name: string, distance: string) => [
+const emergencyFaqs = (name: string, distance: string, driveTime: string) => [
   {
     q: `How quickly can you respond to a roofing emergency in ${name}?`,
-    a: `Attendance in ${name} depends on the team's location, workload, weather and safe working conditions. Our Taunton base is approximately ${distance} away. Call us with the details and we will confirm the earliest available appointment; published travel times are not arrival guarantees.`,
+    a: `We aim to reach ${name} within ${driveTime === "based here" ? "30 minutes" : driveTime} of your call for a genuine roofing emergency. Our Taunton base is ${distance} from ${name}, and we maintain 24/7 emergency availability every day of the year including bank holidays and Christmas.`,
   },
   {
     q: `Do you charge extra for emergency call-outs in ${name}?`,
@@ -50,7 +53,7 @@ const emergencyFaqs = (name: string, distance: string) => [
   },
   {
     q: `What should I do if my roof is leaking right now?`,
-    a: `Call us on 07587 478826 to check availability. Meanwhile, place buckets or towels to collect dripping water, move valuables away from the affected area, switch off any electrical circuits that may be at risk from water ingress, and, if safe, take photographs for insurance purposes. Do not attempt to get onto the roof yourself.`,
+    a: `Call us immediately on 07587 478826 — we're available 24/7. While waiting for us to arrive: place buckets or towels to collect dripping water, move valuables away from the affected area, switch off any electrical circuits that may be at risk from water ingress, and if safe to do so, take photographs for insurance purposes. Do not attempt to get onto the roof yourself.`,
   },
   {
     q: `Will insurance cover emergency roof repairs?`,
@@ -58,7 +61,7 @@ const emergencyFaqs = (name: string, distance: string) => [
   },
   {
     q: `Do you provide emergency repairs on weekends and bank holidays?`,
-    a: `Weekend and bank-holiday availability varies. Call 07587 478826 and leave a clear message if the line is not answered; we will confirm whether and when a safe attendance can be arranged.`,
+    a: `Yes — our emergency service operates 24 hours a day, 7 days a week, 365 days a year. Roofing emergencies don't stick to business hours and neither do we. Call 07587 478826 at any time and you'll speak directly to a member of our team.`,
   },
 ];
 
@@ -73,7 +76,7 @@ export default async function EmergencyRooferCityPage({
   const loc = locMaybe as NonNullable<typeof locMaybe>;
 
   const adjacent = getAdjacentLocations(city, 5);
-  const faqs = emergencyFaqs(loc.name, loc.distanceFromTaunton);
+  const faqs = emergencyFaqs(loc.name, loc.distanceFromTaunton, loc.driveTime);
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -95,6 +98,7 @@ export default async function EmergencyRooferCityPage({
     telephone: "07587478826",
     email: "admin@prolineroofingandsolar.co.uk",
     url: "https://www.prolineroofingandsolar.co.uk",
+    openingHours: "Mo-Su 00:00-24:00",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Taunton",
@@ -127,7 +131,7 @@ export default async function EmergencyRooferCityPage({
           <div className="flex items-center gap-2 text-white">
             <AlertTriangle className="w-5 h-5 animate-pulse shrink-0" />
             <span className="font-black text-sm uppercase tracking-wide">
-              Urgent Roof Problem? Call to Check Availability
+              24/7 Emergency Roofing — Call Now
             </span>
           </div>
           <a
@@ -150,21 +154,21 @@ export default async function EmergencyRooferCityPage({
           <AnimatedSection>
             <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/40 text-red-400 text-xs font-black uppercase tracking-widest px-4 py-2 mb-6">
               <AlertTriangle className="w-3.5 h-3.5" />
-              Urgent Repair Enquiries
+              Emergency Service — Available Right Now
             </div>
             <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-4">
-              Urgent Roof Repairs — {loc.name.toUpperCase()}
+              24/7 Emergency Roofing — {loc.name.toUpperCase()}
             </p>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-5 uppercase leading-none">
-              Urgent Roof Repairs in{" "}
+              24/7 Emergency Roofer in{" "}
               <span className="text-[#f97316]">{loc.name}</span>
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-6">
               {loc.emergencyNote}
             </p>
             <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
-              For storm damage, active leaks, fallen tiles or chimney damage,
-              call so we can assess the risk and confirm the available next step.
+              Storm damage, active leaks, fallen tiles, chimney collapses — we
+              respond fast, make your roof safe, and carry out proper repairs.
             </p>
 
             {/* BIG phone number */}
@@ -184,7 +188,7 @@ export default async function EmergencyRooferCityPage({
             </div>
 
             <p className="text-gray-400 text-xs">
-              Attendance is subject to location, weather, workload and safe access
+              Available 24 hours a day • 7 days a week • 365 days a year
             </p>
           </AnimatedSection>
         </div>
@@ -192,10 +196,14 @@ export default async function EmergencyRooferCityPage({
         <div className="relative max-w-7xl mx-auto px-4 mt-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "Call", label: "Check Availability" },
-              { value: loc.distanceFromTaunton, label: "From Taunton" },
-              { value: "Written", label: "Repair Quote" },
-              { value: "Safe", label: "Make-Safe Options" },
+              { value: "24/7", label: "Always Available" },
+              {
+                value:
+                  loc.driveTime === "based here" ? "< 30 min" : loc.driveTime,
+                label: "Response Time",
+              },
+              { value: "30+", label: "Years Experience" },
+              { value: "5 ★", label: "Google Rating" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -302,7 +310,7 @@ export default async function EmergencyRooferCityPage({
                 Experiencing Any of the Above?
               </p>
               <p className="text-gray-400 text-sm mb-6">
-                Call us, describe the damage and check attendance availability
+                Don&apos;t wait — call us now on our 24/7 emergency line
               </p>
               <a
                 href="tel:07587478826"
@@ -337,12 +345,12 @@ export default async function EmergencyRooferCityPage({
               {
                 step: "01",
                 title: "Call Us",
-                desc: "Call 07587 478826, provide your postcode and describe the damage. We'll assess urgency and confirm availability.",
+                desc: "Call 07587 478826 — available 24/7. Tell us your location and describe the damage. We'll assess urgency immediately.",
               },
               {
                 step: "02",
-                title: "We Confirm",
-                desc: "We explain the next safe step and confirm whether and when attendance can be arranged.",
+                title: "We Dispatch",
+                desc: "We dispatch the nearest available team member to your property as quickly as possible.",
               },
               {
                 step: "03",
@@ -357,7 +365,7 @@ export default async function EmergencyRooferCityPage({
               {
                 step: "05",
                 title: "Full Repair",
-                desc: "Permanent repairs follow the agreed scope, with any applicable warranty terms stated in writing.",
+                desc: "Permanent repairs carried out to the highest standard, with a written workmanship guarantee.",
               },
             ].map(({ step, title, desc }, i) => (
               <AnimatedSection key={step} delay={i * 0.1}>
@@ -383,7 +391,7 @@ export default async function EmergencyRooferCityPage({
               <Phone className="w-7 h-7" />
               <span>
                 <span className="block text-xs opacity-80 mb-0.5">
-                  Call Our Urgent Repair Line
+                  Call Our Emergency Line — Available Right Now
                 </span>
                 <span className="text-2xl md:text-3xl">07587 478826</span>
               </span>

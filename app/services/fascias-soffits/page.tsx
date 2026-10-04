@@ -205,7 +205,7 @@ export default function FasciasSoffitsPage() {
             {[
               { value: "30–40yr", label: "UPVC Lifespan" },
               { value: "Free", label: "Survey & Quote" },
-              { value: "Source", label: "Review Platforms" },
+              { value: "5 ★", label: "Google Rating" },
               { value: "1 day", label: "Typical Install" },
             ].map(({ value, label }) => (
               <div
@@ -296,9 +296,8 @@ export default function FasciasSoffitsPage() {
                       <p className="text-gray-500 text-sm leading-relaxed pl-7">
                         All existing timber is removed, rafter feet and wallplate are inspected
                         and treated, and full UPVC roofline is fitted. Required where rot is
-                        present. More expensive, but intended as a long-life solution; the quoted
-                        product warranty and maintenance requirements should be checked before work
-                        begins. It also allows the underlying structure to be inspected.
+                        present. More expensive but provides a full 30+ year solution and peace
+                        of mind on the condition of the underlying structure.
                       </p>
                     </div>
                   </div>
@@ -401,7 +400,7 @@ export default function FasciasSoffitsPage() {
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-3">
-              Indicative Roofline Costs
+              Roofline Costs &mdash; Somerset 2024
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-sm">
               Indicative prices for fascia, soffit and bargeboard work in Somerset.
@@ -461,7 +460,7 @@ export default function FasciasSoffitsPage() {
 
           <AnimatedSection className="mt-10 text-center">
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              Prices are indicative only and may change. Scaffold costs are
+              Prices are indicative guides for Somerset in 2024. Scaffold costs are
               typically included for two-storey properties.{" "}
               <Link href="/quote" className="text-[#f97316] hover:underline font-bold">
                 Get a free survey and detailed quote.

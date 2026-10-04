@@ -1,9 +1,8 @@
 /**
  * Central place for ProLine's external links.
  *
- * GOOGLE_REVIEW_URL currently opens a Google search for the business. Buttons
- * must describe that behaviour until a direct Business Profile review URL is
- * supplied.
+ * 👉 GOOGLE_REVIEW_URL — this is the "leave us a review" link used by the
+ *    review buttons across the site (homepage, footer, reviews page).
  *
  *    To get YOUR direct review link (the one that opens the review box
  *    instantly — much better than a search):

@@ -22,7 +22,7 @@ const faqSchema = {
       name: "How much does a new roof cost in Somerset?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Roof costs vary significantly with size, access, materials, scaffolding and structural repairs. A site survey and written, dated quote are needed for a meaningful price.",
+        text: "A new roof on a typical 3-bedroom semi-detached house in Somerset costs £5,000–£12,000 for concrete tiles, £8,000–£18,000 for natural slate, and £3,500–£8,000 for a flat roof. Costs vary based on size, access, materials and extent of any structural repairs needed.",
       },
     },
     {
@@ -30,7 +30,7 @@ const faqSchema = {
       name: "How quickly can you carry out emergency roof repairs in Somerset?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For active leaks or storm damage, call with your postcode and a description of the problem. We will assess urgency and confirm current attendance availability.",
+        text: "ProLine Roofing provides 24/7 emergency call-outs across Somerset. For active leaks or storm damage, we aim to respond within 24 hours — often same-day. We'll make your property safe and provide a full repair quote.",
       },
     },
     {
@@ -38,7 +38,7 @@ const faqSchema = {
       name: "How much do solar panels cost in Somerset?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Solar cost and payback depend on the proposed system, roof, usage, tariff and financing. Request a written design, output model and current quote rather than relying on a generic figure.",
+        text: "A typical domestic solar PV system in Somerset costs £5,000–£10,000 installed, depending on system size (typically 3–6kW for a family home). Battery storage adds £2,000–£5,000. Most homeowners see payback within 8–12 years.",
       },
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       name: "Are there grants for solar panels in Somerset?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Solar incentives, VAT treatment and export tariffs change. Check current eligibility with GOV.UK, the scheme administrator and your energy supplier before making a financial decision.",
+        text: "Solar panels are currently zero-rated for VAT (saving 20% off the installation cost) until at least 2027. The ECO4 scheme provides free installations for qualifying low-income households. The Smart Export Guarantee (SEG) pays you for excess energy you export to the grid.",
       },
     },
   ],
@@ -66,9 +66,9 @@ const faqCategories = [
     questions: [
       {
         q: "How much does a new roof cost in Somerset?",
-        a: "Roof costs vary with size, pitch, access, scaffolding, materials and any structural work uncovered. A site survey and written, dated quote are needed for a meaningful price.",
+        a: "A new roof on a typical 3-bedroom semi-detached house in Somerset costs £5,000–£12,000 for concrete tiles, £8,000–£18,000 for natural slate, and £3,500–£8,000 for a flat roof. Costs vary based on roof size, pitch, access, materials chosen and whether any structural work is needed. We always provide a free, no-obligation written quote before any work begins.",
         links: [
-          { label: "Read: Archived 2024 Roof Cost Guide", href: "/blog/roof-repair-costs-somerset-2024" },
+          { label: "Read: Roof Repair Costs Somerset", href: "/blog/roof-repair-costs-somerset-2024" },
           { label: "Get a Free Quote", href: "/quote" },
         ],
       },
@@ -78,7 +78,7 @@ const faqCategories = [
       },
       {
         q: "What factors affect the cost of a roof repair?",
-        a: "The main factors are the extent of damage, roof material, access and scaffolding, the roof's age and any underlying structural work. We confirm the price in a dated written quote after assessing the roof.",
+        a: "The main factors are: the type and extent of damage, the roof material, access requirements (scaffolding adds cost), the age of the roof, and whether any underlying structural work is needed. Minor repairs like replacing a few tiles start from around £150–300. Major works like partial re-roofing can run to several thousand pounds.",
       },
       {
         q: "Can I get a rough quote over the phone?",
@@ -91,7 +91,7 @@ const faqCategories = [
     questions: [
       {
         q: "How quickly can you respond to an emergency roof repair?",
-        a: "For active leaks, storm damage or fallen tiles, call 07587 478826 with your postcode and a description of the problem. We will assess urgency and confirm current attendance availability.",
+        a: "We provide 24/7 emergency roofing across Somerset. For active leaks, storm damage or fallen tiles, we aim to respond within 24 hours — often the same day. Emergency call-outs are available nights, weekends and bank holidays. Call 07587 478826 at any time.",
         links: [{ label: "Emergency Roofing Taunton", href: "/emergency-roofer/taunton" }],
       },
       {
@@ -136,18 +136,18 @@ const faqCategories = [
     questions: [
       {
         q: "How much do solar panels cost in Somerset?",
-        a: "Solar costs depend on the designed capacity, panel and inverter specification, roof access, scaffolding, electrical work and whether battery storage is included. Request a written, dated proposal for your property.",
-        links: [{ label: "Read: Archived 2024 Solar Cost Guide", href: "/blog/solar-panel-costs-somerset-2024" }],
+        a: "A typical domestic solar PV system (3–4kW) costs £5,000–£8,000 installed by MCS-accredited installers. A 6kW system with battery storage typically costs £8,000–£14,000. 0% VAT currently applies to residential solar installations, saving up to 20%.",
+        links: [{ label: "Read: Solar Panel Costs Somerset", href: "/blog/solar-panel-costs-somerset-2024" }],
       },
       {
         q: "How much can I save with solar panels in Somerset?",
-        a: "Savings and payback vary with roof orientation, shading, system output, when you use electricity, battery behaviour and current import and export tariffs. Ask for a property-specific output and savings model, and test its assumptions before proceeding.",
+        a: "Somerset receives around 1,400–1,600 sunshine hours per year. A typical 4kW system generates 3,400–3,800 kWh annually, saving £600–£900 per year at current energy prices when combined with the Smart Export Guarantee export income. Most systems pay back in 8–12 years.",
         links: [{ label: "Read: Solar ROI Calculator Somerset", href: "/blog/solar-roi-calculator-somerset" }],
       },
       {
         q: "Are there solar grants available in Somerset?",
-        a: "Schemes, tax treatment and export tariffs change and eligibility is property- and household-specific. Check current information with GOV.UK, the scheme administrator and your energy supplier before relying on an incentive.",
-        links: [{ label: "Read: Archived 2024 Grants Guide", href: "/blog/solar-grants-uk-2024" }],
+        a: "Yes. Solar panels are VAT-free (0% instead of 20%) until at least 2027 — effectively a 20% discount. Low-income households may qualify for free installations through the ECO4 scheme. All homeowners can earn money back through the Smart Export Guarantee (SEG) for excess energy exported to the grid.",
+        links: [{ label: "Read: Solar Grants UK 2024", href: "/blog/solar-grants-uk-2024" }],
       },
       {
         q: "Do I need planning permission for solar panels?",
@@ -155,7 +155,7 @@ const faqCategories = [
       },
       {
         q: "What is MCS accreditation and why does it matter?",
-        a: "MCS is a UK certification scheme for small-scale renewable installations. Certification can affect export-tariff eligibility and consumer protections. Ask us to identify the installer and certification route for your project in writing, then verify it on the official MCS register.",
+        a: "MCS (Microgeneration Certification Scheme) is the quality mark for solar installers in the UK. Only MCS-accredited installations qualify for the Smart Export Guarantee (SEG) — the scheme that pays you for exported solar energy. ProLine is MCS accredited.",
       },
     ],
   },
@@ -169,11 +169,11 @@ const faqCategories = [
       },
       {
         q: "My house is in a conservation area — can you still help?",
-        a: "Conservation-area and listed-building work may need specialist materials and consent. We can assess the roofing requirement, but the property owner should confirm permissions with the local planning authority before work begins.",
+        a: "Yes, absolutely. We have extensive experience working in Somerset's conservation areas and with listed buildings. We source traditional materials including natural Welsh slate, clay tiles and handmade bricks, and can advise on what your local authority is likely to require.",
       },
       {
         q: "Do your roofers need to be registered or qualified?",
-        a: "Ask for the qualifications, method statement and current insurance information relevant to your project. Roofing work should be planned and carried out in accordance with current work-at-height requirements.",
+        a: "All our operatives are trained and experienced roofers. We hold full public liability insurance and employers' liability insurance. We're committed to safe working at height in accordance with the Work at Height Regulations 2005.",
       },
     ],
   },
@@ -182,11 +182,11 @@ const faqCategories = [
     questions: [
       {
         q: "Do you guarantee your work?",
-        a: "Warranty terms depend on the scope, materials and existing roof condition. Any workmanship and manufacturer warranties included will be identified in your written quote.",
+        a: "Yes. All work comes with a written workmanship guarantee. Repair work is typically guaranteed for 1–2 years; larger works such as re-roofing carry 10–15 year guarantees. Materials carry manufacturers' warranties separately.",
       },
       {
         q: "Are you fully insured?",
-        a: "Ask us for current insurance documentation and check that the policy type, limit and dates are suitable for your project before work begins.",
+        a: "Yes — we carry full public liability insurance (£5 million) and employers' liability insurance. Proof of insurance is available on request.",
       },
       {
         q: "What payment methods do you accept?",

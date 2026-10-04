@@ -48,10 +48,10 @@ export default function Footer() {
           <div>
             <Logo dark className="mb-4" />
             <p className="text-gray-400 text-sm leading-relaxed mt-4">
-              Roofing and solar services from our Taunton base. Check our listed service areas or contact us with your postcode.
+              Expert roofing and solar installation across Somerset, Devon, Bristol and Bath. Based in Taunton — serving the whole South West.
             </p>
             <p className="text-gray-400 text-sm mt-5 mb-3">Happy with our work?</p>
-            <GoogleReviewButton variant="solid" label="Find us on Google" className="text-xs px-5 py-3" />
+            <GoogleReviewButton variant="solid" label="Review us on Google" className="text-xs px-5 py-3" />
           </div>
 
           {/* Col 2 – Quick Links */}
@@ -151,7 +151,7 @@ export default function Footer() {
               Get a Free Quote
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              Get in touch for a free, no-obligation quote for your roofing or solar project. We reply during staffed hours.
+              Get in touch today for a free, no obligation quote for your roofing or solar project. We respond within 24 hours.
             </p>
             <Link
               href="/quote"

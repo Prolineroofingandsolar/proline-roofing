@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog-posts";
 
 const base = "https://www.prolineroofingandsolar.co.uk";
 
@@ -43,56 +42,63 @@ const blogSlugs = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
   const corePages: MetadataRoute.Sitemap = [
-    { url: base, changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/roofing`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/solar`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/quote`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/locations`, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${base}/services`, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${base}/faq`, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${base}/projects`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${base}/reviews`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${base}/about`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/privacy`, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/terms`, changeFrequency: "yearly", priority: 0.3 },
+    { url: base, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: `${base}/roofing`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/solar`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/quote`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/locations`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${base}/projects`, lastModified: now, changeFrequency: "weekly", priority: 0.75 },
+    { url: `${base}/reviews`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const locationRooferPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${base}/roofer/${city}`,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.9,
   }));
 
   const locationRoofRepairPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${base}/roof-repair/${city}`,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const locationSolarPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${base}/solar-panels/${city}`,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const locationEmergencyPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${base}/emergency-roofer/${city}`,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const serviceDetailPages: MetadataRoute.Sitemap = servicePages.map((service) => ({
     url: `${base}/services/${service}`,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const blogPostPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
     url: `${base}/blog/${slug}`,
-    lastModified: blogPosts.find((post) => post.slug === slug)?.publishedAt,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.65,
   }));

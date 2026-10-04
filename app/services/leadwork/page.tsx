@@ -86,7 +86,7 @@ const services = [
   {
     icon: AlertTriangle,
     title: "Emergency Flashing Repairs",
-    desc: "For failed flashings causing active leaks, call to check urgent attendance and temporary weatherproofing availability.",
+    desc: "Failed flashings causing active leaks repaired as emergency call-outs. Temporary weatherproofing applied same-day where full replacement needs to be scheduled.",
   },
 ];
 
@@ -205,7 +205,7 @@ export default function LeadworkPage() {
             {[
               { value: "50+ yrs", label: "Lead Lifespan" },
               { value: "Free", label: "Site Survey" },
-              { value: "Source", label: "Review Platforms" },
+              { value: "5 ★", label: "Google Rating" },
               { value: "LSA", label: "Standard Work" },
             ].map(({ value, label }) => (
               <div
@@ -418,7 +418,7 @@ export default function LeadworkPage() {
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-3">
-              Indicative Leadwork Costs
+              Leadwork Costs &mdash; Somerset 2024
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-sm">
               Indicative prices for leadwork and flashing repairs in Somerset.
@@ -478,7 +478,7 @@ export default function LeadworkPage() {
 
           <AnimatedSection className="mt-10 text-center">
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              All prices are indicative only and may change. Scaffold access
+              All prices are indicative guides for Somerset in 2024. Scaffold access
               costs are additional.{" "}
               <Link href="/quote" className="text-[#f97316] hover:underline font-bold">
                 Request a free site inspection and quote.

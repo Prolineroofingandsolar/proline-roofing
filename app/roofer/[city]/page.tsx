@@ -6,8 +6,10 @@ import {
   ArrowRight,
   MapPin,
   Star,
+  CheckCircle,
   Shield,
   Clock,
+  Award,
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -41,14 +43,14 @@ export async function generateMetadata({
 }
 
 const serviceLinks = [
-  { title: "New Roofs", href: "/roofing", icon: "🏠" },
+  { title: "New Roofs", href: "/services/new-roofs", icon: "🏠" },
   { title: "Roof Repairs", href: "/services/roof-repairs", icon: "🔧" },
   { title: "Flat Roofing", href: "/services/flat-roofing", icon: "📐" },
   { title: "Slate Roofing", href: "/services/slate-roofing", icon: "🪨" },
   { title: "Tile Roofing", href: "/services/tile-roofing", icon: "🏗️" },
   { title: "Chimney Repairs", href: "/services/chimney-repairs", icon: "🧱" },
   { title: "Leadwork", href: "/services/leadwork", icon: "⚒️" },
-  { title: "Fascias & Soffits", href: "/services/fascias-soffits", icon: "🌧️" },
+  { title: "Fascias & Guttering", href: "/services/fascias-guttering", icon: "🌧️" },
 ];
 
 export default async function RooferCityPage({
@@ -157,10 +159,10 @@ export default async function RooferCityPage({
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "Free", label: "Initial Quote" },
-              { value: "Written", label: "Scope of Work" },
-              { value: "Current", label: "Documents on Request" },
-              { value: "Urgent", label: "Call-Out Enquiries" },
+              { value: "30+", label: "Years Experience" },
+              { value: "1,000+", label: "Roofs Completed" },
+              { value: "5 ★", label: "Google Rating" },
+              { value: "24/7", label: "Emergency Cover" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -328,18 +330,18 @@ export default async function RooferCityPage({
               },
               {
                 icon: Shield,
-                title: "Current Documentation",
-                desc: "Ask for current insurance evidence and written warranty terms relevant to your quote.",
+                title: "Fully Insured",
+                desc: "Full public liability insurance and written workmanship guarantees on every job, giving you complete peace of mind.",
               },
               {
                 icon: Star,
-                title: "Customer Feedback",
-                desc: "The Reviews page identifies the source platform for each displayed review.",
+                title: "5-Star Rated",
+                desc: "Hundreds of verified 5-star Google reviews from customers across Somerset and the South West.",
               },
               {
                 icon: Clock,
-                title: "Urgent Call-Outs",
-                desc: "Storm damage or an active leak? Call to check current attendance availability.",
+                title: "24/7 Emergency Cover",
+                desc: "Storm damage or active leak? We're available around the clock for genuine roofing emergencies.",
               },
             ].map(({ icon: Icon, title, desc }, i) => (
               <AnimatedSection key={title} delay={i * 0.08}>
@@ -356,6 +358,35 @@ export default async function RooferCityPage({
             ))}
           </div>
 
+          {/* Testimonial */}
+          <AnimatedSection>
+            <div className="border-l-4 border-[#f97316] bg-gray-50 p-8 max-w-3xl mx-auto">
+              <div className="flex gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-4 h-4 fill-[#f97316] text-[#f97316]"
+                  />
+                ))}
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed italic mb-4">
+                &ldquo;{loc.testimonial.text}&rdquo;
+              </p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-black text-[#1a1a1a] text-sm">
+                    — {loc.testimonial.name}
+                  </p>
+                  <p className="text-gray-400 text-xs mt-0.5">
+                    {loc.testimonial.suburb}
+                  </p>
+                </div>
+                <span className="text-xs bg-orange-50 text-[#f97316] font-bold px-3 py-1">
+                  {loc.testimonial.service}
+                </span>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

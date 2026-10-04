@@ -21,13 +21,13 @@ import AnimatedSection from "@/components/AnimatedSection";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Urgent Roof Repairs Somerset | ProLine Roofing & Solar",
+  title: "Emergency Roofing Somerset | 24/7 ProLine Roofing & Solar",
   description:
-    "Urgent roof repair enquiries for storm damage, active leaks and fallen tiles across our Somerset service areas. Call 07587 478826 to check attendance availability.",
+    "24/7 emergency roofing across Somerset and the South West. Storm damage, active leaks, fallen tiles. Fast response guaranteed. Call NOW: 07587 478826.",
   keywords: [
     "emergency roofing Somerset",
     "emergency roofer Taunton",
-    "urgent roofer Somerset",
+    "24 hour roofer Somerset",
     "storm damage roof Somerset",
     "emergency roof repair Taunton",
     "urgent roofer Somerset",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     canonical: "https://www.prolineroofingandsolar.co.uk/services/emergency-roofing",
   },
   openGraph: {
-    title: "Urgent Roof Repairs Somerset | ProLine Roofing & Solar",
+    title: "Emergency Roofing Somerset | 24/7 ProLine Roofing & Solar",
     description:
-      "Urgent roof repair enquiries for storm damage, active leaks and fallen tiles. Call to check attendance availability.",
+      "24/7 emergency roofing across Somerset and the South West. Storm damage, active leaks, fallen tiles. Fast response guaranteed. Call NOW: 07587 478826.",
     url: "https://www.prolineroofingandsolar.co.uk/services/emergency-roofing",
     siteName: "ProLine Roofing & Solar",
     locale: "en_GB",
@@ -51,7 +51,7 @@ const services = [
   {
     icon: Cloud,
     title: "Emergency Storm Damage Repair",
-    desc: "High winds, driving rain and falling branches can strip tiles, damage felt and cause sudden structural failures. Call so we can assess the risk and available next steps.",
+    desc: "High winds, driving rain and falling branches can strip tiles, damage felt and cause sudden structural failures. We respond fast to make your roof safe and weathertight.",
   },
   {
     icon: AlertTriangle,
@@ -85,31 +85,31 @@ const services = [
   },
   {
     icon: Clock,
-    title: "Urgent Call-Out Enquiries",
-    desc: "If you have a roofing emergency in one of our listed service areas, call 07587 478826 and we will confirm current attendance availability.",
+    title: "24/7 Emergency Call-Out",
+    desc: "Day, night, weekend and bank holiday — if you have a roofing emergency in Somerset, call 07587 478826. We cover the whole county around the clock.",
   },
 ];
 
 const whyReasons = [
   {
     icon: Zap,
-    title: "Response from Taunton",
-    desc: "Attendance depends on the location, workload, weather and safe access. We confirm timing after assessing the problem by phone.",
+    title: "Fast Response Across Somerset",
+    desc: "Based in Taunton, we can reach most parts of Somerset within 1–2 hours. Speed matters in a roofing emergency — every minute of active leaking causes more damage.",
   },
   {
     icon: Clock,
-    title: "Call to Check Availability",
-    desc: "If the line is not answered, leave a clear message with your postcode and the nature of the damage so the team can assess it.",
+    title: "Available 24/7, 365 Days",
+    desc: "Roofing emergencies don't respect business hours. Our 24/7 call line ensures you can reach a real person at any hour — including Christmas, New Year and bank holidays.",
   },
   {
     icon: Award,
-    title: "Safety-Led Assessment",
-    desc: "We assess the immediate risk, safe access and suitable temporary or permanent repair options before work starts.",
+    title: "30+ Years Experience",
+    desc: "Experienced roofers make better decisions under pressure. Our team has seen every type of roofing emergency and knows how to make situations safe quickly and efficiently.",
   },
   {
     icon: Shield,
-    title: "Current Documentation",
-    desc: "Ask for current insurance information and confirm the proposed scope before emergency or follow-on repair work begins.",
+    title: "Fully Insured",
+    desc: "All emergency work is carried out under our full public liability insurance. We operate safely even in challenging conditions — night working, wet weather, awkward access.",
   },
   {
     icon: FileText,
@@ -130,7 +130,7 @@ const faqs = [
   },
   {
     q: "How quickly can ProLine respond to a roofing emergency in Somerset?",
-    a: "Response time depends on the postcode, workload, traffic, weather and safe access. Call with the details and we will confirm whether and when attendance can be arranged. For life-threatening situations such as fire or structural collapse, call 999 before contacting a roofer.",
+    a: "Our target response time for genuine roofing emergencies in Somerset is within 2 hours during daylight, and within 3 hours at night. From our base in Taunton we can typically reach anywhere in Somerset within 60–90 minutes. Response times to rural areas or at the extremes of our coverage area may be slightly longer. For life-threatening situations (fire, structural collapse) always call 999 before calling us.",
   },
   {
     q: "Do you charge extra for emergency and out-of-hours call-outs?",
@@ -154,7 +154,7 @@ const faqs = [
   },
   {
     q: "Do you cover all areas of Somerset for emergencies?",
-    a: "Our regular locations are shown on the Service Areas page. For any other postcode, call 07587 478826 and we will confirm whether attendance is possible before making arrangements.",
+    a: "Yes — we cover the whole of Somerset for emergency roofing, including all major towns (Taunton, Bridgwater, Yeovil, Wells, Glastonbury, Minehead, Frome, Chard, Shepton Mallet, Street) and rural areas including the Quantock Hills, Exmoor, the Somerset Levels and the Mendip Hills. We also respond to emergencies in parts of Devon, Dorset and Wiltshire close to our coverage area. If you are unsure whether we cover your location, call 07587 478826.",
   },
 ];
 
@@ -165,7 +165,7 @@ export default function EmergencyRoofingPage() {
       <div className="bg-red-600 text-white text-center py-3 px-4">
         <p className="font-black text-sm uppercase tracking-wider flex items-center justify-center gap-3 flex-wrap">
           <AlertTriangle className="w-4 h-4 shrink-0" />
-          Roofing Emergency? Call to Check Availability
+          Roofing Emergency? Call Us Now — Available 24/7
           <a
             href="tel:07587478826"
             className="underline decoration-2 hover:text-red-200 transition-colors"
@@ -187,16 +187,16 @@ export default function EmergencyRoofingPage() {
           <AnimatedSection>
             <div className="inline-flex items-center gap-2 bg-red-600/90 text-white text-xs font-black uppercase tracking-[0.2em] px-4 py-2 mb-6">
               <AlertTriangle className="w-3.5 h-3.5" />
-              Urgent Repair Enquiries &mdash; Somerset
+              24/7 Emergency Service &mdash; Somerset
               <AlertTriangle className="w-3.5 h-3.5" />
             </div>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-5 uppercase leading-none">
-              Urgent Roof Repairs<br />
-              <span className="text-[#f97316]">Across Our Service Areas</span>
+              Emergency Roofers<br />
+              <span className="text-[#f97316]">Available 24/7</span>
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-4">
               Storm damage, active leaks, fallen tiles &mdash; call ProLine now.
-              Tell us your postcode and what has happened; we will confirm the safest next step and current attendance availability.
+              We respond within 2 hours across Somerset, any time, day or night.
             </p>
 
             {/* Large phone CTA */}
@@ -213,15 +213,15 @@ export default function EmergencyRoofingPage() {
             <p className="text-gray-400 text-sm mb-8">
               Or{" "}
               <Link href="/quote" className="text-[#f97316] hover:underline font-bold">
-                request an urgent callback online
+                request an emergency callback online
               </Link>{" "}
-              and we will respond during staffed hours.
+              and we will call you back within minutes.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
               {[
-                "Timing Confirmed by Phone",
-                "Listed Service Areas",
+                "2 Hour Response",
+                "Available 24/7",
                 "Temporary Sheeting Available",
                 "Insurance Reports",
               ].map((item) => (
@@ -241,10 +241,10 @@ export default function EmergencyRoofingPage() {
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "Call", label: "Check Availability" },
-              { value: "Safe", label: "Make-Safe Options" },
-              { value: "Written", label: "Repair Quote" },
-              { value: "Current", label: "Documents on Request" },
+              { value: "24/7", label: "Available" },
+              { value: "2hrs", label: "Response Target" },
+              { value: "5 ★", label: "Google Rating" },
+              { value: "Insured", label: "Public Liability" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -460,11 +460,11 @@ export default function EmergencyRoofingPage() {
               Do Not Wait — Call Now
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-4">
-              Urgent Roof Repairs in Somerset
+              Emergency Roofer for Somerset &mdash; 24/7
             </h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-              Active water ingress can cause further damage. Call, describe the
-              problem and we will confirm current attendance availability.
+              Every hour of active water ingress causes more damage. Our team is
+              ready to respond now &mdash; day, night, weekend or bank holiday.
             </p>
             <a
               href="tel:07587478826"
@@ -603,12 +603,13 @@ export default function EmergencyRoofingPage() {
                 </span>
               </div>
               <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6">
-                Urgent Roofing Across Our Service Areas
+                Emergency Roofing Across Somerset &mdash; 24/7
               </h2>
               <p className="text-gray-400 leading-relaxed mb-6">
-                We respond from our Taunton base. Attendance time varies by postcode,
-                workload, traffic, weather and whether the roof can be accessed safely.
-                We confirm availability and timing after assessing the problem by phone.
+                From our base in Taunton we provide 24/7 emergency roofing cover
+                across the whole of Somerset. Our 2-hour target response time means
+                we can reach Yeovil, Frome, Wells, Bridgwater and Minehead within
+                our emergency window.
               </p>
               <p className="text-gray-400 leading-relaxed mb-8">
                 We also respond to emergencies in parts of Devon, Dorset and Wiltshire
@@ -681,7 +682,7 @@ export default function EmergencyRoofingPage() {
 
       <CTASection
         heading="Roofing Emergency? Call Now: 07587 478826"
-        subtext="Call with your postcode and a description of the damage. We will confirm current availability and the safest next step."
+        subtext="Available 24 hours a day, 7 days a week. Fast response across Somerset. We make your roof safe and provide full insurance documentation."
       />
     </>
   );
