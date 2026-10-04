@@ -93,7 +93,7 @@ async function proxy(request: Request, upstreamPath: string) {
   return new Response(body, { status: upstream.status, headers: outgoing });
 }
 
-export default {
+const worker = {
   async fetch(request: Request) {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders });
 
@@ -143,3 +143,5 @@ export default {
     return json({ error: "not_found" }, 404);
   },
 };
+
+export default worker;

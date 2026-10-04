@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | ProLine Roofing & Solar",
   },
   description:
-    "Expert roofing and solar installation services across Somerset, Devon, Bristol and Bath. Fully insured, 5-star rated. Call 07587 478826 for a free quote.",
+    "Roofing and solar installation services from a Taunton-based team serving Somerset and surrounding areas. Call 07587 478826 for a free quote.",
   keywords: [
     "roofing taunton",
     "solar panels taunton",
@@ -32,15 +32,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ProLine Roofing & Solar | Somerset & South West",
     description:
-      "Expert roofing and solar installation across Somerset, Devon, Bristol and Bath. 30+ years experience, 5-star rated, fully insured.",
+      "Roofing and solar installation services from a Taunton-based team serving Somerset and surrounding areas.",
     type: "website",
     locale: "en_GB",
     siteName: "ProLine Roofing & Solar",
+    images: [{ url: "/image0.jpeg", alt: "ProLine Roofing & Solar" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ProLine Roofing & Solar | Somerset & South West",
-    description: "Expert roofing and solar installation across Somerset. 5-star rated. Free quotes.",
+    description: "Roofing and solar installation services across Somerset. Free quotes.",
+    images: ["/image0.jpeg"],
   },
   robots: {
     index: true,
@@ -49,18 +51,14 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "https://www.prolineroofingandsolar.co.uk" },
   metadataBase: new URL("https://www.prolineroofingandsolar.co.uk"),
-  verification: {
-    google: "your-google-verification-code",
-  },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["RoofingContractor", "LocalBusiness"],
   name: "ProLine Roofing & Solar",
-  alternateName: "ProLine Roofing & Solar Ltd",
-  image: "https://www.prolineroofingandsolar.co.uk/og-image.jpg",
-  logo: "https://www.prolineroofingandsolar.co.uk/logo.png",
+  image: "https://www.prolineroofingandsolar.co.uk/image0.jpeg",
+  logo: "https://www.prolineroofingandsolar.co.uk/logo.svg",
   "@id": "https://www.prolineroofingandsolar.co.uk/#business",
   url: "https://www.prolineroofingandsolar.co.uk",
   telephone: "+447587478826",
@@ -124,23 +122,9 @@ const localBusinessSchema = {
   },
   priceRange: "££",
   currenciesAccepted: "GBP",
-  paymentAccepted: "Cash, Bank Transfer, Card",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "47",
-    bestRating: "5",
-    worstRating: "1",
-  },
   sameAs: [
-    "https://www.google.com/maps?cid=prolineroofingandsolar",
     "https://www.facebook.com/prolineroofingandsolar",
   ],
-  founder: {
-    "@type": "Person",
-    name: "ProLine Roofing & Solar",
-    jobTitle: "Managing Director",
-  },
   knowsAbout: [
     "Roofing",
     "Flat Roofing",
@@ -163,14 +147,6 @@ const websiteSchema = {
   name: "ProLine Roofing & Solar",
   description: "Expert roofing and solar installation services across Somerset, Devon, Bristol and Bath.",
   publisher: { "@id": "https://www.prolineroofingandsolar.co.uk/#business" },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://www.prolineroofingandsolar.co.uk/blog?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export default function RootLayout({

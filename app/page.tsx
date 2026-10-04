@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import {
   CheckCircle, Star, Phone, ArrowRight, MapPin, ChevronDown,
 } from "lucide-react";
@@ -83,33 +83,33 @@ function IconEmergency() {
 const services = [
   { Icon: IconRoofRepairs, title: "Roof Repairs", href: "/services/roof-repairs", desc: "Fast, reliable repairs for leaks, slipped tiles and storm damage." },
   { Icon: IconNewRoofs, title: "New Roofs", href: "/roofing", desc: "Full new roof installations built to last using premium materials." },
-  { Icon: IconFlatRoofing, title: "Flat Roofing", href: "/services/flat-roofing", desc: "GRP fibreglass and EPDM flat roof systems with 25-year guarantees." },
-  { Icon: IconSolarPV, title: "Solar PV", href: "/solar", desc: "Reduce your energy bills with high-efficiency solar panel systems." },
+  { Icon: IconFlatRoofing, title: "Flat Roofing", href: "/services/flat-roofing", desc: "GRP fibreglass and EPDM flat roof systems with written warranty options." },
+  { Icon: IconSolarPV, title: "Solar PV", href: "/solar", desc: "Solar panel systems designed around your roof and electricity use." },
   { Icon: IconChimney, title: "Chimney Work", href: "/services/chimney-repairs", desc: "Chimney repairs, repointing, flashing and full rebuilds." },
   { Icon: IconLeadwork, title: "Leadwork", href: "/services/leadwork", desc: "Expert lead valleys, flashings, abutments and soakers." },
   { Icon: IconFascias, title: "Fascias & Guttering", href: "/services/fascias-soffits", desc: "UPVC fascias, soffits and guttering supply and installation." },
-  { Icon: IconEmergency, title: "Emergency Call-Out", href: "/services/emergency-roofing", desc: "24/7 emergency roofing — we're there when you need us most." },
+  { Icon: IconEmergency, title: "Urgent Roof Repairs", href: "/services/emergency-roofing", desc: "Call to check current availability for leaks and storm damage." },
 ];
 
 
 const testimonials = [
-  { name: "Rebecca", location: "Axminster", rating: 5, text: "Roof and chimney repointing. Brilliant. All very friendly and polite. Did a brilliant job and cleaned up nicely after themselves :) very pleased.", service: "Chimney Work" },
-  { name: "Verified Customer", location: "Yeovil", rating: 5, text: "Will came out on Bank Holiday Monday to complete the job, quickly, efficiently and to a high standard.", service: "Solar PV" },
-  { name: "Verified Customer", location: "Bridgwater", rating: 5, text: "William and his team done a very good job. Always clean up after every day and kept me updated as they went on. I will definitely be using them again.", service: "Roof Repairs" },
+  { name: "Rebecca", location: "Axminster", rating: 5, text: "Roof and chimney repointing. Brilliant. All very friendly and polite. Did a brilliant job and cleaned up nicely after themselves :) very pleased.", service: "Chimney Work", source: "MyBuilder" },
+  { name: "Verified Customer", location: "Yeovil", rating: 5, text: "Will came out on Bank Holiday Monday to complete the job, quickly, efficiently and to a high standard.", service: "Solar PV", source: "MyBuilder" },
+  { name: "Verified Customer", location: "Bridgwater", rating: 5, text: "William and his team done a very good job. Always clean up after every day and kept me updated as they went on with the job. I will definitely be using them again.", service: "Roof Repairs", source: "MyBuilder" },
 ];
 
 const whyUs = [
-  { title: "30 Years Combined Experience", desc: "Decades of roofing expertise you can rely on." },
-  { title: "Fully Qualified & Insured", desc: "All work carried out to the highest industry standards." },
-  { title: "Premium Materials Only", desc: "Quality guaranteed — we never cut corners on materials." },
+  { title: "Experienced Local Team", desc: "Ask us for examples relevant to your property and proposed work." },
+  { title: "Documentation on Request", desc: "Check current insurance and certification details before work begins." },
+  { title: "Specified Materials", desc: "Your quote sets out the proposed products and system." },
   { title: "Free No-Obligation Quotes", desc: "Honest, transparent pricing with no hidden costs." },
-  { title: "Emergency Call-Outs", desc: "Available 24/7 when you need urgent roofing help." },
+  { title: "Urgent Call-Outs", desc: "Call to check current attendance availability." },
   { title: "Local, Family Business", desc: "Proudly serving Taunton and the South West." },
 ];
 
 export default function HomePage() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       {/* ── HERO ── */}
       <section className="relative min-h-[620px] flex items-center overflow-hidden">
         <div
@@ -166,7 +166,7 @@ export default function HomePage() {
                 href="tel:07587478826"
                 className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 border-2 border-red-600 hover:border-red-700 text-white font-black text-sm uppercase tracking-widest px-7 py-4 transition-all hover:scale-105 animate-pulse"
               >
-                <Phone className="w-4 h-4" /> 24/7 Emergency
+                <Phone className="w-4 h-4" /> Urgent Roof Help
               </a>
             </motion.div>
 
@@ -177,37 +177,10 @@ export default function HomePage() {
               className="flex items-center gap-2 text-white/60 text-xs"
             >
               <MapPin className="w-3.5 h-3.5 text-[#f97316]" />
-              Based in Taunton &bull; Covering the South West
+              Based in Taunton &bull; View our current service areas
             </motion.div>
           </div>
 
-          {/* Feature card */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="hidden lg:block w-full lg:w-72 xl:w-80 shrink-0 bg-black/70 border border-white/10 p-6"
-          >
-            <p className="text-[#f97316] font-black text-xs uppercase tracking-widest mb-4 pb-3 border-b border-white/10">
-              Why Choose ProLine?
-            </p>
-            <ul className="space-y-4">
-              {[
-                { icon: CheckCircle, title: "30 Years Combined Experience", desc: "Proven expertise across roofing & solar." },
-                { icon: Star, title: "5-Star Google Rated", desc: "Dozens of verified 5-star reviews." },
-                { icon: Phone, title: "Free Quotes & Emergency Call-Out", desc: "Available when you need us most." },
-                { icon: MapPin, title: "South West Specialists", desc: "Based in Taunton, covering the region." },
-              ].map(({ icon: Icon, title, desc }) => (
-                <li key={title} className="flex items-start gap-3">
-                  <Icon className="w-5 h-5 text-[#f97316] shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-white font-bold text-sm">{title}</p>
-                    <p className="text-gray-400 text-xs mt-0.5">{desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
         </div>
 
         {/* Scroll indicator */}
@@ -222,25 +195,6 @@ export default function HomePage() {
             <ChevronDown className="w-5 h-5" />
           </motion.div>
         </motion.div>
-      </section>
-
-      {/* ── STATS BAR ── */}
-      <section className="bg-[#1a1a1a] border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-          {[
-            { value: "30+", label: "Years Experience" },
-            { value: "300+", label: "Projects Completed" },
-            { value: "5★", label: "Google Rating" },
-            { value: "£5m", label: "Public Liability" },
-          ].map(({ value, label }, i) => (
-            <AnimatedSection key={label} delay={i * 0.1} className="py-7 px-4 text-center group">
-              <div className="text-4xl md:text-5xl font-black text-[#f97316] leading-none tracking-tight">
-                {value}
-              </div>
-              <div className="text-gray-400 text-xs uppercase tracking-widest mt-2">{label}</div>
-            </AnimatedSection>
-          ))}
-        </div>
       </section>
 
       {/* ── OUR SERVICES ── */}
@@ -288,7 +242,7 @@ export default function HomePage() {
             Taunton&apos;s Local Roofing<br />&amp; Solar Experts
           </h2>
           <p className="text-gray-400 text-sm leading-relaxed mb-3">
-            With 30 years of combined experience, ProLine Roofing &amp; Solar is Taunton&apos;s trusted name for quality roofing and solar installations across the South West.
+            ProLine Roofing &amp; Solar is a Taunton-based team providing roofing and solar services across Somerset and surrounding areas.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed mb-8">
             We&apos;re a local business that takes pride in every job — big or small. From a single tile repair to a full solar system installation, we treat every customer&apos;s home like our own.
@@ -348,15 +302,11 @@ export default function HomePage() {
               <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Customer Reviews</span>
               <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight">What Our Customers Say</h2>
-            <div className="flex items-center justify-center gap-1 mt-3">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-[#f97316] text-[#f97316]" />)}
-              <span className="ml-2 text-gray-600 text-sm font-semibold">Rated 5.0 by our customers</span>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight">Selected Customer Feedback</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map(({ name, location, text, service }, i) => (
+            {testimonials.map(({ name, location, text, service, source }, i) => (
               <AnimatedSection key={name} delay={i * 0.15}>
                 <div className="border border-gray-100 p-6 shadow-sm hover:shadow-md hover:border-[#f97316] transition-all duration-300 h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
@@ -367,6 +317,7 @@ export default function HomePage() {
                     <div>
                       <p className="font-black text-gray-900 text-sm">— {name}</p>
                       <p className="text-gray-400 text-xs">{location}</p>
+                      <p className="text-gray-500 text-xs">Source: {source}</p>
                     </div>
                     <span className="text-xs bg-orange-50 text-[#f97316] font-bold px-2.5 py-1 rounded-full">{service}</span>
                   </div>
@@ -380,7 +331,7 @@ export default function HomePage() {
               <Link href="/reviews" className="inline-flex items-center gap-2 border-2 border-[#f97316] text-[#f97316] font-black text-sm uppercase tracking-widest px-6 py-3 hover:bg-[#f97316] hover:text-white transition-all">
                 Read All Reviews <ArrowRight className="w-4 h-4" />
               </Link>
-              <GoogleReviewButton variant="solid" label="Leave us a Google Review" className="px-6 py-3" />
+              <GoogleReviewButton variant="solid" label="Find us on Google" className="px-6 py-3" />
             </div>
           </AnimatedSection>
         </div>
@@ -389,8 +340,8 @@ export default function HomePage() {
       {/* ── CTA ── */}
       <CTASection
         heading="Free Quote or Emergency Call-Out?"
-        subtext="Storm damage, active leak, or just need a no-obligation quote? Call us any time — we cover Taunton, Bridgwater and all of Somerset."
+        subtext="Storm damage, an active leak, or a planned project? Call to check availability or request a no-obligation quote."
       />
-    </>
+    </MotionConfig>
   );
 }

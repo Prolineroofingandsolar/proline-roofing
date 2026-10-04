@@ -108,8 +108,8 @@ const whyReasons = [
   },
   {
     icon: Star,
-    title: "5-Star Google Rating",
-    desc: "Our slate roofing work consistently receives five-star feedback from customers across Somerset. Read our reviews.",
+    title: "Customer Feedback",
+    desc: "Our Reviews page identifies the platform associated with each displayed review.",
   },
   {
     icon: Clock,
@@ -205,7 +205,7 @@ export default function SlateRoofingPage() {
             {[
               { value: "100+ yr", label: "Welsh Slate Life" },
               { value: "Free", label: "Roof Survey" },
-              { value: "5 ★", label: "Google Rating" },
+              { value: "Source", label: "Review Platforms" },
               { value: "Stock", label: "Matching Slates" },
             ].map(({ value, label }) => (
               <div
@@ -406,7 +406,7 @@ export default function SlateRoofingPage() {
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-3">
-              Slate Roof Cost Guide &mdash; Somerset 2024
+              Indicative Slate Roof Cost Guide
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-sm">
               Indicative prices for slate roofing work in Somerset.
@@ -467,7 +467,7 @@ export default function SlateRoofingPage() {
 
           <AnimatedSection className="mt-10 text-center">
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              All prices are indicative guides for Somerset in 2024. Prices vary
+              All prices are indicative only and may change. Prices vary
               significantly with roof size, complexity and material specification.{" "}
               <Link href="/quote" className="text-[#f97316] hover:underline font-bold">
                 Get a free, no-obligation survey and quote.

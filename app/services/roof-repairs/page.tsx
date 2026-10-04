@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Roof Repairs Somerset | ProLine Roofing & Solar",
   description:
-    "Expert roof repair services across Somerset and the South West. Tile repairs, leak fixes, chimney repairs, storm damage. Fast response, fully insured. Call 07587 478826.",
+    "Roof repair services across Somerset and surrounding areas, including tile repairs, leak investigation, chimney repairs and storm damage. Call 07587 478826.",
   keywords: [
     "roof repairs somerset",
     "roof repair taunton",
@@ -67,8 +67,8 @@ const repairTypes = [
   {
     icon: Clock,
     title: "Emergency Call-Outs",
-    desc: "24/7 emergency response for active leaks, fallen tiles and structural issues. We'll make your property safe and provide a same-day repair quote.",
-    price: "Available 24/7",
+    desc: "Urgent call-out enquiries for active leaks, fallen tiles and structural issues. Call to check attendance availability.",
+    price: "Call for availability",
   },
 ];
 
@@ -112,7 +112,7 @@ const faqs = [
   },
   {
     q: "How quickly can you respond to a roof repair?",
-    a: "For emergency situations — active leaks or storm damage — we aim to respond within 24 hours, often same-day. For non-emergency repairs, we typically book within 3–7 days. We'll always give you a realistic timeframe when you call.",
+    a: "For active leaks or storm damage, call with your postcode and details so we can assess urgency and confirm attendance availability. For planned repairs, we will offer the available survey dates when you contact us.",
   },
   {
     q: "Can you repair just a few tiles, or does the whole roof need replacing?",
@@ -160,7 +160,7 @@ export default function RoofRepairsPage() {
               <span className="text-[#f97316]">Done Properly</span>
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-              From a single broken tile to emergency storm damage — ProLine Roofing repairs roofs across Somerset and the South West. Fast, reliable and fully guaranteed.
+              From a single broken tile to storm damage, we assess the problem and provide a written repair scope before planned work begins.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -181,10 +181,10 @@ export default function RoofRepairsPage() {
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "24/7", label: "Emergency Cover" },
-              { value: "Same Day", label: "Survey Available" },
-              { value: "5 ★", label: "Google Rating" },
-              { value: "Guaranteed", label: "All Repairs" },
+              { value: "Urgent", label: "Call-Out Enquiries" },
+              { value: "Booked", label: "Survey Times" },
+              { value: "Written", label: "Repair Scope" },
+              { value: "Clear", label: "Warranty Terms" },
             ].map(({ value, label }) => (
               <div key={label} className="bg-white/5 backdrop-blur-sm text-center py-4 px-2">
                 <div className="text-2xl font-black text-[#f97316]">{value}</div>
@@ -283,10 +283,10 @@ export default function RoofRepairsPage() {
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
             {[
-              { step: "01", title: "Call or Request a Quote", desc: "Contact us by phone or online. Describe the problem and we'll arrange a visit — often the same or next day." },
+              { step: "01", title: "Call or Request a Quote", desc: "Contact us by phone or online. Describe the problem and we'll confirm available survey times." },
               { step: "02", title: "Free Survey", desc: "We inspect the roof thoroughly, identify all issues (not just the obvious ones) and provide a clear written quote." },
               { step: "03", title: "Repair Carried Out", desc: "Work completed by our qualified team, using quality materials and proper techniques. Surrounding area left clean and tidy." },
-              { step: "04", title: "Written Guarantee", desc: "All repairs come with a written workmanship guarantee. We want you to have complete peace of mind." },
+              { step: "04", title: "Written Terms", desc: "Your quote states any workmanship or manufacturer warranty included with the repair." },
             ].map(({ step, title, desc }, i) => (
               <AnimatedSection key={step} delay={i * 0.1}>
                 <div className="relative text-center p-8 border-l border-gray-200 first:border-l-0">
@@ -367,7 +367,7 @@ export default function RoofRepairsPage() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <p className="text-white font-black text-xl uppercase tracking-tight">Active Leak or Storm Damage?</p>
-            <p className="text-orange-100 text-sm mt-1">24/7 emergency roof repair across Somerset. We respond fast.</p>
+            <p className="text-orange-100 text-sm mt-1">Call with your postcode and a description of the damage to check availability.</p>
           </div>
           <a
             href="tel:07587478826"
@@ -380,7 +380,7 @@ export default function RoofRepairsPage() {
 
       <CTASection
         heading="Need a Roof Repair Quote?"
-        subtext="Contact our team today for a free, no-obligation survey and written quote. We respond within 24 hours."
+        subtext="Contact our team for a free, no-obligation survey and written quote. We reply during staffed hours."
       />
     </>
   );

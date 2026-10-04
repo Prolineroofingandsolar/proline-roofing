@@ -30,10 +30,8 @@ const navLinks = [
     label: "SOLAR",
     href: "/solar",
     children: [
-      { label: "Solar Panel Installation", href: "/solar" },
-      { label: "Solar Panel Repairs", href: "/solar" },
-      { label: "Solar Maintenance", href: "/solar" },
-      { label: "Battery Storage", href: "/solar" },
+      { label: "All Solar Services", href: "/solar#solar-services" },
+      { label: "Request a Solar Survey", href: "/quote" },
     ],
   },
   {
@@ -100,7 +98,7 @@ export default function Header() {
           <Logo />
 
           {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-0">
+          <ul className="hidden xl:flex items-center gap-0">
             {navLinks.map((link) => {
               const active =
                 pathname === link.href ||
@@ -109,17 +107,19 @@ export default function Header() {
                 <li key={link.label} className="relative group">
                   {link.children ? (
                     <>
-                      <button
+                      <Link
+                        href={link.href}
+                        aria-haspopup="true"
                         className={`flex items-center gap-1 px-3 py-2 text-xs font-bold tracking-wider transition-colors border-b-2 border-transparent ${
                           active
                             ? "text-[#f97316] border-[#f97316]"
-                            : "text-gray-700 hover:text-[#f97316] group-hover:border-[#f97316]"
+                            : "text-gray-700 hover:text-[#f97316] group-hover:border-[#f97316] group-focus-within:border-[#f97316]"
                         }`}
                       >
                         {link.label}
                         <ChevronDown className="w-3 h-3" />
-                      </button>
-                      <div className="absolute top-full left-0 w-52 bg-white shadow-xl border-t-2 border-[#f97316] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                      </Link>
+                      <div className="absolute top-full left-0 w-52 bg-white shadow-xl border-t-2 border-[#f97316] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all z-50">
                         {link.children.map((child) => (
                           <Link
                             key={child.label}
@@ -152,14 +152,16 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/quote"
-              className="hidden lg:inline-flex items-center bg-[#f97316] hover:bg-[#ea6c0a] text-white text-xs font-black tracking-widest px-5 py-3 transition-colors uppercase"
+              className="hidden xl:inline-flex items-center bg-[#f97316] hover:bg-[#ea6c0a] text-white text-xs font-black tracking-widest px-5 py-3 transition-colors uppercase"
             >
               Get a Free Quote
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-gray-700 hover:text-[#f97316] transition-colors"
-              aria-label="Toggle menu"
+              className="xl:hidden p-2 text-gray-700 hover:text-[#f97316] transition-colors"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
             >
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -168,7 +170,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="lg:hidden border-t border-gray-100 bg-white">
+          <div id="mobile-navigation" className="xl:hidden border-t border-gray-100 bg-white">
             <ul className="divide-y divide-gray-100">
               {navLinks.map((link) => (
                 <li key={link.label}>
@@ -177,6 +179,7 @@ export default function Header() {
                       <button
                         onClick={() => toggleSection(link.label)}
                         className="w-full flex items-center justify-between px-4 py-3 text-xs font-bold tracking-wider text-gray-700"
+                        aria-expanded={openSection === link.label}
                       >
                         {link.label}
                         <ChevronDown

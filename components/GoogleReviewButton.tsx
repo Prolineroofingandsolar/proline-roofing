@@ -1,4 +1,3 @@
-import { Star } from "lucide-react";
 import { GOOGLE_REVIEW_URL } from "@/lib/links";
 
 /* Google "G" logo mark */
@@ -22,7 +21,7 @@ interface GoogleReviewButtonProps {
 
 export default function GoogleReviewButton({
   variant = "solid",
-  label = "Leave us a Google Review",
+  label = "Find us on Google",
   className = "",
 }: GoogleReviewButtonProps) {
   const base =
@@ -45,11 +44,6 @@ export default function GoogleReviewButton({
         <GoogleG className="w-4 h-4" />
       </span>
       {label}
-      <span className="flex gap-0.5">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-3.5 h-3.5 fill-current" />
-        ))}
-      </span>
     </a>
   );
 }

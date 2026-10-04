@@ -9,7 +9,8 @@ import { client, urlFor } from "@/sanity/client";
 export const metadata: Metadata = {
   title: "Our Projects | ProLine Roofing & Solar",
   description:
-    "Browse completed roofing and solar projects by ProLine in Taunton and across Somerset. See our workmanship for yourself.",
+    "Browse ProLine's roofing and solar gallery, and ask for recent case studies relevant to your proposed project.",
+  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/projects" },
 };
 
 // Revalidate every 60 seconds so new Sanity projects appear without redeploy
@@ -27,71 +28,60 @@ interface SanityProject {
 
 const staticProjects = [
   {
-    title: "Full Roof Replacement",
-    type: "New Roof",
-    location: "Taunton, Somerset",
-    description: "Complete strip and re-roof on a 1970s detached property. Premium concrete interlocking tiles, new insulation, UPVC fascias and guttering.",
+    title: "Pitched Roof Work",
+    type: "Roofing",
+    description: "A closer look at pitched-roof workmanship and finishing details.",
     img: "/image0.jpeg",
   },
   {
-    title: "4kW Solar PV System",
+    title: "Roof-Mounted Solar Panels",
     type: "Solar PV",
-    location: "Wellington, Somerset",
-    description: "4kW solar system with 10 x 400W panels and a 5kWh battery storage unit. Customer now generates around 70% of their own electricity.",
+    description: "An example of a roof-mounted solar panel array.",
     img: "/UK_MKT_PHO_REF_Solar_Grasmere_002.jpg",
   },
   {
-    title: "GRP Flat Roof",
-    type: "Flat Roofing",
-    location: "Bridgwater, Somerset",
-    description: "Full replacement of a failed felt flat roof on a rear kitchen extension. 25-year GRP fibreglass system with new Velux roof light.",
+    title: "Slate Roofing with Solar",
+    type: "Roofing & Solar",
+    description: "Pitched slate roofing shown alongside a roof-mounted solar installation.",
     img: "/image1.jpeg",
   },
   {
-    title: "Slate Roof Repair",
-    type: "Roof Repairs",
-    location: "Taunton, Somerset",
-    description: "Storm damage repair on a Victorian-era terraced property. Replaced 40+ broken Welsh slates, re-pointed ridge, re-sealed lead flashings.",
+    title: "Slate Roof Detail",
+    type: "Slate Roofing",
+    description: "Slate roof covering and associated finishing details.",
     img: "/image2.jpeg",
   },
   {
-    title: "6kW Solar + Battery",
-    type: "Solar PV",
-    location: "Taunton, Somerset",
-    description: "6kW solar system paired with a 10kWh GivEnergy battery. Customer exports surplus power under the SEG tariff.",
+    title: "Finished Tile Roof",
+    type: "Tile Roofing",
+    description: "A finished pitched roof using interlocking tiles.",
     img: "/image3.jpeg",
   },
   {
-    title: "New Build Roof",
-    type: "New Roof",
-    location: "Yeovil, Somerset",
-    description: "Full roofing package for a new-build detached property. Tile installation, UPVC trims, lead valleys, and ridge and hip detailing.",
+    title: "Green Roof System",
+    type: "Specialist Roofing",
+    description: "A planted green-roof system designed to add drainage and biodiversity benefits.",
     img: "/image4.jpeg",
   },
   {
-    title: "Chimney Rebuild",
-    type: "Chimney Work",
-    location: "Bridgwater, Somerset",
-    description: "Full chimney stack rebuild on a 1950s semi. New pots, lead flashing, repointing and waterproofing treatment applied.",
+    title: "Roofline Detail",
+    type: "Roofing",
+    description: "Roof covering and roofline detailing viewed at completion.",
     img: "/image5.jpeg",
   },
   {
-    title: "Fascias & Guttering",
-    type: "Fascias",
-    location: "Wellington, Somerset",
-    description: "Full UPVC fascia, soffit and guttering replacement on a detached bungalow. Ogee-profile guttering with new downpipes.",
+    title: "Completed Pitched Roof",
+    type: "Roofing",
+    description: "A completed pitched roof showing the overall finish.",
     img: "/image6.jpeg",
-  },
-  {
-    title: "3kW Solar System",
-    type: "Solar PV",
-    location: "Glastonbury, Somerset",
-    description: "3kW solar system for a 2-bed cottage. 8 x 375W panels with SolarEdge inverter. Generating over 60% of household energy.",
-    img: "/UK_MKT_PHO_REF_Solar_Grasmere_002.jpg",
   },
 ];
 
 const typeColours: Record<string, string> = {
+  "Roofing": "bg-blue-50 text-blue-700",
+  "Roofing & Solar": "bg-yellow-50 text-yellow-800",
+  "Tile Roofing": "bg-orange-50 text-orange-800",
+  "Specialist Roofing": "bg-green-50 text-green-800",
   "New Roof": "bg-blue-50 text-blue-700",
   "Solar PV": "bg-yellow-50 text-yellow-700",
   "Flat Roofing": "bg-green-50 text-green-700",
@@ -128,9 +118,13 @@ export default async function ProjectsPage() {
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <AnimatedSection>
             <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">Our Work</p>
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">Recent Projects</h1>
+            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+              {sanityProjects ? "Recent Projects" : "Roofing & Solar Gallery"}
+            </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              A selection of roofing and solar projects completed across Taunton and the South West. Quality you can see for yourself.
+              {sanityProjects
+                ? "A selection of roofing and solar projects completed across Taunton and the surrounding area."
+                : "Examples of roofing finishes and solar systems. Ask us for recent, relevant case studies when requesting a quote."}
             </p>
           </AnimatedSection>
         </div>
@@ -186,19 +180,19 @@ export default async function ProjectsPage() {
               {staticProjects.map((p, i) => (
                 <AnimatedSection key={p.title} delay={(i % 3) * 0.1}>
                   <div className="bg-white border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg hover:border-[#f97316] transition-all duration-300 group">
-                    <div className="overflow-hidden h-52">
-                      <div
-                        className="h-full w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                        style={{ backgroundImage: `url('${p.img}')` }}
+                    <div className="relative overflow-hidden h-52">
+                      <Image
+                        src={p.img}
+                        alt={p.title}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="p-5">
                       <div className="flex items-center justify-between mb-3">
                         <span className={`text-xs font-bold px-2.5 py-1 ${typeColours[p.type] ?? "bg-gray-100 text-gray-700"}`}>
                           {p.type}
-                        </span>
-                        <span className="flex items-center gap-1 text-xs text-gray-400">
-                          <MapPin className="w-3.5 h-3.5" /> {p.location}
                         </span>
                       </div>
                       <h3 className="font-black text-gray-900 mb-2">{p.title}</h3>

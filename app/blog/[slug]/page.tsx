@@ -179,6 +179,7 @@ export default async function BlogPostPage({
     bg: "bg-gray-100",
   };
   const links = serviceLinks[post.category] ?? serviceLinks.guides;
+  const isArchived = new Date(post.publishedAt).getUTCFullYear() < new Date().getUTCFullYear();
 
   /* ── JSON-LD ────────────────────────────────────────────── */
   const articleSchema = {
@@ -268,6 +269,17 @@ export default async function BlogPostPage({
 
             {/* Article body */}
             <article>
+              {isArchived && (
+                <div className="mb-8 border-l-4 border-amber-500 bg-amber-50 p-5 text-sm leading-relaxed text-amber-950">
+                  <strong className="block mb-1">Archive notice</strong>
+                  This article was published on {formatDate(post.publishedAt)}. Prices,
+                  grants, tax treatment, tariffs, regulations and product details may
+                  have changed. Do not rely on it as a current quote or eligibility
+                  check; verify financial and regulatory information with the relevant
+                  official provider.
+                </div>
+              )}
+
               {/* Excerpt / lead */}
               <p className="text-lg text-gray-600 leading-relaxed mb-8 pb-8 border-b border-gray-100 font-medium italic">
                 {post.excerpt}

@@ -205,7 +205,7 @@ export default function GutteringPage() {
             {[
               { value: "25–40yr", label: "UPVC Lifespan" },
               { value: "Free", label: "Gutter Survey" },
-              { value: "5 ★", label: "Google Rating" },
+              { value: "Source", label: "Review Platforms" },
               { value: "1 day", label: "Typical Install" },
             ].map(({ value, label }) => (
               <div
@@ -402,7 +402,7 @@ export default function GutteringPage() {
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
             <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-3">
-              Guttering Cost Guide &mdash; Somerset 2024
+              Indicative Guttering Cost Guide
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-sm">
               Indicative prices for guttering work in Somerset.
@@ -463,7 +463,7 @@ export default function GutteringPage() {
 
           <AnimatedSection className="mt-10 text-center">
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              All prices are indicative guides for Somerset in 2024. Scaffold or access
+              All prices are indicative only and may change. Scaffold or access
               equipment costs may apply for higher properties.{" "}
               <Link href="/quote" className="text-[#f97316] hover:underline font-bold">
                 Get a free, no-obligation quote

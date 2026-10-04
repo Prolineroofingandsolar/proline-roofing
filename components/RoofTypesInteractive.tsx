@@ -55,7 +55,7 @@ const roofTypes: RoofType[] = [
       {
         name: "Emergency Call-Out",
         detail:
-          "Active leak or storm damage? We respond fast, day or night, seven days a week.",
+          "Active leak or storm damage? Call with your postcode and details to check current attendance availability.",
       },
     ],
     materials: [
@@ -69,8 +69,8 @@ const roofTypes: RoofType[] = [
     ],
     stats: [
       { value: "500+", label: "Pitched Roofs Done" },
-      { value: "10yr", label: "Workmanship Guarantee" },
-      { value: "24/7", label: "Emergency Cover" },
+      { value: "Written", label: "Warranty Terms" },
+      { value: "Urgent", label: "Call-Out Enquiries" },
     ],
   },
   {
@@ -99,7 +99,7 @@ const roofTypes: RoofType[] = [
       {
         name: "Leak Detection & Repair",
         detail:
-          "We pinpoint the source of flat roof leaks fast and carry out lasting, fully guaranteed repairs.",
+          "We investigate the source of flat roof leaks and set out the recommended repair and any warranty terms in writing.",
       },
       {
         name: "Flat-to-Pitch Conversion",
@@ -117,7 +117,7 @@ const roofTypes: RoofType[] = [
     stats: [
       { value: "200+", label: "Flat Roofs Done" },
       { value: "25yr", label: "Material Warranty" },
-      { value: "24/7", label: "Emergency Cover" },
+      { value: "Urgent", label: "Call-Out Enquiries" },
     ],
   },
   {
@@ -164,7 +164,7 @@ const roofTypes: RoofType[] = [
     stats: [
       { value: "150+", label: "Chimneys Repaired" },
       { value: "BS EN", label: "12588 Compliant" },
-      { value: "24/7", label: "Emergency Cover" },
+      { value: "Urgent", label: "Call-Out Enquiries" },
     ],
   },
   {
@@ -211,8 +211,8 @@ const roofTypes: RoofType[] = [
       "Square Profile",
     ],
     stats: [
-      { value: "300+", label: "Rooflines Completed" },
-      { value: "10yr", label: "Workmanship Guarantee" },
+      { value: "Written", label: "Project Scope" },
+      { value: "Clear", label: "Warranty Terms" },
       { value: "Zero", label: "Maintenance UPVC" },
     ],
   },

@@ -37,7 +37,7 @@ export async function generateMetadata({
   if (!loc) return {};
   return {
     title: `Solar Panels ${loc.name} | ProLine Roofing & Solar`,
-    description: `Professional solar panel installation in ${loc.name}, ${loc.county}. MCS accredited, fully insured, maximum savings guaranteed. Free survey and quote.`,
+    description: `Solar panel installation enquiries in ${loc.name}, ${loc.county}. Request a roof and energy-use survey with a written system proposal.`,
     alternates: {
       canonical: `https://www.prolineroofingandsolar.co.uk/solar-panels/${loc.slug}`,
     },
@@ -192,8 +192,8 @@ export default async function SolarPanelsCityPage({
               {loc.solarNote}
             </p>
             <p className="text-gray-400 text-base max-w-2xl mx-auto mb-8">
-              MCS-certified solar PV, battery storage and EV charging —
-              professionally installed to cut your bills and earn export income.
+              Solar PV, battery storage and EV charging designed around your
+              roof, electricity use and project requirements.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -215,10 +215,10 @@ export default async function SolarPanelsCityPage({
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "£1,000+", label: "Typical Annual Saving" },
-              { value: "25yr", label: "Panel Warranty" },
-              { value: "MCS", label: "Certified" },
-              { value: "5 ★", label: "Google Rating" },
+              { value: "Free", label: "Initial Survey" },
+              { value: "Written", label: "System Proposal" },
+              { value: "Modelled", label: "Output Estimate" },
+              { value: "Clear", label: "Warranty Terms" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -243,22 +243,22 @@ export default async function SolarPanelsCityPage({
             {
               icon: TrendingDown,
               title: "Cut Your Bills",
-              desc: "Typical savings of £1,000+ per year on energy costs.",
+              desc: "Savings depend on system design, household usage and electricity tariffs.",
             },
             {
               icon: Zap,
               title: "SEG Export Income",
-              desc: "Earn money selling surplus power back to the grid.",
+              desc: "Ask your energy supplier about current export tariffs and eligibility.",
             },
             {
               icon: Sun,
               title: "Add Property Value",
-              desc: "Solar adds an average of 4% to your home's value.",
+              desc: "A system is designed around the roof, orientation and available space.",
             },
             {
               icon: Leaf,
               title: "Go Green",
-              desc: "Cut household CO₂ emissions by up to 1.5 tonnes/year.",
+              desc: "Generate lower-carbon electricity at the property when conditions allow.",
             },
           ].map(({ icon: Icon, title, desc }, i) => (
             <AnimatedSection key={title} delay={i * 0.1}>
@@ -387,13 +387,13 @@ export default async function SolarPanelsCityPage({
             {[
               {
                 icon: Award,
-                title: "MCS Certified",
-                desc: "MCS certification is required to receive SEG export payments and manufacturer warranties. Every installation we carry out is fully MCS compliant.",
+                title: "Certification in Writing",
+                desc: "The proposal should identify the certification route and the documents supplied at handover.",
               },
               {
                 icon: Shield,
-                title: "Fully Insured",
-                desc: "Full public liability insurance and 25-year panel warranties. Your investment is fully protected.",
+                title: "Current Documentation",
+                desc: "Ask for current insurance evidence and the exact product and workmanship warranty terms before proceeding.",
               },
               {
                 icon: MapPin,
@@ -402,8 +402,8 @@ export default async function SolarPanelsCityPage({
               },
               {
                 icon: Star,
-                title: "5-Star Rated",
-                desc: "Hundreds of verified 5-star Google reviews from solar and roofing customers across the South West.",
+                title: "Customer Feedback",
+                desc: "Our Reviews page identifies the source platform for each displayed customer review.",
               },
             ].map(({ icon: Icon, title, desc }, i) => (
               <AnimatedSection key={title} delay={i * 0.08}>
@@ -420,35 +420,6 @@ export default async function SolarPanelsCityPage({
             ))}
           </div>
 
-          {/* Testimonial with solar framing */}
-          <AnimatedSection>
-            <div className="border-l-4 border-[#f97316] bg-gray-50 p-8 max-w-3xl mx-auto">
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-[#f97316] text-[#f97316]"
-                  />
-                ))}
-              </div>
-              <p className="text-gray-600 text-sm leading-relaxed italic mb-4">
-                &ldquo;{loc.testimonial.text}&rdquo;
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-black text-[#1a1a1a] text-sm">
-                    — {loc.testimonial.name}
-                  </p>
-                  <p className="text-gray-400 text-xs mt-0.5">
-                    {loc.testimonial.suburb}
-                  </p>
-                </div>
-                <span className="text-xs bg-orange-50 text-[#f97316] font-bold px-3 py-1">
-                  {loc.testimonial.service}
-                </span>
-              </div>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
@@ -488,12 +459,12 @@ export default async function SolarPanelsCityPage({
               {
                 step: "04",
                 title: "Installation",
-                desc: "Our MCS-certified team installs your system cleanly and safely, typically in 1–2 days.",
+                desc: "The agreed installation team fits and commissions the system to the written design and programme.",
               },
               {
                 step: "05",
                 title: "Handover",
-                desc: "Full walkthrough, monitoring app setup, MCS certificate and ongoing aftercare support.",
+                desc: "Full walkthrough, monitoring setup and the certification and warranty documents specified in your proposal.",
               },
             ].map(({ step, title, desc }, i) => (
               <AnimatedSection key={step} delay={i * 0.1}>
