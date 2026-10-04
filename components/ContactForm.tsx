@@ -2,14 +2,22 @@
 
 import { useState } from "react";
 import { CheckCircle, Loader2 } from "lucide-react";
+import Link from "next/link";
 
 
 const SERVICES = [
   "Roof Repairs",
   "New Roof Installation",
   "Flat Roofing",
+  "Slate or Tile Roofing",
+  "Chimney Repairs",
+  "Leadwork",
+  "Fascias, Soffits or Guttering",
+  "Emergency Roofing",
+  "Commercial Roofing",
   "Solar PV System",
   "Battery Storage",
+  "EV Charging",
   "Roof Maintenance",
   "Other",
 ];
@@ -18,14 +26,18 @@ interface FormData {
   name: string;
   phone: string;
   email: string;
+  postcode: string;
   service: string;
   message: string;
+  company: string;
 }
 
 interface Errors {
   name?: string;
   phone?: string;
   email?: string;
+  contact?: string;
+  postcode?: string;
   service?: string;
   message?: string;
 }
@@ -33,12 +45,15 @@ interface Errors {
 function validate(data: FormData): Errors {
   const errors: Errors = {};
   if (!data.name.trim()) errors.name = "Name is required";
-  if (!data.phone.trim()) errors.phone = "Phone number is required";
-  else if (!/^[\d\s\+\-\(\)]{7,}$/.test(data.phone))
+  if (data.phone.trim() && !/^[\d\s\+\-\(\)]{7,}$/.test(data.phone))
     errors.phone = "Enter a valid phone number";
-  if (!data.email.trim()) errors.email = "Email is required";
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
+  if (data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
     errors.email = "Enter a valid email address";
+  if (!data.phone.trim() && !data.email.trim())
+    errors.contact = "Enter a phone number or email address";
+  if (!data.postcode.trim()) errors.postcode = "Postcode is required";
+  else if (!/^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(data.postcode.trim()))
+    errors.postcode = "Enter a valid UK postcode";
   if (!data.service) errors.service = "Please select a service";
   if (!data.message.trim()) errors.message = "Message is required";
   else if (data.message.trim().length < 10)
@@ -46,40 +61,17 @@ function validate(data: FormData): Errors {
   return errors;
 }
 
-const SUPABASE_URL = "https://qzvdzzvkocmulcfujyea.supabase.co";
-const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6dmR6enZrb2NtdWxjZnVqeWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NzIxNjUsImV4cCI6MjA5NDQ0ODE2NX0.g42AvuElukfbpgbg9Y6XImnuHQ2Po5GEaVVGMz3Siu0";
-
 async function sendToCRM(form: FormData) {
-  const now = new Date().toISOString();
-  const lead = {
-    id: crypto.randomUUID(),
-    name: form.name,
-    phone: form.phone,
-    email: form.email,
-    address: "",
-    job_type: form.service,
-    stage: "New Lead",
-    source: "Website",
-    notes: form.message,
-    created_at: now,
-    updated_at: now,
-  };
-
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+  const res = await fetch("/api/leads", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      Prefer: "return=minimal",
     },
-    body: JSON.stringify(lead),
+    body: JSON.stringify(form),
   });
 
   if (!res.ok) {
-    const text = await res.text();
-    throw new Error(text || `Error ${res.status}`);
+    throw new Error("The enquiry could not be sent");
   }
 }
 
@@ -88,8 +80,10 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
     name: "",
     phone: "",
     email: "",
+    postcode: "",
     service: "",
     message: "",
+    company: "",
   });
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
@@ -128,7 +122,7 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
     e.preventDefault();
     const newErrors = validate(form);
     setErrors(newErrors);
-    setTouched({ name: true, phone: true, email: true, service: true, message: true });
+    setTouched({ name: true, phone: true, email: true, postcode: true, service: true, message: true });
     if (Object.keys(newErrors).length > 0) return;
 
     setSubmitting(true);
@@ -138,8 +132,7 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
       setSubmitted(true);
     } catch (err) {
       console.error("CRM submit error:", err);
-      const msg = err instanceof Error ? err.message : "Unknown error";
-      setSubmitError(`Something went wrong: ${msg}. Please call us on 07587 478826.`);
+      setSubmitError("We could not send your enquiry. Please try again or call 07587 478826.");
     } finally {
       setSubmitting(false);
     }
@@ -155,7 +148,7 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
           Message Sent!
         </h3>
         <p className={`text-sm ${darkBg ? "text-gray-300" : "text-gray-600"}`}>
-          Thank you for getting in touch. We&apos;ll be back to you within 24 hours.
+          Thank you for getting in touch. We&apos;ll reply as soon as possible during staffed hours.
         </p>
       </div>
     );
@@ -186,7 +179,7 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
         {/* Phone */}
         <div>
           <label htmlFor="phone" className={labelClass}>
-            Phone Number <span className="text-[#f97316]">*</span>
+            Phone Number
           </label>
           <input
             id="phone"
@@ -203,23 +196,45 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
         </div>
       </div>
 
-      {/* Email */}
-      <div>
-        <label htmlFor="email" className={labelClass}>
-          Email Address <span className="text-[#f97316]">*</span>
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          value={form.email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          placeholder="john@example.com"
-          className={`${inputBase} ${errors.email ? errorClass : ""}`}
-        />
-        {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label htmlFor="email" className={labelClass}>Email Address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            value={form.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="john@example.com"
+            className={`${inputBase} ${errors.email || errors.contact ? errorClass : ""}`}
+          />
+          {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
+        </div>
+        <div>
+          <label htmlFor="postcode" className={labelClass}>
+            Project Postcode <span className="text-[#f97316]">*</span>
+          </label>
+          <input
+            id="postcode"
+            name="postcode"
+            type="text"
+            autoComplete="postal-code"
+            value={form.postcode}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="TA1 1AA"
+            className={`${inputBase} ${errors.postcode ? errorClass : ""}`}
+          />
+          {errors.postcode && <p className="mt-1 text-xs text-red-500">{errors.postcode}</p>}
+        </div>
+      </div>
+      {errors.contact && <p className="-mt-3 text-xs text-red-500">{errors.contact}</p>}
+
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="company">Company</label>
+        <input id="company" name="company" value={form.company} onChange={handleChange} tabIndex={-1} autoComplete="off" />
       </div>
 
       {/* Service */}
@@ -281,7 +296,8 @@ export default function ContactForm({ darkBg = false }: { darkBg?: boolean }) {
         )}
       </button>
       <p className={`text-xs text-center ${darkBg ? "text-gray-400" : "text-gray-500"}`}>
-        We respond within 24 hours. No spam, ever.
+        We use your details only to respond to this enquiry. See our{" "}
+        <Link href="/privacy" className="underline hover:no-underline">privacy policy</Link>.
       </p>
     </form>
   );

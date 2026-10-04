@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Contact Us | ProLine Roofing & Solar",
   description:
     "Get in touch with ProLine Roofing & Solar in Taunton, Somerset. Call 07587 478826 or send us a message online. Free quotes available.",
+  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/contact" },
 };
 
 const contactDetails = [
@@ -27,7 +28,7 @@ export default function ContactPage() {
             <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">Get in Touch</p>
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">Contact Us</h1>
             <p className="text-gray-300 text-lg max-w-xl mx-auto">
-              Have a question or ready to book? Get in touch and we&apos;ll respond within 24 hours.
+              Have a question or ready to book? Get in touch and we&apos;ll reply during staffed hours.
             </p>
           </AnimatedSection>
         </div>
@@ -36,7 +37,7 @@ export default function ContactPage() {
       {/* Emergency strip */}
       <div className="bg-[#f97316] py-4">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white font-black text-sm uppercase tracking-wide">⚡ 24/7 Emergency Roofing Available</p>
+          <p className="text-white font-black text-sm uppercase tracking-wide">Urgent roof problem? Call to check attendance</p>
           <a href="tel:07587478826" className="text-white font-black text-sm bg-black/20 px-4 py-2 hover:bg-black/40 transition-colors">
             Call Now: 07587 478826
           </a>
@@ -87,7 +88,7 @@ export default function ContactPage() {
             <AnimatedSection direction="right">
               <div className="bg-white border border-gray-100 shadow-sm p-8">
                 <h2 className="text-2xl font-black text-[#1a1a1a] uppercase mb-1">Send Us a Message</h2>
-                <p className="text-gray-500 text-sm mb-6">We&apos;ll get back to you within 24 hours.</p>
+                <p className="text-gray-500 text-sm mb-6">We&apos;ll reply as soon as possible during staffed hours.</p>
                 <ContactForm />
               </div>
             </AnimatedSection>

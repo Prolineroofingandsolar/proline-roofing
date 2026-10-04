@@ -6,7 +6,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 export const metadata: Metadata = {
   title: "Get a Free Quote | ProLine Roofing & Solar",
   description:
-    "Request a free, no-obligation quote from ProLine Roofing & Solar in Taunton, Somerset. We respond within 24 hours. Call 07587 478826.",
+    "Request a free, no-obligation quote from ProLine Roofing & Solar in Taunton, Somerset. Include the project postcode and details, or call 07587 478826.",
+  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/quote" },
 };
 
 export default function QuotePage() {
@@ -31,9 +32,9 @@ export default function QuotePage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             { icon: CheckCircle, text: "Free no-obligation quote" },
-            { icon: Clock, text: "Response within 24 hours" },
+            { icon: Clock, text: "Replies in staffed hours" },
             { icon: Shield, text: "Fully insured & qualified" },
-            { icon: Star, text: "5-star Google rated" },
+            { icon: Star, text: "Source-labelled reviews" },
           ].map(({ icon: Icon, text }) => (
             <div key={text} className="flex items-center justify-center gap-2 text-white">
               <Icon className="w-4 h-4 shrink-0" />
@@ -54,7 +55,7 @@ export default function QuotePage() {
                 <ul className="space-y-5">
                   {[
                     { step: "1", title: "Submit Your Enquiry", desc: "Fill in the form with details about your project." },
-                    { step: "2", title: "We'll Be in Touch", desc: "A member of our team will call or email within 24 hours." },
+                    { step: "2", title: "We'll Be in Touch", desc: "A member of our team will call or email during staffed hours." },
                     { step: "3", title: "Free Site Survey", desc: "We arrange a convenient time to visit and assess the work." },
                     { step: "4", title: "Receive Your Quote", desc: "Detailed, itemised quote with no hidden costs." },
                   ].map(({ step, title, desc }) => (
@@ -74,7 +75,7 @@ export default function QuotePage() {
               {/* Call us */}
               <div className="bg-[#f97316] p-6 text-white text-center">
                 <p className="font-black text-base uppercase tracking-wide mb-1">Prefer to Call?</p>
-                <p className="text-orange-100 text-sm mb-4">Our team is ready Mon–Sat, 8am–6pm</p>
+                <p className="text-orange-100 text-sm mb-4">Mon–Fri 8am–6pm · Sat 8am–1pm</p>
                 <a
                   href="tel:07587478826"
                   className="inline-flex items-center gap-2 bg-white text-[#f97316] font-black px-5 py-3 hover:bg-orange-50 transition-colors text-sm"
@@ -83,15 +84,11 @@ export default function QuotePage() {
                 </a>
               </div>
 
-              {/* Reviews snippet */}
               <div className="bg-white border border-gray-100 shadow-sm p-6">
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[#f97316] text-[#f97316]" />)}
-                </div>
-                <p className="text-gray-600 text-sm italic leading-relaxed mb-3">
-                  &ldquo;Great service from start to finish. Professional, reliable and great value. Highly recommend!&rdquo;
+                <p className="text-gray-900 font-black text-sm mb-2">Before you send</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Include the project postcode and as much detail as possible. We will confirm coverage and arrange a survey if the work is suitable.
                 </p>
-                <p className="text-gray-900 font-black text-xs">— Sarah M., Taunton</p>
               </div>
             </AnimatedSection>
 

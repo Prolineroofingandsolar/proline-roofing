@@ -1,44 +1,20 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Star, ArrowRight, ExternalLink } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
 import GoogleReviewButton from "@/components/GoogleReviewButton";
 import { FACEBOOK_REVIEW_URL, BARK_REVIEW_URL } from "@/lib/links";
 import { getGoogleReviews } from "@/lib/googleReviews";
 import { curatedReviews } from "@/lib/curatedReviews";
-import { client } from "@/sanity/client";
 
 export const metadata: Metadata = {
   title: "Customer Reviews | ProLine Roofing & Solar",
   description:
-    "Read 5-star customer reviews for ProLine Roofing & Solar in Taunton, Somerset. Verified reviews from real customers across the South West.",
+    "Read customer feedback for ProLine Roofing & Solar, with the original review platform identified on each review.",
+  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/reviews" },
 };
 
 export const revalidate = 60;
-
-interface SanityReview {
-  _id: string;
-  name: string;
-  location: string;
-  service: string;
-  text: string;
-  date: string;
-  rating: number;
-  source?: "google" | "facebook" | "bark" | "mybuilder";
-}
-
-const staticReviews = [
-  { name: "Sarah M.", location: "Taunton, Somerset", rating: 5, text: "Absolutely brilliant service from start to finish. The team replaced our entire roof and it looks fantastic. Tidy workers, great communication, and the price was very fair. Would highly recommend ProLine to anyone.", service: "New Roof", date: "March 2025", source: "google" },
-  { name: "David R.", location: "Wellington, Somerset", rating: 5, text: "Had solar panels fitted last month — what a difference! The guys were professional and left everything spotless. Already seeing the savings on our electricity bills. Excellent company.", service: "Solar PV", date: "April 2025", source: "facebook" },
-  { name: "Karen T.", location: "Bridgwater, Somerset", rating: 5, text: "Called ProLine after a storm damaged our roof. They came out the very next day, assessed the damage, and had it repaired within the week. Fantastic response time and quality workmanship.", service: "Roof Repairs", date: "January 2025", source: "bark" },
-  { name: "James L.", location: "Taunton, Somerset", rating: 5, text: "We had a flat roof on our extension that was leaking badly. ProLine came out, gave us a fair quote, and replaced the whole thing with a GRP fibreglass roof. Brilliant job — no more leaks!", service: "Flat Roofing", date: "February 2025", source: "google" },
-  { name: "Helen W.", location: "Yeovil, Somerset", rating: 5, text: "Very impressed with the whole team. They installed our solar panels and battery storage and took care of everything — from design to DNO application. Highly professional.", service: "Solar PV", date: "March 2025", source: "mybuilder" },
-  { name: "Mike P.", location: "Taunton, Somerset", rating: 5, text: "ProLine re-roofed our 1930s semi-detached and did a superb job. The tiles match perfectly and the ridge looks immaculate. Clean, courteous team who worked efficiently every day.", service: "New Roof", date: "December 2024", source: "google" },
-  { name: "Angela F.", location: "Bridgwater, Somerset", rating: 5, text: "Had a persistent leak that two other roofers failed to fix. ProLine diagnosed it immediately and sorted it out in a few hours. Genuine experts — wish I'd called them first.", service: "Roof Repairs", date: "November 2024", source: "facebook" },
-  { name: "Tom H.", location: "Wellington, Somerset", rating: 5, text: "Solar installation was seamless from start to finish. ProLine handled everything — scaffolding, panels, inverter, and battery. Very knowledgeable team who answered all my questions.", service: "Solar PV", date: "October 2024", source: "bark" },
-  { name: "Claire S.", location: "Taunton, Somerset", rating: 5, text: "Excellent company. Had the entire roof stripped and re-tiled, plus new fascias and guttering. The quote was detailed and the price was spot on. Whole job done in three days.", service: "New Roof", date: "September 2024", source: "google" },
-];
 
 const sourceBadge: Record<string, { label: string; bg: string; text: string }> = {
   google:    { label: "Google",     bg: "bg-blue-50",   text: "text-blue-600" },
@@ -57,36 +33,16 @@ const serviceColours: Record<string, string> = {
   "Emergency": "bg-gray-100 text-gray-700",
 };
 
-async function getReviews() {
-  if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) return null;
-  try {
-    const data = await client.fetch<SanityReview[]>(
-      `*[_type == "review"] | order(_createdAt desc)`
-    );
-    return data && data.length > 0 ? data : null;
-  } catch {
-    return null;
-  }
-}
-
 export default async function ReviewsPage() {
-  const [google, sanityReviews] = await Promise.all([
-    getGoogleReviews(),
-    getReviews(),
-  ]);
+  const google = await getGoogleReviews();
 
   // Live Google reviews + hand-curated reviews from other platforms
-  // (MyBuilder, Bark, Facebook). Falls back to CMS, then placeholders.
-  const liveReviews = [...(google?.reviews ?? []), ...curatedReviews];
-  const isLive = liveReviews.length > 0;
-  const reviews = isLive ? liveReviews : (sanityReviews ?? staticReviews);
-
-  const totalCount =
-    (google?.totalReviewCount ?? google?.reviews.length ?? 0) + curatedReviews.length;
-  const totalLabel = totalCount > 0 ? `${totalCount}+` : "30+";
-  const ratingLabel = google?.averageRating
-    ? `${google.averageRating.toFixed(1)} ★`
-    : "5.0 ★";
+  // Every displayed review names its source platform; no inferred totals are shown.
+  const reviews = [...(google?.reviews ?? []), ...curatedReviews];
+  const average = reviews.length
+    ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
+    : 0;
+  const sources = Array.from(new Set(reviews.map((review) => review.source)));
 
   return (
     <>
@@ -97,15 +53,12 @@ export default async function ReviewsPage() {
         <div className="relative max-w-7xl mx-auto px-4 text-center">
             <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">Customer Reviews</p>
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">What Our Customers Say</h1>
-            <div className="flex items-center justify-center gap-1 my-4">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-[#f97316] text-[#f97316]" />)}
-            </div>
             <p className="text-gray-300 text-lg">
-              <span className="text-white font-black">5.0 / 5</span> — Verified reviews across Google, Facebook &amp; Bark
+              Customer feedback collected from the platforms named on each review.
             </p>
             <div className="flex items-center justify-center gap-3 mt-4 flex-wrap">
-              {["Google", "Facebook", "Bark.com", "MyBuilder"].map((p) => (
-                <span key={p} className="text-xs font-bold bg-white/10 text-white px-3 py-1">{p}</span>
+              {sources.map((source) => (
+                <span key={source} className="text-xs font-bold bg-white/10 text-white px-3 py-1">{sourceBadge[source]?.label}</span>
               ))}
             </div>
         </div>
@@ -115,9 +68,9 @@ export default async function ReviewsPage() {
       <section className="bg-[#f97316] py-6">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-3 gap-4 text-center">
           {[
-            { value: totalLabel, label: "Total Reviews" },
-            { value: ratingLabel, label: "Average Rating" },
-            { value: "100%", label: "Would Recommend" },
+            { value: String(reviews.length), label: "Reviews Shown" },
+            { value: average ? `${average.toFixed(1)} ★` : "—", label: "Average Shown" },
+            { value: String(sources.length), label: "Source Platforms" },
           ].map(({ value, label }) => (
             <AnimatedSection key={label}>
               <p className="text-white font-black text-2xl md:text-3xl">{value}</p>
@@ -130,24 +83,15 @@ export default async function ReviewsPage() {
       {/* Reviews grid */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          {isLive ? (
-            <AnimatedSection className="text-center mb-10">
-              <p className="text-gray-400 text-xs">
-                Showing {reviews.length} verified review{reviews.length !== 1 ? "s" : ""} from Google, MyBuilder &amp; Bark
-              </p>
-            </AnimatedSection>
-          ) : sanityReviews ? (
-            <AnimatedSection className="text-center mb-10">
-              <p className="text-gray-400 text-xs">
-                Showing {sanityReviews.length} review{sanityReviews.length !== 1 ? "s" : ""} — manage them at{" "}
-                <strong>/studio</strong>
-              </p>
-            </AnimatedSection>
-          ) : null}
+          <AnimatedSection className="text-center mb-10">
+            <p className="text-gray-500 text-sm">
+              Showing {reviews.length} review{reviews.length !== 1 ? "s" : ""}. The source badge identifies where each was posted.
+            </p>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map((r, i) => {
-              const key = "name" in r ? r.name + (r.date ?? i) : (r as SanityReview)._id;
+              const key = r._id;
               return (
                 <AnimatedSection key={key} delay={(i % 3) * 0.1}>
                   <div className="bg-white border border-gray-100 p-6 shadow-sm hover:shadow-md hover:border-[#f97316] transition-all duration-300 h-full flex flex-col">
@@ -189,7 +133,7 @@ export default async function ReviewsPage() {
             <p className="text-gray-900 font-black text-xl uppercase mb-2">Had a great experience?</p>
             <p className="text-gray-500 text-sm mb-8">Leave us a review on your preferred platform — it really helps!</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <GoogleReviewButton variant="solid" label="Google Review" className="w-full sm:w-auto justify-center" />
+              <GoogleReviewButton variant="solid" label="Find us on Google" className="w-full sm:w-auto justify-center" />
               <a
                 href={FACEBOOK_REVIEW_URL}
                 target="_blank"

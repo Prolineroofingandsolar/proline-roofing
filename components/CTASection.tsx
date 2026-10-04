@@ -8,7 +8,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   heading = "Ready for a Free Quote?",
-  subtext = "Contact our team today and we'll get back to you within 24 hours with a no-obligation quote.",
+  subtext = "Contact our team with your postcode and project details. We will reply as soon as possible during staffed hours.",
 }: CTASectionProps) {
   return (
     <section className="bg-[#f97316]">

@@ -17,24 +17,25 @@ import RoofTypesInteractive from "@/components/RoofTypesInteractive";
 export const metadata: Metadata = {
   title: "Roofing Services | Taunton & South West",
   description:
-    "Expert roofing services in Taunton and Somerset — pitched roofs, flat roofing, chimney repairs, leadwork, fascias and guttering. Fully insured. Free quotes.",
+    "Roofing services in Taunton and Somerset, including pitched roofs, flat roofing, chimney repairs, leadwork, fascias and guttering. Free quotes.",
+  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/roofing" },
 };
 
 const reasons = [
   {
     icon: Award,
-    title: "30+ Years Combined Experience",
-    desc: "Our team brings decades of hands-on roofing knowledge to every job, big or small.",
+    title: "Relevant Experience",
+    desc: "Ask to see recent examples that match your roof type and proposed work.",
   },
   {
     icon: CheckCircle,
-    title: "Fully Insured & Guaranteed",
-    desc: "All work is backed by full public liability insurance and a written workmanship guarantee.",
+    title: "Documentation Available",
+    desc: "Ask for current insurance evidence and the written warranty terms relevant to your quote.",
   },
   {
     icon: Star,
-    title: "5-Star Rated on Google",
-    desc: "Hundreds of happy customers across Somerset and the South West. Read their reviews.",
+    title: "Customer Feedback",
+    desc: "Read customer feedback with the source platform identified on each review.",
   },
   {
     icon: Zap,
@@ -43,8 +44,8 @@ const reasons = [
   },
   {
     icon: Clock,
-    title: "24/7 Emergency Call-Out",
-    desc: "Storm damage or active leak? We're available around the clock to make your roof safe.",
+    title: "Urgent Call-Outs",
+    desc: "Storm damage or an active leak? Call to check current attendance availability.",
   },
   {
     icon: Phone,
@@ -97,10 +98,10 @@ export default function RoofingPage() {
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "30+", label: "Years Experience" },
-              { value: "1,000+", label: "Roofs Completed" },
-              { value: "5 ★", label: "Google Rating" },
-              { value: "24/7", label: "Emergency Cover" },
+              { value: "Free", label: "Initial Quote" },
+              { value: "Written", label: "Scope of Work" },
+              { value: "Current", label: "Documents on Request" },
+              { value: "Urgent", label: "Call-Out Enquiries" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -217,8 +218,7 @@ export default function RoofingPage() {
               Storm Damage or Active Leak?
             </p>
             <p className="text-orange-100 text-sm mt-1">
-              We provide 24/7 emergency roofing call-outs across Somerset and
-              the South West.
+              Call us to explain the problem and check the earliest available attendance.
             </p>
           </div>
           <a

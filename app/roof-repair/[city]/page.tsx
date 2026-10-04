@@ -4,8 +4,6 @@ import { notFound } from "next/navigation";
 import {
   Phone,
   ArrowRight,
-  MapPin,
-  Star,
   CheckCircle,
   Shield,
   Clock,
@@ -35,7 +33,7 @@ export async function generateMetadata({
   if (!loc) return {};
   return {
     title: `Roof Repair ${loc.name} | ProLine Roofing & Solar`,
-    description: `Expert roof repair services in ${loc.name}. We fix leaks, replace tiles, repair chimneys and storm damage. Call 07587 478826 for a same-day survey.`,
+    description: `Roof repair services in ${loc.name} for leaks, tiles, chimneys and storm damage. Call 07587 478826 to check survey availability.`,
     alternates: {
       canonical: `https://www.prolineroofingandsolar.co.uk/roof-repair/${loc.slug}`,
     },
@@ -55,7 +53,7 @@ const repairServices = [
   },
   {
     title: "Emergency Repairs",
-    desc: "24/7 emergency call-out for active leaks, fallen tiles and storm damage.",
+    desc: "Urgent call-out enquiries for active leaks, fallen tiles and storm damage.",
     icon: "⚡",
   },
   {
@@ -92,11 +90,11 @@ const repairFaqs = (name: string) => [
   },
   {
     q: `How quickly can you come out for a repair in ${name}?`,
-    a: `We aim to offer same-day or next-day surveys for roof repairs in ${name} wherever possible. For active leaks or storm damage, we provide 24/7 emergency attendance. Call us on 07587 478826 and we'll assess the urgency and schedule accordingly.`,
+    a: `Survey timing in ${name} depends on workload, weather and the urgency of the problem. For active leaks or storm damage, call 07587 478826 and we'll assess the situation and confirm the earliest available attendance.`,
   },
   {
     q: `Do you offer emergency roof repairs in ${name}?`,
-    a: `Yes — we provide genuine 24/7 emergency roof repairs. If you have active water ingress, fallen tiles, or visible structural damage, call us immediately on 07587 478826. We'll discuss the situation, advise on immediate protective measures, and arrange attendance as quickly as possible.`,
+    a: `For active water ingress, fallen tiles or visible structural damage, call us on 07587 478826. We'll discuss the situation, advise on immediate protective measures and confirm current attendance availability.`,
   },
   {
     q: `What are the most common roof problems in ${name}?`,
@@ -104,7 +102,7 @@ const repairFaqs = (name: string) => [
   },
   {
     q: `Do you provide a guarantee on roof repairs?`,
-    a: `Yes. All our repair work comes with a written workmanship guarantee. The duration depends on the nature of the repair — minor tile work is typically guaranteed for 3 years, while larger repairs and new flat roofing are guaranteed for 10+ years. We'll confirm the specific guarantee terms in your written quote.`,
+    a: `Warranty terms depend on the repair, materials and existing roof condition. Any workmanship or manufacturer warranty included with your project will be stated in the written quote.`,
   },
 ];
 
@@ -206,10 +204,10 @@ export default async function RoofRepairCityPage({
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "30+", label: "Years Experience" },
-              { value: "Same Day", label: "Survey Available" },
-              { value: "5 ★", label: "Google Rating" },
-              { value: "24/7", label: "Emergency Cover" },
+              { value: "Free", label: "Initial Quote" },
+              { value: "Written", label: "Repair Scope" },
+              { value: "Clear", label: "Warranty Terms" },
+              { value: "Urgent", label: "Call-Out Enquiries" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -309,12 +307,12 @@ export default async function RoofRepairCityPage({
               {
                 icon: Shield,
                 title: "Written Guarantee",
-                desc: "Every repair is backed by a written workmanship guarantee so you have recourse if anything is not right.",
+                desc: "Any workmanship or manufacturer warranty included will be stated in your written quote.",
               },
               {
                 icon: Clock,
                 title: "Fast Response",
-                desc: `Just ${loc.distanceFromTaunton} from ${loc.name} — we offer same-day emergency attendance and next-day surveys.`,
+                desc: `We travel from our Taunton base and confirm the earliest available appointment after assessing the problem.`,
               },
               {
                 icon: CheckCircle,
@@ -336,35 +334,6 @@ export default async function RoofRepairCityPage({
             ))}
           </div>
 
-          {/* Testimonial */}
-          <AnimatedSection>
-            <div className="border border-white/10 border-l-4 border-l-[#f97316] p-8 max-w-3xl mx-auto">
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-[#f97316] text-[#f97316]"
-                  />
-                ))}
-              </div>
-              <p className="text-gray-300 text-sm leading-relaxed italic mb-4">
-                &ldquo;{loc.testimonial.text}&rdquo;
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-black text-white text-sm">
-                    — {loc.testimonial.name}
-                  </p>
-                  <p className="text-gray-500 text-xs mt-0.5">
-                    {loc.testimonial.suburb}
-                  </p>
-                </div>
-                <span className="text-xs bg-[#f97316]/20 text-[#f97316] font-bold px-3 py-1">
-                  {loc.testimonial.service}
-                </span>
-              </div>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 

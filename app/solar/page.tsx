@@ -20,24 +20,25 @@ import SolarTypesInteractive from "@/components/SolarTypesInteractive";
 export const metadata: Metadata = {
   title: "Solar Panel Installation | Taunton & South West",
   description:
-    "Solar PV panel installation, battery storage and EV charging in Taunton, Somerset. MCS certified. Reduce your energy bills with a professionally installed solar system. Free survey and quote.",
+    "Solar PV panel installation, battery storage and EV charging in Taunton, Somerset. Request a roof and energy-use survey with a written proposal.",
+  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/solar" },
 };
 
 const reasons = [
   {
     icon: Award,
-    title: "MCS Certified Installers",
-    desc: "All our solar installations are MCS certified — required for SEG export payments and most warranties.",
+    title: "Certification in Writing",
+    desc: "Your proposal should confirm the certification route, installer details and documents supplied at handover.",
   },
   {
     icon: CheckCircle,
-    title: "Fully Insured & Guaranteed",
-    desc: "Public liability insurance, 25-year panel warranties and a written workmanship guarantee on every job.",
+    title: "Clear Warranty Terms",
+    desc: "We set out applicable product, installer and workmanship warranty terms in the written proposal.",
   },
   {
     icon: Star,
-    title: "5-Star Rated on Google",
-    desc: "Dozens of happy solar customers across Somerset and the South West. Read their verified reviews.",
+    title: "Customer Feedback",
+    desc: "Read source-labelled customer feedback on our Reviews page.",
   },
   {
     icon: Zap,
@@ -79,9 +80,8 @@ export default function SolarPage() {
               <span className="text-[#f97316]">Installation</span>
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-              MCS-certified solar PV, battery storage and EV charging —
-              professionally installed to cut your bills, earn export income and
-              reduce your carbon footprint.
+              Solar PV, battery storage and EV charging designed around your
+              roof, electricity use and project requirements.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -104,10 +104,10 @@ export default function SolarPage() {
         <div className="relative max-w-7xl mx-auto px-4 mt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
-              { value: "£1,000+", label: "Typical Annual Saving" },
-              { value: "25yr", label: "Panel Warranty" },
-              { value: "MCS", label: "Certified" },
-              { value: "5 ★", label: "Google Rating" },
+              { value: "Free", label: "Initial Survey" },
+              { value: "Written", label: "System Proposal" },
+              { value: "Clear", label: "Warranty Terms" },
+              { value: "Local", label: "Taunton Team" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -127,10 +127,10 @@ export default function SolarPage() {
       <section className="bg-[#f97316] py-8">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: TrendingDown, title: "Cut Your Bills", desc: "Typical savings of £1,000+ per year on energy costs." },
-            { icon: Zap, title: "SEG Export Income", desc: "Earn money selling surplus power back to the grid." },
-            { icon: Sun, title: "Add Property Value", desc: "Solar adds an average of 4% to your home's value." },
-            { icon: Leaf, title: "Go Green", desc: "Cut household CO₂ emissions by up to 1.5 tonnes/year." },
+            { icon: TrendingDown, title: "Use Less Grid Power", desc: "Savings depend on system design, usage and your electricity tariff." },
+            { icon: Zap, title: "Export Options", desc: "Ask your energy supplier about current export tariffs and eligibility." },
+            { icon: Sun, title: "Designed for Your Roof", desc: "Output estimates are based on orientation, shading and panel layout." },
+            { icon: Leaf, title: "Lower-Carbon Energy", desc: "Generate renewable electricity at your property when conditions allow." },
           ].map(({ icon: Icon, title, desc }, i) => (
             <AnimatedSection key={title} delay={i * 0.1}>
               <div className="text-center">
@@ -216,7 +216,7 @@ export default function SolarPage() {
               {
                 step: "04",
                 title: "Installation",
-                desc: "Our MCS-certified team installs your system safely and efficiently.",
+                desc: "The agreed installation team fits and commissions the system to the written design.",
               },
               {
                 step: "05",

@@ -24,7 +24,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Flat Roofing Somerset | ProLine Roofing & Solar",
   description:
-    "Expert flat roofing installation and repair in Somerset and the South West. EPDM, GRP fibreglass and felt systems. Fully insured, guaranteed. Free quotes.",
+    "Flat roofing installation and repair in Somerset and surrounding areas, including EPDM, GRP fibreglass and felt systems. Free quotes.",
   keywords: [
     "flat roofing Somerset",
     "flat roof repair Taunton",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Flat Roofing Somerset | ProLine Roofing & Solar",
     description:
-      "Expert flat roofing installation and repair in Somerset and the South West. EPDM, GRP fibreglass and felt systems. Fully insured, guaranteed. Free quotes.",
+      "Flat roofing installation and repair in Somerset and surrounding areas, including EPDM, GRP fibreglass and felt systems. Free quotes.",
     url: "https://www.prolineroofingandsolar.co.uk/services/flat-roofing",
     siteName: "ProLine Roofing & Solar",
     locale: "en_GB",
@@ -87,15 +87,15 @@ const services = [
   {
     icon: AlertTriangle,
     title: "Emergency Flat Roof Repairs",
-    desc: "Active leak on your flat roof? We provide rapid-response emergency call-outs across Somerset, with temporary waterproofing available the same day.",
+    desc: "Active leak on your flat roof? Call with your postcode and details to check current attendance and temporary waterproofing availability.",
   },
 ];
 
 const whyReasons = [
   {
     icon: Award,
-    title: "30+ Years Combined Experience",
-    desc: "Our roofers have installed and repaired hundreds of flat roofs across Somerset using every major system.",
+    title: "Relevant Experience",
+    desc: "Ask to see recent examples using the flat-roof system proposed for your property.",
   },
   {
     icon: CheckCircle,
@@ -104,8 +104,8 @@ const whyReasons = [
   },
   {
     icon: Star,
-    title: "5-Star Google Rating",
-    desc: "Our reputation in Somerset is built on quality workmanship and honest advice. Read our reviews online.",
+    title: "Customer Feedback",
+    desc: "Our Reviews page identifies the platform associated with each displayed review.",
   },
   {
     icon: ThumbsUp,
@@ -181,7 +181,7 @@ export default function FlatRoofingPage() {
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
               EPDM rubber, GRP fibreglass and felt flat roofing systems installed
               and repaired across Somerset. Long-lasting solutions backed by
-              written guarantees and 30+ years of experience.
+              a written specification and project-specific warranty terms.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -206,8 +206,8 @@ export default function FlatRoofingPage() {
             {[
               { value: "25+ yrs", label: "EPDM Lifespan" },
               { value: "Free", label: "Roof Survey" },
-              { value: "5 ★", label: "Google Rating" },
-              { value: "24/7", label: "Emergency Cover" },
+              { value: "Source", label: "Review Platforms" },
+              { value: "Urgent", label: "Call-Out Enquiries" },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -471,7 +471,7 @@ export default function FlatRoofingPage() {
 
       <CTASection
         heading="Need a Flat Roof Quote in Somerset?"
-        subtext="Call 07587 478826 or request a free survey online. We respond within 24 hours and all quotes are free with no obligation."
+        subtext="Call 07587 478826 or request a free survey online. We reply during staffed hours and quotes are free with no obligation."
       />
     </>
   );
