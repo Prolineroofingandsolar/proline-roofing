@@ -23,7 +23,10 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
-      - name: Build and deploy static website
-        run: npm run deploy
+      - name: Build static website
+        run: npm run build
+
+      - name: Deploy static website
+        run: npx wrangler deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
