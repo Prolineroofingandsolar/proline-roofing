@@ -27,6 +27,20 @@ jobs:
         run: npm run build
 
       - name: Deploy static website
-        run: npx wrangler deploy
+        shell: bash
+        run: |
+          set +e
+          npx wrangler deploy 2>&1 | tee wrangler-static-deploy.log
+          deploy_status=${PIPESTATUS[0]}
+          set -e
+
+          if (( deploy_status != 0 )); then
+            error_message=$(tail -c 6000 wrangler-static-deploy.log)
+            error_message=${error_message//'%'/'%25'}
+            error_message=${error_message//$'\r'/'%0D'}
+            error_message=${error_message//$'\n'/'%0A'}
+            echo "::error title=Cloudflare static deployment failed::$error_message"
+            exit "$deploy_status"
+          fi
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
