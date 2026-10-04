@@ -14,8 +14,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/reviews" },
 };
 
-export const revalidate = 60;
-
 const sourceBadge: Record<string, { label: string; bg: string; text: string }> = {
   google:    { label: "Google",     bg: "bg-blue-50",   text: "text-blue-600" },
   facebook:  { label: "Facebook",   bg: "bg-indigo-50", text: "text-indigo-600" },

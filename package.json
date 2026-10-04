@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "build": "opennextjs-cloudflare build",
+    "build": "next build --webpack",
     "build:next": "next build --webpack",
-    "start": "next start",
+    "start": "wrangler dev --local",
     "lint": "eslint",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+    "deploy": "next build --webpack && wrangler deploy"
   },
   "dependencies": {
     "@sanity/image-url": "^2.1.1",

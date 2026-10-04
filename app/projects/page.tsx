@@ -13,9 +13,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/projects" },
 };
 
-// Revalidate every 60 seconds so new Sanity projects appear without redeploy
-export const revalidate = 60;
-
 interface SanityProject {
   _id: string;
   title: string;

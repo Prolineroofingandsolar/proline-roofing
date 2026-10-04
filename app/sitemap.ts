@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 
+export const dynamic = "force-static";
+
 const base = "https://www.prolineroofingandsolar.co.uk";
 
 const cities = [

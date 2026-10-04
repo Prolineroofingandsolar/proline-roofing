@@ -1,5 +1,19 @@
 const SUPABASE_AUTH_ORIGIN = "https://qzvdzzvkocmulcfujyea.supabase.co/auth/v1";
 
+interface Env {
+  SUPABASE_URL: string;
+  SUPABASE_ANON_KEY: string;
+}
+
+const LEAD_SERVICES = new Set([
+  "Roof Repairs", "New Roof Installation", "Flat Roofing", "Slate or Tile Roofing",
+  "Chimney Repairs", "Leadwork", "Fascias, Soffits or Guttering", "Emergency Roofing",
+  "Commercial Roofing", "Solar PV System", "Battery Storage", "EV Charging",
+  "Roof Maintenance", "Other",
+]);
+
+const requestLog = new Map<string, number[]>();
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "accept, authorization, content-type",
@@ -93,15 +107,131 @@ async function proxy(request: Request, upstreamPath: string) {
   return new Response(body, { status: upstream.status, headers: outgoing });
 }
 
+function clean(value: unknown, maxLength: number) {
+  return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
+}
+
+function isRateLimited(request: Request) {
+  const key = request.headers.get("cf-connecting-ip") || "unknown";
+  const now = Date.now();
+  const recent = (requestLog.get(key) || []).filter((time) => now - time < 10 * 60 * 1000);
+  if (recent.length >= 5) return true;
+  recent.push(now);
+  requestLog.set(key, recent);
+  if (requestLog.size > 1000) {
+    for (const [ip, times] of requestLog) {
+      if (!times.some((time) => now - time < 10 * 60 * 1000)) requestLog.delete(ip);
+    }
+  }
+  return false;
+}
+
+async function submitLead(request: Request, env: Env) {
+  if (isRateLimited(request)) {
+    return json({ error: "Too many enquiries. Please wait and try again." }, 429, { "Retry-After": "600" });
+  }
+
+  let body: Record<string, unknown>;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ error: "Invalid request body." }, 400);
+  }
+
+  if (clean(body.company, 200)) return json({ success: true });
+
+  const name = clean(body.name, 100);
+  const phone = clean(body.phone, 40);
+  const email = clean(body.email, 160);
+  const postcode = clean(body.postcode, 12).toUpperCase();
+  const service = clean(body.service, 80);
+  const message = clean(body.message, 3000);
+  const validPhone = !phone || /^[\d\s+\-()]{7,}$/.test(phone);
+  const validEmail = !email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validPostcode = /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/.test(postcode);
+
+  if (!name || (!phone && !email) || !validPhone || !validEmail || !validPostcode || !LEAD_SERVICES.has(service) || message.length < 10) {
+    return json({ error: "Please check the enquiry details." }, 400);
+  }
+
+  if (!env.SUPABASE_URL || !env.SUPABASE_ANON_KEY) {
+    return json({ error: "Enquiries are temporarily unavailable." }, 503);
+  }
+
+  const now = new Date().toISOString();
+  const response = await fetch(`${env.SUPABASE_URL}/rest/v1/leads`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      apikey: env.SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${env.SUPABASE_ANON_KEY}`,
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify({
+      id: crypto.randomUUID(),
+      name,
+      phone,
+      email,
+      address: postcode,
+      job_type: service,
+      stage: "New Lead",
+      source: "Website",
+      notes: message,
+      created_at: now,
+      updated_at: now,
+    }),
+  });
+
+  if (!response.ok) {
+    console.error("Supabase lead submission failed:", response.status);
+    return json({ error: "The enquiry could not be saved." }, 502);
+  }
+
+  return json({ success: true });
+}
+
 const worker = {
-  async fetch(request: Request) {
+  async fetch(request: Request, env: Env) {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders });
 
     const url = new URL(request.url);
     const origin = url.origin;
 
-    if (request.method === "GET" && url.hostname === "prolineroofingandsolar.co.uk" && url.pathname === "/oauth/consent") {
+    if (request.method === "GET" && url.pathname === "/oauth/consent") {
       return consentPage();
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/leads") return submitLead(request, env);
+    if (request.method === "POST" && url.pathname === "/api/oauth/register") return proxy(request, "/oauth/clients/register");
+    if (request.method === "POST" && url.pathname === "/api/oauth/token") return proxy(request, "/oauth/token");
+    if (["GET", "POST"].includes(request.method) && url.pathname === "/api/oauth/userinfo") return proxy(request, "/oauth/userinfo");
+
+    if (request.method === "GET" && url.pathname === "/.well-known/oauth-authorization-server/auth/v1") {
+      const siteOrigin = `${url.protocol}//${url.host}`;
+      return json(
+        {
+          issuer: `${siteOrigin}/auth/v1`,
+          authorization_endpoint: `${SUPABASE_AUTH_ORIGIN}/oauth/authorize`,
+          token_endpoint: `${siteOrigin}/api/oauth/token`,
+          jwks_uri: `${SUPABASE_AUTH_ORIGIN}/.well-known/jwks.json`,
+          userinfo_endpoint: `${siteOrigin}/api/oauth/userinfo`,
+          registration_endpoint: `${siteOrigin}/api/oauth/register`,
+          scopes_supported: ["openid", "profile", "email", "phone", "offline_access"],
+          response_types_supported: ["code"],
+          response_modes_supported: ["query"],
+          grant_types_supported: ["authorization_code", "refresh_token"],
+          subject_types_supported: ["public"],
+          id_token_signing_alg_values_supported: ["RS256", "HS256", "ES256"],
+          token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post", "none"],
+          claims_supported: [
+            "sub", "aud", "iss", "exp", "iat", "auth_time", "nonce", "email", "email_verified",
+            "phone_number", "phone_number_verified", "name", "picture", "preferred_username", "updated_at",
+          ],
+          code_challenge_methods_supported: ["S256", "plain"],
+        },
+        200,
+        { "Cache-Control": "public, max-age=300" },
+      );
     }
 
     if (request.method === "GET" && url.pathname === "/.well-known/oauth-authorization-server") {

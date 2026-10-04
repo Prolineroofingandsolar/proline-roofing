@@ -6,7 +6,16 @@
   "workers_dev": true,
   "routes": [
     { "pattern": "oauth.prolineroofingandsolar.co.uk", "custom_domain": true },
-    { "pattern": "prolineroofingandsolar.co.uk/oauth/*", "zone_name": "prolineroofingandsolar.co.uk" }
+    { "pattern": "prolineroofingandsolar.co.uk/oauth/*", "zone_name": "prolineroofingandsolar.co.uk" },
+    { "pattern": "www.prolineroofingandsolar.co.uk/oauth/*", "zone_name": "prolineroofingandsolar.co.uk" },
+    { "pattern": "prolineroofingandsolar.co.uk/api/*", "zone_name": "prolineroofingandsolar.co.uk" },
+    { "pattern": "www.prolineroofingandsolar.co.uk/api/*", "zone_name": "prolineroofingandsolar.co.uk" },
+    { "pattern": "prolineroofingandsolar.co.uk/.well-known/*", "zone_name": "prolineroofingandsolar.co.uk" },
+    { "pattern": "www.prolineroofingandsolar.co.uk/.well-known/*", "zone_name": "prolineroofingandsolar.co.uk" }
   ],
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  "vars": {
+    "SUPABASE_URL": "https://qzvdzzvkocmulcfujyea.supabase.co",
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6dmR6enZrb2NtdWxjZnVqeWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NzIxNjUsImV4cCI6MjA5NDQ0ODE2NX0.g42AvuElukfbpgbg9Y6XImnuHQ2Po5GEaVVGMz3Siu0"
+  }
 }
