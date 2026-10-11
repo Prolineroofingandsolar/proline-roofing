@@ -28,7 +28,7 @@ export default function ServiceCard({
       </h3>
       <p className="text-gray-500 text-sm leading-relaxed flex-1">{description}</p>
       <div className="flex items-center gap-1 mt-4 text-[#f97316] text-sm font-semibold">
-        Learn more
+        Explore {title}
         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </div>
     </Link>
