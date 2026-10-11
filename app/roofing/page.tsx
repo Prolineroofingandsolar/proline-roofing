@@ -15,7 +15,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import RoofTypesInteractive from "@/components/RoofTypesInteractive";
 
 export const metadata: Metadata = {
-  title: "Roofing Services | Taunton & South West",
+  title: "Roofing Services | Taunton & South West | ProLine Roofing & Solar",
   description:
     "Roofing services in Taunton and Somerset, including pitched roofs, flat roofing, chimney repairs, leadwork, fascias and guttering. Free quotes.",
   alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/roofing" },

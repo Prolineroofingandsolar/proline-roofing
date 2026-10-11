@@ -208,7 +208,7 @@ export default function ServicesPage() {
                     href={href}
                     className="inline-flex items-center gap-1 text-[#f97316] text-xs font-black uppercase tracking-widest hover:gap-2 transition-all mt-auto"
                   >
-                    Learn More <ArrowRight className="w-3.5 h-3.5" />
+                    View {title} <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </AnimatedSection>
@@ -251,7 +251,7 @@ export default function ServicesPage() {
                     href={href}
                     className="inline-flex items-center gap-1 text-[#f97316] text-xs font-black uppercase tracking-widest hover:gap-2 transition-all mt-auto"
                   >
-                    Learn More <ArrowRight className="w-3.5 h-3.5" />
+                    View {title} <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </AnimatedSection>

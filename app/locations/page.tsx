@@ -8,7 +8,7 @@ import { locations } from "@/lib/locations";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Roofing & Solar Service Areas | ProLine",
+  title: "Roofing & Solar Service Areas | ProLine Roofing & Solar",
   description:
     "Browse ProLine Roofing & Solar service areas across Somerset and surrounding parts of the South West, or ask whether we can travel to your property.",
   alternates: {

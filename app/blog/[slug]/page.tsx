@@ -29,7 +29,7 @@ export async function generateMetadata({
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
   return {
-    title: post.title,
+    title: `${post.title} | ProLine Roofing & Solar`,
     description: post.excerpt,
     keywords: post.tags,
     alternates: { canonical: `${BASE}/blog/${post.slug}` },

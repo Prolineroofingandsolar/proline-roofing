@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion, MotionConfig } from "framer-motion";
 import {
@@ -112,9 +113,13 @@ export default function HomePage() {
     <MotionConfig reducedMotion="user">
       {/* ── HERO ── */}
       <section className="relative min-h-[620px] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/UK_MKT_PHO_REF_Solar_Grasmere_002.jpg')" }}
+        <Image
+          src="/hero-home.jpg"
+          alt="Roof-mounted solar panels installed on a pitched roof"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20" />
 
@@ -223,7 +228,7 @@ export default function HomePage() {
                     href={href}
                     className="mt-3 text-[#f97316] text-xs font-bold flex items-center gap-1 hover:gap-2 transition-all"
                   >
-                    Learn more <ArrowRight className="w-3 h-3" />
+                    Explore {title} <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
               </AnimatedSection>
@@ -251,7 +256,7 @@ export default function HomePage() {
             href="/about"
             className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black text-xs uppercase tracking-widest px-6 py-3.5 self-start transition-all hover:scale-105"
           >
-            Learn More <ArrowRight className="w-3.5 h-3.5" />
+            About ProLine <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </AnimatedSection>
 
