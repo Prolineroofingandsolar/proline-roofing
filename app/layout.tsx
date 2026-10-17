@@ -7,7 +7,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 export const metadata: Metadata = {
   title: {
     default: "ProLine Roofing & Solar | Taunton, Somerset",
-    template: "%s | ProLine Roofing & Solar",
+    template: "%s",
   },
   description:
     "Roofing and solar installation services from a Taunton-based team serving Somerset and surrounding areas. Call 07587 478826 for a free quote.",
@@ -41,13 +41,19 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ProLine Roofing & Solar | Somerset & South West",
-    description: "Roofing and solar installation services across Somerset. Free quotes.",
+    description:
+      "Roofing and solar installation services across Somerset. Free quotes.",
     images: ["/image0.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: { canonical: "https://www.prolineroofingandsolar.co.uk" },
   metadataBase: new URL("https://www.prolineroofingandsolar.co.uk"),
@@ -91,40 +97,117 @@ const localBusinessSchema = {
     },
   ],
   areaServed: [
-    { "@type": "City", name: "Taunton", containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" } },
-    { "@type": "City", name: "Bridgwater", containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" } },
-    { "@type": "City", name: "Bath", containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" } },
-    { "@type": "City", name: "Bristol", containedInPlace: { "@type": "AdministrativeArea", name: "Bristol" } },
-    { "@type": "City", name: "Exeter", containedInPlace: { "@type": "AdministrativeArea", name: "Devon" } },
-    { "@type": "City", name: "Yeovil", containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" } },
-    { "@type": "City", name: "Weston-super-Mare", containedInPlace: { "@type": "AdministrativeArea", name: "North Somerset" } },
-    { "@type": "City", name: "Wellington", containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" } },
-    { "@type": "City", name: "Burnham-on-Sea", containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" } },
-    { "@type": "City", name: "Glastonbury", containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" } },
+    {
+      "@type": "City",
+      name: "Taunton",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" },
+    },
+    {
+      "@type": "City",
+      name: "Bridgwater",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" },
+    },
+    {
+      "@type": "City",
+      name: "Bath",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" },
+    },
+    {
+      "@type": "City",
+      name: "Bristol",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Bristol" },
+    },
+    {
+      "@type": "City",
+      name: "Exeter",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Devon" },
+    },
+    {
+      "@type": "City",
+      name: "Yeovil",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" },
+    },
+    {
+      "@type": "City",
+      name: "Weston-super-Mare",
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: "North Somerset",
+      },
+    },
+    {
+      "@type": "City",
+      name: "Wellington",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" },
+    },
+    {
+      "@type": "City",
+      name: "Burnham-on-Sea",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" },
+    },
+    {
+      "@type": "City",
+      name: "Glastonbury",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Somerset" },
+    },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Roofing & Solar Services",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Roof Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof Repairs" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Emergency Roofing" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flat Roofing" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Slate Roofing" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Chimney Repairs" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Leadwork" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fascias & Soffits" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guttering" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Solar Panel Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Battery Storage" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Roofing" } },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "New Roof Installation" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Roof Repairs" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Emergency Roofing" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Flat Roofing" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Slate Roofing" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Chimney Repairs" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Leadwork" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Fascias & Soffits" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Guttering" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Solar Panel Installation" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Battery Storage" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Commercial Roofing" },
+      },
     ],
   },
   priceRange: "££",
   currenciesAccepted: "GBP",
-  sameAs: [
-    "https://www.facebook.com/prolineroofingandsolar",
-  ],
+  sameAs: ["https://www.facebook.com/prolineroofingandsolar"],
   knowsAbout: [
     "Roofing",
     "Flat Roofing",
@@ -145,7 +228,8 @@ const websiteSchema = {
   "@id": "https://www.prolineroofingandsolar.co.uk/#website",
   url: "https://www.prolineroofingandsolar.co.uk",
   name: "ProLine Roofing & Solar",
-  description: "Expert roofing and solar installation services across Somerset, Devon, Bristol and Bath.",
+  description:
+    "Expert roofing and solar installation services across Somerset, Devon, Bristol and Bath.",
   publisher: { "@id": "https://www.prolineroofingandsolar.co.uk/#business" },
 };
 
@@ -157,7 +241,9 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
         />
         <script
           type="application/ld+json"
