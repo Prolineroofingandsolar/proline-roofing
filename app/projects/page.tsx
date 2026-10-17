@@ -10,7 +10,9 @@ export const metadata: Metadata = {
   title: "Our Projects | ProLine Roofing & Solar",
   description:
     "Browse ProLine's roofing and solar gallery, and ask for recent case studies relevant to your proposed project.",
-  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/projects" },
+  alternates: {
+    canonical: "https://www.prolineroofingandsolar.co.uk/projects",
+  },
 };
 
 interface SanityProject {
@@ -27,7 +29,8 @@ const staticProjects = [
   {
     title: "Pitched Roof Work",
     type: "Roofing",
-    description: "A closer look at pitched-roof workmanship and finishing details.",
+    description:
+      "A closer look at pitched-roof workmanship and finishing details.",
     img: "/image0.jpeg",
   },
   {
@@ -39,7 +42,8 @@ const staticProjects = [
   {
     title: "Slate Roofing with Solar",
     type: "Roofing & Solar",
-    description: "Pitched slate roofing shown alongside a roof-mounted solar installation.",
+    description:
+      "Pitched slate roofing shown alongside a roof-mounted solar installation.",
     img: "/image1.jpeg",
   },
   {
@@ -57,7 +61,8 @@ const staticProjects = [
   {
     title: "Green Roof System",
     type: "Specialist Roofing",
-    description: "A planted green-roof system designed to add drainage and biodiversity benefits.",
+    description:
+      "A planted green-roof system designed to add drainage and biodiversity benefits.",
     img: "/image4.jpeg",
   },
   {
@@ -75,7 +80,7 @@ const staticProjects = [
 ];
 
 const typeColours: Record<string, string> = {
-  "Roofing": "bg-blue-50 text-blue-700",
+  Roofing: "bg-blue-50 text-blue-700",
   "Roofing & Solar": "bg-yellow-50 text-yellow-800",
   "Tile Roofing": "bg-orange-50 text-orange-800",
   "Specialist Roofing": "bg-green-50 text-green-800",
@@ -84,15 +89,15 @@ const typeColours: Record<string, string> = {
   "Flat Roofing": "bg-green-50 text-green-700",
   "Roof Repairs": "bg-orange-50 text-[#f97316]",
   "Chimney Work": "bg-red-50 text-red-700",
-  "Fascias": "bg-purple-50 text-purple-700",
-  "Leadwork": "bg-gray-100 text-gray-700",
+  Fascias: "bg-purple-50 text-purple-700",
+  Leadwork: "bg-gray-100 text-gray-700",
 };
 
 async function getProjects() {
   if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) return null;
   try {
     const data = await client.fetch<SanityProject[]>(
-      `*[_type == "project"] | order(order asc, _createdAt desc)`
+      `*[_type == "project"] | order(order asc, _createdAt desc)`,
     );
     return data && data.length > 0 ? data : null;
   } catch {
@@ -114,7 +119,9 @@ export default async function ProjectsPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <AnimatedSection>
-            <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">Our Work</p>
+            <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">
+              Our Work
+            </p>
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
               {sanityProjects ? "Recent Projects" : "Roofing & Solar Gallery"}
             </h1>
@@ -133,10 +140,21 @@ export default async function ProjectsPage() {
           <AnimatedSection className="text-center mb-14">
             <div className="flex items-center justify-center gap-4 mb-3">
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Completed Work</span>
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
+                {sanityProjects ? "Completed Work" : "Roofing Inspiration"}
+              </span>
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
-            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase">Project Gallery</h2>
+            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase">
+              {sanityProjects ? "Recent Projects" : "Roofing Gallery"}
+            </h2>
+            {!sanityProjects && (
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-600">
+                These images show roofing materials and finishes. For examples
+                of recent ProLine jobs relevant to your home, ask us when you
+                enquire.
+              </p>
+            )}
           </AnimatedSection>
 
           {sanityProjects ? (
@@ -148,7 +166,11 @@ export default async function ProjectsPage() {
                     {p.image && (
                       <div className="overflow-hidden h-52 relative">
                         <Image
-                          src={urlFor(p.image).width(600).height(416).fit("crop").url()}
+                          src={urlFor(p.image)
+                            .width(600)
+                            .height(416)
+                            .fit("crop")
+                            .url()}
                           alt={p.title}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -157,15 +179,21 @@ export default async function ProjectsPage() {
                     )}
                     <div className="p-5 flex flex-col flex-1">
                       <div className="flex items-center justify-between mb-3">
-                        <span className={`text-xs font-bold px-2.5 py-1 ${typeColours[p.type] ?? "bg-gray-100 text-gray-700"}`}>
+                        <span
+                          className={`text-xs font-bold px-2.5 py-1 ${typeColours[p.type] ?? "bg-gray-100 text-gray-700"}`}
+                        >
                           {p.type}
                         </span>
                         <span className="flex items-center gap-1 text-xs text-gray-400">
                           <MapPin className="w-3.5 h-3.5" /> {p.location}
                         </span>
                       </div>
-                      <h3 className="font-black text-gray-900 mb-2">{p.title}</h3>
-                      <p className="text-gray-500 text-sm leading-relaxed flex-1">{p.description}</p>
+                      <h3 className="font-black text-gray-900 mb-2">
+                        {p.title}
+                      </h3>
+                      <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                        {p.description}
+                      </p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -188,12 +216,18 @@ export default async function ProjectsPage() {
                     </div>
                     <div className="p-5">
                       <div className="flex items-center justify-between mb-3">
-                        <span className={`text-xs font-bold px-2.5 py-1 ${typeColours[p.type] ?? "bg-gray-100 text-gray-700"}`}>
+                        <span
+                          className={`text-xs font-bold px-2.5 py-1 ${typeColours[p.type] ?? "bg-gray-100 text-gray-700"}`}
+                        >
                           {p.type}
                         </span>
                       </div>
-                      <h3 className="font-black text-gray-900 mb-2">{p.title}</h3>
-                      <p className="text-gray-500 text-sm leading-relaxed">{p.description}</p>
+                      <h3 className="font-black text-gray-900 mb-2">
+                        {p.title}
+                      </h3>
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        {p.description}
+                      </p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -202,7 +236,9 @@ export default async function ProjectsPage() {
           )}
 
           <AnimatedSection className="text-center mt-14">
-            <p className="text-gray-500 text-sm mb-5">Ready to start your project?</p>
+            <p className="text-gray-500 text-sm mb-5">
+              Ready to start your project?
+            </p>
             <Link
               href="/quote"
               className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black px-7 py-4 uppercase tracking-widest text-sm transition-all hover:scale-105"

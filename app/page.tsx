@@ -1,347 +1,403 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import { motion, MotionConfig } from "framer-motion";
-import {
-  CheckCircle, Star, Phone, ArrowRight, MapPin, ChevronDown,
-} from "lucide-react";
+import { ArrowRight, Check, MapPin, Phone, ShieldCheck } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import GoogleReviewButton from "@/components/GoogleReviewButton";
-import AnimatedSection from "@/components/AnimatedSection";
-import CoverageMap from "@/components/CoverageMap";
-
-/* ── Service icons ── */
-function IconRoofRepairs() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <path d="M8 32L32 10L56 32"/><path d="M14 32V54H50V54"/><path d="M26 54V40H38V54"/>
-      <path d="M40 22L48 18M44 27L52 23"/>
-    </svg>
-  );
-}
-function IconNewRoofs() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <path d="M8 28L32 8L56 28"/><path d="M14 28V56H50V28"/>
-      <path d="M14 36H50M14 44H50M20 28V44M32 28V44M44 28V44"/>
-    </svg>
-  );
-}
-function IconFlatRoofing() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <rect x="6" y="22" width="52" height="8" rx="1"/><path d="M12 30V54M52 30V54M12 54H52"/>
-      <path d="M6 22L12 14H52L58 22"/>
-    </svg>
-  );
-}
-function IconSolarPV() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <circle cx="18" cy="16" r="7"/>
-      <path d="M18 4V6M18 26V28M6 16H4M32 16H30M10 8L11.5 9.5M25.5 22.5L27 24M10 24L11.5 22.5M25.5 9.5L27 8"/>
-      <rect x="20" y="30" width="36" height="26" rx="2"/>
-      <path d="M20 38H56M20 46H56M32 30V56M44 30V56"/>
-      <path d="M38 56V60M30 60H46"/>
-    </svg>
-  );
-}
-function IconChimney() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <path d="M8 38L32 14L56 38"/><path d="M14 38V56H50V38"/>
-      <rect x="24" y="10" width="10" height="18" rx="1"/>
-      <path d="M27 10C27 6 29 4 29 4C29 4 31 6 31 10"/>
-    </svg>
-  );
-}
-function IconLeadwork() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <path d="M8 42L22 28L32 38L44 18L56 28"/>
-      <path d="M8 50H56M12 42V50M20 34V50M32 38V50M44 28V50M52 34V50"/>
-    </svg>
-  );
-}
-function IconFascias() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <path d="M8 32L32 14L56 32"/><path d="M12 32H52"/>
-      <rect x="10" y="32" width="44" height="8" rx="1"/>
-      <path d="M14 40V52M22 40V52M30 40V52M38 40V52M46 40V52M50 40V52"/>
-    </svg>
-  );
-}
-function IconEmergency() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
-      <path d="M32 8L36 24H56L42 34L48 50L32 40L16 50L22 34L8 24H28Z"/>
-    </svg>
-  );
-}
 
 const services = [
-  { Icon: IconRoofRepairs, title: "Roof Repairs", href: "/services/roof-repairs", desc: "Fast, reliable repairs for leaks, slipped tiles and storm damage." },
-  { Icon: IconNewRoofs, title: "New Roofs", href: "/roofing", desc: "Full new roof installations built to last using premium materials." },
-  { Icon: IconFlatRoofing, title: "Flat Roofing", href: "/services/flat-roofing", desc: "GRP fibreglass and EPDM flat roof systems with written warranty options." },
-  { Icon: IconSolarPV, title: "Solar PV", href: "/solar", desc: "Solar panel systems designed around your roof and electricity use." },
-  { Icon: IconChimney, title: "Chimney Work", href: "/services/chimney-repairs", desc: "Chimney repairs, repointing, flashing and full rebuilds." },
-  { Icon: IconLeadwork, title: "Leadwork", href: "/services/leadwork", desc: "Expert lead valleys, flashings, abutments and soakers." },
-  { Icon: IconFascias, title: "Fascias & Guttering", href: "/services/fascias-soffits", desc: "UPVC fascias, soffits and guttering supply and installation." },
-  { Icon: IconEmergency, title: "Urgent Roof Repairs", href: "/services/emergency-roofing", desc: "Call to check current availability for leaks and storm damage." },
-];
+  [
+    "01",
+    "Roof repairs",
+    "Leaks, slipped tiles, storm damage and the details that keep water out.",
+    "/services/roof-repairs",
+  ],
+  [
+    "02",
+    "New roofs",
+    "A complete roof replacement, specified around your property and budget.",
+    "/roofing",
+  ],
+  [
+    "03",
+    "Flat roofing",
+    "EPDM and GRP systems for extensions, garages and dormers.",
+    "/services/flat-roofing",
+  ],
+  [
+    "04",
+    "Chimneys & leadwork",
+    "Repairs to stacks, flashings, valleys and roof junctions.",
+    "/services/chimney-repairs",
+  ],
+  [
+    "05",
+    "Solar PV",
+    "Roof-led solar design with a clear proposal and realistic assumptions.",
+    "/solar",
+  ],
+  [
+    "06",
+    "Roofline & gutters",
+    "Fascias, soffits, guttering and the finishing details.",
+    "/services/fascias-soffits",
+  ],
+] as const;
 
+const steps = [
+  [
+    "01",
+    "Tell us what you need",
+    "Send your postcode and a short description. For an active leak, call us.",
+  ],
+  [
+    "02",
+    "We assess the work",
+    "We discuss the problem and arrange a suitable survey where needed. We confirm availability before attending.",
+  ],
+  [
+    "03",
+    "Get a clear quote",
+    "Your written quote sets out the proposed work, materials and any warranty terms relevant to the job.",
+  ],
+] as const;
 
-const testimonials = [
-  { name: "Rebecca", location: "Axminster", rating: 5, text: "Roof and chimney repointing. Brilliant. All very friendly and polite. Did a brilliant job and cleaned up nicely after themselves :) very pleased.", service: "Chimney Work", source: "MyBuilder" },
-  { name: "Verified Customer", location: "Yeovil", rating: 5, text: "Will came out on Bank Holiday Monday to complete the job, quickly, efficiently and to a high standard.", service: "Solar PV", source: "MyBuilder" },
-  { name: "Verified Customer", location: "Bridgwater", rating: 5, text: "William and his team done a very good job. Always clean up after every day and kept me updated as they went on with the job. I will definitely be using them again.", service: "Roof Repairs", source: "MyBuilder" },
-];
-
-const whyUs = [
-  { title: "Experienced Local Team", desc: "Ask us for examples relevant to your property and proposed work." },
-  { title: "Documentation on Request", desc: "Check current insurance and certification details before work begins." },
-  { title: "Specified Materials", desc: "Your quote sets out the proposed products and system." },
-  { title: "Free No-Obligation Quotes", desc: "Honest, transparent pricing with no hidden costs." },
-  { title: "Urgent Call-Outs", desc: "Call to check current attendance availability." },
-  { title: "Local, Family Business", desc: "Proudly serving Taunton and the South West." },
+const feedback = [
+  {
+    quote:
+      "Roof and chimney repointing. Brilliant. All very friendly and polite. Did a brilliant job and cleaned up nicely after themselves :) very pleased.",
+    name: "Rebecca",
+    location: "Axminster",
+    source: "MyBuilder",
+  },
+  {
+    quote:
+      "Will came out on Bank Holiday Monday to complete the job, quickly, efficiently and to a high standard.",
+    name: "Verified customer",
+    location: "Yeovil",
+    source: "MyBuilder",
+  },
 ];
 
 export default function HomePage() {
   return (
-    <MotionConfig reducedMotion="user">
-      {/* ── HERO ── */}
-      <section className="relative min-h-[620px] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/UK_MKT_PHO_REF_Solar_Grasmere_002.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20" />
-
-        <div className="relative w-full max-w-7xl mx-auto px-4 py-14 sm:py-20 flex flex-col lg:flex-row items-start lg:items-center gap-10">
-          <div className="flex-1">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-[#f97316] font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2"
-            >
-              <span className="w-8 h-px bg-[#f97316] inline-block" />
-              Local Roofers &amp; Solar Installers — Taunton, Somerset
-            </motion.p>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black text-white uppercase leading-tight tracking-tight mb-5"
-            >
-              Trusted Roofers &amp;<br />
-              <span className="text-[#f97316]">Solar Installers</span><br />
-              in Taunton, Somerset
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-white/85 text-base max-w-lg mb-8 leading-relaxed"
-            >
-              Roof repairs, flat roofs, re-roofs, chimney work, leadwork, guttering and solar PV installations across Taunton, Bridgwater, Wellington and Somerset.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="flex flex-wrap gap-4 mb-8"
-            >
+    <>
+      <section className="relative isolate overflow-hidden bg-[#141a1d] text-white">
+        <div className="absolute inset-0 lg:left-[48%]">
+          <Image
+            src="/image0.jpeg"
+            alt="Slate roof on a Somerset property"
+            fill
+            priority
+            sizes="(min-width: 1024px) 52vw, 100vw"
+            className="object-cover object-center lg:object-[50%_42%]"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141a1d] via-[#141a1d]/95 to-[#141a1d]/55 lg:bg-gradient-to-r lg:from-[#141a1d] lg:via-[#141a1d] lg:to-transparent" />
+        <div className="relative mx-auto grid min-h-[620px] max-w-7xl items-center px-5 py-20 sm:px-8 lg:min-h-[680px] lg:grid-cols-2 lg:py-24">
+          <div className="max-w-2xl">
+            <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-orange-300">
+              <span className="h-px w-9 bg-orange-400" /> Taunton based ·
+              Somerset focused
+            </p>
+            <h1 className="max-w-[13ch] text-5xl font-black uppercase leading-[0.98] tracking-[-0.045em] sm:text-6xl lg:text-[4.7rem]">
+              A better roof.{" "}
+              <span className="text-orange-400">A clearer process.</span>
+            </h1>
+            <p className="mt-7 max-w-xl text-base leading-7 text-gray-200 sm:text-lg">
+              Roofing repairs, replacements and solar PV from a Taunton-based
+              team. Tell us what your property needs and we&apos;ll explain the
+              options, scope and next steps plainly.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/quote"
-                className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black text-sm uppercase tracking-widest px-7 py-4 transition-all hover:scale-105"
+                className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#c2410c] px-7 py-4 text-sm font-black uppercase tracking-wider text-white transition-colors hover:bg-[#9a3412] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Get a Free Quote <ArrowRight className="w-4 h-4" />
+                Request a free quote <ArrowRight className="h-4 w-4" />
               </Link>
               <a
                 href="tel:07587478826"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 border-2 border-red-600 hover:border-red-700 text-white font-black text-sm uppercase tracking-widest px-7 py-4 transition-all hover:scale-105 animate-pulse"
+                className="inline-flex min-h-14 items-center justify-center gap-3 border border-white/60 px-7 py-4 text-sm font-black uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-[#141a1d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                <Phone className="w-4 h-4" /> Urgent Roof Help
+                <Phone className="h-4 w-4" /> 07587 478826
               </a>
-            </motion.div>
+            </div>
+            <p className="mt-6 text-xs leading-5 text-gray-300">
+              Urgent roof problem? Call to check current attendance
+              availability.
+            </p>
+          </div>
+          <div className="hidden self-end justify-self-end lg:block">
+            <div className="border-l-2 border-orange-400 bg-[#141a1d]/90 p-5 backdrop-blur-sm">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-300">
+                Roofing · Solar · Roofline
+              </p>
+              <p className="mt-2 max-w-[22rem] text-sm leading-6 text-gray-200">
+                From a single repair to a full re-roof, with a written scope for
+                the work proposed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex items-center gap-2 text-white/60 text-xs"
+      <div className="border-b border-stone-200 bg-[#f8f6f2]">
+        <div className="mx-auto grid max-w-7xl gap-4 px-5 py-5 text-sm font-semibold text-[#253039] sm:grid-cols-3 sm:px-8">
+          <p className="flex items-center gap-3">
+            <MapPin className="h-5 w-5 shrink-0 text-[#c2410c]" /> Based in
+            Taunton
+          </p>
+          <p className="flex items-center gap-3">
+            <ShieldCheck className="h-5 w-5 shrink-0 text-[#c2410c]" /> Written
+            scope &amp; materials
+          </p>
+          <p className="flex items-center gap-3">
+            <Check className="h-5 w-5 shrink-0 text-[#c2410c]" /> No-obligation
+            quotes
+          </p>
+        </div>
+      </div>
+
+      <section
+        className="bg-white py-20 sm:py-24"
+        aria-labelledby="services-heading"
+      >
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="mb-11 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#c2410c]">
+                What we do
+              </p>
+              <h2
+                id="services-heading"
+                className="mt-3 max-w-xl text-4xl font-black uppercase leading-tight tracking-tight text-[#18232a] sm:text-5xl"
+              >
+                The right work for your roof.
+              </h2>
+            </div>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 self-start text-sm font-bold text-[#9a3412] underline-offset-4 hover:underline"
             >
-              <MapPin className="w-3.5 h-3.5 text-[#f97316]" />
-              Based in Taunton &bull; View our current service areas
-            </motion.div>
+              Explore all services <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
-
-        </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/40"
-        >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
-            <ChevronDown className="w-5 h-5" />
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* ── OUR SERVICES ── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection className="text-center mb-14">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">What We Do</span>
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight">Our Services</h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm">From emergency repairs to full solar installations — we cover everything your roof and home needs.</p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {services.map(({ Icon, title, href, desc }, i) => (
-              <AnimatedSection key={title} delay={i * 0.07}>
-                <div className="group border border-gray-200 p-6 flex flex-col items-center text-center hover:border-[#f97316] hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="mb-4 text-[#f97316] group-hover:scale-110 transition-transform duration-300">
-                    <Icon />
-                  </div>
-                  <h3 className="font-black text-[12px] uppercase tracking-wider text-gray-900 mb-2">{title}</h3>
-                  <p className="text-gray-500 text-[11px] leading-relaxed">{desc}</p>
-                  <Link
-                    href={href}
-                    className="mt-3 text-[#f97316] text-xs font-bold flex items-center gap-1 hover:gap-2 transition-all"
-                  >
-                    Learn more <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── ABOUT SPLIT ── */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[480px]">
-        <AnimatedSection direction="left" className="bg-[#1a1a1a] px-8 md:px-14 py-16 flex flex-col justify-center">
-          <p className="flex items-center gap-2 text-[#f97316] text-xs font-bold uppercase tracking-widest mb-4">
-            <ArrowRight className="w-3.5 h-3.5" /> About ProLine
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-white leading-tight mb-5">
-            Taunton&apos;s Local Roofing<br />&amp; Solar Experts
-          </h2>
-          <p className="text-gray-400 text-sm leading-relaxed mb-3">
-            ProLine Roofing &amp; Solar is a Taunton-based team providing roofing and solar services across Somerset and surrounding areas.
-          </p>
-          <p className="text-gray-400 text-sm leading-relaxed mb-8">
-            We&apos;re a local business that takes pride in every job — big or small. From a single tile repair to a full solar system installation, we treat every customer&apos;s home like our own.
-          </p>
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#e8650f] text-white font-black text-xs uppercase tracking-widest px-6 py-3.5 self-start transition-all hover:scale-105"
-          >
-            Learn More <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </AnimatedSection>
-
-        <AnimatedSection direction="right" className="relative min-h-[380px]">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/image0.jpeg')" }}
-          />
-          <div className="absolute inset-0 bg-black/25" />
-        </AnimatedSection>
-      </section>
-
-      {/* ── WHY CHOOSE US ── */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Our Promise</span>
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight">Why Choose ProLine?</h2>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyUs.map(({ title, desc }, i) => (
-              <AnimatedSection key={title} delay={i * 0.1}>
-                <div className="bg-white border border-gray-100 p-6 shadow-sm hover:shadow-md hover:border-[#f97316] transition-all duration-300 group">
-                  <CheckCircle className="w-6 h-6 text-[#f97316] mb-3 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-black text-gray-900 mb-2">{title}</h3>
-                  <p className="text-gray-500 text-sm">{desc}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── COVERAGE MAP ── */}
-      <CoverageMap />
-
-      {/* ── TESTIMONIALS ── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Customer Reviews</span>
-              <div className="flex-1 max-w-[100px] h-px bg-[#f97316]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-black text-[#1a1a1a] uppercase tracking-tight">Selected Customer Feedback</h2>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map(({ name, location, text, service, source }, i) => (
-              <AnimatedSection key={name} delay={i * 0.15}>
-                <div className="border border-gray-100 p-6 shadow-sm hover:shadow-md hover:border-[#f97316] transition-all duration-300 h-full flex flex-col">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-[#f97316] text-[#f97316]" />)}
-                  </div>
-                  <p className="text-gray-600 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{text}&rdquo;</p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-black text-gray-900 text-sm">— {name}</p>
-                      <p className="text-gray-400 text-xs">{location}</p>
-                      <p className="text-gray-500 text-xs">Source: {source}</p>
-                    </div>
-                    <span className="text-xs bg-orange-50 text-[#f97316] font-bold px-2.5 py-1 rounded-full">{service}</span>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection className="text-center mt-10">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/reviews" className="inline-flex items-center gap-2 border-2 border-[#f97316] text-[#f97316] font-black text-sm uppercase tracking-widest px-6 py-3 hover:bg-[#f97316] hover:text-white transition-all">
-                Read All Reviews <ArrowRight className="w-4 h-4" />
+          <div className="grid gap-px border border-stone-200 bg-stone-200 md:grid-cols-2 lg:grid-cols-3">
+            {services.map(([number, title, description, href]) => (
+              <Link
+                key={number}
+                href={href}
+                className="group flex min-h-64 flex-col bg-white p-7 transition-colors hover:bg-[#f8f6f2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#c2410c] sm:p-9"
+              >
+                <span className="text-sm font-black tracking-widest text-[#c2410c]">
+                  {number}
+                </span>
+                <h3 className="mt-9 text-xl font-black uppercase tracking-tight text-[#18232a] sm:text-2xl">
+                  {title}
+                </h3>
+                <p className="mt-3 max-w-sm text-sm leading-6 text-slate-600">
+                  {description}
+                </p>
+                <span className="mt-auto flex items-center gap-2 pt-6 text-xs font-black uppercase tracking-wider text-[#9a3412]">
+                  Explore service{" "}
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
               </Link>
-              <GoogleReviewButton variant="solid" label="Find us on Google" className="px-6 py-3" />
-            </div>
-          </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      <section
+        className="bg-[#18232a] py-20 text-white sm:py-24"
+        aria-labelledby="approach-heading"
+      >
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-orange-300">
+              Straightforward from the start
+            </p>
+            <h2
+              id="approach-heading"
+              className="mt-4 text-4xl font-black uppercase leading-tight tracking-tight sm:text-5xl"
+            >
+              No guesswork. Just a clear way forward.
+            </h2>
+            <p className="mt-6 max-w-md leading-7 text-gray-300">
+              A roof problem can feel urgent and expensive. We&apos;ll help you
+              understand what needs attention and what the proposed work
+              includes.
+            </p>
+            <Link
+              href="/quote"
+              className="mt-8 inline-flex items-center gap-2 font-bold text-orange-300 underline-offset-4 hover:underline"
+            >
+              Tell us about your project <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="divide-y divide-white/15 border-t border-white/15">
+            {steps.map(([number, title, text]) => (
+              <div
+                key={number}
+                className="grid gap-4 py-7 sm:grid-cols-[4rem_1fr]"
+              >
+                <span className="text-2xl font-black text-orange-300">
+                  {number}
+                </span>
+                <div>
+                  <h3 className="text-lg font-bold">{title}</h3>
+                  <p className="mt-2 max-w-lg text-sm leading-6 text-gray-300">
+                    {text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="bg-[#f8f6f2] py-20 sm:py-24"
+        aria-labelledby="gallery-heading"
+      >
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="mb-9 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#c2410c]">
+                See the details
+              </p>
+              <h2
+                id="gallery-heading"
+                className="mt-3 text-4xl font-black uppercase tracking-tight text-[#18232a] sm:text-5xl"
+              >
+                Roofing gallery
+              </h2>
+            </div>
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 self-start text-sm font-bold text-[#9a3412] underline-offset-4 hover:underline"
+            >
+              View the gallery <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
+            <Link
+              href="/projects"
+              className="group relative block min-h-80 overflow-hidden bg-stone-300 sm:min-h-[450px]"
+            >
+              <Image
+                src="/image2.jpeg"
+                alt="Slate roofing and lead valley detail"
+                fill
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <span className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent px-6 pb-6 pt-16 text-lg font-bold text-white">
+                Roofing &amp; leadwork
+              </span>
+            </Link>
+            <div className="flex flex-col bg-white p-8 sm:p-10">
+              <span className="text-xs font-black uppercase tracking-[0.2em] text-[#c2410c]">
+                Built around the details
+              </span>
+              <h3 className="mt-6 text-3xl font-black uppercase leading-tight text-[#18232a]">
+                See the finish before you decide.
+              </h3>
+              <p className="mt-5 leading-7 text-slate-600">
+                Browse examples of roof coverings and finishing details. For a
+                recent project similar to yours, ask when you request a quote.
+              </p>
+              <Link
+                href="/projects"
+                className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold text-[#9a3412]"
+              >
+                Browse the gallery <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="bg-white py-20 sm:py-24"
+        aria-labelledby="reviews-heading"
+      >
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="mb-9 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#c2410c]">
+                Customer feedback
+              </p>
+              <h2
+                id="reviews-heading"
+                className="mt-3 text-4xl font-black uppercase tracking-tight text-[#18232a] sm:text-5xl"
+              >
+                In their words.
+              </h2>
+            </div>
+            <Link
+              href="/reviews"
+              className="inline-flex items-center gap-2 self-start text-sm font-bold text-[#9a3412] underline-offset-4 hover:underline"
+            >
+              Read more reviews <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            {feedback.map((review) => (
+              <blockquote
+                key={review.quote}
+                className="flex flex-col border border-stone-200 bg-[#f8f6f2] p-7 sm:p-9"
+              >
+                <p className="text-lg leading-8 text-[#253039]">
+                  “{review.quote}”
+                </p>
+                <footer className="mt-auto pt-7 text-sm font-bold text-[#18232a]">
+                  {review.name} · {review.location}
+                  <span className="mt-1 block text-xs font-normal text-slate-500">
+                    Source: {review.source}
+                  </span>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+          <div className="mt-8">
+            <GoogleReviewButton variant="outline" label="Find us on Google" />
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="border-t border-stone-200 bg-[#f8f6f2] py-14"
+        aria-labelledby="areas-heading"
+      >
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-5 sm:px-8 lg:flex-row lg:items-center">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#c2410c]">
+              Where we work
+            </p>
+            <h2
+              id="areas-heading"
+              className="mt-2 text-2xl font-black uppercase text-[#18232a] sm:text-3xl"
+            >
+              Taunton &amp; surrounding Somerset
+            </h2>
+            <p className="mt-2 text-sm text-slate-600">
+              Including Bridgwater, Wellington and nearby areas. Send your
+              postcode to confirm coverage.
+            </p>
+          </div>
+          <Link
+            href="/locations"
+            className="inline-flex min-h-12 items-center justify-center gap-2 self-start border border-[#18232a] px-6 text-sm font-bold text-[#18232a] hover:bg-[#18232a] hover:text-white"
+          >
+            Check service areas <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
       <CTASection
-        heading="Free Quote or Emergency Call-Out?"
-        subtext="Storm damage, an active leak, or a planned project? Call to check availability or request a no-obligation quote."
+        heading="Ready to discuss your roof?"
+        subtext="Tell us about your project for a no-obligation quote, or call to check availability for an urgent problem."
       />
-    </MotionConfig>
+    </>
   );
 }
