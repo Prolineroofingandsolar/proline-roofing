@@ -7,11 +7,12 @@ import { Phone, Mail, MapPin, Menu, X, ChevronDown } from "lucide-react";
 import Logo from "./Logo";
 
 const navLinks = [
+  { label: "HOME", href: "/" },
   {
     label: "ROOFING",
     href: "/roofing",
     children: [
-      { label: "Overview & New Roofs", href: "/roofing" },
+      { label: "All Roofing Services", href: "/roofing" },
       { label: "Roof Repairs", href: "/services/roof-repairs" },
       { label: "New Roofs", href: "/roofing" },
       { label: "Flat Roofing", href: "/services/flat-roofing" },
@@ -34,7 +35,7 @@ const navLinks = [
     ],
   },
   {
-    label: "AREAS",
+    label: "LOCATIONS",
     href: "/locations",
     children: [
       { label: "All Areas We Cover", href: "/locations" },
@@ -47,8 +48,9 @@ const navLinks = [
     ],
   },
   { label: "PROJECTS", href: "/projects" },
-  { label: "ADVICE", href: "/blog" },
-  { label: "ABOUT", href: "/about" },
+  { label: "BLOG", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
+  { label: "ABOUT US", href: "/about" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -68,9 +70,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between min-w-0">
           <div className="hidden sm:flex items-center gap-1.5 text-gray-300 text-xs shrink-0">
             <MapPin className="w-3.5 h-3.5 text-[#f97316]" />
-            <span>
-              Based in Taunton &mdash; Serving Somerset &amp; the South West
-            </span>
+            <span>Based in Taunton &mdash; Serving Somerset &amp; the South West</span>
           </div>
           <div className="flex items-center gap-3 ml-auto">
             <a
@@ -98,15 +98,11 @@ export default function Header() {
           <Logo />
 
           {/* Desktop nav */}
-          <ul
-            className="hidden xl:flex items-center gap-0"
-            aria-label="Main navigation"
-          >
+          <ul className="hidden xl:flex items-center gap-0">
             {navLinks.map((link) => {
               const active =
                 pathname === link.href ||
-                (link.children &&
-                  link.children.some((c) => c.href === pathname));
+                (link.children && link.children.some((c) => c.href === pathname));
               return (
                 <li key={link.label} className="relative group">
                   {link.children ? (
@@ -167,21 +163,14 @@ export default function Header() {
               aria-expanded={mobileOpen}
               aria-controls="mobile-navigation"
             >
-              {mobileOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div
-            id="mobile-navigation"
-            className="xl:hidden border-t border-gray-100 bg-white"
-          >
+          <div id="mobile-navigation" className="xl:hidden border-t border-gray-100 bg-white">
             <ul className="divide-y divide-gray-100">
               {navLinks.map((link) => (
                 <li key={link.label}>
@@ -201,13 +190,6 @@ export default function Header() {
                       </button>
                       {openSection === link.label && (
                         <div className="bg-gray-50 divide-y divide-gray-100">
-                          <Link
-                            href={link.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block px-8 py-3 text-xs font-black text-[#9a3412]"
-                          >
-                            View {link.label.toLowerCase()} overview
-                          </Link>
                           {link.children.map((child) => (
                             <Link
                               key={child.label}
@@ -226,9 +208,7 @@ export default function Header() {
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
                       className={`block px-4 py-3 text-xs font-bold tracking-wider ${
-                        pathname === link.href
-                          ? "text-[#f97316]"
-                          : "text-gray-700"
+                        pathname === link.href ? "text-[#f97316]" : "text-gray-700"
                       }`}
                     >
                       {link.label}
