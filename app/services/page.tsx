@@ -20,9 +20,7 @@ export const metadata: Metadata = {
     "fascias soffits somerset",
     "leadwork somerset",
   ],
-  alternates: {
-    canonical: "https://www.prolineroofingandsolar.co.uk/services",
-  },
+  alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/services" },
 };
 
 const roofingServices = [
@@ -30,117 +28,78 @@ const roofingServices = [
     title: "Roof Repairs",
     href: "/services/roof-repairs",
     desc: "Fast, professional repairs for leaking roofs, broken tiles, storm damage and all common roof problems. From single tiles to major structural repairs.",
-    highlights: [
-      "Tile & slate repairs",
-      "Leak detection",
-      "Storm damage",
-      "Survey availability on request",
-    ],
+    price: "From £150",
+    highlights: ["Tile & slate repairs", "Leak detection", "Storm damage", "Same-day survey available"],
   },
   {
     title: "New Roofs",
     href: "/roofing",
     desc: "Full new roof installations for domestic and commercial properties. We work with all materials including concrete tiles, clay tiles, natural slate and EPDM.",
-    highlights: [
-      "Tile & slate options",
-      "Access specified in quote",
-      "Written warranty terms",
-      "Roof condition assessment",
-    ],
+    price: "From £5,000",
+    highlights: ["All tile types", "Scaffold included", "10-15 yr guarantee", "Full structural inspection"],
   },
   {
     title: "Flat Roofing",
     href: "/services/flat-roofing",
     desc: "Modern flat roofing systems including EPDM rubber, GRP fibreglass and torch-on felt. New installations, repairs and full replacements.",
-    highlights: [
-      "EPDM rubber",
-      "GRP fibreglass",
-      "System-specific warranties",
-      "Extensions & garages",
-    ],
+    price: "From £2,500",
+    highlights: ["EPDM rubber", "GRP fibreglass", "25-year lifespan", "Extensions & garages"],
   },
   {
     title: "Slate Roofing",
     href: "/services/slate-roofing",
     desc: "Natural and artificial slate roofing. Welsh slate, Spanish slate and synthetic alternatives. Sympathetic repairs for period properties and conservation areas.",
-    highlights: [
-      "Natural Welsh slate",
-      "Spanish & Brazilian slate",
-      "Synthetic slate",
-      "Conservation areas",
-    ],
+    price: "From £6,000",
+    highlights: ["Natural Welsh slate", "Spanish & Brazilian slate", "Synthetic slate", "Conservation areas"],
   },
   {
     title: "Tile Roofing",
     href: "/services/tile-roofing",
     desc: "Concrete and clay tile roofing for modern and period homes. All profiles available. Matching tiles for repairs to older roofs.",
-    highlights: [
-      "Concrete tiles",
-      "Clay plain tiles",
-      "Interlocking tiles",
-      "Ridge tile replacement",
-    ],
+    price: "From £4,500",
+    highlights: ["Concrete tiles", "Clay plain tiles", "Interlocking tiles", "Ridge tile replacement"],
   },
   {
     title: "Chimney Repairs",
     href: "/services/chimney-repairs",
     desc: "Comprehensive chimney services including repointing, flaunching, leadwork, pot replacement and full stack rebuilds. Damp-proofing and waterproofing.",
+    price: "From £300",
     highlights: ["Repointing", "Lead flashing", "Flaunching", "Stack rebuilds"],
   },
   {
     title: "Leadwork",
     href: "/services/leadwork",
     desc: "Expert lead flashing installation and repair. Lead valleys, step flashings, chimney abutments, soakers and flat roof leadwork. Listed building experience.",
-    highlights: [
-      "Chimney flashings",
-      "Lead valleys",
-      "Code 4 & 5 lead",
-      "Listed buildings",
-    ],
+    price: "From £300",
+    highlights: ["Chimney flashings", "Lead valleys", "Code 4 & 5 lead", "Listed buildings"],
   },
   {
     title: "Fascias & Soffits",
     href: "/services/fascias-soffits",
     desc: "UPVC fascia, soffit and bargeboard replacement. Low maintenance, rot-free alternatives to timber. Full roofline packages including guttering.",
-    highlights: [
-      "UPVC & aluminium",
-      "Vented soffits",
-      "Colour choice",
-      "Dry verge systems",
-    ],
+    price: "From £600",
+    highlights: ["UPVC & aluminium", "Vented soffits", "Colour choice", "Dry verge systems"],
   },
   {
     title: "Guttering",
     href: "/services/guttering",
     desc: "Gutter replacement, repair and cleaning. UPVC, aluminium and cast iron. Full drainage solutions including downpipes, soakaways and gutter guards.",
-    highlights: [
-      "UPVC guttering",
-      "Cast iron",
-      "Gutter cleaning",
-      "Gutter guards",
-    ],
+    price: "From £300",
+    highlights: ["UPVC guttering", "Cast iron", "Gutter cleaning", "Gutter guards"],
   },
   {
     title: "Emergency Roofing",
     href: "/services/emergency-roofing",
     desc: "Urgent roof repair enquiries for storm damage, active leaks, fallen tiles and unsafe chimney damage. Call to check attendance availability.",
-    highlights: [
-      "Urgent enquiries",
-      "Storm damage",
-      "Active leaks",
-      "Written reports",
-    ],
+    price: "Call for availability",
+    highlights: ["Urgent enquiries", "Storm damage", "Active leaks", "Written reports"],
   },
   {
     title: "Commercial Roofing",
     href: "/services/commercial-roofing",
     desc: "Commercial and industrial roofing across Somerset. Flat roof systems, metal cladding, rooflights, commercial solar and planned maintenance contracts.",
-    highlights: [
-      "TPO/PVC systems",
-      "Metal cladding",
-      "Planned maintenance",
-      "Commercial solar",
-    ],
+    price: "Quote on request",
+    highlights: ["TPO/PVC systems", "Metal cladding", "Planned maintenance", "Commercial solar"],
   },
 ];
 
@@ -149,45 +108,29 @@ const solarServices = [
     title: "Solar Panel Installation",
     href: "/solar",
     desc: "Solar PV enquiries for homes and businesses, covering system design, supply and installation with project documentation set out in writing.",
-    highlights: [
-      "Certification details",
-      "Suitable roof types",
-      "System design",
-      "DNO applications",
-    ],
+    price: "From £5,000",
+    highlights: ["Certification details", "Suitable roof types", "System design", "DNO applications"],
   },
   {
     title: "Battery Storage",
     href: "/solar",
     desc: "Solar battery storage systems to maximise your self-consumption and reduce your reliance on the grid. AC and DC-coupled systems available.",
-    highlights: [
-      "AC & DC coupled",
-      "Tesla Powerwall",
-      "GivEnergy",
-      "VPP compatible",
-    ],
+    price: "From £2,000",
+    highlights: ["AC & DC coupled", "Tesla Powerwall", "GivEnergy", "VPP compatible"],
   },
   {
     title: "Solar Panel Repairs",
     href: "/solar",
     desc: "Diagnosis and repair of underperforming solar systems. Panel replacement, inverter issues, wiring faults and string re-configuration.",
-    highlights: [
-      "Panel replacement",
-      "Inverter repair",
-      "Monitoring setup",
-      "Performance check",
-    ],
+    price: "From £150",
+    highlights: ["Panel replacement", "Inverter repair", "Monitoring setup", "Performance check"],
   },
   {
     title: "Solar Maintenance",
     href: "/solar",
     desc: "Annual servicing and maintenance for solar PV systems. Panel cleaning, electrical checks, inverter inspection and performance reporting.",
-    highlights: [
-      "Panel cleaning",
-      "System checks",
-      "Performance review",
-      "Maintenance enquiries",
-    ],
+    price: "From £150/yr",
+    highlights: ["Panel cleaning", "Electrical testing", "Performance report", "Annual contracts"],
   },
 ];
 
@@ -207,14 +150,11 @@ export default function ServicesPage() {
               Somerset &amp; the South West
             </p>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-5 uppercase leading-none">
-              All Our
-              <br />
+              All Our<br />
               <span className="text-[#f97316]">Services</span>
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-              From a single tile replacement to a full new roof and solar
-              installation — ProLine delivers quality workmanship across every
-              roofing and solar service.
+              From a single tile replacement to a full new roof and solar installation — ProLine delivers quality workmanship across every roofing and solar service.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -240,37 +180,25 @@ export default function ServicesPage() {
           <AnimatedSection className="text-center mb-14">
             <div className="flex items-center justify-center gap-4 mb-3">
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
-                Roofing
-              </span>
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Roofing</span>
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
-            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight">
-              Roofing Services
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-gray-600">
-              Every property is different. We assess the work and set out the
-              proposed materials, access and price in a written quote.
-            </p>
+            <h2 className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight">Roofing Services</h2>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {roofingServices.map(({ title, href, desc, highlights }, i) => (
+            {roofingServices.map(({ title, href, desc, price, highlights }, i) => (
               <AnimatedSection key={title} delay={i * 0.06}>
                 <div className="group border border-gray-100 hover:border-[#f97316] hover:shadow-md transition-all p-7 h-full flex flex-col">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="font-black text-[#1a1a1a] text-base uppercase tracking-tight group-hover:text-[#f97316] transition-colors">
                       {title}
                     </h3>
+                    <span className="text-xs text-[#f97316] font-black shrink-0 ml-2">{price}</span>
                   </div>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">
-                    {desc}
-                  </p>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">{desc}</p>
                   <ul className="space-y-1.5 mb-5">
                     {highlights.map((h) => (
-                      <li
-                        key={h}
-                        className="flex items-center gap-2 text-xs text-gray-600"
-                      >
+                      <li key={h} className="flex items-center gap-2 text-xs text-gray-600">
                         <CheckCircle className="w-3.5 h-3.5 text-[#f97316] shrink-0" />
                         {h}
                       </li>
@@ -295,33 +223,25 @@ export default function ServicesPage() {
           <AnimatedSection className="text-center mb-14">
             <div className="flex items-center justify-center gap-4 mb-3">
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">
-                Solar
-              </span>
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-[#f97316]">Solar</span>
               <div className="flex-1 max-w-[80px] h-px bg-[#f97316]" />
             </div>
-            <h2 className="text-3xl font-black text-white uppercase tracking-tight">
-              Solar Services
-            </h2>
+            <h2 className="text-3xl font-black text-white uppercase tracking-tight">Solar Services</h2>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 gap-6">
-            {solarServices.map(({ title, href, desc, highlights }, i) => (
+            {solarServices.map(({ title, href, desc, price, highlights }, i) => (
               <AnimatedSection key={title} delay={i * 0.1}>
                 <div className="group border border-white/10 hover:border-[#f97316] transition-all p-7 h-full flex flex-col">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="font-black text-white text-base uppercase tracking-tight group-hover:text-[#f97316] transition-colors">
                       {title}
                     </h3>
+                    <span className="text-xs text-[#f97316] font-black shrink-0 ml-2">{price}</span>
                   </div>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">
-                    {desc}
-                  </p>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{desc}</p>
                   <ul className="space-y-1.5 mb-5">
                     {highlights.map((h) => (
-                      <li
-                        key={h}
-                        className="flex items-center gap-2 text-xs text-gray-300"
-                      >
+                      <li key={h} className="flex items-center gap-2 text-xs text-gray-300">
                         <CheckCircle className="w-3.5 h-3.5 text-[#f97316] shrink-0" />
                         {h}
                       </li>
@@ -344,12 +264,8 @@ export default function ServicesPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <AnimatedSection className="text-center mb-10">
-            <h2 className="text-2xl font-black text-[#1a1a1a] uppercase tracking-tight">
-              Our Services by Location
-            </h2>
-            <p className="text-gray-500 mt-2 text-sm">
-              Find our services in your area:
-            </p>
+            <h2 className="text-2xl font-black text-[#1a1a1a] uppercase tracking-tight">Our Services by Location</h2>
+            <p className="text-gray-500 mt-2 text-sm">Find our services in your area:</p>
           </AnimatedSection>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {[
@@ -374,10 +290,7 @@ export default function ServicesPage() {
             ))}
           </div>
           <div className="text-center mt-6">
-            <Link
-              href="/locations"
-              className="inline-flex items-center gap-2 text-[#f97316] font-black text-sm uppercase tracking-widest hover:underline"
-            >
+            <Link href="/locations" className="inline-flex items-center gap-2 text-[#f97316] font-black text-sm uppercase tracking-widest hover:underline">
               All Areas We Cover <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
