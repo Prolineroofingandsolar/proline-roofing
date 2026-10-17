@@ -18,16 +18,10 @@ export default function QuotePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <AnimatedSection>
-            <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">
-              No Obligation
-            </p>
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
-              Get a Free Quote
-            </h1>
+            <p className="text-[#f97316] text-xs font-black uppercase tracking-[0.25em] mb-3">No Obligation</p>
+            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">Get a Free Quote</h1>
             <p className="text-gray-300 text-lg max-w-xl mx-auto">
-              Tell us about your project and we&apos;ll come out, assess the
-              work and provide a detailed quote — completely free with no
-              pressure.
+              Tell us about your project and we&apos;ll come out, assess the work and provide a detailed quote — completely free with no pressure.
             </p>
           </AnimatedSection>
         </div>
@@ -39,17 +33,12 @@ export default function QuotePage() {
           {[
             { icon: CheckCircle, text: "Free no-obligation quote" },
             { icon: Clock, text: "Replies in staffed hours" },
-            { icon: Shield, text: "Written scope of work" },
+            { icon: Shield, text: "Fully insured & qualified" },
             { icon: Star, text: "Source-labelled reviews" },
           ].map(({ icon: Icon, text }) => (
-            <div
-              key={text}
-              className="flex items-center justify-center gap-2 text-white"
-            >
+            <div key={text} className="flex items-center justify-center gap-2 text-white">
               <Icon className="w-4 h-4 shrink-0" />
-              <span className="text-xs font-bold uppercase tracking-wide">
-                {text}
-              </span>
+              <span className="text-xs font-bold uppercase tracking-wide">{text}</span>
             </div>
           ))}
         </div>
@@ -62,31 +51,13 @@ export default function QuotePage() {
             <AnimatedSection direction="left" className="space-y-6">
               {/* What to expect */}
               <div className="bg-[#1a1a1a] p-7 text-white">
-                <h2 className="font-black text-base uppercase tracking-wide mb-5 pb-3 border-b border-white/10">
-                  What to Expect
-                </h2>
+                <h2 className="font-black text-base uppercase tracking-wide mb-5 pb-3 border-b border-white/10">What to Expect</h2>
                 <ul className="space-y-5">
                   {[
-                    {
-                      step: "1",
-                      title: "Submit Your Enquiry",
-                      desc: "Fill in the form with details about your project.",
-                    },
-                    {
-                      step: "2",
-                      title: "We'll Be in Touch",
-                      desc: "A member of our team will call or email during staffed hours.",
-                    },
-                    {
-                      step: "3",
-                      title: "Free Site Survey",
-                      desc: "We arrange a convenient time to visit and assess the work.",
-                    },
-                    {
-                      step: "4",
-                      title: "Receive Your Quote",
-                      desc: "Detailed, itemised quote with no hidden costs.",
-                    },
+                    { step: "1", title: "Submit Your Enquiry", desc: "Fill in the form with details about your project." },
+                    { step: "2", title: "We'll Be in Touch", desc: "A member of our team will call or email during staffed hours." },
+                    { step: "3", title: "Free Site Survey", desc: "We arrange a convenient time to visit and assess the work." },
+                    { step: "4", title: "Receive Your Quote", desc: "Detailed, itemised quote with no hidden costs." },
                   ].map(({ step, title, desc }) => (
                     <li key={step} className="flex items-start gap-3">
                       <div className="w-7 h-7 bg-[#f97316] flex items-center justify-center shrink-0 text-xs font-black text-white">
@@ -103,12 +74,8 @@ export default function QuotePage() {
 
               {/* Call us */}
               <div className="bg-[#f97316] p-6 text-white text-center">
-                <p className="font-black text-base uppercase tracking-wide mb-1">
-                  Prefer to Call?
-                </p>
-                <p className="text-orange-100 text-sm mb-4">
-                  Mon–Fri 8am–6pm · Sat 8am–1pm
-                </p>
+                <p className="font-black text-base uppercase tracking-wide mb-1">Prefer to Call?</p>
+                <p className="text-orange-100 text-sm mb-4">Mon–Fri 8am–6pm · Sat 8am–1pm</p>
                 <a
                   href="tel:07587478826"
                   className="inline-flex items-center gap-2 bg-white text-[#f97316] font-black px-5 py-3 hover:bg-orange-50 transition-colors text-sm"
@@ -118,13 +85,9 @@ export default function QuotePage() {
               </div>
 
               <div className="bg-white border border-gray-100 shadow-sm p-6">
-                <p className="text-gray-900 font-black text-sm mb-2">
-                  Before you send
-                </p>
+                <p className="text-gray-900 font-black text-sm mb-2">Before you send</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Include the project postcode and as much detail as possible.
-                  We will confirm coverage and arrange a survey if the work is
-                  suitable.
+                  Include the project postcode and as much detail as possible. We will confirm coverage and arrange a survey if the work is suitable.
                 </p>
               </div>
             </AnimatedSection>
@@ -132,12 +95,9 @@ export default function QuotePage() {
             {/* Form */}
             <AnimatedSection direction="right" className="lg:col-span-2">
               <div className="bg-white border border-gray-100 shadow-sm p-8">
-                <h2 className="text-2xl font-black text-[#1a1a1a] uppercase mb-1">
-                  Tell Us About Your Project
-                </h2>
+                <h2 className="text-2xl font-black text-[#1a1a1a] uppercase mb-1">Tell Us About Your Project</h2>
                 <p className="text-gray-500 text-sm mb-6">
-                  The more detail you provide, the more accurate our initial
-                  estimate will be.
+                  The more detail you provide, the more accurate our initial estimate will be.
                 </p>
                 <ContactForm />
               </div>
