@@ -26,7 +26,7 @@ export async function generateMetadata({
   const loc = getLocationBySlug(city);
   if (!loc) return {};
   return {
-    title: `Solar Panels ${loc.name}`,
+    title: `Solar Panels ${loc.name} | ProLine Roofing & Solar`,
     description: `Estimate what solar could be worth for a home in ${loc.name}, then request a roof and energy-use survey with a written proposal.`,
     alternates: {
       canonical: `https://www.prolineroofingandsolar.co.uk/solar-panels/${loc.slug}`,

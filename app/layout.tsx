@@ -7,7 +7,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 export const metadata: Metadata = {
   title: {
     default: "ProLine Roofing & Solar | Taunton, Somerset",
-    template: "%s | ProLine Roofing & Solar",
+    template: "%s",
   },
   description:
     "Roofing and solar installation services from a Taunton-based team serving Somerset and surrounding areas. Call 07587 478826 for a free quote.",
@@ -71,11 +71,6 @@ const localBusinessSchema = {
     postalCode: "TA2 8FA",
     addressCountry: "GB",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 51.0183,
-    longitude: -3.1006,
-  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -124,6 +119,8 @@ const localBusinessSchema = {
   currenciesAccepted: "GBP",
   sameAs: [
     "https://www.facebook.com/prolineroofingandsolar",
+    "https://maps.google.com/?cid=5527514095325498287",
+    "https://find-and-update.company-information.service.gov.uk/company/16644701",
   ],
   knowsAbout: [
     "Roofing",

@@ -16,7 +16,7 @@ import CTASection from "@/components/CTASection";
 import SolarSavingsEstimator from "@/components/SolarSavingsEstimator";
 
 export const metadata: Metadata = {
-  title: "Solar Panel Installation | Taunton & South West",
+  title: "Solar Panel Installation | Taunton & South West | ProLine Roofing & Solar",
   description:
     "Estimate what solar could be worth for your home, then request a roof and energy-use survey with a clear written proposal.",
   alternates: { canonical: "https://www.prolineroofingandsolar.co.uk/solar" },
